@@ -1,0 +1,41 @@
+<headerone></headerone>
+<sideMenu></sideMenu>
+<spinner *ngIf="spinner"></spinner>
+<section class="sect-following" *ngIf="!spinner">
+    <div class=" container ">
+        <div class="row following-row">
+            <div class="col-12">
+                <h5>Followers</h5>
+            </div>
+        </div>
+
+        <!-- List -->
+        <div class="row">
+            <div class="col-12">
+                <div class="text-center center" *ngIf="followerList && followerList.length < 1"> No Followers yet!</div>
+                <ul class="following-list" *ngIf="followerList">
+                    <li *ngFor="let f of followerList">
+                        <div class="following-image">
+                            <a [routerLink]="['/public-profile']" [queryParams]="{user:f.info._id}">
+                                <!-- <img id="{{f.followerId}}" src="{{f.userinfo.profilePic}}" (click)="viewPublicProfile(f.followerId)"> -->
+                                <img id="{{f.info._id}}" src="{{f.info.profilePic}}" *ngIf="f.info.profilePic" (click)="viewPublicProfile(f.info._id)">
+                                <span class="profile-image" *ngIf="!f.info.profilePic" imgName  title="{{f.info.firstname}},{{f.info.lastname}}" style="border-radius:50%" (click)="viewPublicProfile(f.info._id)"></span>
+                            </a>
+                        </div>
+                        <div class="following-info pointer" (click)="viewPublicProfile(f.info._id)">
+                            <h5>{{f.info.username}}</h5>
+                            <span>{{f.info.followers.length}} Followers</span>
+                            <span>{{f.info.following.length}} Following</span>
+                            <span>{{f.info.publishVideosinfo}} Videos</span>
+                            <p>{{f.info.bio}}</p>
+                        </div>
+                        <div class="btn-holder" *ngIf="currentUser != f.info._id">
+                            <button type="button" (click)="unfollowBack(f.info._id)" *ngIf="f.info.iAMFollowing">Following</button>
+                            <button type="button" (click)="followBack(f.info._id)" *ngIf="!f.info.iAMFollowing">Follow</button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>

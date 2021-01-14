@@ -1,0 +1,2050 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>my-app documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">my-app documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>UploadVideosComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/afterLogin/uploadVideos/uploadVideos.component.ts</code>
+</p>
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+                    <code><a href="https://angular.io/api/core/AfterViewInit" target="_blank" >AfterViewInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>uploadVideos</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./uploadVideos.component.css</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./uploadVideos.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#uploadVideoObject">uploadVideoObject</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#callInitialList">callInitialList</a>
+                            </li>
+                            <li>
+                                <a href="#cancelUpload">cancelUpload</a>
+                            </li>
+                            <li>
+                                <a href="#changeFilterUploadVideo">changeFilterUploadVideo</a>
+                            </li>
+                            <li>
+                                <a href="#changeFilterURL">changeFilterURL</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#getEventMessage">getEventMessage</a>
+                            </li>
+                            <li>
+                                <a href="#ngAfterViewInit">ngAfterViewInit</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#onSelectFile">onSelectFile</a>
+                            </li>
+                            <li>
+                                <a href="#openInteractiveVideo">openInteractiveVideo</a>
+                            </li>
+                            <li>
+                                <a href="#previewURL">previewURL</a>
+                            </li>
+                            <li>
+                                <a href="#uploadVideo">uploadVideo</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(urlService: <a href="../injectables/CrudService.html">CrudService</a>, router: <a href="https://angular.io/api/router/Router" target="_blank">Router</a>, toastr: ToastrService, sanitizer: <a href="https://angular.io/api/platform-browser/DomSanitizer" target="_blank">DomSanitizer</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/afterLogin/uploadVideos/uploadVideos.component.ts:18</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>urlService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/CrudService.html" target="_self" >CrudService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>router</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/router/Router" target="_blank" >Router</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>toastr</td>
+                                                  
+                                                        <td>
+                                                                    <code>ToastrService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>sanitizer</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/platform-browser/DomSanitizer" target="_blank" >DomSanitizer</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="callInitialList"></a>
+                    <span class="name">
+                        <b>
+                            callInitialList
+                        </b>
+                        <a href="#callInitialList"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>callInitialList()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="38"
+                            class="link-to-prism">src/app/afterLogin/uploadVideos/uploadVideos.component.ts:38</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="cancelUpload"></a>
+                    <span class="name">
+                        <b>
+                            cancelUpload
+                        </b>
+                        <a href="#cancelUpload"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>cancelUpload()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="94"
+                            class="link-to-prism">src/app/afterLogin/uploadVideos/uploadVideos.component.ts:94</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="changeFilterUploadVideo"></a>
+                    <span class="name">
+                        <b>
+                            changeFilterUploadVideo
+                        </b>
+                        <a href="#changeFilterUploadVideo"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>changeFilterUploadVideo(val)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="323"
+                            class="link-to-prism">src/app/afterLogin/uploadVideos/uploadVideos.component.ts:323</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>val</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="changeFilterURL"></a>
+                    <span class="name">
+                        <b>
+                            changeFilterURL
+                        </b>
+                        <a href="#changeFilterURL"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>changeFilterURL(val)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="363"
+                            class="link-to-prism">src/app/afterLogin/uploadVideos/uploadVideos.component.ts:363</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>val</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getEventMessage"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            getEventMessage
+                        </b>
+                        <a href="#getEventMessage"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getEventMessage(event: HttpEvent<any>, file: File)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="261"
+                            class="link-to-prism">src/app/afterLogin/uploadVideos/uploadVideos.component.ts:261</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Return distinct message for sent, upload progress, &amp; response events </p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>event</td>
+                                    <td>
+                                            <code>HttpEvent&lt;any&gt;</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>file</td>
+                                    <td>
+                                            <code>File</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngAfterViewInit"></a>
+                    <span class="name">
+                        <b>
+                            ngAfterViewInit
+                        </b>
+                        <a href="#ngAfterViewInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngAfterViewInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="32"
+                            class="link-to-prism">src/app/afterLogin/uploadVideos/uploadVideos.component.ts:32</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <b>
+                            ngOnInit
+                        </b>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="23"
+                            class="link-to-prism">src/app/afterLogin/uploadVideos/uploadVideos.component.ts:23</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onSelectFile"></a>
+                    <span class="name">
+                        <b>
+                            onSelectFile
+                        </b>
+                        <a href="#onSelectFile"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onSelectFile(event)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="67"
+                            class="link-to-prism">src/app/afterLogin/uploadVideos/uploadVideos.component.ts:67</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>event</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="openInteractiveVideo"></a>
+                    <span class="name">
+                        <b>
+                            openInteractiveVideo
+                        </b>
+                        <a href="#openInteractiveVideo"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>openInteractiveVideo()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="384"
+                            class="link-to-prism">src/app/afterLogin/uploadVideos/uploadVideos.component.ts:384</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="previewURL"></a>
+                    <span class="name">
+                        <b>
+                            previewURL
+                        </b>
+                        <a href="#previewURL"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>previewURL()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="279"
+                            class="link-to-prism">src/app/afterLogin/uploadVideos/uploadVideos.component.ts:279</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="uploadVideo"></a>
+                    <span class="name">
+                        <b>
+                            uploadVideo
+                        </b>
+                        <a href="#uploadVideo"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>uploadVideo()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="111"
+                            class="link-to-prism">src/app/afterLogin/uploadVideos/uploadVideos.component.ts:111</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="uploadVideoObject"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            uploadVideoObject</b>
+                            <a href="#uploadVideoObject"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>{spinner:false,allVideos:[],selectedVideos:[],format:&#x27;&#x27;,url:&#x27;&#x27;,isUploaded:false,duration:0,name:&#x27;&#x27;,type:&#x27;&#x27;,size:&#x27;&#x27;,preSignedUrl:&#x27;&#x27;,file:&#x27;&#x27;,allUploadedVideo:[],allUrls:[],changeFilterUploadVideo:&#x27;recentFirst&#x27;,changeFilterURL:&#x27;recentFirst&#x27;,uploadPercentage:0, loadingVideo: false}</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="21" class="link-to-prism">src/app/afterLogin/uploadVideos/uploadVideos.component.ts:21</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit, AfterViewInit } from &#x27;@angular/core&#x27;;
+import { CrudService } from &#x27;src/app/crud.service&#x27;;
+import { Router } from &#x27;@angular/router&#x27;;
+import { HttpEvent, HttpEventType } from &#x27;@angular/common/http&#x27;
+import { ToastrService } from &#x27;ngx-toastr&#x27;;
+import { DomSanitizer } from &#x27;@angular/platform-browser&#x27;;
+// import { setInterval } from &#x27;timers&#x27;;
+import { fadeInOutAnimation } from &#x27;./../../ngifAnimation&#x27;;
+
+declare var $;
+
+@Component({
+  selector: &#x27;uploadVideos&#x27;,
+  templateUrl: &#x27;./uploadVideos.component.html&#x27;,
+  styleUrls: [&#x27;./uploadVideos.component.css&#x27;],
+  animations: [ fadeInOutAnimation ]
+})
+export class UploadVideosComponent implements OnInit, AfterViewInit {
+
+  constructor(private urlService:CrudService, private router:Router,private toastr: ToastrService,private sanitizer:DomSanitizer) { }
+  private uploadVideoObject:any &#x3D; {spinner:false,allVideos:[],selectedVideos:[],format:&#x27;&#x27;,url:&#x27;&#x27;,isUploaded:false,duration:0,name:&#x27;&#x27;,type:&#x27;&#x27;,size:&#x27;&#x27;,preSignedUrl:&#x27;&#x27;,file:&#x27;&#x27;,allUploadedVideo:[],allUrls:[],changeFilterUploadVideo:&#x27;recentFirst&#x27;,changeFilterURL:&#x27;recentFirst&#x27;,uploadPercentage:0, loadingVideo: false}
+
+  ngOnInit() {
+    this.uploadVideoObject.allVideos &#x3D; [];
+    this.uploadVideoObject.selectedVideos &#x3D; [];
+    this.uploadVideoObject.allUploadedVideo &#x3D; [];
+    this.uploadVideoObject.uploadPercentage &#x3D; 0;
+    this.callInitialList()
+  }
+  
+
+  ngAfterViewInit() {
+    
+    
+    
+  }
+
+  callInitialList() {
+
+    this.uploadVideoObject.spinner &#x3D; true;
+    this.uploadVideoObject.allUploadedVideo &#x3D; [];
+    this.urlService.getUploadedVideo().subscribe(
+      success &#x3D;&gt; {
+        this.uploadVideoObject.allVideos &#x3D; success.data
+        for (let i of this.uploadVideoObject.allVideos) {
+          // if (i.type &#x3D;&#x3D; &quot;URL&quot;) {
+          //   i.URL &#x3D; this.sanitizer.bypassSecurityTrustResourceUrl(i.URL)
+          //   this.uploadVideoObject.allUrls.push(i)
+          // }
+          // else {
+            this.uploadVideoObject.allUploadedVideo.push(i)
+          // }
+       }
+        this.uploadVideoObject.allUploadedVideo &#x3D;  this.uploadVideoObject.allUploadedVideo.reverse()
+        this.uploadVideoObject.spinner &#x3D; false; 
+        setTimeout(()&#x3D;&gt;{
+          this.uploadVideoObject.loadingVideo &#x3D;  false;
+        })
+        
+      },
+      error &#x3D;&gt; {
+        this.uploadVideoObject.spinner &#x3D; false;
+
+      })
+  }
+
+  onSelectFile(event) {
+    const file &#x3D; event.target.files &amp;&amp; event.target.files[0];
+    this.uploadVideoObject.file &#x3D; file;
+    this.uploadVideoObject.uploadPercentage &#x3D; 0;
+    if (file) {
+      //let file &#x3D; fileInput.target.files[0];
+      this.uploadVideoObject.name&#x3D;  file.name.replace(/[{()}]/g, &#x27;&#x27;).replace(/\s/g,&#x27;&#x27;);
+      this.uploadVideoObject.name &#x3D; this.uploadVideoObject.name.trim();
+     
+      this.uploadVideoObject.type &#x3D; event.target.files[0].type;
+   //   this.uploadVideoObject.duration &#x3D; event.target.files[0].duration;
+      this.uploadVideoObject.size &#x3D; event.target.files[0].size;
+      //console.log(event.target)
+      //var modifiedDate &#x3D; event.target.files[i].lastModifiedDate;
+      var reader &#x3D; new FileReader();
+      reader.readAsDataURL(file);
+      if (file.type.indexOf(&#x27;image&#x27;) &gt; -1) {
+        this.uploadVideoObject.format &#x3D; &#x27;image&#x27;;
+      } else if (file.type.indexOf(&#x27;video&#x27;) &gt; -1) {
+        this.uploadVideoObject.format &#x3D; &#x27;video&#x27;;
+      }
+      // reader.onload &#x3D; (event) &#x3D;&gt; {
+      //   this.uploadVideoObject.url &#x3D; (&lt;FileReader&gt;event.target).result;
+      // }
+      this.uploadVideoObject.isUploaded &#x3D; true
+    }
+  }
+  cancelUpload() {
+    this.uploadVideoObject.isUploaded &#x3D; false;
+    this.uploadVideoObject.format &#x3D; &#x27;&#x27;;
+    this.uploadVideoObject.url &#x3D; &#x27;&#x27;;
+    this.uploadVideoObject.Url &#x3D; &#x27;&#x27;;
+    this.uploadVideoObject.URL &#x3D; &#x27;&#x27;;
+    this.uploadVideoObject.name &#x3D; &#x27;&#x27;;
+    this.uploadVideoObject.type &#x3D; &#x27;&#x27;;
+    this.uploadVideoObject.uploadPercentage &#x3D; 0
+
+    this.uploadVideoObject.size &#x3D; &#x27;&#x27;;
+    this.uploadVideoObject.preSignedUrl &#x3D; &#x27;&#x27;
+    this.uploadVideoObject.changeFilterUploadVideo &#x3D; &#x27;recentFirst&#x27;;
+    this.uploadVideoObject.changeFilterURL &#x3D; &#x27;recentFirst&#x27;
+    $(&#x27;video&#x27;).trigger(&#x27;pause&#x27;);
+  }
+
+  uploadVideo() {
+
+    for (let i of this.uploadVideoObject.allVideos) {
+      if (i.name &#x3D;&#x3D; this.uploadVideoObject.name) {
+        this.toastr.error(&#x27;Video alredy exist!&#x27;);
+        return;
+      }
+    }
+    this.uploadVideoObject.spinner &#x3D; true;
+    
+    let obj: any &#x3D; { name: this.uploadVideoObject.name, type: &#x27;application/octet-stream&#x27;, URL: null, duration: this.uploadVideoObject.duration, thumbnail: &#x27;&#x27;, size: this.uploadVideoObject.size }
+    this.urlService.createpresignedUrl(obj).subscribe(
+      success &#x3D;&gt; {
+        this.uploadVideoObject.preSignedUrl &#x3D; success.data
+      // this.uploadVideoObject.selectedVideos &#x3D; success.data
+      this.toastr.info(&#x27;Uploading!&#x27;)
+      this.urlService.uploadVideo(this.uploadVideoObject.preSignedUrl,this.uploadVideoObject.file).subscribe(
+        success &#x3D;&gt;{
+          this.uploadVideoObject.uploadPercentage &#x3D; 0;
+          let data: any &#x3D; {name: this.uploadVideoObject.name};
+
+          // On success call transcode video API
+          this.toastr.info(&#x27;Video Processing!&#x27;)
+
+          this.urlService.transcodeVideo(data).subscribe(
+            success &#x3D;&gt; {
+              this.uploadVideoObject.uploadPercentage &#x3D; 0;
+              let requestObj: any &#x3D; {
+                name: this.uploadVideoObject.name,
+                type: &#x27;application/octet-stream&#x27;,
+                transcodeId: success.data.transcodeId
+              };
+              if (this.uploadVideoObject.uploadPercentage) {
+                this.uploadVideoObject.uploadPercentage &#x3D;   this.uploadVideoObject.uploadPercentage + 20  
+              }
+              // this.uploadVideoObject.uploadPercentage &#x3D;   this.uploadVideoObject.uploadPercentage + 20
+              // On success call API that checks the transcoding status
+              let interval: any;
+              interval &#x3D; setInterval(() &#x3D;&gt; {
+                this.urlService.checkTranscodingStatus(requestObj).subscribe(
+                  success &#x3D;&gt; {
+                    //console.log(success.data);
+                    if (success.data._id !&#x3D; null || success.data._id !&#x3D; undefined) {
+                      
+                      clearInterval(interval);
+                      this.toastr.info(&#x27;Completed!&#x27;);
+                      this.uploadVideoObject.loadingVideo &#x3D;  true;
+                      this.cancelUpload();
+                      this.callInitialList();
+                    }
+                    if( this.uploadVideoObject.uploadPercentage &lt; 95){
+                       this.uploadVideoObject.uploadPercentage &#x3D; this.uploadVideoObject.uploadPercentage + 5;
+                       this.toastr.info(&#x27;Processing in progress!&#x27;)
+                  }
+                  else{
+                    this.toastr.info(&#x27;Video Processing, please wait for a moment!&#x27;)
+                  }
+                  },
+                  error &#x3D;&gt;{
+                    let data: any &#x3D; {name: this.uploadVideoObject.name};
+                      this.urlService.deletePresignedURL(data).subscribe(
+                  success &#x3D;&gt; {
+                        this.uploadVideoObject.spinner &#x3D; false;  
+                        this.uploadVideoObject.isUploaded &#x3D; false
+                        this.uploadVideoObject.uploadPercentage &#x3D;0
+                        this.toastr.error(&#x27;Opps something went wrong, please try again!&#x27;) 
+                     })
+                  }
+                );
+              }, 5000);
+              // this.urlService.checkTranscodingStatus(requestObj).subscribe(
+              //   success &#x3D;&gt; {
+              //     console.log(success.data);
+              //   }
+              // );
+            }, error &#x3D;&gt; {
+              let data: any &#x3D; {name: this.uploadVideoObject.name};
+              this.urlService.deletePresignedURL(data).subscribe(
+                success &#x3D;&gt; {
+                  this.uploadVideoObject.spinner &#x3D; false;  
+                  this.uploadVideoObject.isUploaded &#x3D; false
+                  this.uploadVideoObject.uploadPercentage &#x3D;0
+                  this.toastr.error(&#x27;Upload not uploaded, please try again!&#x27;) 
+                }
+              );
+            }
+          );
+        
+        },
+        error &#x3D;&gt;{
+          //this.uploadVideoObject.spinner &#x3D; false;
+          let Obj:any &#x3D; {name: this.uploadVideoObject.name}
+          this.urlService.deletePresignedURL(Obj).subscribe(
+            success &#x3D;&gt;{
+               this.uploadVideoObject.spinner &#x3D; false;
+               this.toastr.error(&#x27;Uploading failed, Please try again!&#x27;)
+               this.uploadVideoObject.uploadPercentage &#x3D; 0
+               this.uploadVideoObject.isUploaded &#x3D; false;
+            })
+        })
+       let interval &#x3D;  setInterval(()&#x3D;&gt;{
+        this.uploadVideoObject.uploadPercentage &#x3D;  this.urlService.getProgress()
+        if( this.uploadVideoObject.uploadPercentage &gt; 99.9)
+        {
+          clearInterval(interval);
+        }
+      },1000)
+    
+     
+      },
+      error &#x3D;&gt; {
+        this.uploadVideoObject.spinner &#x3D; false;
+
+      })
+  }
+
+
+  // getDuration(e) {
+  //   console.log(e)
+  //   this.uploadVideoObject.duration &#x3D; e.target.duration;
+  //   //  alert(duration)
+  // }
+
+  // uploadURL()
+  // {
+  //   this.uploadVideoObject.spinner &#x3D;  true;
+  //   for(let i of this.uploadVideoObject.allVideos)
+  //   {
+  //     if(i.name &#x3D;&#x3D; this.uploadVideoObject.url.changingThisBreaksApplicationSecurity)
+  //     {
+  //       this.toastr.warning(&quot;URL already Exist!&quot;);
+  //       return;
+  //     }
+  //   }
+
+  //   let obj:any &#x3D; {name:this.uploadVideoObject.url.changingThisBreaksApplicationSecurity,type:&quot;URL&quot;,URL:this.uploadVideoObject.url.changingThisBreaksApplicationSecurity,duration:this.uploadVideoObject.duration,thumbnail:&#x27;&#x27;,size:&#x27;&#x27;}
+  //   this.urlService.createpresignedUrl(obj).subscribe(
+  //     success &#x3D;&gt;{
+  //       this.uploadVideoObject.preSignedUrl &#x3D; success.data
+  //       this.uploadVideoObject.spinner &#x3D; false;
+  //       this.cancelUpload();
+  //       this.callInitialList();
+  //       },
+  //     error &#x3D;&gt;{
+  //       this.uploadVideoObject.spinner &#x3D; false;
+  //     })
+
+  // }
+
+/** Return distinct message for sent, upload progress, &amp; response events */
+  private getEventMessage(event: HttpEvent&lt;any&gt;, file: File) {
+    switch (event.type) {
+      case HttpEventType.Sent:
+        return &#x60;Uploading file &quot;${file.name}&quot; of size ${file.size}.&#x60;;
+
+      case HttpEventType.UploadProgress:
+        // Compute and show the % done:
+        const percentDone &#x3D; Math.round(100 * event.loaded / event.total);
+        return &#x60;File &quot;${file.name}&quot; is ${percentDone}% uploaded.&#x60;;
+
+      case HttpEventType.Response:
+        return &#x60;File &quot;${file.name}&quot; was completely uploaded!&#x60;;
+
+      default:
+        return &#x60;File &quot;${file.name}&quot; surprising upload event: ${event.type}.&#x60;;
+    }
+  }
+
+  previewURL() {
+    var regExp &#x3D; /^(?:https?:\/\/)?(?:m\.|www\.)?(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v&#x3D;|watch\?.+&amp;v&#x3D;))((\w|-){11})(?:\S+)?$/;
+    var match &#x3D; this.uploadVideoObject.Url.match(regExp);
+    if (!match) {
+      this.toastr.error(&#x27;Invalid URaaaL!&#x27;);
+      this.uploadVideoObject.Url &#x3D; &#x27;&#x27;;
+      return;
+    }
+
+
+    if (this.uploadVideoObject.Url.indexOf(&#x27;https://www.youtube.com&#x27;) !&#x3D;&#x3D; -1) {
+      let tempURL: any &#x3D; &#x27;&#x27;
+      tempURL &#x3D; this.uploadVideoObject.Url.split(&#x27;https://www.youtube.com&#x27;)[1]
+      // tempURL  &#x3D; this.uploadVideoObject.Url[1]
+
+      if (tempURL.indexOf(&#x27;v&#x3D;&#x27;) !&#x3D;&#x3D; -1) {
+        tempURL &#x3D; tempURL.split(&#x27;v&#x3D;&#x27;)[1];
+        this.uploadVideoObject.url &#x3D; tempURL
+      }
+      else if (tempURL.indexOf(&#x27;embed&#x27;) !&#x3D;&#x3D; -1) {
+        tempURL &#x3D; tempURL.split(&#x27;embed/&#x27;)[1];
+        if (tempURL.indexOf(&#x27;&quot;&quot;&#x27;) !&#x3D;&#x3D; -1) {
+          this.uploadVideoObject.Url &#x3D; &#x27;&#x27;;
+          this.toastr.error(&#x27;Invalid URL!&#x27;);
+          return;
+        }
+        this.uploadVideoObject.url &#x3D; tempURL
+
+      }
+      else {
+        this.toastr.error(&#x27;Invalid URL!&#x27;);
+        this.uploadVideoObject.Url &#x3D; &#x27;&#x27;;
+        return;
+      }
+
+      this.uploadVideoObject.url &#x3D; this.sanitizer.bypassSecurityTrustResourceUrl(&#x27;https://www.youtube.com/embed/&#x27; + tempURL);
+      this.uploadVideoObject.isUploaded &#x3D; true;
+    }
+    else {
+      this.toastr.error(&#x27;Only Valid Youtube URL Allowed!&#x27;);
+      this.uploadVideoObject.Url &#x3D; &#x27;&#x27;;
+    }
+  }
+
+  changeFilterUploadVideo(val) {
+
+    if (val &#x3D;&#x3D; &#x27;recentFirst&#x27;) {
+      this.uploadVideoObject.allUploadedVideo.sort(function (a, b) {
+        if (a.updatedAt &gt; b.updatedAt) {
+          return 1;
+        }
+        return -1
+      })
+    }
+
+    else if (val &#x3D;&#x3D; &#x27;size&#x27;) {
+      this.uploadVideoObject.allUploadedVideo.sort(function (a, b) {
+        if (a.size &gt; b.size) {
+          return -1;
+        }
+        return 1
+      })
+    }
+    else if (val &#x3D;&#x3D; &#x27;duration&#x27;) {
+      this.uploadVideoObject.allUploadedVideo.sort(function (a, b) {
+        if (a.duration &gt; b.duration) {
+          return -1;
+        }
+        return 1
+      })
+    }
+    else if (val &#x3D;&#x3D; &#x27;name&#x27;) {
+      this.uploadVideoObject.allUploadedVideo.sort(function (a, b) {
+        if (a.name &gt; b.name) {
+          return -1;
+        }
+        return 1
+      })
+
+    }
+
+  }
+
+
+  changeFilterURL(val) {
+
+    if (val &#x3D;&#x3D; &#x27;recentFirst&#x27;) {
+      this.uploadVideoObject.allUrls.sort(function (a, b) {
+        if (a.updatedAt &gt; b.updatedAt) {
+          return 1;
+        }
+        return -1
+      })
+    }
+
+    else {
+      this.uploadVideoObject.allUrls.sort(function (a, b) {
+        if (a.size &gt; b.size) {
+          return -1;
+        }
+        return 1
+      })
+    }
+  }
+
+  openInteractiveVideo() {
+    if (this.uploadVideoObject.allVideos.length &lt; 1) {
+      this.toastr.warning(&quot;No videos found, Please upload a video/URL!&quot;)
+    }
+    else {
+      this.router.navigate([&#x27;/create-interactive-video&#x27;])
+    }
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;headerone&gt;&lt;/headerone&gt;
+&lt;spinner *ngIf&#x3D;&quot;uploadVideoObject.spinner&quot;  [@fadeInOut]&gt;&lt;/spinner&gt;
+    &lt;section class&#x3D;&quot;upload-videos-sec&quot;&gt;
+            &lt;div class&#x3D;&quot;container video-common-sec&quot;&gt;
+              &lt;div class&#x3D;&quot;upload-vid&quot;&gt;
+                &lt;h3&gt;Start by uploading the first video&lt;/h3&gt;
+    
+                &lt;div class&#x3D;&quot;upload-v-btn&quot;&gt;
+                  
+                  &lt;!-- &lt;div class&#x3D;&quot;dropdown more-btn&quot;&gt;
+                    &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;btn dropdown-toggle&quot; data-toggle&#x3D;&quot;dropdown&quot;&gt;
+                      &lt;img src&#x3D;&quot;assets/images/upload-video-icons/upload-more.svg&quot;&gt;
+                    &lt;/button&gt;
+                    &lt;div class&#x3D;&quot;dropdown-menu&quot;&gt;
+                      &lt;a class&#x3D;&quot;dropdown-item&quot; href&#x3D;&quot;#&quot;&gt;Link 1&lt;/a&gt;
+                      &lt;a class&#x3D;&quot;dropdown-item&quot; href&#x3D;&quot;#&quot;&gt;Link 2&lt;/a&gt;
+                      &lt;a class&#x3D;&quot;dropdown-item&quot; href&#x3D;&quot;#&quot;&gt;Link 3&lt;/a&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt; --&gt;
+
+
+    
+                  &lt;!-- &lt;button type&#x3D;&quot;button&quot; style&#x3D;&quot;cursor: not-allowed;opacity: 0.5;&quot;&gt;
+                    &lt;div class&#x3D;&quot;media&quot;&gt;
+                      &lt;img src&#x3D;&quot;assets/images/upload-video-icons/record-vid-cam.svg&quot; alt&#x3D;&quot;&quot; class&#x3D;&quot;mr-3&quot;&gt;
+                      &lt;div class&#x3D;&quot;media-body text-left&quot;&gt;
+                        &lt;h5&gt;Live&lt;/h5&gt;
+                        &lt;p&gt;Use the camera on your device to record a video&lt;/p&gt;      
+                      &lt;/div&gt;
+                    &lt;/div&gt;
+                  &lt;/button&gt; --&gt;
+
+                  &lt;button type&#x3D;&quot;button&quot; data-toggle&#x3D;&quot;modal&quot; data-target&#x3D;&quot;#upload-vid-Modal&quot; (click)&#x3D;&quot;cancelUpload();buttontype&#x3D;&#x27;video&#x27;&quot; data-backdrop&#x3D;&quot;static&quot; data-keyboard&#x3D;&quot;false&quot;&gt;
+                    &lt;div class&#x3D;&quot;media&quot;&gt;
+                      &lt;img src&#x3D;&quot;assets/images/upload-video-icons/upload-video.svg&quot; alt&#x3D;&quot;&quot; class&#x3D;&quot;mr-3&quot;&gt;
+                      &lt;div class&#x3D;&quot;media-body text-left&quot;&gt;
+                        &lt;h5&gt;Upload&lt;/h5&gt;
+                        &lt;p&gt;Upload a video from your device library&lt;/p&gt;      
+                      &lt;/div&gt;
+                    &lt;/div&gt;
+                  &lt;/button&gt;
+&lt;!-- 
+                  &lt;button type&#x3D;&quot;button&quot; data-toggle&#x3D;&quot;modal&quot; data-target&#x3D;&quot;#upload-url-Modal&quot; (click)&#x3D;&quot;cancelUpload();buttontype&#x3D;&#x27;url&#x27;&quot; data-backdrop&#x3D;&quot;static&quot; data-keyboard&#x3D;&quot;false&quot; style&#x3D;&quot;cursor: not-allowed;opacity: 0.5;&quot; [disabled]&#x3D;&quot;true&quot;&gt;
+                    &lt;div class&#x3D;&quot;media&quot;&gt;
+                      &lt;img src&#x3D;&quot;assets/images/upload-video-icons/video-url.svg&quot; alt&#x3D;&quot;&quot; class&#x3D;&quot;mr-3&quot;&gt;
+                      &lt;div class&#x3D;&quot;media-body text-left&quot;&gt;
+                        &lt;h5&gt;URL&lt;/h5&gt;
+                        &lt;p&gt;Use a video from an external source such as youtube&lt;/p&gt;      
+                      &lt;/div&gt;
+                    &lt;/div&gt;
+                  &lt;/button&gt; --&gt;
+
+                &lt;/div&gt;
+    
+                &lt;div class&#x3D;&quot;upload-other-btn&quot;&gt;
+                  &lt;div class&#x3D;&quot;d-flex align-items-center txt&quot; style&#x3D;&quot;cursor: pointer;&quot; (click)&#x3D;&quot;openInteractiveVideo()&quot;&gt;
+                    &lt;img src&#x3D;&quot;assets/images/Plus.png&quot; class&#x3D;&quot;ml-1 mr-2&quot; alt&#x3D;&quot;&quot;&gt;
+                    &lt;h5&gt;Create an Interactive Video&lt;/h5&gt;
+                  &lt;/div&gt;  
+                  &lt;!-- &lt;div class&#x3D;&quot;other-buttons d-flex justify-content-between mt-4&quot;&gt;
+                    &lt;div&gt;
+                      &lt;button type&#x3D;&quot;button&quot;&gt;
+                        &lt;img src&#x3D;&quot;assets/images/upload-video-icons/upload-share.svg&quot; alt&#x3D;&quot;&quot;&gt;
+                      &lt;/button&gt;
+                      &lt;button type&#x3D;&quot;button&quot;&gt;
+                        &lt;img src&#x3D;&quot;assets/images/upload-video-icons/upload-share.svg&quot; alt&#x3D;&quot;&quot;&gt;
+                      &lt;/button&gt;
+                      &lt;button type&#x3D;&quot;button&quot;&gt;
+                        &lt;img src&#x3D;&quot;assets/images/upload-video-icons/upload-share.svg&quot; alt&#x3D;&quot;&quot;&gt;
+                      &lt;/button&gt;
+                      &lt;button type&#x3D;&quot;button&quot;&gt;
+                        &lt;img src&#x3D;&quot;assets/images/upload-video-icons/upload-share.svg&quot; alt&#x3D;&quot;&quot;&gt;
+                      &lt;/button&gt;
+                    &lt;/div&gt;
+                    &lt;div&gt;
+                      &lt;button type&#x3D;&quot;button&quot;&gt;
+                        &lt;img src&#x3D;&quot;assets/images/upload-video-icons/before-undo.svg&quot; alt&#x3D;&quot;&quot;&gt;
+                      &lt;/button&gt;
+                      &lt;button type&#x3D;&quot;button&quot;&gt;
+                        &lt;img src&#x3D;&quot;assets/images/upload-video-icons/after-undo.svg&quot; alt&#x3D;&quot;&quot;&gt;
+                      &lt;/button&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt; --&gt;
+                &lt;/div&gt;
+    
+                    
+              &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/section&gt;
+    
+    
+    
+    
+      &lt;!-- Upload Modal Screen --&gt;
+      &lt;div class&#x3D;&quot;modal fade upload-vid-Modal&quot; id&#x3D;&quot;upload-vid-Modal&quot;&gt;
+        &lt;div class&#x3D;&quot;modal-dialog modal-dialog-centered modal-lg&quot;&gt;
+          &lt;div class&#x3D;&quot;modal-content&quot;&gt;
+          
+            &lt;div class&#x3D;&quot;modal-header border-bottom-0&quot;&gt;
+              &lt;h4 class&#x3D;&quot;modal-title&quot;&gt;Upload from your device&lt;/h4&gt;
+              &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;close&quot; data-dismiss&#x3D;&quot;modal&quot; (click)&#x3D;&quot;cancelUpload()&quot;&gt;&amp;times;&lt;/button&gt;
+            &lt;/div&gt;
+            
+            &lt;div class&#x3D;&quot;modal-body&quot;&gt;
+              &lt;div class&#x3D;&quot;select-vid-area text-center&quot; *ngIf&#x3D;&quot;!uploadVideoObject.isUploaded&quot;  &gt;
+                &lt;span class&#x3D;&quot;upload-img&quot;&gt;
+                  &lt;svg xmlns&#x3D;&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink&#x3D;&quot;http://www.w3.org/1999/xlink&quot; version&#x3D;&quot;1.1&quot; id&#x3D;&quot;Capa_1&quot; x&#x3D;&quot;0px&quot; y&#x3D;&quot;0px&quot; viewBox&#x3D;&quot;0 0 512 512&quot; style&#x3D;&quot;enable-background:new 0 0 512 512;&quot; xml:space&#x3D;&quot;preserve&quot; width&#x3D;&quot;25px&quot; height&#x3D;&quot;25px&quot; class&#x3D;&quot;&quot;&gt;&lt;g&gt;&lt;g&gt;
+                      &lt;g&gt;
+                        &lt;path d&#x3D;&quot;M472,312.642v139c0,11.028-8.972,20-20,20H60c-11.028,0-20-8.972-20-20v-139H0v139c0,33.084,26.916,60,60,60h392    c33.084,0,60-26.916,60-60v-139H472z&quot; data-original&#x3D;&quot;#000000&quot; class&#x3D;&quot;active-path&quot; data-old_color&#x3D;&quot;#000000&quot; fill&#x3D;&quot;#FFFFFF&quot;/&gt;
+                      &lt;/g&gt;
+                    &lt;/g&gt;&lt;g&gt;
+                      &lt;g&gt;
+                        &lt;polygon points&#x3D;&quot;256,0.358 131.716,124.642 160,152.926 236,76.926 236,388.642 276,388.642 276,76.926 352,152.926     380.284,124.642   &quot; data-original&#x3D;&quot;#000000&quot; class&#x3D;&quot;active-path&quot; data-old_color&#x3D;&quot;#000000&quot; fill&#x3D;&quot;#FFFFFF&quot;/&gt;
+                      &lt;/g&gt;
+                    &lt;/g&gt;&lt;/g&gt;
+                  &lt;/svg&gt;
+                &lt;/span&gt;
+                &lt;!-- &lt;h6&gt;Drag and drop your video here&lt;/h6&gt; --&gt;
+                &lt;p&gt;Click the button bellow to select video from your device&lt;/p&gt;
+                &lt;!-- &lt;button type&#x3D;&quot;fil&quot;&gt;Select file&lt;/button&gt; --&gt;
+            
+                  &lt;label for&#x3D;&quot;selectFile&quot; class&#x3D;&quot;button-style&quot; &gt;Select Video
+                   &lt;input type&#x3D;&#x27;file&#x27; accept&#x3D;&quot;video/*&quot; (change)&#x3D;&quot;onSelectFile($event)&quot;  id&#x3D;&quot;selectFile&quot; name&#x3D;&quot;file&quot;/&gt;
+                  &lt;/label&gt;
+
+
+                
+
+              &lt;/div&gt;
+
+              &lt;div class&#x3D;&quot;select-vid-area text-center&quot; *ngIf&#x3D;&quot;uploadVideoObject.isUploaded&quot;   [@fadeInOut]&gt;
+                
+                &lt;!-- &lt;h6&gt;Drag and drop your video here&lt;/h6&gt; --&gt;
+                &lt;!-- &lt;p&gt;Click the button bellow to select video from your device&lt;/p&gt; --&gt;
+                &lt;!-- &lt;button type&#x3D;&quot;fil&quot;&gt;Select file&lt;/button&gt; --&gt;
+            
+                &lt;!-- &lt;video *ngIf&#x3D;&quot;uploadVideoObject.url&quot; [src]&#x3D;&quot;uploadVideoObject.url&quot; style&#x3D;&quot;display: none&quot; (loadedmetadata)&#x3D;&quot;getDuration($event)&quot;&gt;&lt;/video&gt;  --&gt;
+
+             
+                &lt;!-- &lt;div plyr style&#x3D;&quot;width: 640px;&quot; plyrTitle&#x3D;&quot;Video 1&quot; [plyrPlaysInline]&#x3D;&quot;true&quot; [plyrSources]&#x3D;&quot;uploadVideoObject.url&quot; (plyrInit)&#x3D;&quot;player &#x3D; $event&quot; (plyrPlay)&#x3D;&quot;played($event)&quot; &gt;&lt;/div&gt; --&gt;
+
+              
+                  &lt;div class&#x3D;&quot;fileName&quot;&gt;File : {{uploadVideoObject.name}}&lt;/div&gt;
+                  
+                  &lt;div class&#x3D;&quot;uploaded-percetange&quot;&gt;
+                    &lt;div class&#x3D;&quot;progress&quot;&gt;
+                      &lt;div class&#x3D;&quot;progress-bar progress-bar-striped progress-bar-animated&quot; role&#x3D;&quot;progressbar&quot; aria-valuemin&#x3D;&quot;0&quot; aria-valuemax&#x3D;&quot;100&quot; [ngStyle]&#x3D;&quot;{&#x27;width&#x27;: uploadVideoObject.uploadPercentage+&#x27;%&#x27;}&quot;&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class&#x3D;&quot;valueofpercentager&quot; *ngIf&#x3D;&quot;uploadVideoObject.uploadPercentage!&#x3D;&#x3D;undefined&quot;&gt;{{uploadVideoObject.uploadPercentage + &quot; %&quot; }}&lt;/div&gt;
+                    &lt;div class&#x3D;&quot;valueofpercentager&quot; *ngIf&#x3D;&quot;uploadVideoObject.uploadPercentage&#x3D;&#x3D;&#x27;undefined&#x27;&quot;&gt;0 %&lt;/div&gt;
+                  &lt;/div&gt;
+                  &lt;label for&#x3D;&quot;selectFile&quot; class&#x3D;&quot;button-style&quot; style&#x3D;&quot;display: inline; margin-right: 15px;&quot;&gt;Change Video
+                    &lt;input type&#x3D;&#x27;file&#x27; accept&#x3D;&quot;video/mp4,video/x-m4v,video/*&quot; (change)&#x3D;&quot;onSelectFile($event)&quot;  id&#x3D;&quot;selectFile&quot;   name&#x3D;&quot;file&quot;/&gt;
+                  &lt;/label&gt;
+                  &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;custom-btn&quot; (click)&#x3D;&quot;uploadVideo()&quot;&gt;Upload&lt;/button&gt;
+                  &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;cancel-button custom-btn&quot;  (click)&#x3D;&quot;cancelUpload()&quot; &gt;Cancel&lt;/button&gt;
+              &lt;/div&gt;
+
+
+
+    
+              &lt;div class&#x3D;&quot;vid-library-options mt-4 mb-4&quot;&gt;
+                &lt;div class&#x3D;&quot;row&quot;&gt;
+                  &lt;div class&#x3D;&quot;col-md-6 pr-md-1&quot;&gt;
+                    &lt;div class&#x3D;&quot;vid-options&quot;&gt;
+                      &lt;div class&#x3D;&quot;txt mr-2&quot;&gt;
+                        &lt;h5&gt;FreeFuse library&lt;/h5&gt;
+                        &lt;p&gt;You can reuse videos uploaded previously&lt;/p&gt;
+                      &lt;/div&gt;
+                      &lt;!-- &lt;div class&#x3D;&quot;search position-relative h-100&quot;&gt;
+                        &lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control&quot;&gt;
+                        &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;btn&quot; id&#x3D;&quot;vid-search-btn&quot;&gt;
+                          &lt;svg xmlns&#x3D;&quot;http://www.w3.org/2000/svg&quot; width&#x3D;&quot;17&quot; height&#x3D;&quot;18&quot; viewBox&#x3D;&quot;0 0 19.999 20.77&quot;&gt;
+                            &lt;defs&gt; &lt;/defs&gt; &lt;path id&#x3D;&quot;search&quot; d&#x3D;&quot;M20.873 20.106l-5.827-6.06a8.242 8.242 0 1 0-.58.529l5.841 6.075a.392.392 0 1 0 .565-.544zm-11.655-4.42a7.451 7.451 0 1 1 7.451-7.451 7.459 7.459 0 0 1-7.451 7.451z&quot; class&#x3D;&quot;cls-1&quot; transform&#x3D;&quot;translate(-.983)&quot;&gt;&lt;/path&gt;
+                          &lt;/svg&gt;
+                        &lt;/button&gt;
+                      &lt;/div&gt; --&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                  &lt;div class&#x3D;&quot;col-md-6&quot;&gt;
+                    &lt;div class&#x3D;&quot;vid-options&quot;&gt;
+                      &lt;select class&#x3D;&quot;form-control&quot; (change)&#x3D;&quot;changeFilterUploadVideo(uploadVideoObject.changeFilterUploadVideo)&quot; name&#x3D;&quot;changeFilterUploadVideo&quot; [(ngModel)]&#x3D;&quot;uploadVideoObject.changeFilterUploadVideo&quot;&gt;
+                        &lt;option value&#x3D;&quot;recentFirst&quot;&gt;Recent&lt;/option&gt;
+                        &lt;option value&#x3D;&quot;size&quot;&gt;Size&lt;/option&gt;
+                        &lt;option value&#x3D;&quot;duration&quot;&gt;Duration&lt;/option&gt;
+                        &lt;option value&#x3D;&quot;name&quot;&gt;Name&lt;/option&gt;
+
+                      &lt;/select&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+    
+              &lt;div class&#x3D;&quot;upload-vid-list FF-scroll-modify&quot; *ngIf&#x3D;&quot;!uploadVideoObject.loadingVideo&quot;&gt;
+              
+              &lt;div class&#x3D;&quot;text-center&quot; *ngIf&#x3D;&quot;uploadVideoObject.allUploadedVideo.length &lt; 1&quot;&gt;No Videos Upload!&lt;/div&gt;
+              
+                &lt;div *ngIf&#x3D;&quot;uploadVideoObject.allUploadedVideo.length &gt; 0&quot;&gt;
+                &lt;div class&#x3D;&quot;row mb-3 animations&quot; *ngFor&#x3D;&quot;let i of uploadVideoObject.allUploadedVideo; let index &#x3D; index&quot;&gt;
+                  &lt;div class&#x3D;&quot;col-md-12 col-lg-6&quot;&gt;
+                    &lt;div class&#x3D;&quot;choose-vid&quot;&gt;
+                      &lt;div class&#x3D;&quot;form-group form-check d-flex align-items-center pl-0 mb-0&quot;&gt;
+                          &lt;video  width&#x3D;&quot;200&quot; height&#x3D;&quot;100&quot; controls id&#x3D;&quot;video_player{{index}}&quot; poster&#x3D;&quot;{{i.poster}}&quot; class&#x3D;&quot;ml-2 mr-3 video-js vjs-default-skin vjs-big-play-centered&quot;  preload&#x3D;&quot;auto&quot;  videojs &gt;
+                            &lt;source src&#x3D;&quot;{{i.URL}}&quot; type&#x3D;&quot;application/x-mpegURL&quot;&gt;
+                          &lt;/video&gt; 
+                          &lt;h6 class&#x3D;&quot;mb-0&quot;&gt;{{i.name}} &lt;samp class&#x3D;&quot;d-block size-block&quot;&gt;{{i.size | size}}&lt;/samp&gt;&lt;/h6&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                  &lt;div class&#x3D;&quot;col-md-12 col-lg-6 d-flex align-items-center&quot;&gt;
+                    &lt;div class&#x3D;&quot;row vid-timing&quot;&gt;
+                      &lt;div class&#x3D;&quot;col-6&quot;&gt;
+                        &lt;samp class&#x3D;&quot;d-block&quot;&gt;Duration&lt;/samp&gt;
+                        &lt;span&gt;{{i.duration | minuteSeconds}}&lt;/span&gt;
+                      &lt;/div&gt;
+                      &lt;div class&#x3D;&quot;col-6 pl-4&quot;&gt;
+                        &lt;samp class&#x3D;&quot;d-block&quot;&gt;Uploaded On&lt;/samp&gt;
+                        &lt;span&gt;{{i.updatedAt |  date:&#x27;MM/dd/yyyy&#x27;}}&lt;/span&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+
+                
+                
+    
+              &lt;/div&gt;
+
+              &lt;div *ngIf&#x3D;&quot;uploadVideoObject.loadingVideo&quot; style&#x3D;&quot;min-height: 300px;text-align: center&quot;&gt;
+                    Loading Latest Video
+              &lt;/div&gt;
+              &lt;!--  --&gt;
+                
+            &lt;/div&gt;
+            
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;!-- url popup --&gt;
+    
+      &lt;div class&#x3D;&quot;modal fade upload-url-Modal upload-vid-Modal&quot; id&#x3D;&quot;upload-url-Modal&quot;&gt;
+        &lt;div class&#x3D;&quot;modal-dialog modal-dialog-centered modal-lg&quot;&gt;
+          &lt;div class&#x3D;&quot;modal-content&quot;&gt;
+          
+            &lt;div class&#x3D;&quot;modal-header border-bottom-0 pb-3&quot;&gt;
+              &lt;h4 class&#x3D;&quot;modal-title&quot;&gt;Video url&lt;/h4&gt;
+              &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;close&quot; data-dismiss&#x3D;&quot;modal&quot;&gt;&amp;times;&lt;/button&gt;
+            &lt;/div&gt;
+            
+            &lt;div class&#x3D;&quot;modal-body&quot;&gt;
+              &lt;div class&#x3D;&quot;vid-url-body&quot;&gt;
+                &lt;div *ngIf&#x3D;&quot;!uploadVideoObject.isUploaded&quot;  [@fadeInOut]&gt;
+                  &lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control&quot; placeholder&#x3D;&quot;Paste your link here&quot;  [(ngModel)]&#x3D;&quot;uploadVideoObject.Url&quot; name&#x3D;&quot;URL_Upload&quot; #URL_Upload&#x3D;&quot;ngModel&quot; required id&#x3D;&quot;URL_Upload&quot;  [ngClass]&#x3D;&quot;{&#x27;custom-alert-border&#x27;:(URL_Upload.invalid &amp;&amp; URL_Upload.touched)}&quot;&gt;
+                  &lt;div *ngIf&#x3D;&quot;URL_Upload.invalid &amp;&amp; URL_Upload.touched&quot;  [@fadeInOut] class&#x3D;&quot;custom-alert&quot;&gt;
+                    &lt;div *ngIf&#x3D;&quot;URL_Upload.errors.required&quot;  [@fadeInOut]&gt;
+                            This is required!
+                    &lt;/div&gt; 
+                  
+                    &lt;/div&gt;
+                    
+                  &lt;div class&#x3D;&quot;url-txt&quot;&gt;
+                    &lt;h6&gt;Video url example format:&lt;/h6&gt;
+                    &lt;p&gt;https://youtube.com/&lt;/p&gt;
+                  &lt;/div&gt;
+                  &lt;button type&#x3D;&quot;button&quot;(click)&#x3D;&quot;previewURL()&quot; [disabled]&#x3D;&quot;URL_Upload.invalid&quot;&gt;Save&lt;/button&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+
+            &lt;div *ngIf&#x3D;&quot;uploadVideoObject.isUploaded&quot;  [@fadeInOut]&gt;
+
+              &lt;div class&#x3D;&quot;select-vid-area text-center&quot; &gt;
+                
+                  
+              &lt;!-- &lt;iframe width&#x3D;&quot;560&quot; height&#x3D;&quot;315&quot; [src]&#x3D;&quot;uploadVideoObject.url&quot; frameborder&#x3D;&quot;0&quot; allow&#x3D;&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen *ngIf&#x3D;&quot;buttontype&#x3D;&#x3D;&#x27;url&#x27;&quot;&gt;&lt;/iframe&gt; --&gt;
+                
+                  &lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control&quot; placeholder&#x3D;&quot;Paste your link here&quot;  [(ngModel)]&#x3D;&quot;uploadVideoObject.Url&quot; name&#x3D;&quot;URL_Upload&quot; #URL_Upload&#x3D;&quot;ngModel&quot; required id&#x3D;&quot;URL_Upload&quot;  [ngClass]&#x3D;&quot;{&#x27;custom-alert-border&#x27;:(URL_Upload.invalid &amp;&amp; URL_Upload.touched)}&quot;&gt;
+                  &lt;div *ngIf&#x3D;&quot;URL_Upload.invalid &amp;&amp; URL_Upload.touched&quot; class&#x3D;&quot;custom-alert&quot;&gt;
+                    &lt;div *ngIf&#x3D;&quot;URL_Upload.errors.required&quot;&gt;
+                            This is required!
+                    &lt;/div&gt; 
+                  
+                    &lt;/div&gt;
+  
+                    &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;custom-btn&quot; (click)&#x3D;&quot;uploadURL()&quot;&gt;Upload&lt;/button&gt;
+                    &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;cancel-button custom-btn&quot;  (click)&#x3D;&quot;cancelUpload()&quot; &gt;Cancel&lt;/button&gt;
+  
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+
+              
+
+
+              &lt;div class&#x3D;&quot;vid-library-options mt-4 mb-4 &quot;&gt;
+                &lt;div class&#x3D;&quot;row&quot;&gt;
+                  &lt;div class&#x3D;&quot;col-md-6 pr-md-1&quot;&gt;
+                    &lt;div class&#x3D;&quot;vid-options&quot;&gt;
+                      &lt;div class&#x3D;&quot;txt mr-2&quot;&gt;
+                        &lt;h5&gt;FreeFuse library&lt;/h5&gt;
+                        &lt;p&gt;You can reuse videos uploaded previously&lt;/p&gt;
+                      &lt;/div&gt;
+                      &lt;!-- &lt;div class&#x3D;&quot;search position-relative h-100&quot;&gt;
+                        &lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control&quot;&gt;
+                        &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;btn&quot; id&#x3D;&quot;vid-search-btn&quot;&gt;
+                          &lt;svg xmlns&#x3D;&quot;http://www.w3.org/2000/svg&quot; width&#x3D;&quot;17&quot; height&#x3D;&quot;18&quot; viewBox&#x3D;&quot;0 0 19.999 20.77&quot;&gt;
+                            &lt;defs&gt; &lt;/defs&gt; &lt;path id&#x3D;&quot;search&quot; d&#x3D;&quot;M20.873 20.106l-5.827-6.06a8.242 8.242 0 1 0-.58.529l5.841 6.075a.392.392 0 1 0 .565-.544zm-11.655-4.42a7.451 7.451 0 1 1 7.451-7.451 7.459 7.459 0 0 1-7.451 7.451z&quot; class&#x3D;&quot;cls-1&quot; transform&#x3D;&quot;translate(-.983)&quot;&gt;&lt;/path&gt;
+                          &lt;/svg&gt;
+                        &lt;/button&gt;
+                      &lt;/div&gt; --&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                  &lt;div class&#x3D;&quot;col-md-6&quot;&gt;
+                    &lt;div class&#x3D;&quot;vid-options&quot;&gt;
+                      &lt;!-- &lt;select class&#x3D;&quot;form-control mr-3&quot;&gt;
+                        &lt;option&gt;All videos&lt;/option&gt;
+                        &lt;option&gt;Uploaded&lt;/option&gt;
+                        &lt;option&gt;URL&lt;/option&gt;
+                      &lt;/select&gt; --&gt;
+                      &lt;select class&#x3D;&quot;form-control&quot; (change)&#x3D;&quot;changeFilterURL(uploadVideoObject.changeFilterURL)&quot; name&#x3D;&quot;changeFilterURL&quot; [(ngModel)]&#x3D;&quot;uploadVideoObject.changeFilterURL&quot;&gt;
+                        &lt;option value&#x3D;&quot;recentFirst&quot;&gt;Recent First&lt;/option&gt;
+                        &lt;option value&#x3D;&quot;recentLast&quot;&gt;Recent Last&lt;/option&gt;
+                      
+                      &lt;/select&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+    
+              &lt;div class&#x3D;&quot;upload-vid-list FF-scroll-modify&quot;&gt;
+                &lt;div class&#x3D;&quot;text-center&quot; *ngIf&#x3D;&quot;uploadVideoObject.allUrls.length &lt; 1&quot;&gt;No URL Added!&lt;/div&gt;
+                &lt;div class&#x3D;&quot;row mb-3&quot; *ngFor&#x3D;&quot;let i of uploadVideoObject.allUrls&quot;&gt;
+                  &lt;div class&#x3D;&quot;col-md-12 col-lg-9&quot;&gt;
+                    &lt;div class&#x3D;&quot;choose-vid&quot;&gt;
+                      &lt;div class&#x3D;&quot;form-group form-check d-flex align-items-center pl-0 mb-0&quot;&gt;
+                          &lt;iframe width&#x3D;&quot;200&quot; height&#x3D;&quot;100&quot; [src]&#x3D;&quot;i.URL&quot; frameborder&#x3D;&quot;0&quot; allow&#x3D;&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;  
+                          &lt;h6 class&#x3D;&quot;mb-0&quot; style&#x3D;&quot;margin-left: 10px;&quot;&gt;{{i.name}} &lt;/h6&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                  &lt;div class&#x3D;&quot;col-md-12 col-lg-3 d-flex align-items-center&quot;&gt;
+                    &lt;div class&#x3D;&quot;row vid-timing&quot; style&#x3D;&quot;width: 100%&quot;&gt;
+                      &lt;!-- &lt;div class&#x3D;&quot;col-6&quot;&gt;
+                        &lt;samp class&#x3D;&quot;d-block&quot;&gt;Duration&lt;/samp&gt;
+                        &lt;span&gt;{{i.duration}}&lt;/span&gt;
+                      &lt;/div&gt; --&gt;
+                      &lt;div class&#x3D;&quot;col-6 pl-4&quot;&gt;
+                        &lt;samp class&#x3D;&quot;d-block&quot;&gt;Uploaded On&lt;/samp&gt;
+                        &lt;span&gt;{{i.updatedAt |  date:&#x27;MM/dd/yyyy&#x27;}}&lt;/span&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+
+                
+                
+    
+              &lt;/div&gt;
+
+
+
+              &lt;!--  --&gt;
+            &lt;/div&gt;
+            
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;!-- Upload Modal Screen --&gt;
+
+      
+&lt;withoutloginfooter&gt;&lt;/withoutloginfooter&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./uploadVideos.component.css</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">section.upload-videos-sec .upload-vid{
+    width: 360px;
+    height: auto;
+}
+.upload-videos-sec .upload-vid &gt; h3{
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 28px;
+}
+.upload-vid .upload-v-btn{
+    padding: 15px;
+    background-color: #9ca9ba;
+}
+.upload-vid .upload-v-btn &gt; button{
+    border: none;
+    background: none;
+    width: 100%;
+    border-bottom: 1px solid #ffffff61;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    outline: none;
+}
+.upload-vid .upload-v-btn &gt; button:last-child{
+    border-bottom: none;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+.upload-vid .upload-v-btn &gt; button .media img{
+    width: 26px;
+    height: 26px;
+}
+.upload-vid .upload-v-btn &gt; button .media-body h5{
+    font-size: 16px;
+    font-weight: 600;
+    color: #ffffff;
+}
+.upload-vid .upload-v-btn &gt; button .media-body p{
+    font-size: 12px;
+    color: #ffffff;
+    margin-bottom: 0px;
+}
+.upload-vid .upload-other-btn{
+    background-color: #ffffff;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0px 10px 20px -10px #dad8d8;
+}
+.choose-vid h6
+{
+    word-break: break-all;
+    width: 100px;
+}
+.upload-vid .upload-other-btn &gt; .txt img{
+    width: 20px;
+    height: 20px;
+}
+.upload-vid .upload-other-btn &gt; .txt h5{
+    font-size: 16px;
+    margin-bottom: 0px;
+}
+.upload-vid .upload-other-btn .other-buttons &gt; div button{
+    width: 30px;
+    height: auto;
+    background: none;
+    border: none;
+}
+.upload-vid .upload-other-btn .other-buttons &gt; div button img{
+    width: 100%;
+    height: 100%;
+}
+.upload-vid .upload-v-btn .more-btn button{
+    box-shadow: none;
+    float: right;
+    padding: 0px 10px;
+    margin-bottom: 15px;
+}
+.upload-vid .upload-v-btn .more-btn button::after{
+    display: none;
+}
+.upload-vid .upload-v-btn .more-btn button img{
+    width: 20px;
+    height: 20px;
+}
+
+/* Upload video popup */
+.upload-vid-Modal .modal-body,.upload-url-Modal .modal-body{
+    padding: 0px 25px 25px 25px;
+}
+.upload-vid-Modal .modal-header,.upload-url-Modal .modal-header{
+    padding: 25px;
+}
+
+.upload-vid-Modal .modal-header .modal-title,
+.upload-url-Modal .modal-header .modal-title{
+    font-size: 19px;
+}
+.upload-vid-Modal .modal-body .select-vid-area .upload-img{
+    width: 65px;
+    height: 65px;
+    background-color: #9ca9ba;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+}
+.upload-vid-Modal .modal-body .select-vid-area button{
+    border: 1px solid #6e5eff;
+    padding: 8px 30px;
+    border-radius: 5px;
+    background: #6e5eff;
+    color: #ffff;
+    font-size: 15px;
+    outline: none;
+}
+.upload-vid-Modal .modal-body .select-vid-area{
+    border: 1px dotted black;
+    border-radius: 10px;
+    padding: 28px 15px;
+}
+.upload-vid-Modal .modal-body .select-vid-area p{
+    font-size: 14px;
+}
+.upload-vid-Modal{
+    padding-right: 15px !important;
+    padding-left: 15px !important;
+}
+.upload-vid-Modal .vid-library-options .vid-options .txt h5{
+    font-size: 17px;
+}
+.upload-vid-Modal .vid-library-options .vid-options{
+    display: flex;
+    justify-content: space-between;
+}
+.upload-vid-Modal .vid-library-options .vid-options .txt p{
+    font-size: 14px;
+    margin-bottom: 0px;
+}
+.vid-library-options .vid-options .search button{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0px;
+}
+.vid-library-options .vid-options .search &gt; input{
+    /* padding-right: 40px; */
+    width: 44px;
+}
+
+.vid-library-options .vid-options .search button svg{
+    fill: black;
+}
+
+.upload-vid-list .choose-vid .form-group label img{
+    width: 90px;
+    height: 60px;
+    object-fit: cover;
+}
+.upload-vid-list .choose-vid .form-group label h6 samp{
+    font-size: 14px;
+    color: #a4a4a5;
+    margin-top: 2px;
+}
+.upload-vid-list &gt; .row .vid-timing samp{
+    font-size: 14px;
+    color: #a4a4a5;
+}
+
+.upload-vid-list &gt; .row .vid-timing{
+    width: 100%;
+}
+.upload-vid-Modal .modal-body .upload-vid-list{
+    height: 300px;
+}
+.vid-list-btn{
+    width: 100% !important;
+    padding-right: 40px;
+}
+.upload-vid-list .choose-vid .form-group label{
+    position: relative;
+    cursor: pointer;
+}
+.upload-vid-list .choose-vid .form-group label:before{
+    content:&#x27;&#x27;;
+    border: 1px solid black;
+    padding: 10px;
+    margin-right: 5px;
+    border-radius: 50%;
+}
+.upload-vid-list .choose-vid .form-group input:checked + label:after{
+    content: &#x27;&#x27;;
+    position: absolute;
+    left: 9px;
+    width: 6px;
+    height: 14px;
+    border: solid #0079bf;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }  
+/* Upload video popup */
+
+/* Upload url popup */
+.upload-url-Modal {
+    padding-right: 15px !important;
+    padding-left: 15px !important;
+}
+.size-block
+{
+margin-top: 10px;
+}
+.upload-url-Modal .vid-url-body .url-txt{
+    margin-top: 10px;
+}
+.upload-url-Modal .vid-url-body .url-txt h6{
+    color: #a4a4a5;
+    margin-bottom: 2px;
+}
+.upload-url-Modal .vid-url-body .url-txt p{
+    color: #a4a4a5;
+    font-size: 14px;
+}
+.upload-url-Modal .vid-url-body button{
+    float: right;
+    border: 1px solid #6e5eff;
+    padding: 8px 30px;
+    border-radius: 5px;
+    background: #6e5eff;
+    color: #ffff;
+    margin-top: -58px;
+    font-size: 15px;
+}
+
+/* Upload url popup */
+
+.upload-videos-sec
+{
+    margin-top: 70px;   
+}
+.button-style input
+{   opacity: 0;
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9;
+    cursor: pointer;
+}
+
+.button-style
+{
+    border: 1px solid #6e5eff;
+    padding: 8px 30px;
+    border-radius: 5px;
+    background: #6e5eff;
+    color: #ffff;
+    font-size: 15px;
+    display: block;
+    width: 200px;
+    margin: 0 auto;
+    cursor: pointer;
+    position: relative;
+    outline: none;
+}
+.cancel-button
+{
+    background: red!important;
+    border: 1px solid red!important;
+    cursor: pointer;
+    margin-left: 15px
+}
+.custom-btn
+{
+    margin-top: 15px;
+}
+.fileName
+{
+    padding: 10px;
+    font-size: 18px;
+}
+.uploaded-percetange
+{
+    padding: 20px;
+}</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><headerone></headerone><spinner *ngIf="uploadVideoObject.spinner"  [@fadeInOut]></spinner>    <section class="upload-videos-sec">            <div class="container video-common-sec">              <div class="upload-vid">                <h3>Start by uploading the first video</h3>                    <div class="upload-v-btn">                                    <!-- <div class="dropdown more-btn">                    <button type="button" class="btn dropdown-toggle" data-toggle="dropdown">                      <img src="assets/images/upload-video-icons/upload-more.svg">                    </button>                    <div class="dropdown-menu">                      <a class="dropdown-item" href="#">Link 1</a>                      <a class="dropdown-item" href="#">Link 2</a>                      <a class="dropdown-item" href="#">Link 3</a>                    </div>                  </div> -->                      <!-- <button type="button" style="cursor: not-allowed;opacity: 0.5;">                    <div class="media">                      <img src="assets/images/upload-video-icons/record-vid-cam.svg" alt="" class="mr-3">                      <div class="media-body text-left">                        <h5>Live</h5>                        <p>Use the camera on your device to record a video</p>                            </div>                    </div>                  </button> -->                  <button type="button" data-toggle="modal" data-target="#upload-vid-Modal" (click)="cancelUpload();buttontype=\'video\'" data-backdrop="static" data-keyboard="false">                    <div class="media">                      <img src="assets/images/upload-video-icons/upload-video.svg" alt="" class="mr-3">                      <div class="media-body text-left">                        <h5>Upload</h5>                        <p>Upload a video from your device library</p>                            </div>                    </div>                  </button><!--                   <button type="button" data-toggle="modal" data-target="#upload-url-Modal" (click)="cancelUpload();buttontype=\'url\'" data-backdrop="static" data-keyboard="false" style="cursor: not-allowed;opacity: 0.5;" [disabled]="true">                    <div class="media">                      <img src="assets/images/upload-video-icons/video-url.svg" alt="" class="mr-3">                      <div class="media-body text-left">                        <h5>URL</h5>                        <p>Use a video from an external source such as youtube</p>                            </div>                    </div>                  </button> -->                </div>                    <div class="upload-other-btn">                  <div class="d-flex align-items-center txt" style="cursor: pointer;" (click)="openInteractiveVideo()">                    <img src="assets/images/Plus.png" class="ml-1 mr-2" alt="">                    <h5>Create an Interactive Video</h5>                  </div>                    <!-- <div class="other-buttons d-flex justify-content-between mt-4">                    <div>                      <button type="button">                        <img src="assets/images/upload-video-icons/upload-share.svg" alt="">                      </button>                      <button type="button">                        <img src="assets/images/upload-video-icons/upload-share.svg" alt="">                      </button>                      <button type="button">                        <img src="assets/images/upload-video-icons/upload-share.svg" alt="">                      </button>                      <button type="button">                        <img src="assets/images/upload-video-icons/upload-share.svg" alt="">                      </button>                    </div>                    <div>                      <button type="button">                        <img src="assets/images/upload-video-icons/before-undo.svg" alt="">                      </button>                      <button type="button">                        <img src="assets/images/upload-video-icons/after-undo.svg" alt="">                      </button>                    </div>                  </div> -->                </div>                                      </div>            </div>        </section>                      <!-- Upload Modal Screen -->      <div class="modal fade upload-vid-Modal" id="upload-vid-Modal">        <div class="modal-dialog modal-dialog-centered modal-lg">          <div class="modal-content">                      <div class="modal-header border-bottom-0">              <h4 class="modal-title">Upload from your device</h4>              <button type="button" class="close" data-dismiss="modal" (click)="cancelUpload()">&times;</button>            </div>                        <div class="modal-body">              <div class="select-vid-area text-center" *ngIf="!uploadVideoObject.isUploaded"  >                <span class="upload-img">                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" width="25px" height="25px" class=""><g><g>                      <g>                        <path d="M472,312.642v139c0,11.028-8.972,20-20,20H60c-11.028,0-20-8.972-20-20v-139H0v139c0,33.084,26.916,60,60,60h392    c33.084,0,60-26.916,60-60v-139H472z" data-original="#000000" class="active-path" data-old_color="#000000" fill="#FFFFFF"/>                      </g>                    </g><g>                      <g>                        <polygon points="256,0.358 131.716,124.642 160,152.926 236,76.926 236,388.642 276,388.642 276,76.926 352,152.926     380.284,124.642   " data-original="#000000" class="active-path" data-old_color="#000000" fill="#FFFFFF"/>                      </g>                    </g></g>                  </svg>                </span>                <!-- <h6>Drag and drop your video here</h6> -->                <p>Click the button bellow to select video from your device</p>                <!-- <button type="fil">Select file</button> -->                              <label for="selectFile" class="button-style" >Select Video                   <input type=\'file\' accept="video/*" (change)="onSelectFile($event)"  id="selectFile" name="file"/>                  </label>                              </div>              <div class="select-vid-area text-center" *ngIf="uploadVideoObject.isUploaded"   [@fadeInOut]>                                <!-- <h6>Drag and drop your video here</h6> -->                <!-- <p>Click the button bellow to select video from your device</p> -->                <!-- <button type="fil">Select file</button> -->                            <!-- <video *ngIf="uploadVideoObject.url" [src]="uploadVideoObject.url" style="display: none" (loadedmetadata)="getDuration($event)"></video>  -->                             <!-- <div plyr style="width: 640px;" plyrTitle="Video 1" [plyrPlaysInline]="true" [plyrSources]="uploadVideoObject.url" (plyrInit)="player = $event" (plyrPlay)="played($event)" ></div> -->                                <div class="fileName">File : {{uploadVideoObject.name}}</div>                                    <div class="uploaded-percetange">                    <div class="progress">                      <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuemin="0" aria-valuemax="100" [ngStyle]="{\'width\': uploadVideoObject.uploadPercentage+\'%\'}"></div>                    </div>                    <div class="valueofpercentager" *ngIf="uploadVideoObject.uploadPercentage!==undefined">{{uploadVideoObject.uploadPercentage + " %" }}</div>                    <div class="valueofpercentager" *ngIf="uploadVideoObject.uploadPercentage==\'undefined\'">0 %</div>                  </div>                  <label for="selectFile" class="button-style" style="display: inline; margin-right: 15px;">Change Video                    <input type=\'file\' accept="video/mp4,video/x-m4v,video/*" (change)="onSelectFile($event)"  id="selectFile"   name="file"/>                  </label>                  <button type="button" class="custom-btn" (click)="uploadVideo()">Upload</button>                  <button type="button" class="cancel-button custom-btn"  (click)="cancelUpload()" >Cancel</button>              </div>                  <div class="vid-library-options mt-4 mb-4">                <div class="row">                  <div class="col-md-6 pr-md-1">                    <div class="vid-options">                      <div class="txt mr-2">                        <h5>FreeFuse library</h5>                        <p>You can reuse videos uploaded previously</p>                      </div>                      <!-- <div class="search position-relative h-100">                        <input type="text" class="form-control">                        <button type="button" class="btn" id="vid-search-btn">                          <svg xmlns="http://www.w3.org/2000/svg" width="17" height="18" viewBox="0 0 19.999 20.77">                            <defs> </defs> <path id="search" d="M20.873 20.106l-5.827-6.06a8.242 8.242 0 1 0-.58.529l5.841 6.075a.392.392 0 1 0 .565-.544zm-11.655-4.42a7.451 7.451 0 1 1 7.451-7.451 7.459 7.459 0 0 1-7.451 7.451z" class="cls-1" transform="translate(-.983)"></path>                          </svg>                        </button>                      </div> -->                    </div>                  </div>                  <div class="col-md-6">                    <div class="vid-options">                      <select class="form-control" (change)="changeFilterUploadVideo(uploadVideoObject.changeFilterUploadVideo)" name="changeFilterUploadVideo" [(ngModel)]="uploadVideoObject.changeFilterUploadVideo">                        <option value="recentFirst">Recent</option>                        <option value="size">Size</option>                        <option value="duration">Duration</option>                        <option value="name">Name</option>                      </select>                    </div>                  </div>                </div>              </div>                  <div class="upload-vid-list FF-scroll-modify" *ngIf="!uploadVideoObject.loadingVideo">                            <div class="text-center" *ngIf="uploadVideoObject.allUploadedVideo.length < 1">No Videos Upload!</div>                              <div *ngIf="uploadVideoObject.allUploadedVideo.length > 0">                <div class="row mb-3 animations" *ngFor="let i of uploadVideoObject.allUploadedVideo; let index = index">                  <div class="col-md-12 col-lg-6">                    <div class="choose-vid">                      <div class="form-group form-check d-flex align-items-center pl-0 mb-0">                          <video  width="200" height="100" controls id="video_player{{index}}" poster="{{i.poster}}" class="ml-2 mr-3 video-js vjs-default-skin vjs-big-play-centered"  preload="auto"  videojs >                            <source src="{{i.URL}}" type="application/x-mpegURL">                          </video>                           <h6 class="mb-0">{{i.name}} <samp class="d-block size-block">{{i.size | size}}</samp></h6>                      </div>                    </div>                  </div>                  <div class="col-md-12 col-lg-6 d-flex align-items-center">                    <div class="row vid-timing">                      <div class="col-6">                        <samp class="d-block">Duration</samp>                        <span>{{i.duration | minuteSeconds}}</span>                      </div>                      <div class="col-6 pl-4">                        <samp class="d-block">Uploaded On</samp>                        <span>{{i.updatedAt |  date:\'MM/dd/yyyy\'}}</span>                      </div>                    </div>                  </div>                </div>              </div>                                                  </div>              <div *ngIf="uploadVideoObject.loadingVideo" style="min-height: 300px;text-align: center">                    Loading Latest Video              </div>              <!--  -->                            </div>                      </div>        </div>      </div>      <!-- url popup -->          <div class="modal fade upload-url-Modal upload-vid-Modal" id="upload-url-Modal">        <div class="modal-dialog modal-dialog-centered modal-lg">          <div class="modal-content">                      <div class="modal-header border-bottom-0 pb-3">              <h4 class="modal-title">Video url</h4>              <button type="button" class="close" data-dismiss="modal">&times;</button>            </div>                        <div class="modal-body">              <div class="vid-url-body">                <div *ngIf="!uploadVideoObject.isUploaded"  [@fadeInOut]>                  <input type="text" class="form-control" placeholder="Paste your link here"  [(ngModel)]="uploadVideoObject.Url" name="URL_Upload" #URL_Upload="ngModel" required id="URL_Upload"  [ngClass]="{\'custom-alert-border\':(URL_Upload.invalid && URL_Upload.touched)}">                  <div *ngIf="URL_Upload.invalid && URL_Upload.touched"  [@fadeInOut] class="custom-alert">                    <div *ngIf="URL_Upload.errors.required"  [@fadeInOut]>                            This is required!                    </div>                                       </div>                                      <div class="url-txt">                    <h6>Video url example format:</h6>                    <p>https://youtube.com/</p>                  </div>                  <button type="button"(click)="previewURL()" [disabled]="URL_Upload.invalid">Save</button>                </div>            </div>            <div *ngIf="uploadVideoObject.isUploaded"  [@fadeInOut]>              <div class="select-vid-area text-center" >                                                <!-- <iframe width="560" height="315" [src]="uploadVideoObject.url" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen *ngIf="buttontype==\'url\'"></iframe> -->                                  <input type="text" class="form-control" placeholder="Paste your link here"  [(ngModel)]="uploadVideoObject.Url" name="URL_Upload" #URL_Upload="ngModel" required id="URL_Upload"  [ngClass]="{\'custom-alert-border\':(URL_Upload.invalid && URL_Upload.touched)}">                  <div *ngIf="URL_Upload.invalid && URL_Upload.touched" class="custom-alert">                    <div *ngIf="URL_Upload.errors.required">                            This is required!                    </div>                                       </div>                      <button type="button" class="custom-btn" (click)="uploadURL()">Upload</button>                    <button type="button" class="cancel-button custom-btn"  (click)="cancelUpload()" >Cancel</button>                  </div>            </div>                            <div class="vid-library-options mt-4 mb-4 ">                <div class="row">                  <div class="col-md-6 pr-md-1">                    <div class="vid-options">                      <div class="txt mr-2">                        <h5>FreeFuse library</h5>                        <p>You can reuse videos uploaded previously</p>                      </div>                      <!-- <div class="search position-relative h-100">                        <input type="text" class="form-control">                        <button type="button" class="btn" id="vid-search-btn">                          <svg xmlns="http://www.w3.org/2000/svg" width="17" height="18" viewBox="0 0 19.999 20.77">                            <defs> </defs> <path id="search" d="M20.873 20.106l-5.827-6.06a8.242 8.242 0 1 0-.58.529l5.841 6.075a.392.392 0 1 0 .565-.544zm-11.655-4.42a7.451 7.451 0 1 1 7.451-7.451 7.459 7.459 0 0 1-7.451 7.451z" class="cls-1" transform="translate(-.983)"></path>                          </svg>                        </button>                      </div> -->                    </div>                  </div>                  <div class="col-md-6">                    <div class="vid-options">                      <!-- <select class="form-control mr-3">                        <option>All videos</option>                        <option>Uploaded</option>                        <option>URL</option>                      </select> -->                      <select class="form-control" (change)="changeFilterURL(uploadVideoObject.changeFilterURL)" name="changeFilterURL" [(ngModel)]="uploadVideoObject.changeFilterURL">                        <option value="recentFirst">Recent First</option>                        <option value="recentLast">Recent Last</option>                                            </select>                    </div>                  </div>                </div>              </div>                  <div class="upload-vid-list FF-scroll-modify">                <div class="text-center" *ngIf="uploadVideoObject.allUrls.length < 1">No URL Added!</div>                <div class="row mb-3" *ngFor="let i of uploadVideoObject.allUrls">                  <div class="col-md-12 col-lg-9">                    <div class="choose-vid">                      <div class="form-group form-check d-flex align-items-center pl-0 mb-0">                          <iframe width="200" height="100" [src]="i.URL" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                            <h6 class="mb-0" style="margin-left: 10px;">{{i.name}} </h6>                      </div>                    </div>                  </div>                  <div class="col-md-12 col-lg-3 d-flex align-items-center">                    <div class="row vid-timing" style="width: 100%">                      <!-- <div class="col-6">                        <samp class="d-block">Duration</samp>                        <span>{{i.duration}}</span>                      </div> -->                      <div class="col-6 pl-4">                        <samp class="d-block">Uploaded On</samp>                        <span>{{i.updatedAt |  date:\'MM/dd/yyyy\'}}</span>                      </div>                    </div>                  </div>                </div>                                                  </div>              <!--  -->            </div>                      </div>        </div>      </div>      <!-- Upload Modal Screen -->      <withoutloginfooter></withoutloginfooter></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CreateInteractiveVideoComponent', 'selector': 'createInteractiveVideoComponent'},{'name': 'DashboardComponent', 'selector': 'dashboard'},{'name': 'EditProfileComponent', 'selector': 'editProfile'},{'name': 'FollowersComponent', 'selector': 'app-followers'},{'name': 'FollowingComponent', 'selector': 'app-following'},{'name': 'FooterComponent', 'selector': 'footer'},{'name': 'FooterComponent', 'selector': 'footer'},{'name': 'FooterComponent', 'selector': 'footer'},{'name': 'FooterComponent', 'selector': 'footer'},{'name': 'FooterComponent', 'selector': 'footer'},{'name': 'FooterComponent', 'selector': 'footer'},{'name': 'ForgetPasswordComponent', 'selector': 'forgetPassword'},{'name': 'HeaderComponent', 'selector': 'headerone'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LandingPageComponent', 'selector': 'app-landing-page'},{'name': 'LandingTestComponent', 'selector': 'app-landing-test'},{'name': 'LibraryComponent', 'selector': 'app-library'},{'name': 'LoginComponent', 'selector': 'login'},{'name': 'MyVideosComponent', 'selector': 'app-my-videos'},{'name': 'MyVideosPublicComponent', 'selector': 'app-my-videos-public'},{'name': 'NotificationsComponent', 'selector': 'app-notifications'},{'name': 'OtpComponent', 'selector': 'otp'},{'name': 'ProfileCompletionComponent', 'selector': 'profileCompletion'},{'name': 'PublicProfileComponent', 'selector': 'app-public-profile'},{'name': 'PublicUserActivitiyComponent', 'selector': 'app-public-user-activitiy'},{'name': 'PublicVideoComponent', 'selector': 'app-public-video'},{'name': 'PublishFooterComponent', 'selector': 'publishFooter'},{'name': 'ResetPasswordComponent', 'selector': 'resetPassword'},{'name': 'SearchResultsComponent', 'selector': 'app-search-results'},{'name': 'SectionSpinnerComponent', 'selector': 'sectionSpinner'},{'name': 'SideMenuComponent', 'selector': 'sideMenu'},{'name': 'SignupComponent', 'selector': 'signup'},{'name': 'SignupComponent', 'selector': 'signup'},{'name': 'SpinnerComponent', 'selector': 'spinner'},{'name': 'TestComponent', 'selector': 'app-test'},{'name': 'ThatsallComponent', 'selector': 'app-thatsall'},{'name': 'TrendingComponent', 'selector': 'app-trending'},{'name': 'UploadVideosComponent', 'selector': 'uploadVideos'},{'name': 'UserActivitiyComponent', 'selector': 'app-user-activitiy'},{'name': 'WithOutLoginFooterComponent', 'selector': 'withoutloginfooter'}];
+    var DIRECTIVES = [{'name': 'VideoJS', 'selector': '[videojs]'}];
+    var ACTUAL_COMPONENT = {'name': 'UploadVideosComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'UploadVideosComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

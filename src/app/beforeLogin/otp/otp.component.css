@@ -1,0 +1,29 @@
+.otp-code-form .media > img{
+    width: 25px;
+    height: 25px;
+}
+.otp-code-form .media-body h5{
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+.otp-code-form .media-body p{
+    font-size: 13px;
+}
+.otp-code-form button.resend-code{
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    font-size: 10px;
+    color: #6e5eff;
+    height: 100%;
+    outline: none;
+    margin-right: 4px;
+}
+.otp-code-form .main_focus_input{
+    padding-right: 90px;
+}
+

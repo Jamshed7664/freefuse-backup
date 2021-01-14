@@ -1,0 +1,298 @@
+.signup-form > h6{
+    font-size: 15px;
+    color: #3c4858;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+.signup-form .pwd-info{ 
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 12px;
+}
+.signup-form .pwd-info > img{
+    width: 15px;
+    height: 15px;
+}
+.input-mess-info{
+    border: none;
+    box-shadow: 0px 0px 10px 2px #dad8d8;
+    font-size: 11px;
+    color: #3c4858;
+}
+.input-mess-info .popover-body{
+    padding: 15px;
+}
+.input-mess-info .popover-body p{
+    margin-bottom: 5px;
+}
+.resetPassword
+{
+    margin-top: 100px;
+}
+.video-common-form
+{
+    width: 100%;
+    margin-bottom: 10px;
+}
+.video-common-sec
+{
+    padding: 0;
+}
+
+.profilePic
+{
+    position: relative;
+    width: 100px;
+    text-align: center;
+    margin: 0 auto;
+    
+}
+.profilePic img
+{
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    width: 100px;
+    cursor: pointer;
+
+}
+.profilePic label{
+    opacity: 0;
+    transition: 0.3s ease-in-out all;
+    font-size: 10px;
+    cursor: pointer;
+    width: 100%;
+}
+.profilePic input{
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left: 0;
+    cursor: pointer;
+    position: absolute;
+    z-index: 9;
+}
+.profilePic:hover label{
+opacity: 1;
+}
+form .signup-group .txtarea .input-field
+{
+    bottom: auto;
+   
+    top: 18px;
+
+}
+form .signup-group .txtarea textarea{
+    padding-top: 15px;
+}
+form .signup-group .txtarea .input-field.video_input_focus
+{
+    bottom: auto!important;
+    top: 5px!important;
+}
+ 
+.select-category-form{
+    box-shadow: 0px 0px 10px 0px #dad8d8;
+    padding: 30px;
+    background: white;
+}
+.FF-scroll-modify
+{
+    max-height: 300px;
+    height: auto;
+}
+
+.form-check
+{
+    padding: 15px;
+}
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link
+{
+   
+    background-color: transparent;
+    color: #6e5eff;
+}
+.nav-pills .nav-link
+{
+    color: #000;
+    margin-bottom: 5px;
+}
+.nav-pills .nav-link:hover{
+    color: #6e5eff;
+}
+.nav-pills .nav-link svg{
+    margin-top: -3px;
+}
+
+.profile-section {
+    margin-bottom: 10px;
+}
+
+.profile-section div.profilePic {
+    text-align: left;
+    width: 767px;
+}
+
+.profile-section img {
+    width: 80px;
+    height: 80px;
+}
+.container
+{
+    max-width: 1000px;
+}
+
+.profile-section h5 {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 600;
+    margin-left: 10px;
+  
+}
+
+.profile-section p {
+    display: inline-block;
+    font-size: 12px;
+    color: #929090;
+}
+
+.interests h3 {
+    display: inline-block;
+}
+
+.interests p {
+    display: block;
+}
+
+.interests h5 {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.interests a {
+    margin-right: 10px;
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 4px 12px;
+    font-size: 12px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.link-button {
+    text-decoration: none;
+    color: #6e5eff;
+    float: right;
+}
+
+.bottom-border-gray {
+    border-bottom: 1px solid #929090;
+}
+
+.align-right {
+    text-align: right;
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+.w-20 {
+    width: 23%;
+}
+
+.custom-toggle-switch::before {
+    background-color: #6e5eff;
+}
+
+.notifications p{
+    display: block;
+}
+
+.icon :hover{
+    fill: #6655ee;
+}
+
+.icon > svg {
+    width: 11%;
+    margin-right: 5px;
+}
+
+a.active > svg {
+    fill: #6655ee
+}
+
+.acc-status {
+    color: #6655ee !important;
+    font-size: 15px !important;
+}
+.video-common-btn{
+    width: auto;
+    /* margin-left: -15px; */
+}
+
+.btn-show-password {
+    position: absolute;
+    right: 16px;
+    top: 16px;
+}
+
+.btn-show-new-password {
+    position: absolute;
+    right: 16px;
+    top: 72px;
+}
+
+.btn-show-cnew-password {
+    position: absolute;
+    right: 16px;
+    top: 130px;
+}
+
+@media(max-width: 991px)
+{
+
+    .profile-section div.profilePic {
+      
+        width: 100%;
+    }
+    .margin-left-lrft-0
+    {
+        margin-left: 0!important;
+    }
+    .interests a
+    {
+        display: block;
+        margin: 10px;
+    }
+    .align-right
+    {
+        text-align: left;
+    }
+    .link-button{
+        float: none;
+        margin: 10px 0;
+    }
+    .nav-pills .nav-link
+    {
+        display: inline-block;
+        padding: 10px;
+    }
+    .nav-pills .nav-link svg
+    {
+        display: none;
+    }
+    .video-common-btn
+    {
+        width: auto;
+    }
+    #v-pills-tab
+    {
+        text-align: center;
+        display: block!important;
+    }
+    
+}

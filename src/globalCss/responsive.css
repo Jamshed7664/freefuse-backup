@@ -1,0 +1,95 @@
+@media(min-width: 576px){
+    .hbfilms-top-header form input{
+        width: 400px !important;
+    }    
+    /* .upload-vid-Modal .modal-dialog{
+        max-width: 850px;
+    } */
+}
+
+@media(max-width: 992px){
+    .upload-vid-list > .row .vid-timing{
+        margin-left: 12px;
+    }
+    .upload-vid-Modal .upload-vid-list .choose-vid{
+        margin-bottom: 15px;
+    }
+}
+
+@media(max-width: 768px){
+    .side-menu-navbar .navbar-nav li a span{
+        display: none;
+    }
+    .hbfilms-top-header form input{
+        width: 100% !important;
+    }
+    .hb-film-sec-2 .history-video-card{
+        margin-top: 25px;
+    }
+    .hb-film-sec-3 ul.rfTab{
+        margin-bottom: 20px !important;
+    }
+    .history-video-card > h4{
+        margin-bottom: 20px;
+    }
+    .hb-logo-content .logo-txt > button{
+        margin-bottom: 15px;
+    }
+    .vid-publish-footer .row .pre-pub-btn{
+        justify-content: center !important;
+    }
+    .vid-publish-footer .row .other-btns{
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .vid-publish-footer .row .footer-text{
+        margin-bottom: 20px;
+    }
+    .upload-vid-Modal .vid-library-options > .row > div:last-child{
+        margin-top: 20px;
+    }
+    .vid-publish-footer .row .other-btns{
+        display: block;
+    }
+    .vid-publish-footer .row .other-btns .share-btn{
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
+    }
+
+}
+@media(max-width: 576px){
+    .hbfilms-top-header .navbar-nav-2 > li{
+        margin-left: 0px !important;
+        width: 100%;
+        text-align: center;
+    }
+    .history-video-card > a{
+        margin-bottom: 5px;
+    }
+    .hbfilms-top-header .search-f{
+        margin-top: 10px;
+    }
+    .upload-url-Modal .vid-url-body button{
+        float: none;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .upload-url-Modal .vid-url-body .url-txt{
+        float: none;
+        text-align: center;
+    }
+    .vid-library-options .vid-options .search > input{
+        width: 100% !important;
+        padding-right: 40px;
+        margin-top: 10px;
+    }
+    .upload-vid-Modal .vid-library-options .vid-options{
+        display: block;
+    }
+    .upload-vid-Modal .vid-library-options .vid-options > select{
+        margin-bottom: 10px;
+    }
+
+}

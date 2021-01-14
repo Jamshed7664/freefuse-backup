@@ -1,0 +1,107 @@
+.sect-following {
+    margin-top: 100px;
+}
+
+.custom-container {
+    max-width: 800px;
+}
+
+.following-row {
+    margin-bottom: 20px;
+}
+
+.following-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.following-list li {
+    display: block;
+    margin-bottom: 40px;
+    height: 70px;
+}
+
+.following-image {
+    width: 70px;
+    height: 70px;
+    float: left;
+}
+
+.following-image img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    cursor: pointer;
+    object-fit: cover;
+}
+
+.following-info {
+    width: 580px;
+    float: left;
+    height: 60px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.following-info h5 {
+    margin-bottom: 0;
+    font-size: 20px;
+}
+
+.following-info span {
+    margin-right: 20px;
+    font-size: 13px;
+}
+
+.following-info p {
+    margin-bottom: 0;
+    font-size: 13px;
+}
+
+.btn-holder {
+    width: calc(100% - 650px);
+    height: 70px;
+    float: left;
+}
+
+.btn-holder button {
+    float: right;
+    width: auto;
+    background-color: #FFF;
+    color: #6e5eff;
+    border: 1px solid #6e5eff;
+    border-radius: 3px;
+}
+@media(max-width: 991px)
+{
+    .following-list li
+    {
+        height: auto;
+        display: block;
+        width: 100%;
+    }
+    .following-info
+    {
+        float: none;
+        width: calc(100% - 65px);
+        height: auto;
+        display: block;
+        margin-left: 65px;
+    }
+    .sect-following
+    {
+        margin-bottom: 100px;
+    }
+    .btn-holder,.btn-holder button
+    {
+        float: none;
+        width: auto;
+        height: auto;
+        display: block;
+        
+    }
+    .btn-holder
+    {
+        margin: 15px 0px
+    }
+}

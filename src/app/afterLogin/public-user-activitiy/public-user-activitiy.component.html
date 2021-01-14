@@ -1,0 +1,127 @@
+<headerone></headerone>
+<sideMenu></sideMenu>
+<spinner *ngIf="spinner" ></spinner>
+<!-- Main wrapper -->
+<section class="main">
+    <div class="custom-container">
+        <div class="row">
+            <div class="col-12">
+                <h5>Activities</h5>
+            </div>
+        </div> 
+        <div class="row">
+            <!-- Tab list -->
+            <div class="col-lg-3">
+                <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                    <a class="nav-link active icon" id="history-tab" data-toggle="pill" href="#history" role="tab" aria-controls="history" aria-selected="true">
+                        <svg version="1.1" id="icons" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	                        viewBox="0 0 22 21.228" style="enable-background:new 0 0 22 21.228;" xml:space="preserve">
+                            <path d="M22,13V3c0-1.654-1.346-3-3-3H3C1.346,0,0,1.346,0,3v10c0,1.654,1.346,3,3,3h3v-2H3c-0.552,0-1-0.449-1-1V3
+                            	c0-0.551,0.448-1,1-1h16c0.552,0,1,0.449,1,1v10c0,0.551-0.448,1-1,1h-5.878l-3.12,2.773V14h-2v7.228L13.882,16H19
+	                            C20.654,16,22,14.654,22,13z"/>
+                            <polygon points="10,4 10,12 14,8 "/>
+                        </svg>
+                        Recommended
+                    </a>
+                    <a class="nav-link icon" id="likes-tab" data-toggle="pill" href="#likes" role="tab" aria-controls="likes" aria-selected="false">
+                        <svg viewBox="0 0 16 16" width="512" xmlns="http://www.w3.org/2000/svg">
+                            <path d="m3.5 0h-3c-.276367 0-.5.223633-.5.5v9c0 .276367.223633.5.5.5h3c.276367 0 .5-.223633.5-.5v-9c0-.276367-.223633-.5-.5-.5zm-.5 9h-2v-8h2z" transform="translate(0 5)"/><path d="m9.15332 5.02979h-2.9541c-.258301 0-.387695-.172363-.431152-.246582-.043457-.0737305-.131348-.270508-.0063477-.496094l1.0415-1.87549c.228516-.410645.251953-.893555.0649414-1.32471-.187012-.43164-.556152-.744629-1.0127-.858398l-.734375-.183594c-.178711-.0449219-.368164.0122071-.492676.150391l-3.9873 4.42969c-.413574.460449-.641113 1.0542-.641113 1.67236v4.23242c0 1.37842 1.12158 2.5 2.5 2.5l4.97412-.0004883c1.12305 0 2.11475-.756348 2.41113-1.83887l1.06738-3.89844c.03125-.13623.0473633-.275879.0473633-.415527 0-1.01807-.828613-1.84668-1.84668-1.84668zm.82959 2.01709-1.0625 3.87939c-.177734.649414-.772461 1.10352-1.44629 1.10352h-4.97412c-.827148 0-1.5-.672852-1.5-1.5v-4.23242c0-.371094.136719-.727539.384766-1.00342l3.78564-4.20605.442383.110352c.152344.0380859.275391.142578.337891.286621.0625.143555.0546875.304199-.0214844.441406l-1.0415 1.87549c-.260742.469238-.253906 1.02588.0185547 1.48877.272461.462891.755859.739258 1.29297.739258h2.9541c.466797 0 .84668.379883.84668.84668 0 .0634766-.0073242.127441-.0170898.17041z" transform="translate(5 .97)"/>
+                        </svg>
+                        Liked Videos
+                    </a>
+                    <a class="nav-link icon" id="shared-tab" data-toggle="pill" href="#shares" role="tab" aria-controls="shares" aria-selected="false">
+                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	                        viewBox="0 0 13.5 11.25" style="enable-background:new 0 0 13.5 11.25;" xml:space="preserve">
+                            <path d="M8.262,10.512V7.453C6.386,7.43,4.775,7.734,3.428,8.367C2.08,9,0.937,9.961,0,11.25c0.352-1.921,1.166-3.668,2.443-5.238
+	                            c1.277-1.57,3.217-2.566,5.818-2.988V0L13.5,5.273L8.262,10.512z"/>
+                            <g></g>
+                            <g></g>
+                            <g></g>
+                            <g></g>
+                            <g></g>
+                            <g></g>
+                        </svg>
+                        Shared Videos
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Tab content-->
+            <div class="col-lg-9 video-container">
+                <div class="tab-content" id="v-pills-tabContent">
+                    <!-- Watch history section -->
+                    <div class="tab-pane fade show active" id="history" role="tabpanel" aria-labelledby="history-tab">
+                        <div class="row history-row" *ngFor="let i of watchHistory">
+                            <div class="row width-100" *ngIf="i.videoInfo">
+                            <div class="col-3 video-img">
+                                <img src="{{i.videoInfo.poster}}" thumnailsDirective id="{{i.videoInfo._id}}" (click)="showVideo(i.videoInfo._id)">
+                            </div>
+                            <div class="col-9 video-details">
+                                <h5>{{i.videoInfo.Title}}</h5>
+                                <p>Watched by you, {{i.createdAt | dateAgo}}</p>
+                                <span *ngFor="let c of i.videoInfo.Categories">{{c}}</span>
+                                <!-- <p class="video-desc">Description</p> -->
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Liked videos section -->
+                    <div class="tab-pane fade show" id="likes" role="tabpanel" aria-labelledby="likes-tab">
+                            <div class="row history-row animations" *ngFor="let i of likedVideos" (click)="showVideo(i.videoData._id)">
+                                <div class="row width-100" *ngIf="i.videoData">
+                                    <div class="col-3 video-img" >
+                                        <img src="{{i.videoData.poster}}" thumnailsDirective id="{{i.videoData._id}}">
+                                        <div class="over">
+                                                <span>
+                                                        <img  src="../../../assets/images/landing/video-decisions.svg">
+                                                    {{i.videoData.totalchild}}</span>
+                                                <span>
+                                                        <img  src="../../../assets/images/landing/video-outcomes.svg">
+                                                    {{i.videoData.totallevel}}</span>
+                                            </div>
+                                    </div>
+                                    <div class="col-9 video-details" >
+                                        <h5>{{i.videoData.Title}}</h5>
+                                        <p>reacted <img src="{{getEmoji(i.category)}}" style="height: auto;width: 17px;" class="reacted" /> by you, {{i.createdAt | dateAgo}}</p>
+                                        <span *ngFor="let c of i.videoData.Categories">{{c}}</span>
+                                        <!-- <p class="video-desc">Description</p> -->
+                                    </div>
+                                    </div>
+                                </div>
+                    </div>
+ 
+                    <!-- Shared videos section -->
+                    <div class="tab-pane fade show" id="shares" role="tabpanel" aria-labelledby="shares-tab">
+                        <h5 style="text-align: center;" *ngIf="sharedVideos.length==0">No shared videos found.....</h5>
+                        <div class="row history-row animations" *ngFor="let i of sharedVideos" (click)="showVideo(i._id)">
+                            <div class="row width-100" *ngIf="i.videoDetails">
+                                <div class="col-3 video-img">
+                                    <img src="{{i.videoDetails.poster}}" thumnailsDirective id="{{i._id}}" >
+                                    <div class="over">
+                                            <span>
+                                                    <img  src="../../../assets/images/landing/video-decisions.svg">
+                                                {{i.videoDetails.totalchild}}</span>
+                                            <span>
+                                                    <img  src="../../../assets/images/landing/video-outcomes.svg">
+                                                {{i.videoDetails.totallevel}}</span>
+                                        </div>
+                                </div>
+                                <div class="col-9 video-details">
+                                    <h5>{{i.videoDetails.Title}}</h5>
+                                    <p>Shared, {{i.shareTime | dateAgo}}</p>
+                                    
+                                         <span *ngFor="let c of i.videoDetails.Categories">{{c}}</span>
+                                     
+                                    <!-- <p class="video-desc">Description</p> -->
+                                </div>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<withoutloginfooter></withoutloginfooter>

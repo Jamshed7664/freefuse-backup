@@ -1,0 +1,366 @@
+<headerone></headerone>
+<spinner *ngIf="spinner"  [@fadeInOut]></spinner>
+    <section class="upload-videos-sec">
+            <div class="container video-common-sec">
+              <div class="upload-vid" *ngIf="!isTemplate">
+                <h3>Start by uploading the first video</h3>
+    
+                <!-- <div class="upload-v-btn"> -->
+             
+
+                  <!-- <button type="button" data-toggle="modal" data-target="#upload-vid-Modal" (click)="cancelUpload();" data-backdrop="static" data-keyboard="false">
+                    <div class="media">
+                      <img src="assets/images/upload-video-icons/upload-video.svg" alt="" class="mr-3">
+                      <div class="media-body text-left">
+                        <h5>Upload</h5>
+                        <p>Upload a video from your device library</p>      
+                      </div>
+                    </div>
+                  </button> -->
+
+
+                <!-- </div> -->
+    
+                <div class="upload-other-btn pointer">
+                  <div class="d-flex align-items-center txt" style="cursor: pointer;" (click)="isOpen = !isOpen">
+                    <!-- <img src="assets/images/Plus.png" class="ml-1 mr-2" alt=""> -->
+                    <h5>Create an Interactive Video</h5>
+                  </div>  
+
+                  <!-- <div *ngIf="isOpen" [@fadeInOut]> -->
+                  <div  [@fadeInOut]>
+                    <div class="options1 opeinds" (click)="openInteractiveVideo()">Free Board</div>
+                    <div class="options2 opeinds" (click)="isTemplate = true">Video Template</div>
+                  </div>
+                 
+                </div>
+    
+                    
+              </div>
+
+
+
+              <div class="upload-vid templar" *ngIf="isTemplate" >
+                <a class="left-arrow-on" (click)="isTemplate = !isTemplate"><img src="../../../assets/images/left-arrow 2.svg" /> Back</a>
+                <h3 class="mt-5">Please Select a template type</h3>
+    
+                <div class="trmplates">
+                  <div class="row">
+                    <div class="col-6  pl-2 pr-2 templatetype pointer okay{{i.id}}" *ngFor="let i of templatetypes"  (click)="templatetypesmethod(i.id)">
+                      <div class="fonrmation">
+                        <img src="{{i.src}}" />
+                        <span><b>{{i.name}}</b></span>
+                        <span>{{i.type}}</span>
+                      </div>
+                    </div>
+                  </div>
+                 
+                </div>
+    
+                    
+              </div>
+
+
+
+
+
+            </div>
+        </section>
+    
+    
+    
+    
+      <!-- Upload Modal Screen -->
+      <div class="modal fade upload-vid-Modal" id="upload-vid-Modal">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content">
+          
+            <div class="modal-header border-bottom-0">
+              <h4 class="modal-title">Upload from your device</h4>
+              <button type="button" class="close" data-dismiss="modal" (click)="cancelUpload()">&times;</button>
+            </div>
+            
+            <div class="modal-body">
+              <div class="select-vid-area text-center" *ngIf="uploadVideoObject.file.length < 1"  >
+                <span class="upload-img">
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" width="25px" height="25px" class=""><g><g>
+                      <g>
+                        <path d="M472,312.642v139c0,11.028-8.972,20-20,20H60c-11.028,0-20-8.972-20-20v-139H0v139c0,33.084,26.916,60,60,60h392    c33.084,0,60-26.916,60-60v-139H472z" data-original="#000000" class="active-path" data-old_color="#000000" fill="#FFFFFF"/>
+                      </g>
+                    </g><g>
+                      <g>
+                        <polygon points="256,0.358 131.716,124.642 160,152.926 236,76.926 236,388.642 276,388.642 276,76.926 352,152.926     380.284,124.642   " data-original="#000000" class="active-path" data-old_color="#000000" fill="#FFFFFF"/>
+                      </g>
+                    </g></g>
+                  </svg>
+                </span>
+                <!-- <h6>Drag and drop your video here</h6> -->
+                <p>Click the button below to select video from your device</p>
+                <!-- <button type="fil">Select file</button> -->
+            
+                  <label for="selectFile" class="button-style" >Select Video
+                   <input type='file' accept="video/mp4,video/x-m4v,video/*" (change)="onSelectFile($event)"  id="selectFile" name="file" multiple/>
+                  </label>
+
+
+                
+
+              </div>
+
+              <div class="select-vid-area text-center" *ngIf="uploadVideoObject.file.length > 0"  >
+                
+                <!-- <h6>Drag and drop your video here</h6> -->
+                <!-- <p>Click the button bellow to select video from your device</p> -->
+                <!-- <button type="fil">Select file</button> -->
+            
+                <!-- <video *ngIf="uploadVideoObject.url" [src]="uploadVideoObject.url" style="display: none" (loadedmetadata)="getDuration($event)"></video>  -->
+
+             
+                <!-- <div plyr style="width: 640px;" plyrTitle="Video 1" [plyrPlaysInline]="true" [plyrSources]="uploadVideoObject.url" (plyrInit)="player = $event" (plyrPlay)="played($event)" ></div> -->
+
+              <div *ngFor="let i of uploadVideoObject.file" style="position:relative">
+                  <div class="fileName">File : {{i.originalName}} 
+                    <span  *ngIf="i.uploadPercentage!==undefined">{{i.uploadPercentage + " %" }}</span>
+                    <span  *ngIf="i.uploadPercentage=='undefined'">0 %</span>
+                  </div>
+                  
+                  <div class="uploaded-percetange">
+                    <div class="progress">
+                      <div *ngIf="!i.isOtherone" class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuemin="0" aria-valuemax="100" [ngStyle]="{'width': i.uploadPercentage+'%'}"></div>
+                      <div *ngIf="i.isOtherone" class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuemin="0" aria-valuemax="100" [ngStyle]="{'width': i.uploadPercentage+'%'}" style="background-color: #6e5eff;"></div>
+                    
+                    </div>
+                  
+                  </div>
+
+                  <!-- <div class="cancel-upload-button" (click)="cancelCurrentFile(i)" data-toggle="tooltip" data-placement="top" title="Remove File">
+                    <img src ="assets/images/settings/x.svg" />
+                  </div> -->
+                </div>
+
+                  <!-- <label for="selectFile" class="button-style" style="display: inline; margin-right: 15px;">Select More
+                    <input type='file' accept="video/mp4,video/x-m4v,video/*" (change)="onSelectFile($event)"  id="selectFile"   name="file" multiple />
+                  </label> -->
+
+                  <!-- <button type="button" class="custom-btn" (click)="uploadVideo()">Upload</button>
+                  <button type="button" class="cancel-button custom-btn"  (click)="cancelUpload()" >Cancel</button> -->
+              </div>
+
+
+
+    
+              <div class="vid-library-options mt-4 mb-4" *ngIf="uploadVideoObject.file.length < 1">
+                <div class="row">
+                  <div class="col-md-6 pr-md-1">
+                    <div class="vid-options">
+                      <div class="txt mr-2">
+                        <h5>FreeFuse library</h5>
+                        <p>You can reuse videos uploaded previously</p>
+                      </div>
+                      <!-- <div class="search position-relative h-100">
+                        <input type="text" class="form-control">
+                        <button type="button" class="btn" id="vid-search-btn">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="17" height="18" viewBox="0 0 19.999 20.77">
+                            <defs> </defs> <path id="search" d="M20.873 20.106l-5.827-6.06a8.242 8.242 0 1 0-.58.529l5.841 6.075a.392.392 0 1 0 .565-.544zm-11.655-4.42a7.451 7.451 0 1 1 7.451-7.451 7.459 7.459 0 0 1-7.451 7.451z" class="cls-1" transform="translate(-.983)"></path>
+                          </svg>
+                        </button>
+                      </div> -->
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="vid-options">
+                      <select class="form-control" (change)="changeFilterUploadVideo(changeFilterUploadVideoVal)" name="changeFilterUploadVideo" [(ngModel)]="changeFilterUploadVideoVal">
+                        <option value="recentFirst">Recent</option>
+                        <option value="size">Size</option>
+                        <option value="duration">Duration</option>
+                        <option value="name">Name</option>
+
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+    
+              <div class="upload-vid-list FF-scroll-modify" *ngIf="!loadingVideo && uploadVideoObject.file.length < 1">
+              
+              <div class="text-center" *ngIf="allUploadedVideo.length < 1">No Videos Upload!</div>
+              
+                <div *ngIf="allUploadedVideo.length > 0">
+                <div class="row mb-3 animations" *ngFor="let i of allUploadedVideo; let index = index">
+                  <div class="col-md-12 col-lg-6">
+                    <div class="choose-vid">
+                      <div class="form-group form-check d-flex align-items-center pl-0 mb-0">
+                          <video  width="200" height="100" controls id="video_player{{index}}" poster="{{i.poster}}" class="ml-2 mr-3 video-js vjs-default-skin vjs-big-play-centered"  preload="auto"  videojs >
+                            <source src="{{i.URL}}" type="application/x-mpegURL">
+                          </video> 
+                          <h6 class="video-title mb-0">{{i.name}} <samp class="d-block size-block">{{i.size | size}}</samp></h6>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-12 col-lg-6 d-flex align-items-center">
+                    <div class="row vid-timing" style="width:100%">
+                      <div class="col-md-12 col-lg-6 video-stats">
+                        <samp class="d-block">Duration</samp>
+                        <span>{{i.duration | minuteSeconds}}</span>
+                      </div>
+                      <div class="col-md-12 col-lg-6 pl-4 video-stats">
+                        <samp class="d-block">Uploaded On</samp>
+                        <span>{{i.updatedAt |  date:'MM/dd/yyyy'}}</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+                
+                
+    
+              </div>
+
+              <div *ngIf="loadingVideo" style="min-height: 300px;text-align: center">
+                    Loading Latest Video
+              </div>
+              <!--  -->
+                
+            </div>
+            
+          </div>
+        </div>
+      </div>
+
+
+
+
+      <!-- url popup -->
+    
+      <!-- <div class="modal fade upload-url-Modal upload-vid-Modal" id="upload-url-Modal">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content">
+          
+            <div class="modal-header border-bottom-0 pb-3">
+              <h4 class="modal-title">Video url</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            
+            <div class="modal-body">
+              <div class="vid-url-body">
+                <div *ngIf="!isUploaded" >
+                  <input type="text" class="form-control" placeholder="Paste your link here"  [(ngModel)]="uploadVideoObject.Url" name="URL_Upload" #URL_Upload="ngModel" required id="URL_Upload"  [ngClass]="{'custom-alert-border':(URL_Upload.invalid && URL_Upload.touched)}">
+                  <div *ngIf="URL_Upload.invalid && URL_Upload.touched"  [@fadeInOut] class="custom-alert">
+                    <div *ngIf="URL_Upload.errors.required"  [@fadeInOut]>
+                            This is required!
+                    </div> 
+                  
+                    </div>
+                    
+                  <div class="url-txt">
+                    <h6>Video url example format:</h6>
+                    <p>https://youtube.com/</p>
+                  </div>
+                  <button type="button"(click)="previewURL()" [disabled]="URL_Upload.invalid">Save</button>
+                </div>
+            </div>
+
+
+            <div *ngIf="isUploaded"  >
+
+              <div class="select-vid-area text-center" >
+                 -->
+                  
+              <!-- <iframe width="560" height="315" [src]="uploadVideoObject.url" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen *ngIf="buttontype=='url'"></iframe> -->
+                
+                  <!-- <input type="text" class="form-control" placeholder="Paste your link here"  [(ngModel)]="uploadVideoObject.Url" name="URL_Upload" #URL_Upload="ngModel" required id="URL_Upload"  [ngClass]="{'custom-alert-border':(URL_Upload.invalid && URL_Upload.touched)}">
+                  <div *ngIf="URL_Upload.invalid && URL_Upload.touched" class="custom-alert">
+                    <div *ngIf="URL_Upload.errors.required">
+                            This is required!
+                    </div> 
+                  
+                    </div>
+  
+                    <button type="button" class="custom-btn" (click)="uploadURL()">Upload</button>
+                    <button type="button" class="cancel-button custom-btn"  (click)="cancelUpload()" >Cancel</button>
+  
+                </div>
+
+            </div>
+
+              
+
+
+              <div class="vid-library-options mt-4 mb-4 ">
+                <div class="row">
+                  <div class="col-md-6 pr-md-1">
+                    <div class="vid-options">
+                      <div class="txt mr-2">
+                        <h5>FreeFuse library</h5>
+                        <p>You can reuse videos uploaded previously</p>
+                      </div> -->
+                      <!-- <div class="search position-relative h-100">
+                        <input type="text" class="form-control">
+                        <button type="button" class="btn" id="vid-search-btn">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="17" height="18" viewBox="0 0 19.999 20.77">
+                            <defs> </defs> <path id="search" d="M20.873 20.106l-5.827-6.06a8.242 8.242 0 1 0-.58.529l5.841 6.075a.392.392 0 1 0 .565-.544zm-11.655-4.42a7.451 7.451 0 1 1 7.451-7.451 7.459 7.459 0 0 1-7.451 7.451z" class="cls-1" transform="translate(-.983)"></path>
+                          </svg>
+                        </button>
+                      </div> -->
+                    <!-- </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="vid-options"> -->
+                      <!-- <select class="form-control mr-3">
+                        <option>All videos</option>
+                        <option>Uploaded</option>
+                        <option>URL</option>
+                      </select> -->
+                      <!-- <select class="form-control" (change)="changeFilterURL(uploadVideoObject.changeFilterURL)" name="changeFilterURL" [(ngModel)]="uploadVideoObject.changeFilterURL">
+                        <option value="recentFirst">Recent First</option>
+                        <option value="recentLast">Recent Last</option>
+                      
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+    
+              <div class="upload-vid-list FF-scroll-modify">
+                <div class="text-center" *ngIf="uploadVideoObject.allUrls.length < 1">No URL Added!</div>
+                <div class="row mb-3" *ngFor="let i of uploadVideoObject.allUrls">
+                  <div class="col-md-12 col-lg-9">
+                    <div class="choose-vid">
+                      <div class="form-group form-check d-flex align-items-center pl-0 mb-0">
+                          <iframe width="200" height="100" [src]="i.URL" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  
+                          <h6 class="mb-0" style="margin-left: 10px;">{{i.name}} </h6>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-12 col-lg-3 d-flex align-items-center">
+                    <div class="row vid-timing" style="width: 100%"> -->
+                      <!-- <div class="col-6">
+                        <samp class="d-block">Duration</samp>
+                        <span>{{i.duration}}</span>
+                      </div> -->
+                      <!-- <div class="col-6 pl-4">
+                        <samp class="d-block">Uploaded On</samp>
+                        <span>{{i.updatedAt |  date:'MM/dd/yyyy'}}</span>
+                      </div>
+                    </div>
+                  </div>
+                </div> -->
+
+                
+                
+    
+              <!-- </div> -->
+
+
+
+              <!--  -->
+            <!-- </div>
+            
+          </div>
+        </div>
+      </div> -->
+      <!-- Upload Modal Screen -->
+
+      
+<withoutloginfooter></withoutloginfooter>

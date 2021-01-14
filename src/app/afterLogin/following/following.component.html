@@ -1,0 +1,38 @@
+<headerone></headerone>
+<sideMenu></sideMenu>
+<spinner *ngIf="spinner"></spinner>
+<section class="sect-following" *ngIf="!spinner">
+    <div class=" container ">
+        <div class="row following-row">
+            <div class="col-12">
+                <h5>Following</h5>
+            </div>
+        </div>
+
+        <!-- List --> 
+        <div class="row">
+            <div class="col-12">
+                    <div class="text-center center" *ngIf="followingList && followingList.length < 1"> Not Following yet!</div>
+                <ul class="following-list" *ngIf="followingList.length > 0">
+                    <li *ngFor="let f of followingList">
+                        <div class="following-image">
+                            <img  src="{{f.userinfo.profilePic}}" *ngIf="f.userinfo.profilePic" (click)="viewPublicProfile(f.userinfo._id)">
+                            <span class="profile-image" *ngIf="!f.userinfo.profilePic" imgName  title="{{f.userinfo.firstname}},{{f.userinfo.lastname}}" style="border-radius:50%;width: 70px;height: 70px;line-height: 70px;"></span>
+                        </div>
+                        <div class="following-info pointer" (click)="viewPublicProfile(f.userinfo._id)">
+                            <h5>{{f.userinfo.username}}</h5>
+                            <span>{{f.userinfo.followers.length}} Followers</span>
+                            <span>{{f.userinfo.following.length}} Following</span>
+                            <span>{{f.publishVideosinfo}} Videos</span>
+                            <p>{{f.userinfo.bio}}</p>
+                        </div>
+                        <div class="btn-holder">
+                                <button type="button" (click)="unfollowBack(f.userinfo._id)" *ngIf="f.userinfo.iAMFollowing">Following</button>
+                                <button type="button" (click)="followBack(f.userinfo._id)" *ngIf="!f.userinfo.iAMFollowing">Follow</button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>

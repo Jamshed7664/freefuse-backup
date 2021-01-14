@@ -1,0 +1,66 @@
+<headerone></headerone>
+<sideMenu></sideMenu>
+<spinner *ngIf="spinner" [@fadeInOut]></spinner>
+<section class="library">
+    <div class=" custom-container">
+        <div class="row" style="margin-bottom: 15px;">
+            <div class="col-lg-9">
+              <h5>Uploaded Videos {{allVideos.length}}</h5>
+            </div>
+            <div class="col-lg-3">
+              <div class="vid-options">
+                <select class="form-control" (change)="sortVideos($event)" name="changeFilterUploadVideo">
+                  <option value="recentFirst">Recent</option>
+                  <option value="size">Size</option>
+                  <option value="duration">Duration</option>
+                  <option value="name">Name</option>
+                </select>
+              </div>
+            </div>
+          
+        </div>
+        <!-- Videos --> 
+        <div class="row"  >
+            <div class="col-lg-3 pointer" style="margin-bottom: 40px;" *ngFor="let v of allVideos" >
+                <img src="{{v.poster}}" class="poster" (click)="showModal(v._id)" thumnailsDirective>
+                <div class="custom-card" (click)="showModal(v._id)">
+                    <p style="font-weight: 600;margin: 5px 0;">{{v.name}}</p>
+                    <p>Size: {{v.size | size}}</p>
+                    <p  style="margin-bottom: 10px">Duration: {{v.duration | minuteSeconds}}</p>
+                    <!-- <button type="button" class="btn-delete">Delete</button> -->
+                </div>
+                <img src="assets/images/delete-512.png" title="Delete Video" class="delete-video" (click)="deleteVideo(v)"/>
+               
+            </div>
+
+          </div>
+             <!-- Modal -->
+             <div class="modal fade" id="preview-Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Preview Video</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="showVideo = false">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                        <div style="height: 300px;">   
+                            <video  width="100%" poster="{{currentVideoObj.poster}}" controls  preload="auto" videojs class="video-js vjs-default-skin vjs-big-play-centered" *ngIf="showVideo" id="video-all">
+                                <source src="{{currentVideoObj.URL}}" type="application/x-mpegURL">
+                            </video> 
+                       </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="showVideo = false">Close</button>
+                      <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+       
+    </div>
+</section>
+<withoutloginfooter></withoutloginfooter>
+
+

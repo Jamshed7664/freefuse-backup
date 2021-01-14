@@ -1,0 +1,1989 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>my-app documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">my-app documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>HeaderComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/afterLogin/header/header.component.ts</code>
+</p>
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>headerone</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./header.component.css</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./header.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#headerObj">headerObj</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#isLoggedIN">isLoggedIN</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#notifications">notifications</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#resArray">resArray</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#resObject">resObject</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#results">results</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#searchText">searchText</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#showSpinner">showSpinner</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#trimmedUser">trimmedUser</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#users">users</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#getNotifications">getNotifications</a>
+                            </li>
+                            <li>
+                                <a href="#gotoSearch">gotoSearch</a>
+                            </li>
+                            <li>
+                                <a href="#gotoUser">gotoUser</a>
+                            </li>
+                            <li>
+                                <a href="#logout">logout</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#onBackspace">onBackspace</a>
+                            </li>
+                            <li>
+                                <a href="#onBlur">onBlur</a>
+                            </li>
+                            <li>
+                                <a href="#onKeyPress">onKeyPress</a>
+                            </li>
+                            <li>
+                                <a href="#onSearch">onSearch</a>
+                            </li>
+                            <li>
+                                <a href="#splitList">splitList</a>
+                            </li>
+                            <li>
+                                <a href="#viewNotification">viewNotification</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(urlService: <a href="../injectables/CrudService.html">CrudService</a>, router: <a href="https://angular.io/api/router/Router" target="_blank">Router</a>, toastr: ToastrService)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/app/afterLogin/header/header.component.ts:13</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>urlService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/CrudService.html" target="_self" >CrudService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>router</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/router/Router" target="_blank" >Router</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>toastr</td>
+                                                  
+                                                        <td>
+                                                                    <code>ToastrService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getNotifications"></a>
+                    <span class="name">
+                        <b>
+                            getNotifications
+                        </b>
+                        <a href="#getNotifications"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getNotifications()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="138"
+                            class="link-to-prism">src/app/afterLogin/header/header.component.ts:138</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="gotoSearch"></a>
+                    <span class="name">
+                        <b>
+                            gotoSearch
+                        </b>
+                        <a href="#gotoSearch"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>gotoSearch(searc: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="84"
+                            class="link-to-prism">src/app/afterLogin/header/header.component.ts:84</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>searc</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="gotoUser"></a>
+                    <span class="name">
+                        <b>
+                            gotoUser
+                        </b>
+                        <a href="#gotoUser"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>gotoUser(id: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="107"
+                            class="link-to-prism">src/app/afterLogin/header/header.component.ts:107</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>id</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="logout"></a>
+                    <span class="name">
+                        <b>
+                            logout
+                        </b>
+                        <a href="#logout"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>logout()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="58"
+                            class="link-to-prism">src/app/afterLogin/header/header.component.ts:58</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <b>
+                            ngOnInit
+                        </b>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="31"
+                            class="link-to-prism">src/app/afterLogin/header/header.component.ts:31</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onBackspace"></a>
+                    <span class="name">
+                        <b>
+                            onBackspace
+                        </b>
+                        <a href="#onBackspace"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onBackspace(event: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="118"
+                            class="link-to-prism">src/app/afterLogin/header/header.component.ts:118</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>event</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onBlur"></a>
+                    <span class="name">
+                        <b>
+                            onBlur
+                        </b>
+                        <a href="#onBlur"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onBlur(event: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="112"
+                            class="link-to-prism">src/app/afterLogin/header/header.component.ts:112</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>event</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onKeyPress"></a>
+                    <span class="name">
+                        <b>
+                            onKeyPress
+                        </b>
+                        <a href="#onKeyPress"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onKeyPress(event: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="90"
+                            class="link-to-prism">src/app/afterLogin/header/header.component.ts:90</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>event</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onSearch"></a>
+                    <span class="name">
+                        <b>
+                            onSearch
+                        </b>
+                        <a href="#onSearch"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onSearch(e: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="71"
+                            class="link-to-prism">src/app/afterLogin/header/header.component.ts:71</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>e</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="splitList"></a>
+                    <span class="name">
+                        <b>
+                            splitList
+                        </b>
+                        <a href="#splitList"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>splitList(source: Array<any>, chunkSize: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="154"
+                            class="link-to-prism">src/app/afterLogin/header/header.component.ts:154</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>source</td>
+                                    <td>
+                                            <code>Array&lt;any&gt;</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>chunkSize</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Array&lt;any&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="viewNotification"></a>
+                    <span class="name">
+                        <b>
+                            viewNotification
+                        </b>
+                        <a href="#viewNotification"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>viewNotification(id: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="159"
+                            class="link-to-prism">src/app/afterLogin/header/header.component.ts:159</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>id</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="headerObj"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            headerObj</b>
+                            <a href="#headerObj"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>{spinner:false,data:{}}</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/app/afterLogin/header/header.component.ts:20</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="isLoggedIN"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            isLoggedIN</b>
+                            <a href="#isLoggedIN"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>false</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/app/afterLogin/header/header.component.ts:28</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="notifications"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            notifications</b>
+                            <a href="#notifications"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>Array&lt;any&gt;</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">src/app/afterLogin/header/header.component.ts:29</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="resArray"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            resArray</b>
+                            <a href="#resArray"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>false</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/app/afterLogin/header/header.component.ts:24</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="resObject"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            resObject</b>
+                            <a href="#resObject"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>false</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/app/afterLogin/header/header.component.ts:25</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="results"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            results</b>
+                            <a href="#results"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>Array&lt;any&gt;</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">src/app/afterLogin/header/header.component.ts:22</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="searchText"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            searchText</b>
+                            <a href="#searchText"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>&#x27;&#x27;</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="21" class="link-to-prism">src/app/afterLogin/header/header.component.ts:21</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="showSpinner"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            showSpinner</b>
+                            <a href="#showSpinner"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>false</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/app/afterLogin/header/header.component.ts:23</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="trimmedUser"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            trimmedUser</b>
+                            <a href="#trimmedUser"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">src/app/afterLogin/header/header.component.ts:27</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="users"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            users</b>
+                            <a href="#users"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/app/afterLogin/header/header.component.ts:26</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
+import { CrudService } from &#x27;src/app/crud.service&#x27;;
+import{Router} from &#x27;@angular/router&#x27;;
+import { isArray } from &#x27;util&#x27;;
+import { ToastrService } from &#x27;ngx-toastr&#x27;;
+import * as _ from &#x27;lodash&#x27;;
+declare var $;
+@Component({
+  selector: &#x27;headerone&#x27;,
+  templateUrl: &#x27;./header.component.html&#x27;,
+  styleUrls: [&#x27;./header.component.css&#x27;]
+})
+export class HeaderComponent implements OnInit {
+
+  constructor(
+    private urlService:CrudService, 
+    private router:Router,
+    private toastr: ToastrService) { }
+
+  private headerObj:any &#x3D; {spinner:false,data:{}};
+  private searchText: any &#x3D; &#x27;&#x27;;
+  private results: Array&lt;any&gt; &#x3D; [];
+  private showSpinner: boolean &#x3D; false;
+  private resArray: boolean  &#x3D; false;
+  private resObject: boolean &#x3D; false;
+  private users:any &#x3D; [];
+  private trimmedUser:any &#x3D; [];
+private isLoggedIN: any &#x3D;  false
+  private notifications: Array&lt;any&gt; &#x3D; [];
+
+  ngOnInit() {
+    $(&#x27;.search-dropdown&#x27;).hide();
+    if(window.localStorage.getItem(&#x27;token&#x27;) &#x3D;&#x3D; null &amp;&amp; window.localStorage.getItem(&#x27;token&#x27;) &#x3D;&#x3D; undefined){
+      this.isLoggedIN &#x3D; false;
+      //$(&#x27;.search-dropdown&#x27;).hide();
+    }
+    else{
+      this.isLoggedIN &#x3D; true
+    }
+    if(this.isLoggedIN){
+        if(!!window.localStorage.getItem(&#x27;profilePic&#x27;))
+        {
+          this.headerObj.data.profilePic &#x3D; window.localStorage.getItem(&#x27;profilePic&#x27;)
+        
+        }
+        this.urlService.userDetails().subscribe(
+          success &#x3D;&gt;{
+              this.headerObj.data &#x3D; success.data.details;  
+              window.localStorage.setItem(&#x27;profilePic&#x27;,success.data.details.profilePic)
+              window.localStorage.setItem(&#x27;user&#x27;,success.data.details._id)
+          });
+          
+        $(&#x27;.search-dropdown&#x27;).hide();
+        this.getNotifications();
+      }
+  }
+
+  logout()
+  {
+    this.headerObj.spinner &#x3D; true;
+   
+       this.urlService.logout(&#x27;&#x27;).subscribe(
+         success &#x3D;&gt;{
+          window.localStorage.clear();
+          this.router.navigate([&#x27;/login&#x27;]);  
+          this.headerObj.spinner &#x3D; false;
+         })
+  }
+
+  // Search
+  onSearch(e: any) {
+    this.urlService.simpleVideoSearch(e.target.value).subscribe(
+      success &#x3D;&gt; {
+          this.router.navigate([&#x27;/search-results&#x27;], {queryParams: {search: e.target.value}});
+           // $(&#x27;.search-dropdown&#x27;).hide();
+       
+        $(&#x27;.search-dropdown&#x27;).hide();
+      },
+      error &#x3D;&gt; {
+      }
+    );
+  }
+
+  gotoSearch(searc:any)
+  {
+    this.router.navigate([&#x27;/search-results&#x27;], {queryParams: {search: searc}});
+    $(&#x27;.search-dropdown&#x27;).hide();
+  }
+  
+  onKeyPress(event: any) {
+    this.showSpinner &#x3D; true;
+    
+    setTimeout(() &#x3D;&gt; {
+       this.urlService.simpleVideoSearch(event.target.value).subscribe(
+        success &#x3D;&gt; {
+          this.users &#x3D; success.data.searchbyuser
+         
+          this.results &#x3D; success.data.searchdata;
+          this.trimmedUser &#x3D; this.users.slice(0, 10);
+          $(&#x27;.search-dropdown&#x27;).show();
+          this.showSpinner &#x3D; false;
+        });
+    });
+      
+
+  }
+  gotoUser(id:any)
+  {
+    this.router.navigate([&#x27;public-profile&#x27;], { queryParams: { user: id } });
+  }
+
+  onBlur(event: any) {
+    if (event.target.value &#x3D;&#x3D; &#x27;&#x27;) {
+      $(&#x27;.search-dropdown&#x27;).hide();
+    }
+  }
+
+  onBackspace(event: any) {
+    this.showSpinner &#x3D; true;
+    if (event.target.value &#x3D;&#x3D; &#x27;&#x27;) {
+      $(&#x27;.search-dropdown&#x27;).hide();
+      $(&#x27;.search-spinner&#x27;).hide();
+    }
+    if (event.target.value !&#x3D; &#x27;&#x27;) {
+      setTimeout(() &#x3D;&gt; {
+      //  console.log(&#x27;value:&#x27;, event.target.value);
+        this.urlService.simpleVideoSearch(event.target.value).subscribe(
+          success &#x3D;&gt; {
+              this.users &#x3D; success.data.searchbyuser
+              this.results &#x3D; success.data.searchdata;
+              $(&#x27;.search-dropdown&#x27;).show();
+              this.showSpinner &#x3D; false;
+          });
+      }, 100);
+    }
+  }
+
+  getNotifications() {
+    if(this.isLoggedIN){
+    let type: any &#x3D; &#x27;notViewed&#x27;
+    this.urlService.getNotifications(type).subscribe(
+      success &#x3D;&gt; {
+        if (isArray(success.data)) {
+          // this.notifications &#x3D; success.data;
+          let temp: Array&lt;any&gt; &#x3D; success.data;
+          let notifications3: Array&lt;any&gt; &#x3D; this.splitList(temp, 3);
+          this.notifications &#x3D; notifications3[0];
+        }
+      });
+    }
+  }
+
+  // Split list into a group of n
+  splitList(source: Array&lt;any&gt;, chunkSize: any): Array&lt;any&gt;{
+    let chunks &#x3D; _.chunk(source, chunkSize);    
+    return chunks;
+  }
+
+  viewNotification(id: any) {
+    for(let i of this.notifications) {
+      if (id &#x3D;&#x3D; i.notificationId) {
+        let requestObj: any &#x3D; {
+          &#x27;id&#x27;: i.notificationId
+        };
+        if (i.notificationType &#x3D;&#x3D; &#x27;follow&#x27;) {
+          this.urlService.postNotification(requestObj).subscribe(
+            success&#x3D;&gt;{
+              this.router.navigate([&#x27;/public-profile&#x27;], {queryParams: {user: i.userInfo._id}});
+            });
+        } else {
+          this.urlService.postNotification(requestObj).subscribe(
+            success&#x3D;&gt;{
+              this.router.navigate([&#x27;/videos&#x27;], {queryParams: {video: i.videoInfo._id}});
+            });
+        } 
+      }
+    }
+  }
+
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;spinner *ngIf&#x3D;&quot;headerObj.spinner&quot;&gt;&lt;/spinner&gt;
+&lt;header class&#x3D;&quot;hbfilms-top-header&quot;&gt;
+    &lt;nav class&#x3D;&quot;navbar navbar-expand-sm bg-white navbar-dark&quot;&gt;
+
+      &lt;a class&#x3D;&quot;navbar-brand header-logo&quot; [routerLink]&#x3D;&quot;[&#x27;/dashboard&#x27;]&quot;&gt;Free&lt;strong&gt;Fuse&lt;/strong&gt;&lt;/a&gt;
+
+      &lt;button class&#x3D;&quot;navbar-toggler&quot; type&#x3D;&quot;button&quot; data-toggle&#x3D;&quot;collapse&quot; data-target&#x3D;&quot;#collapsibleNavbar&quot;&gt;
+        &lt;span class&#x3D;&quot;navbar-toggler-icon&quot;&gt;&lt;/span&gt;
+      &lt;/button&gt;
+
+      &lt;div class&#x3D;&quot;collapse navbar-collapse&quot; id&#x3D;&quot;collapsibleNavbar&quot;&gt;
+      &lt;form class&#x3D;&quot;form-inline search-f&quot;&gt;
+        &lt;input class&#x3D;&quot;form-control border&quot; type&#x3D;&quot;text&quot; placeholder&#x3D;&quot;Search&quot; name&#x3D;&quot;search&quot; autocomplete&#x3D;&quot;off&quot;
+          [(ngModel)]&#x3D;&quot;searchText&quot;
+          (keypress)&#x3D;&quot;onKeyPress($event)&quot;
+          (blur)&#x3D;&quot;onBlur($event)&quot;
+          (keyup.backspace)&#x3D;&quot;onBackspace($event)&quot;
+          (keyup.enter)&#x3D;&quot;onSearch($event)&quot; #search&#x3D;&quot;ngModel&quot;&gt;
+        &lt;button class&#x3D;&quot;btn shadow-none&quot; type&#x3D;&quot;button&quot;&gt;
+            &lt;svg xmlns&#x3D;&quot;http://www.w3.org/2000/svg&quot; width&#x3D;&quot;18&quot; height&#x3D;&quot;18&quot; viewBox&#x3D;&quot;0 0 19.999 20.77&quot;&gt;
+              &lt;defs&gt; &lt;/defs&gt; &lt;path id&#x3D;&quot;search&quot; d&#x3D;&quot;M20.873 20.106l-5.827-6.06a8.242 8.242 0 1 0-.58.529l5.841 6.075a.392.392 0 1 0 .565-.544zm-11.655-4.42a7.451 7.451 0 1 1 7.451-7.451 7.459 7.459 0 0 1-7.451 7.451z&quot; class&#x3D;&quot;cls-1&quot; transform&#x3D;&quot;translate(-.983)&quot;&gt;&lt;/path&gt;
+            &lt;/svg&gt;
+        &lt;/button&gt;
+        
+        &lt;div class&#x3D;&quot;search-spinner&quot; *ngIf&#x3D;&quot;showSpinner&quot;&gt;
+          &lt;img src&#x3D;&quot;../../../assets/images/search-spinner.gif&quot; style&#x3D;&quot;width: 100%; height: 100%;&quot;&gt;
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot;search-dropdown&quot;&gt;
+          &lt;span *ngIf&#x3D;&quot;resObject&quot; style&#x3D;&quot;padding-left: 10px;&quot;&gt;No results found....&lt;/span&gt;
+          &lt;ul &gt;
+            &lt;li class&#x3D;&quot;head-type&quot; *ngIf&#x3D;&quot;results.length &gt; 0&quot;&gt;&lt;b&gt;Result Type : Videos&lt;/b&gt;&lt;/li&gt;
+            &lt;li *ngIf&#x3D;&quot;results.length &lt; 1 &quot;&gt;No results found....&lt;/li&gt;
+            &lt;li *ngFor&#x3D;&quot;let r of results&quot;&gt;
+              &lt;a (click)&#x3D;&quot;gotoSearch(r.videoInfo.Title)&quot;&gt;
+                {{r.videoInfo.Title}}
+              &lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li class&#x3D;&quot;view-all&quot; *ngIf&#x3D;&quot;results.length &gt; 10&quot;&gt;View All&lt;/li&gt;
+          &lt;/ul&gt; 
+
+          &lt;ul  class&#x3D;&quot;speartor&quot;&gt;
+              &lt;li class&#x3D;&quot;head-type&quot; *ngIf&#x3D;&quot;trimmedUser.length &gt; 0&quot;&gt;&lt;b&gt;Result Type : Users&lt;/b&gt;&lt;/li&gt;
+              &lt;li *ngFor&#x3D;&quot;let r of trimmedUser&quot;&gt;
+                &lt;a (click)&#x3D;&quot;gotoUser(r._id)&quot;&gt;
+                  &lt;img src&#x3D;&quot;{{r.profilePic}}&quot;  style&#x3D;&quot;width: 40px; height: 40px;object-fit: cover; border-radius: 4px&quot;/&gt;   {{r.firstname}} {{r.lastname}}
+                &lt;/a&gt;
+              &lt;/li&gt;
+              &lt;li class&#x3D;&quot;view-all&quot; *ngIf&#x3D;&quot;users.length &gt; 10&quot;&gt;View All&lt;/li&gt;
+            &lt;/ul&gt; 
+        &lt;/div&gt;
+      &lt;/form&gt;
+
+
+
+      &lt;ul class&#x3D;&quot;navbar-nav navbar-nav-2&quot; &gt;
+        &lt;!-- &lt;li class&#x3D;&quot;nav-item&quot;&gt;
+          &lt;a class&#x3D;&quot;nav-link&quot;&gt;
+            &lt;svg class&#x3D;&quot;gb_Ve&quot; focusable&#x3D;&quot;false&quot; viewBox&#x3D;&quot;0 0 24 24&quot;&gt;
+              &lt;path d&#x3D;&quot;M6,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM16,6c0,1.1 0.9,2 2,2s2,-0.9 2,-2 -0.9,-2 -2,-2 -2,0.9 -2,2zM12,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2z&quot;&gt;&lt;/path&gt;
+            &lt;/svg&gt;
+          &lt;/a&gt;
+        &lt;/li&gt; --&gt;
+        &lt;!-- My Stuff --&gt;
+        &lt;li class&#x3D;&quot;nav-item dropdown notif-drop stuff&quot; *ngIf&#x3D;&quot;isLoggedIN&quot;&gt;
+          &lt;a class&#x3D;&quot;nav-link dropdown-toggle my-link&quot; id&#x3D;&quot;my-stuff-drop&quot; data-toggle&#x3D;&quot;dropdown&quot;&gt;
+            My Stuff
+          &lt;/a&gt;
+          &lt;div class&#x3D;&quot;dropdown-menu t-122&quot;&gt;
+            &lt;a class&#x3D;&quot;dropdown-item icon&quot; [routerLink]&#x3D;&quot;[&#x27;/my-videos&#x27;]&quot;&gt;
+              &lt;svg version&#x3D;&quot;1.1&quot; id&#x3D;&quot;icons&quot; xmlns&#x3D;&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink&#x3D;&quot;http://www.w3.org/1999/xlink&quot; x&#x3D;&quot;0px&quot; y&#x3D;&quot;0px&quot;
+	              viewBox&#x3D;&quot;0 0 22.991 18.994&quot; style&#x3D;&quot;enable-background:new 0 0 22.991 18.994;&quot; xml:space&#x3D;&quot;preserve&quot;&gt;
+                &lt;polygon points&#x3D;&quot;5,0 3,0 3,3 0,3 0,5 3,5 3,8 5,8 5,5 8,5 8,3 5,3 &quot;/&gt;
+                &lt;path d&#x3D;&quot;M18.991,7.58V5.994c0-1.654-1.346-3-3-3L10,3v1.994h5.991c0.552,0,1,0.449,1,1v10c0,0.551-0.448,1-1,1h-10
+	                c-0.552,0-1-0.449-1-1V10H3l-0.009,5.994c0,1.654,1.346,3,3,3h10c1.654,0,3-1.346,3-3v-1.586l4,4V3.58L18.991,7.58z M20.991,13.58
+	                l-2-2v-1.172l2-2V13.58z&quot;/&gt;
+              &lt;/svg&gt;
+              &lt;!-- &lt;img src&#x3D;&quot;../../../assets/images/landing/camera-plus.svg&quot; style&#x3D;&quot;object-fit: fill; margin-right: 5px; width: 20px; height: 20px;&quot;&gt; --&gt;
+              My videos
+            &lt;/a&gt;
+            &lt;a class&#x3D;&quot;dropdown-item icon&quot; [routerLink]&#x3D;&quot;[&#x27;/user-activity&#x27;]&quot;&gt;
+              &lt;svg version&#x3D;&quot;1.1&quot; id&#x3D;&quot;icons&quot; xmlns&#x3D;&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink&#x3D;&quot;http://www.w3.org/1999/xlink&quot; x&#x3D;&quot;0px&quot; y&#x3D;&quot;0px&quot;
+	              viewBox&#x3D;&quot;0 0 22.019 23.019&quot; style&#x3D;&quot;enable-background:new 0 0 22.019 23.019;&quot; xml:space&#x3D;&quot;preserve&quot;&gt;
+                &lt;path d&#x3D;&quot;M8.019,14.019c0-1.654-1.346-3-3-3s-3,1.346-3,3s1.346,3,3,3S8.019,15.673,8.019,14.019z M4.019,14.019c0-0.551,0.448-1,1-1
+	                c0.552,0,1,0.449,1,1s-0.448,1-1,1C4.468,15.019,4.019,14.57,4.019,14.019z&quot;/&gt;
+                &lt;path d&#x3D;&quot;M0.019,21.019v2h2v-2c0-0.551,0.448-1,1-1h4c0.552,0,1,0.449,1,1v2h2v-2c0-1.654-1.346-3-3-3h-4
+	                C1.365,18.019,0.019,19.365,0.019,21.019z&quot;/&gt; 
+                &lt;path d&#x3D;&quot;M22.019,11.01C22.019,4.939,17.081,0,11.01,0S0,4.939,0,11.01h2C2,6.042,6.042,2,11.01,2c4.968,0,9.01,4.042,9.01,9.01
+	                s-4.042,9.009-9.01,9.009v2C17.081,22.019,22.019,17.08,22.019,11.01z&quot;/&gt;
+                &lt;polygon points&#x3D;&quot;10.008,4.008 10.008,11.422 14.301,15.715 15.715,14.302 12.008,10.594 12.008,4.008 &quot;/&gt;
+              &lt;/svg&gt;
+              &lt;!-- &lt;img src&#x3D;&quot;../../../assets/images/landing/stuff-history.svg&quot; style&#x3D;&quot;object-fit: fill; margin-right: 5px; width: 20px; height: 20px;&quot;&gt; --&gt;
+              History
+            &lt;/a&gt;
+            &lt;a class&#x3D;&quot;dropdown-item icon&quot; [routerLink]&#x3D;&quot;[&#x27;/library&#x27;]&quot;&gt;
+              &lt;svg version&#x3D;&quot;1.1&quot; id&#x3D;&quot;icons&quot; xmlns&#x3D;&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink&#x3D;&quot;http://www.w3.org/1999/xlink&quot; x&#x3D;&quot;0px&quot; y&#x3D;&quot;0px&quot;
+	              viewBox&#x3D;&quot;0 0 22 21.228&quot; style&#x3D;&quot;enable-background:new 0 0 22 21.228;&quot; xml:space&#x3D;&quot;preserve&quot;&gt;
+                &lt;path d&#x3D;&quot;M22,13V3c0-1.654-1.346-3-3-3H3C1.346,0,0,1.346,0,3v10c0,1.654,1.346,3,3,3h3v-2H3c-0.552,0-1-0.449-1-1V3
+	                c0-0.551,0.448-1,1-1h16c0.552,0,1,0.449,1,1v10c0,0.551-0.448,1-1,1h-5.878l-3.12,2.773V14h-2v7.228L13.882,16H19
+	                C20.654,16,22,14.654,22,13z&quot;/&gt;
+                &lt;polygon points&#x3D;&quot;10,4 10,12 14,8 &quot;/&gt;
+              &lt;/svg&gt;
+              &lt;!-- &lt;img src&#x3D;&quot;../../../assets/images/landing/stuff-library.svg&quot; style&#x3D;&quot;object-fit: fill; margin-right: 5px; width: 20px; height: 20px;&quot;&gt; --&gt;
+              Library
+            &lt;/a&gt;
+          &lt;/div&gt;
+        &lt;/li&gt;
+
+        &lt;!-- Upload Videos --&gt;
+        &lt;li class&#x3D;&quot;nav-item&quot; *ngIf&#x3D;&quot;isLoggedIN&quot;&gt;
+          &lt;a class&#x3D;&quot;nav-link&quot; [routerLink]&#x3D;&quot;[&#x27;/upload-videos&#x27;]&quot;&gt;
+            &lt;svg version&#x3D;&quot;1.1&quot; id&#x3D;&quot;icons&quot; xmlns&#x3D;&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink&#x3D;&quot;http://www.w3.org/1999/xlink&quot; x&#x3D;&quot;0px&quot; y&#x3D;&quot;0px&quot;
+	            viewBox&#x3D;&quot;0 0 22.991 18.994&quot; style&#x3D;&quot;enable-background:new 0 0 22.991 18.994;&quot; xml:space&#x3D;&quot;preserve&quot;&gt;
+              &lt;polygon points&#x3D;&quot;5,0 3,0 3,3 0,3 0,5 3,5 3,8 5,8 5,5 8,5 8,3 5,3 &quot;/&gt;
+              &lt;path d&#x3D;&quot;M18.991,7.58V5.994c0-1.654-1.346-3-3-3L10,3v1.994h5.991c0.552,0,1,0.449,1,1v10c0,0.551-0.448,1-1,1h-10
+              	c-0.552,0-1-0.449-1-1V10H3l-0.009,5.994c0,1.654,1.346,3,3,3h10c1.654,0,3-1.346,3-3v-1.586l4,4V3.58L18.991,7.58z M20.991,13.58
+              	l-2-2v-1.172l2-2V13.58z&quot;/&gt;
+            &lt;/svg&gt;
+            &lt;!-- &lt;img src&#x3D;&quot;../../../assets/images/landing/camera-plus.svg&quot; style&#x3D;&quot;object-fit: fill;&quot;&gt; --&gt;
+          &lt;/a&gt;
+        &lt;/li&gt;
+
+        &lt;!-- Notifications --&gt;
+        &lt;li class&#x3D;&quot;nav-item dropdown notif-drop&quot; *ngIf&#x3D;&quot;isLoggedIN&quot;&gt;
+          &lt;!-- Dropdown --&gt;
+          &lt;a class&#x3D;&quot;nav-link dropdown-toggle&quot; id&#x3D;&quot;navbardrop&quot; data-toggle&#x3D;&quot;dropdown&quot;&gt;
+            &lt;svg version&#x3D;&quot;1.1&quot; id&#x3D;&quot;icons&quot; xmlns&#x3D;&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink&#x3D;&quot;http://www.w3.org/1999/xlink&quot; x&#x3D;&quot;0px&quot; y&#x3D;&quot;0px&quot;
+	            viewBox&#x3D;&quot;0 0 16.023 20&quot; style&#x3D;&quot;enable-background:new 0 0 16.023 20;&quot; xml:space&#x3D;&quot;preserve&quot;&gt;
+              &lt;path d&#x3D;&quot;M8.006,20c1.104,0,2-0.896,2-2h-4C6.006,19.104,6.902,20,8.006,20z&quot;/&gt;
+              &lt;path d&#x3D;&quot;M9.002,2.079v-1.1C9.002,0.438,8.563,0,8.022,0c-0.541,0-0.98,0.438-0.98,0.979v1.095C3.638,2.546,1.006,5.468,1.006,9
+	              v4.589l-0.232,0.226c-0.946,0.922-0.824,1.712-0.667,2.101c0.125,0.31,0.56,1.03,1.908,1.036h11.99c1.343,0,1.781-0.722,1.907-1.032
+	              c0.158-0.39,0.282-1.181-0.665-2.103l-0.242-0.237V9C15.006,5.479,12.39,2.565,9.002,2.079z M2.474,14.951l0.532-0.519V9
+	              c0-2.757,2.243-5,5-5c2.757,0,5,2.243,5,5v5.421l0.542,0.53L2.474,14.951z&quot;/&gt;
+            &lt;/svg&gt;
+            &lt;!-- &lt;img src&#x3D;&quot;../../../assets/images/landing/bell-notifications.svg&quot; style&#x3D;&quot;object-fit: fill;&quot;&gt; --&gt;
+          &lt;/a&gt;
+          &lt;div class&#x3D;&quot;dropdown-menu notifications-dropdown&quot;&gt;
+            &lt;a class&#x3D;&quot;dropdown-item notification-text&quot; *ngIf&#x3D;&quot;notifications &amp;&amp; notifications.length &lt; 1&quot;&gt;
+              No notification yet!
+            &lt;/a&gt;
+            &lt;a class&#x3D;&quot;dropdown-item notification-text&quot; id&#x3D;&quot;{{n.notificationId}}&quot; *ngFor&#x3D;&quot;let n of notifications&quot; (click)&#x3D;&quot;viewNotification(n.notificationId)&quot;&gt;
+              &lt;!-- {{n.notificationType}} --&gt;
+              &lt;img src&#x3D;&quot;{{n.userInfo.profilePic}}&quot; alt&#x3D;&quot;&quot; class&#x3D;&quot;notification-pic&quot;&gt;
+              &lt;span class&#x3D;&quot;notification-link&quot;&gt;
+                {{n.userInfo.username}}
+              &lt;/span&gt;
+              &lt;!-- &lt;span class&#x3D;&quot;&quot;&gt;
+                {{n.followingUserInfo.username}}
+              &lt;/span&gt; --&gt;
+              &lt;span *ngIf&#x3D;&quot;n.notificationType&#x3D;&#x3D;&#x27;Comment&#x27;&quot;&gt;commented on &lt;/span&gt;
+              &lt;span *ngIf&#x3D;&quot;n.notificationType&#x3D;&#x3D;&#x27;Like&#x27;&quot;&gt;reacted on &lt;/span&gt;
+              &lt;span *ngIf&#x3D;&quot;n.notificationType&#x3D;&#x3D;&#x27;Share&#x27;&quot;&gt;shared &lt;/span&gt;
+              &lt;span *ngIf&#x3D;&quot;n.notificationType&#x3D;&#x3D;&#x27;follow&#x27;&quot;&gt;started following &lt;/span&gt;
+              &lt;span *ngIf&#x3D;&quot;n.notificationType&#x3D;&#x3D;&#x27;publishVideo&#x27;&quot;&gt; published &lt;/span&gt;
+              &lt;span *ngIf&#x3D;&quot;n.notificationType&#x3D;&#x3D;&#x27;contributor&#x27;&quot;&gt; added you as a contributor&lt;/span&gt;
+              &lt;span class&#x3D;&quot;notification-link&quot; *ngIf&#x3D;&quot;n.notificationType !&#x3D;&#x3D; &#x27;follow&#x27;&quot;&gt;{{n.videoInfo.Title}}&lt;/span&gt;
+              &lt;span class&#x3D;&quot;notification-link&quot; *ngIf&#x3D;&quot;n.notificationType &#x3D;&#x3D; &#x27;follow&#x27;&quot;&gt;{{n.followingUserInfo.username}}&lt;/span&gt;
+            &lt;/a&gt;
+            &lt;a class&#x3D;&quot;dropdown-item notification-link&quot; [routerLink]&#x3D;&quot;[&#x27;/notifications&#x27;]&quot; *ngIf&#x3D;&quot;notifications.length&gt;5&quot;&gt;View all&lt;/a&gt;
+          &lt;/div&gt;
+          &lt;!-- Dropdown end--&gt;
+        &lt;/li&gt;
+
+        &lt;!-- Profile --&gt;
+        &lt;li class&#x3D;&quot;nav-item dropdown notif-drop&quot; *ngIf&#x3D;&quot;isLoggedIN&quot;&gt;
+          &lt;!-- Dropdown --&gt;
+          &lt;a class&#x3D;&quot;nav-link dropdown-toggle&quot; id&#x3D;&quot;navbardrop1&quot; data-toggle&#x3D;&quot;dropdown&quot;&gt;
+            &lt;img src&#x3D;&quot;{{headerObj.data.profilePic}}&quot;&gt;
+          &lt;/a&gt;
+          &lt;div class&#x3D;&quot;dropdown-menu&quot;&gt;
+            &lt;a class&#x3D;&quot;dropdown-item&quot; [routerLink]&#x3D;&quot;[&#x27;/dashboard&#x27;]&quot; &gt; Profile&lt;/a&gt;
+            &lt;a class&#x3D;&quot;dropdown-item&quot; [routerLink]&#x3D;&quot;[&#x27;/editProfile&#x27;]&quot; &gt; My Account&lt;/a&gt;
+            &lt;a class&#x3D;&quot;dropdown-item&quot; (click)&#x3D;&quot;logout()&quot;&gt;Logout&lt;/a&gt;
+          &lt;/div&gt;
+          &lt;!-- Dropdown end--&gt;
+        &lt;/li&gt;
+        
+
+
+        
+        &lt;!--Sign In--&gt;
+    
+        &lt;li class&#x3D;&quot;nav-item&quot; [routerLink]&#x3D;&quot;[&#x27;/login&#x27;]&quot; *ngIf&#x3D;&quot;!isLoggedIN&quot;&gt;
+          &lt;a class&#x3D;&quot;nav-link btn-login my-link&quot; style&#x3D;&quot;border: 1px solid; border-radius: 6px;font-size: 14px&quot;&gt;
+            &lt;svg version&#x3D;&quot;1.1&quot; id&#x3D;&quot;icons&quot; xmlns&#x3D;&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink&#x3D;&quot;http://www.w3.org/1999/xlink&quot; x&#x3D;&quot;0px&quot; y&#x3D;&quot;0px&quot;
+	            viewBox&#x3D;&quot;0 0 84 84&quot; style&#x3D;&quot;enable-background:new 0 0 84 84;&quot; xml:space&#x3D;&quot;preserve&quot;&gt;
+              &lt;path d&#x3D;&quot;M42,2c22.056,0,40,17.944,40,40S64.056,82,42,82S2,64.056,2,42S19.944,2,42,2 M42,0C18.804,0,0,18.804,0,42
+	              c0,23.196,18.804,42,42,42s42-18.804,42-42C84,18.804,65.196,0,42,0L42,0z&quot;/&gt;
+              &lt;polygon points&#x3D;&quot;55.818,20 52.364,20 52.364,25.182 47.182,25.182 47.182,28.636 52.364,28.636 52.364,33.818 55.818,33.818 
+	              55.818,28.636 61,28.636 61,25.182 55.818,25.182 &quot;/&gt;
+              &lt;path d&#x3D;&quot;M23,52.818V58h29.364v-5.182c0-4.762-3.875-8.636-8.636-8.636H31.636C26.875,44.182,23,48.056,23,52.818z M26.455,52.818
+	              c0-2.857,2.324-5.182,5.182-5.182h12.091c2.857,0,5.182,2.324,5.182,5.182v1.727H26.455V52.818z&quot;/&gt;
+              &lt;path d&#x3D;&quot;M37.682,42.454c4.286,0,7.773-3.486,7.773-7.773c0-4.286-3.487-7.773-7.773-7.773c-4.286,0-7.773,3.487-7.773,7.773
+	              C29.909,38.969,33.396,42.454,37.682,42.454z M37.682,30.364c2.382,0,4.318,1.937,4.318,4.318C42,37.063,40.064,39,37.682,39
+	              c-2.382,0-4.318-1.937-4.318-4.318C33.364,32.301,35.3,30.364,37.682,30.364z&quot;/&gt;
+            &lt;/svg&gt;
+            Sign In
+          &lt;/a&gt;
+        &lt;/li&gt;
+
+
+        &lt;!--Sign up--&gt;
+        &lt;li class&#x3D;&quot;nav-item&quot; [routerLink]&#x3D;&quot;[&#x27;/signup&#x27;]&quot; *ngIf&#x3D;&quot;!isLoggedIN&quot;&gt;
+            &lt;a class&#x3D;&quot;nav-link btn-login my-link&quot; style&#x3D;&quot;border: 1px solid; border-radius: 6px;font-size: 14px&quot;&gt;
+              &lt;svg version&#x3D;&quot;1.1&quot; id&#x3D;&quot;icons&quot; xmlns&#x3D;&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink&#x3D;&quot;http://www.w3.org/1999/xlink&quot; x&#x3D;&quot;0px&quot; y&#x3D;&quot;0px&quot;
+                viewBox&#x3D;&quot;0 0 84 84&quot; style&#x3D;&quot;enable-background:new 0 0 84 84;&quot; xml:space&#x3D;&quot;preserve&quot;&gt;
+                &lt;path d&#x3D;&quot;M42,2c22.056,0,40,17.944,40,40S64.056,82,42,82S2,64.056,2,42S19.944,2,42,2 M42,0C18.804,0,0,18.804,0,42
+                  c0,23.196,18.804,42,42,42s42-18.804,42-42C84,18.804,65.196,0,42,0L42,0z&quot;/&gt;
+                &lt;polygon points&#x3D;&quot;55.818,20 52.364,20 52.364,25.182 47.182,25.182 47.182,28.636 52.364,28.636 52.364,33.818 55.818,33.818 
+                  55.818,28.636 61,28.636 61,25.182 55.818,25.182 &quot;/&gt;
+                &lt;path d&#x3D;&quot;M23,52.818V58h29.364v-5.182c0-4.762-3.875-8.636-8.636-8.636H31.636C26.875,44.182,23,48.056,23,52.818z M26.455,52.818
+                  c0-2.857,2.324-5.182,5.182-5.182h12.091c2.857,0,5.182,2.324,5.182,5.182v1.727H26.455V52.818z&quot;/&gt;
+                &lt;path d&#x3D;&quot;M37.682,42.454c4.286,0,7.773-3.486,7.773-7.773c0-4.286-3.487-7.773-7.773-7.773c-4.286,0-7.773,3.487-7.773,7.773
+                  C29.909,38.969,33.396,42.454,37.682,42.454z M37.682,30.364c2.382,0,4.318,1.937,4.318,4.318C42,37.063,40.064,39,37.682,39
+                  c-2.382,0-4.318-1.937-4.318-4.318C33.364,32.301,35.3,30.364,37.682,30.364z&quot;/&gt;
+              &lt;/svg&gt;
+              Sign Up
+            &lt;/a&gt;
+          &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+  &lt;/nav&gt;
+&lt;/header&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./header.component.css</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">.hbfilms-top-header
+{
+    position: fixed;
+    box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.5);
+    width: 100%;
+    top: 0;
+    z-index: 999;
+}
+
+.red {
+    color: red;
+}
+
+.my-link {
+    color: #000000 !important;
+}
+
+.my-link:hover {
+    color: #6655ee !important;
+}
+
+.btn-login {
+    color: #000000;
+    border: 1px solid #000000;
+}
+
+.btn-login:hover {
+    color: #6655ee !important;
+    border: 1px solid #6655ee;
+}
+
+.search-dropdown {
+    position: absolute;
+    top: 36px;
+    width: 100%;
+    max-height: 400px;
+    color: #a6a3a3;
+    background-color: #fff;
+    font-size: 14px;
+    overflow-y: auto;
+    box-shadow: 1px 1px 3px 0px rgba(0,0,0,0.3);
+}
+
+.view-all{
+    background: #ddd;
+    color: #000;
+    box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.5);
+}
+
+.head-type
+{
+    color: #000;
+    padding: 10px 20px;
+    background: #CCC;
+}
+
+.search-dropdown ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.search-dropdown ul li {
+    padding: 10px;
+}
+
+/* .items ul li :hover {
+    background-color: aqua;
+} */
+
+.search-dropdown ul li a {
+    color: #a6a3a3;
+    text-decoration: none;
+}
+
+.search-spinner {
+    position: absolute;
+    right: 6px;
+    bottom: 12px;
+    width: 20px;
+    height: 20px;
+}
+
+.notifications-dropdown {
+    width: 290px;
+    top: 120% !important;
+}
+
+.t-122 {
+    top: 122% !important;
+}
+
+.notification-link {
+    color: #6e5eff;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.notification-counter {
+    position: absolute;
+    background-color: red;
+    color: white;
+    padding: 0;
+    border-radius: 50%;
+    font-size: 11px;
+    width: 15px;
+    height: 15px;
+    text-align: center;
+    top: 12px;
+    right: 6px;
+}
+
+.notification-pic {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.notification-text {
+    overflow: hidden;
+    width: inherit;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.icon :hover {
+    fill: #6655ee;
+    color: #6655ee !important; 
+}
+
+.dropdown-item svg {
+    width: 18px;
+    height: 18px;
+    margin-right: 5px;
+}</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><spinner *ngIf="headerObj.spinner"></spinner><header class="hbfilms-top-header">    <nav class="navbar navbar-expand-sm bg-white navbar-dark">      <a class="navbar-brand header-logo" [routerLink]="[\'/dashboard\']">Free<strong>Fuse</strong></a>      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">        <span class="navbar-toggler-icon"></span>      </button>      <div class="collapse navbar-collapse" id="collapsibleNavbar">      <form class="form-inline search-f">        <input class="form-control border" type="text" placeholder="Search" name="search" autocomplete="off"          [(ngModel)]="searchText"          (keypress)="onKeyPress($event)"          (blur)="onBlur($event)"          (keyup.backspace)="onBackspace($event)"          (keyup.enter)="onSearch($event)" #search="ngModel">        <button class="btn shadow-none" type="button">            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 19.999 20.77">              <defs> </defs> <path id="search" d="M20.873 20.106l-5.827-6.06a8.242 8.242 0 1 0-.58.529l5.841 6.075a.392.392 0 1 0 .565-.544zm-11.655-4.42a7.451 7.451 0 1 1 7.451-7.451 7.459 7.459 0 0 1-7.451 7.451z" class="cls-1" transform="translate(-.983)"></path>            </svg>        </button>                <div class="search-spinner" *ngIf="showSpinner">          <img src="../../../assets/images/search-spinner.gif" style="width: 100%; height: 100%;">        </div>        <div class="search-dropdown">          <span *ngIf="resObject" style="padding-left: 10px;">No results found....</span>          <ul >            <li class="head-type" *ngIf="results.length > 0"><b>Result Type : Videos</b></li>            <li *ngIf="results.length < 1 ">No results found....</li>            <li *ngFor="let r of results">              <a (click)="gotoSearch(r.videoInfo.Title)">                {{r.videoInfo.Title}}              </a>            </li>            <li class="view-all" *ngIf="results.length > 10">View All</li>          </ul>           <ul  class="speartor">              <li class="head-type" *ngIf="trimmedUser.length > 0"><b>Result Type : Users</b></li>              <li *ngFor="let r of trimmedUser">                <a (click)="gotoUser(r._id)">                  <img src="{{r.profilePic}}"  style="width: 40px; height: 40px;object-fit: cover; border-radius: 4px"/>   {{r.firstname}} {{r.lastname}}                </a>              </li>              <li class="view-all" *ngIf="users.length > 10">View All</li>            </ul>         </div>      </form>      <ul class="navbar-nav navbar-nav-2" >        <!-- <li class="nav-item">          <a class="nav-link">            <svg class="gb_Ve" focusable="false" viewBox="0 0 24 24">              <path d="M6,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM16,6c0,1.1 0.9,2 2,2s2,-0.9 2,-2 -0.9,-2 -2,-2 -2,0.9 -2,2zM12,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2z"></path>            </svg>          </a>        </li> -->        <!-- My Stuff -->        <li class="nav-item dropdown notif-drop stuff" *ngIf="isLoggedIN">          <a class="nav-link dropdown-toggle my-link" id="my-stuff-drop" data-toggle="dropdown">            My Stuff          </a>          <div class="dropdown-menu t-122">            <a class="dropdown-item icon" [routerLink]="[\'/my-videos\']">              <svg version="1.1" id="icons" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"	              viewBox="0 0 22.991 18.994" style="enable-background:new 0 0 22.991 18.994;" xml:space="preserve">                <polygon points="5,0 3,0 3,3 0,3 0,5 3,5 3,8 5,8 5,5 8,5 8,3 5,3 "/>                <path d="M18.991,7.58V5.994c0-1.654-1.346-3-3-3L10,3v1.994h5.991c0.552,0,1,0.449,1,1v10c0,0.551-0.448,1-1,1h-10	                c-0.552,0-1-0.449-1-1V10H3l-0.009,5.994c0,1.654,1.346,3,3,3h10c1.654,0,3-1.346,3-3v-1.586l4,4V3.58L18.991,7.58z M20.991,13.58	                l-2-2v-1.172l2-2V13.58z"/>              </svg>              <!-- <img src="../../../assets/images/landing/camera-plus.svg" style="object-fit: fill; margin-right: 5px; width: 20px; height: 20px;"> -->              My videos            </a>            <a class="dropdown-item icon" [routerLink]="[\'/user-activity\']">              <svg version="1.1" id="icons" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"	              viewBox="0 0 22.019 23.019" style="enable-background:new 0 0 22.019 23.019;" xml:space="preserve">                <path d="M8.019,14.019c0-1.654-1.346-3-3-3s-3,1.346-3,3s1.346,3,3,3S8.019,15.673,8.019,14.019z M4.019,14.019c0-0.551,0.448-1,1-1	                c0.552,0,1,0.449,1,1s-0.448,1-1,1C4.468,15.019,4.019,14.57,4.019,14.019z"/>                <path d="M0.019,21.019v2h2v-2c0-0.551,0.448-1,1-1h4c0.552,0,1,0.449,1,1v2h2v-2c0-1.654-1.346-3-3-3h-4	                C1.365,18.019,0.019,19.365,0.019,21.019z"/>                 <path d="M22.019,11.01C22.019,4.939,17.081,0,11.01,0S0,4.939,0,11.01h2C2,6.042,6.042,2,11.01,2c4.968,0,9.01,4.042,9.01,9.01	                s-4.042,9.009-9.01,9.009v2C17.081,22.019,22.019,17.08,22.019,11.01z"/>                <polygon points="10.008,4.008 10.008,11.422 14.301,15.715 15.715,14.302 12.008,10.594 12.008,4.008 "/>              </svg>              <!-- <img src="../../../assets/images/landing/stuff-history.svg" style="object-fit: fill; margin-right: 5px; width: 20px; height: 20px;"> -->              History            </a>            <a class="dropdown-item icon" [routerLink]="[\'/library\']">              <svg version="1.1" id="icons" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"	              viewBox="0 0 22 21.228" style="enable-background:new 0 0 22 21.228;" xml:space="preserve">                <path d="M22,13V3c0-1.654-1.346-3-3-3H3C1.346,0,0,1.346,0,3v10c0,1.654,1.346,3,3,3h3v-2H3c-0.552,0-1-0.449-1-1V3	                c0-0.551,0.448-1,1-1h16c0.552,0,1,0.449,1,1v10c0,0.551-0.448,1-1,1h-5.878l-3.12,2.773V14h-2v7.228L13.882,16H19	                C20.654,16,22,14.654,22,13z"/>                <polygon points="10,4 10,12 14,8 "/>              </svg>              <!-- <img src="../../../assets/images/landing/stuff-library.svg" style="object-fit: fill; margin-right: 5px; width: 20px; height: 20px;"> -->              Library            </a>          </div>        </li>        <!-- Upload Videos -->        <li class="nav-item" *ngIf="isLoggedIN">          <a class="nav-link" [routerLink]="[\'/upload-videos\']">            <svg version="1.1" id="icons" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"	            viewBox="0 0 22.991 18.994" style="enable-background:new 0 0 22.991 18.994;" xml:space="preserve">              <polygon points="5,0 3,0 3,3 0,3 0,5 3,5 3,8 5,8 5,5 8,5 8,3 5,3 "/>              <path d="M18.991,7.58V5.994c0-1.654-1.346-3-3-3L10,3v1.994h5.991c0.552,0,1,0.449,1,1v10c0,0.551-0.448,1-1,1h-10              	c-0.552,0-1-0.449-1-1V10H3l-0.009,5.994c0,1.654,1.346,3,3,3h10c1.654,0,3-1.346,3-3v-1.586l4,4V3.58L18.991,7.58z M20.991,13.58              	l-2-2v-1.172l2-2V13.58z"/>            </svg>            <!-- <img src="../../../assets/images/landing/camera-plus.svg" style="object-fit: fill;"> -->          </a>        </li>        <!-- Notifications -->        <li class="nav-item dropdown notif-drop" *ngIf="isLoggedIN">          <!-- Dropdown -->          <a class="nav-link dropdown-toggle" id="navbardrop" data-toggle="dropdown">            <svg version="1.1" id="icons" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"	            viewBox="0 0 16.023 20" style="enable-background:new 0 0 16.023 20;" xml:space="preserve">              <path d="M8.006,20c1.104,0,2-0.896,2-2h-4C6.006,19.104,6.902,20,8.006,20z"/>              <path d="M9.002,2.079v-1.1C9.002,0.438,8.563,0,8.022,0c-0.541,0-0.98,0.438-0.98,0.979v1.095C3.638,2.546,1.006,5.468,1.006,9	              v4.589l-0.232,0.226c-0.946,0.922-0.824,1.712-0.667,2.101c0.125,0.31,0.56,1.03,1.908,1.036h11.99c1.343,0,1.781-0.722,1.907-1.032	              c0.158-0.39,0.282-1.181-0.665-2.103l-0.242-0.237V9C15.006,5.479,12.39,2.565,9.002,2.079z M2.474,14.951l0.532-0.519V9	              c0-2.757,2.243-5,5-5c2.757,0,5,2.243,5,5v5.421l0.542,0.53L2.474,14.951z"/>            </svg>            <!-- <img src="../../../assets/images/landing/bell-notifications.svg" style="object-fit: fill;"> -->          </a>          <div class="dropdown-menu notifications-dropdown">            <a class="dropdown-item notification-text" *ngIf="notifications && notifications.length < 1">              No notification yet!            </a>            <a class="dropdown-item notification-text" id="{{n.notificationId}}" *ngFor="let n of notifications" (click)="viewNotification(n.notificationId)">              <!-- {{n.notificationType}} -->              <img src="{{n.userInfo.profilePic}}" alt="" class="notification-pic">              <span class="notification-link">                {{n.userInfo.username}}              </span>              <!-- <span class="">                {{n.followingUserInfo.username}}              </span> -->              <span *ngIf="n.notificationType==\'Comment\'">commented on </span>              <span *ngIf="n.notificationType==\'Like\'">reacted on </span>              <span *ngIf="n.notificationType==\'Share\'">shared </span>              <span *ngIf="n.notificationType==\'follow\'">started following </span>              <span *ngIf="n.notificationType==\'publishVideo\'"> published </span>              <span *ngIf="n.notificationType==\'contributor\'"> added you as a contributor</span>              <span class="notification-link" *ngIf="n.notificationType !== \'follow\'">{{n.videoInfo.Title}}</span>              <span class="notification-link" *ngIf="n.notificationType == \'follow\'">{{n.followingUserInfo.username}}</span>            </a>            <a class="dropdown-item notification-link" [routerLink]="[\'/notifications\']" *ngIf="notifications.length>5">View all</a>          </div>          <!-- Dropdown end-->        </li>        <!-- Profile -->        <li class="nav-item dropdown notif-drop" *ngIf="isLoggedIN">          <!-- Dropdown -->          <a class="nav-link dropdown-toggle" id="navbardrop1" data-toggle="dropdown">            <img src="{{headerObj.data.profilePic}}">          </a>          <div class="dropdown-menu">            <a class="dropdown-item" [routerLink]="[\'/dashboard\']" > Profile</a>            <a class="dropdown-item" [routerLink]="[\'/editProfile\']" > My Account</a>            <a class="dropdown-item" (click)="logout()">Logout</a>          </div>          <!-- Dropdown end-->        </li>                        <!--Sign In-->            <li class="nav-item" [routerLink]="[\'/login\']" *ngIf="!isLoggedIN">          <a class="nav-link btn-login my-link" style="border: 1px solid; border-radius: 6px;font-size: 14px">            <svg version="1.1" id="icons" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"	            viewBox="0 0 84 84" style="enable-background:new 0 0 84 84;" xml:space="preserve">              <path d="M42,2c22.056,0,40,17.944,40,40S64.056,82,42,82S2,64.056,2,42S19.944,2,42,2 M42,0C18.804,0,0,18.804,0,42	              c0,23.196,18.804,42,42,42s42-18.804,42-42C84,18.804,65.196,0,42,0L42,0z"/>              <polygon points="55.818,20 52.364,20 52.364,25.182 47.182,25.182 47.182,28.636 52.364,28.636 52.364,33.818 55.818,33.818 	              55.818,28.636 61,28.636 61,25.182 55.818,25.182 "/>              <path d="M23,52.818V58h29.364v-5.182c0-4.762-3.875-8.636-8.636-8.636H31.636C26.875,44.182,23,48.056,23,52.818z M26.455,52.818	              c0-2.857,2.324-5.182,5.182-5.182h12.091c2.857,0,5.182,2.324,5.182,5.182v1.727H26.455V52.818z"/>              <path d="M37.682,42.454c4.286,0,7.773-3.486,7.773-7.773c0-4.286-3.487-7.773-7.773-7.773c-4.286,0-7.773,3.487-7.773,7.773	              C29.909,38.969,33.396,42.454,37.682,42.454z M37.682,30.364c2.382,0,4.318,1.937,4.318,4.318C42,37.063,40.064,39,37.682,39	              c-2.382,0-4.318-1.937-4.318-4.318C33.364,32.301,35.3,30.364,37.682,30.364z"/>            </svg>            Sign In          </a>        </li>        <!--Sign up-->        <li class="nav-item" [routerLink]="[\'/signup\']" *ngIf="!isLoggedIN">            <a class="nav-link btn-login my-link" style="border: 1px solid; border-radius: 6px;font-size: 14px">              <svg version="1.1" id="icons" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"                viewBox="0 0 84 84" style="enable-background:new 0 0 84 84;" xml:space="preserve">                <path d="M42,2c22.056,0,40,17.944,40,40S64.056,82,42,82S2,64.056,2,42S19.944,2,42,2 M42,0C18.804,0,0,18.804,0,42                  c0,23.196,18.804,42,42,42s42-18.804,42-42C84,18.804,65.196,0,42,0L42,0z"/>                <polygon points="55.818,20 52.364,20 52.364,25.182 47.182,25.182 47.182,28.636 52.364,28.636 52.364,33.818 55.818,33.818                   55.818,28.636 61,28.636 61,25.182 55.818,25.182 "/>                <path d="M23,52.818V58h29.364v-5.182c0-4.762-3.875-8.636-8.636-8.636H31.636C26.875,44.182,23,48.056,23,52.818z M26.455,52.818                  c0-2.857,2.324-5.182,5.182-5.182h12.091c2.857,0,5.182,2.324,5.182,5.182v1.727H26.455V52.818z"/>                <path d="M37.682,42.454c4.286,0,7.773-3.486,7.773-7.773c0-4.286-3.487-7.773-7.773-7.773c-4.286,0-7.773,3.487-7.773,7.773                  C29.909,38.969,33.396,42.454,37.682,42.454z M37.682,30.364c2.382,0,4.318,1.937,4.318,4.318C42,37.063,40.064,39,37.682,39                  c-2.382,0-4.318-1.937-4.318-4.318C33.364,32.301,35.3,30.364,37.682,30.364z"/>              </svg>              Sign Up            </a>          </li>      </ul>    </div>  </nav></header></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CreateInteractiveVideoComponent', 'selector': 'createInteractiveVideoComponent'},{'name': 'DashboardComponent', 'selector': 'dashboard'},{'name': 'EditProfileComponent', 'selector': 'editProfile'},{'name': 'FollowersComponent', 'selector': 'app-followers'},{'name': 'FollowingComponent', 'selector': 'app-following'},{'name': 'FooterComponent', 'selector': 'footer'},{'name': 'FooterComponent', 'selector': 'footer'},{'name': 'FooterComponent', 'selector': 'footer'},{'name': 'FooterComponent', 'selector': 'footer'},{'name': 'FooterComponent', 'selector': 'footer'},{'name': 'FooterComponent', 'selector': 'footer'},{'name': 'ForgetPasswordComponent', 'selector': 'forgetPassword'},{'name': 'HeaderComponent', 'selector': 'headerone'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LandingPageComponent', 'selector': 'app-landing-page'},{'name': 'LandingTestComponent', 'selector': 'app-landing-test'},{'name': 'LibraryComponent', 'selector': 'app-library'},{'name': 'LoginComponent', 'selector': 'login'},{'name': 'MyVideosComponent', 'selector': 'app-my-videos'},{'name': 'MyVideosPublicComponent', 'selector': 'app-my-videos-public'},{'name': 'NotificationsComponent', 'selector': 'app-notifications'},{'name': 'OtpComponent', 'selector': 'otp'},{'name': 'ProfileCompletionComponent', 'selector': 'profileCompletion'},{'name': 'PublicProfileComponent', 'selector': 'app-public-profile'},{'name': 'PublicUserActivitiyComponent', 'selector': 'app-public-user-activitiy'},{'name': 'PublicVideoComponent', 'selector': 'app-public-video'},{'name': 'PublishFooterComponent', 'selector': 'publishFooter'},{'name': 'ResetPasswordComponent', 'selector': 'resetPassword'},{'name': 'SearchResultsComponent', 'selector': 'app-search-results'},{'name': 'SectionSpinnerComponent', 'selector': 'sectionSpinner'},{'name': 'SideMenuComponent', 'selector': 'sideMenu'},{'name': 'SignupComponent', 'selector': 'signup'},{'name': 'SignupComponent', 'selector': 'signup'},{'name': 'SpinnerComponent', 'selector': 'spinner'},{'name': 'TestComponent', 'selector': 'app-test'},{'name': 'ThatsallComponent', 'selector': 'app-thatsall'},{'name': 'TrendingComponent', 'selector': 'app-trending'},{'name': 'UploadVideosComponent', 'selector': 'uploadVideos'},{'name': 'UserActivitiyComponent', 'selector': 'app-user-activitiy'},{'name': 'WithOutLoginFooterComponent', 'selector': 'withoutloginfooter'}];
+    var DIRECTIVES = [{'name': 'VideoJS', 'selector': '[videojs]'}];
+    var ACTUAL_COMPONENT = {'name': 'HeaderComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'HeaderComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

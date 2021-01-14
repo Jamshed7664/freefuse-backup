@@ -1,0 +1,1296 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>my-app documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">my-app documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>NotificationsComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/afterLogin/notifications/notifications.component.ts</code>
+</p>
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-notifications</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./notifications.component.css</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./notifications.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#activities">activities</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#likeCategories">likeCategories</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#notifications">notifications</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#getActivity">getActivity</a>
+                            </li>
+                            <li>
+                                <a href="#getEmoji">getEmoji</a>
+                            </li>
+                            <li>
+                                <a href="#getNotifications">getNotifications</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#showVideo">showVideo</a>
+                            </li>
+                            <li>
+                                <a href="#userProfile">userProfile</a>
+                            </li>
+                            <li>
+                                <a href="#viewNotification">viewNotification</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(apiService: <a href="../injectables/CrudService.html">CrudService</a>, router: <a href="https://angular.io/api/router/Router" target="_blank">Router</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="57" class="link-to-prism">src/app/afterLogin/notifications/notifications.component.ts:57</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>apiService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/CrudService.html" target="_self" >CrudService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>router</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/router/Router" target="_blank" >Router</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getActivity"></a>
+                    <span class="name">
+                        <b>
+                            getActivity
+                        </b>
+                        <a href="#getActivity"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getActivity()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="68"
+                            class="link-to-prism">src/app/afterLogin/notifications/notifications.component.ts:68</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getEmoji"></a>
+                    <span class="name">
+                        <b>
+                            getEmoji
+                        </b>
+                        <a href="#getEmoji"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getEmoji(cat: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="123"
+                            class="link-to-prism">src/app/afterLogin/notifications/notifications.component.ts:123</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>cat</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getNotifications"></a>
+                    <span class="name">
+                        <b>
+                            getNotifications
+                        </b>
+                        <a href="#getNotifications"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getNotifications()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="75"
+                            class="link-to-prism">src/app/afterLogin/notifications/notifications.component.ts:75</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <b>
+                            ngOnInit
+                        </b>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="62"
+                            class="link-to-prism">src/app/afterLogin/notifications/notifications.component.ts:62</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="showVideo"></a>
+                    <span class="name">
+                        <b>
+                            showVideo
+                        </b>
+                        <a href="#showVideo"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>showVideo(videoId: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="115"
+                            class="link-to-prism">src/app/afterLogin/notifications/notifications.component.ts:115</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>videoId</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="userProfile"></a>
+                    <span class="name">
+                        <b>
+                            userProfile
+                        </b>
+                        <a href="#userProfile"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>userProfile(id: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="119"
+                            class="link-to-prism">src/app/afterLogin/notifications/notifications.component.ts:119</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>id</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="viewNotification"></a>
+                    <span class="name">
+                        <b>
+                            viewNotification
+                        </b>
+                        <a href="#viewNotification"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>viewNotification(id: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="84"
+                            class="link-to-prism">src/app/afterLogin/notifications/notifications.component.ts:84</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>id</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="activities"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            activities</b>
+                            <a href="#activities"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>Array&lt;any&gt;</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">src/app/afterLogin/notifications/notifications.component.ts:12</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="likeCategories"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            likeCategories</b>
+                            <a href="#likeCategories"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>Array&lt;any&gt;</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[
+    {
+      shortcut:0,
+      id: &#x27;1&#x27;,
+      category: &#x27;Laugh&#x27;,
+      emoji: &#x27;../../../assets/images/videoplayer/react-laugh.svg&#x27;
+    },
+    {
+      shortcut:1,
+      id: &#x27;2&#x27;,
+      category: &#x27;Like&#x27;,
+      emoji: &#x27;../../../assets/images/videoplayer/react-like.svg&#x27;
+    },
+    {
+      shortcut:2,
+      id: &#x27;3&#x27;,
+      category: &#x27;Dislike&#x27;,
+      emoji: &#x27;../../../assets/images/videoplayer/react-dislike.svg&#x27;
+    },
+    {
+      shortcut:3,
+      id: &#x27;4&#x27;,
+      category: &#x27;Question&#x27;,
+      emoji: &#x27;../../../assets/images/videoplayer/react-question.svg&#x27;
+    },
+    {
+      shortcut:4,
+      id: &#x27;5&#x27;,
+      category: &#x27;Amazed&#x27;,
+      emoji: &#x27;../../../assets/images/videoplayer/react-amazed.svg&#x27;
+    },
+    {
+      shortcut:5,
+      id: &#x27;6&#x27;,
+      category: &#x27;Crying&#x27;,
+      emoji: &#x27;../../../assets/images/videoplayer/react-crying.svg&#x27;
+    },
+    {
+      shortcut:6,
+      id: &#x27;7&#x27;,
+      category: &#x27;Angry&#x27;,
+      emoji: &#x27;../../../assets/images/videoplayer/react-angry.svg&#x27;
+    }
+  ]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/afterLogin/notifications/notifications.component.ts:14</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="notifications"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            notifications</b>
+                            <a href="#notifications"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>Array&lt;any&gt;</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/app/afterLogin/notifications/notifications.component.ts:13</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
+import { CrudService } from &#x27;../../crud.service&#x27;;
+import { Router } from &#x27;@angular/router&#x27;;  
+
+@Component({
+  selector: &#x27;app-notifications&#x27;,
+  templateUrl: &#x27;./notifications.component.html&#x27;,
+  styleUrls: [&#x27;./notifications.component.css&#x27;]
+})
+export class NotificationsComponent implements OnInit {
+
+  private activities: Array&lt;any&gt; &#x3D; [];
+  private notifications: Array&lt;any&gt; &#x3D; [];
+  private likeCategories: Array&lt;any&gt; &#x3D; [
+    {
+      shortcut:0,
+      id: &#x27;1&#x27;,
+      category: &#x27;Laugh&#x27;,
+      emoji: &#x27;../../../assets/images/videoplayer/react-laugh.svg&#x27;
+    },
+    {
+      shortcut:1,
+      id: &#x27;2&#x27;,
+      category: &#x27;Like&#x27;,
+      emoji: &#x27;../../../assets/images/videoplayer/react-like.svg&#x27;
+    },
+    {
+      shortcut:2,
+      id: &#x27;3&#x27;,
+      category: &#x27;Dislike&#x27;,
+      emoji: &#x27;../../../assets/images/videoplayer/react-dislike.svg&#x27;
+    },
+    {
+      shortcut:3,
+      id: &#x27;4&#x27;,
+      category: &#x27;Question&#x27;,
+      emoji: &#x27;../../../assets/images/videoplayer/react-question.svg&#x27;
+    },
+    {
+      shortcut:4,
+      id: &#x27;5&#x27;,
+      category: &#x27;Amazed&#x27;,
+      emoji: &#x27;../../../assets/images/videoplayer/react-amazed.svg&#x27;
+    },
+    {
+      shortcut:5,
+      id: &#x27;6&#x27;,
+      category: &#x27;Crying&#x27;,
+      emoji: &#x27;../../../assets/images/videoplayer/react-crying.svg&#x27;
+    },
+    {
+      shortcut:6,
+      id: &#x27;7&#x27;,
+      category: &#x27;Angry&#x27;,
+      emoji: &#x27;../../../assets/images/videoplayer/react-angry.svg&#x27;
+    }
+  ];
+
+  constructor(private apiService: CrudService,
+    private router: Router) { }
+
+  ngOnInit() {
+    this.getActivity();
+    this.getNotifications();
+  }
+
+  //Get user activities
+  getActivity() {
+    this.apiService.getUserActivity().subscribe(
+      success &#x3D;&gt; {
+        this.activities &#x3D; success.data;
+      });
+  }
+
+  getNotifications() {
+    let viewType: any &#x3D; &#x27;viewAll&#x27;
+    this.apiService.getNotifications(viewType).subscribe(
+      success &#x3D;&gt; {
+        console.log(success.data);
+        this.notifications &#x3D; success.data;
+      });
+  }
+
+  viewNotification(id: any) {
+    for(let i of this.notifications) {
+      if (id &#x3D;&#x3D; i.notificationId) {
+        console.log(&#x27;id matched &#x27;, id+&#x27; &#x3D; &#x27;+ i.notificationId);
+        console.log(i);
+        let requestObj: any &#x3D; {
+          &#x27;id&#x27;: i.notificationId
+        };
+        console.log(&#x27;OBJ: &#x27;, requestObj)
+        if (i.notificationType &#x3D;&#x3D; &#x27;follow&#x27;) {
+          console.log(&#x27;notification type :&#x27;, i.notificationType);
+          this.apiService.postNotification(requestObj).subscribe(
+            success&#x3D;&gt;{
+              console.log(success.data);
+              console.log(&#x27;redirect to user profile&#x27;);
+              this.router.navigate([&#x27;/public-profile&#x27;], {queryParams: {user: i.userInfo._id}});
+            });
+        } else {
+          console.log(&#x27;notification type :&#x27;, i.notificationType);
+          console.log(&#x27;video id :&#x27;, i.videoInfo._id);
+          this.apiService.postNotification(requestObj).subscribe(
+            success&#x3D;&gt;{
+              console.log(success.data)
+              console.log(&#x27;redirect to respective video page&#x27;);
+              this.router.navigate([&#x27;/videos&#x27;], {queryParams: {video: i.videoInfo._id}});
+            });
+        } 
+      }
+    }
+  }
+
+  showVideo(videoId: any) {
+    this.router.navigate([&#x27;videos&#x27;], { queryParams: { video: videoId } });
+  }
+  
+  userProfile(id:any){
+    this.router.navigate([&#x27;public-profile&#x27;], { queryParams: { user: id } });
+  }
+
+  getEmoji(cat:any){
+    //console.log(cat)
+    if(cat &#x3D;&#x3D; &#x27;1&#x27;)
+    return this.likeCategories[0].emoji
+
+    if(cat &#x3D;&#x3D; &#x27;2&#x27;)
+    return this.likeCategories[1].emoji
+
+    if(cat &#x3D;&#x3D; &#x27;3&#x27;)
+    return this.likeCategories[2].emoji
+
+    if(cat &#x3D;&#x3D; &#x27;4&#x27;)
+    return this.likeCategories[3].emoji
+
+    if(cat &#x3D;&#x3D; &#x27;5&#x27;)
+    return this.likeCategories[4].emoji
+
+    if(cat &#x3D;&#x3D; &#x27;6&#x27;)
+    return this.likeCategories[5].emoji
+
+    if(cat &#x3D;&#x3D; &#x27;7&#x27;)
+    return this.likeCategories[6].emoji
+  }
+
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;headerone&gt;&lt;/headerone&gt;
+&lt;sideMenu&gt;&lt;/sideMenu&gt;
+
+&lt;section class&#x3D;&quot;notification-sect&quot;&gt;
+    &lt;div class&#x3D;&quot;container custom-container&quot;&gt;
+        &lt;div class&#x3D;&quot;row heading&quot;&gt;
+            &lt;h5 class&#x3D;&quot;&quot;&gt;User Notifications&lt;/h5&gt;
+        &lt;/div&gt;
+
+        &lt;div class&#x3D;&quot;row&quot; *ngFor&#x3D;&quot;let n of notifications&quot; style&#x3D;&quot;margin-bottom: 30px;&quot;&gt;
+            &lt;div class&#x3D;&quot;col-12 custom-row&quot;&gt;
+              &lt;!-- Contributor Notifications --&gt;
+              &lt;div class&#x3D;&quot;row&quot; *ngIf&#x3D;&quot;n.notificationType &#x3D;&#x3D; &#x27;contributor&#x27;&quot;&gt;
+                &lt;div class&#x3D;&quot;col-3&quot;&gt;
+                  &lt;a&gt;
+                    &lt;img src&#x3D;&quot;{{n.videoInfo.poster}}&quot; class&#x3D;&quot;poster&quot; (click)&#x3D;&quot;viewNotification(n.notificationId)&quot;&gt;
+                  &lt;/a&gt;
+                &lt;/div&gt;
+                &lt;div class&#x3D;&quot;col-6&quot;&gt;
+                  &lt;p&gt;
+                    &lt;span&gt;{{n.userInfo.username}} &lt;/span&gt;
+                    &lt;span&gt;added you as a contributor for &lt;/span&gt;
+                    &lt;a class&#x3D;&quot;notification-link&quot;&gt;{{n.videoInfo.Title}}&lt;/a&gt;
+                  &lt;/p&gt;
+                  &lt;p&gt;{{n.createdAt | dateAgo}}&lt;/p&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+              
+              &lt;!-- Publish Notifications --&gt;
+              &lt;div class&#x3D;&quot;row&quot; *ngIf&#x3D;&quot;n.notificationType &#x3D;&#x3D; &#x27;publishVideo&#x27;&quot;&gt;
+                &lt;div class&#x3D;&quot;col-3&quot;&gt;
+                  &lt;a&gt;
+                    &lt;img src&#x3D;&quot;{{n.videoInfo.poster}}&quot; class&#x3D;&quot;poster&quot; (click)&#x3D;&quot;viewNotification(n.notificationId)&quot;&gt;
+                  &lt;/a&gt;
+                &lt;/div&gt;
+                &lt;div class&#x3D;&quot;col-6&quot;&gt;
+                  &lt;p&gt;
+                    &lt;span&gt;{{n.userInfo.username}} &lt;/span&gt;
+                    &lt;span&gt;published &lt;/span&gt;
+                    &lt;a class&#x3D;&quot;notification-link&quot;&gt;{{n.videoInfo.Title}}&lt;/a&gt;
+                  &lt;/p&gt;
+                  &lt;p&gt;{{n.createdAt | dateAgo}}&lt;/p&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+              &lt;!-- Comment notifications --&gt;
+              &lt;div class&#x3D;&quot;row&quot; *ngIf&#x3D;&quot;n.notificationType &#x3D;&#x3D; &#x27;Comment&#x27;&quot;&gt;
+                  &lt;div class&#x3D;&quot;col-3&quot;&gt;
+                    &lt;a&gt;
+                      &lt;img src&#x3D;&quot;{{n.videoInfo.poster}}&quot; class&#x3D;&quot;poster&quot; (click)&#x3D;&quot;viewNotification(n.notificationId)&quot;&gt;
+                    &lt;/a&gt;
+                  &lt;/div&gt;
+                  &lt;div class&#x3D;&quot;col-6&quot;&gt;
+                    &lt;p&gt;
+                      &lt;span&gt;{{n.userInfo.username}} &lt;/span&gt;
+                      &lt;span&gt;commented on &lt;/span&gt;
+                      &lt;a class&#x3D;&quot;notification-link&quot;&gt;{{n.videoInfo.Title}}&lt;/a&gt;
+                    &lt;/p&gt;
+                    &lt;p&gt;{{n.createdAt | dateAgo}}&lt;/p&gt;
+                  &lt;/div&gt;
+              &lt;/div&gt;
+
+              &lt;!-- Follow notifications --&gt;
+              &lt;div class&#x3D;&quot;row&quot; *ngIf&#x3D;&quot;n.notificationType &#x3D;&#x3D; &#x27;follow&#x27;&quot;&gt;
+                &lt;div class&#x3D;&quot;col-1&quot;&gt;
+                  &lt;a&gt;
+                    &lt;img src&#x3D;&quot;{{n.userInfo.profilePic}}&quot; class&#x3D;&quot;user-profile&quot; (click)&#x3D;&quot;viewNotification(n.notificationId)&quot;&gt;
+                  &lt;/a&gt;
+                &lt;/div&gt;
+                &lt;div class&#x3D;&quot;col-4&quot;&gt;
+                  &lt;p&gt;
+                    &lt;span class&#x3D;&quot;notification-link&quot;&gt;{{n.userInfo.username}}&lt;/span&gt;
+                    &lt;span&gt; started following&lt;/span&gt;
+                  &lt;/p&gt;
+                  &lt;p&gt;{{n.createdAt | dateAgo}}&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;div class&#x3D;&quot;col-1&quot;&gt;
+                  &lt;img src&#x3D;&quot;{{n.followingUserInfo.profilePic}}&quot; class&#x3D;&quot;user-profile&quot;&gt;
+                &lt;/div&gt;
+                &lt;div class&#x3D;&quot;col-4&quot;&gt;
+                  &lt;p&gt;
+                    &lt;span&gt;{{n.followingUserInfo.username}}&lt;/span&gt;
+                  &lt;/p&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+
+              &lt;!-- Like notifications --&gt;
+              &lt;div class&#x3D;&quot;row&quot; *ngIf&#x3D;&quot;n.notificationType &#x3D;&#x3D; &#x27;Like&#x27;&quot;&gt;
+                &lt;div class&#x3D;&quot;col-3&quot;&gt;
+                  &lt;a&gt;
+                    &lt;img src&#x3D;&quot;{{n.videoInfo.poster}}&quot; class&#x3D;&quot;poster&quot; (click)&#x3D;&quot;viewNotification(n.notificationId)&quot;&gt;
+                  &lt;/a&gt;
+                &lt;/div&gt;
+                &lt;div class&#x3D;&quot;col-6&quot;&gt;
+                  &lt;p&gt;
+                    &lt;span&gt;{{n.userInfo.username}}&lt;/span&gt;
+                    &lt;span&gt; reacted with &lt;/span&gt;
+                    &lt;img src&#x3D;&quot;{{getEmoji(n.category)}}&quot; style&#x3D;&quot;height:17px!important;width: auto&quot;/&gt;
+                    on &lt;a class&#x3D;&quot;notification-link&quot; (click)&#x3D;&quot;viewNotification(n.notificationId)&quot;&gt;{{n.videoInfo.Title}}&lt;/a&gt;
+                  &lt;/p&gt;
+                  &lt;p&gt;{{n.createdAt | dateAgo}}&lt;/p&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+
+              &lt;!-- Share notifications --&gt;
+              &lt;div class&#x3D;&quot;row&quot; *ngIf&#x3D;&quot;n.notificationType &#x3D;&#x3D; &#x27;Share&#x27;&quot;&gt;
+                &lt;div class&#x3D;&quot;col-3&quot;&gt;
+                  &lt;a&gt;
+                    &lt;img src&#x3D;&quot;{{n.videoInfo.poster}}&quot; class&#x3D;&quot;poster&quot; (click)&#x3D;&quot;viewNotification(n.notificationId)&quot;&gt;
+                  &lt;/a&gt;
+                &lt;/div&gt;
+                &lt;div class&#x3D;&quot;col-6&quot;&gt;
+                  &lt;p&gt;
+                    &lt;span&gt;{{n.userInfo.username}}&lt;/span&gt;
+                    &lt;span&gt; shared &lt;/span&gt;
+                    &lt;a class&#x3D;&quot;notification-link&quot; (click)&#x3D;&quot;viewNotification(n.notificationId)&quot;&gt;{{n.videoInfo.Title}}&lt;/a&gt;
+                  &lt;/p&gt;
+                  &lt;p&gt;{{n.createdAt | dateAgo}}&lt;/p&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+                &lt;!-- &lt;div class&#x3D;&quot;row&quot; *ngIf&#x3D;&quot;a.activityType &#x3D;&#x3D; &#x27;Like&#x27;&quot;&gt;
+                    &lt;div class&#x3D;&quot;col-3&quot;&gt;
+                        &lt;img src&#x3D;&quot;{{a.videoInfo.poster}}&quot; id&#x3D;&quot;{{a.videoInfo._id}}&quot; class&#x3D;&quot;poster&quot;&gt;
+                    &lt;/div&gt;
+                    &lt;div class&#x3D;&quot;col-6&quot;&gt;
+                      &lt;p&gt;
+                        {{a.userInfo.username}} 
+
+                        &lt;span &gt;&lt;b&gt;reacted&lt;/b&gt; to &lt;img src&#x3D;&quot;{{getEmoji(a.category)}}&quot; style&#x3D;&quot;height:17px!important;width: auto&quot;/&gt; &lt;/span&gt;
+                      
+                        &lt;a [routerLink]&#x3D;&quot;[&#x27;/videos&#x27;]&quot; style&#x3D;&quot;color: #6e5eff&quot; [queryParams]&#x3D;&quot;{video:a.videoInfo._id}&quot;&gt;
+                           {{a.videoInfo.Title}}
+                        &lt;/a&gt; 
+                      
+                      &lt;/p&gt;
+                      &lt;p &gt;{{a.videoInfo.updatedAt | dateAgo}}&lt;/p&gt;
+                    &lt;/div&gt;
+                  
+                &lt;/div&gt; --&gt;
+                
+                &lt;!-- &lt;div class&#x3D;&quot;row&quot; *ngIf&#x3D;&quot;a.activityType &#x3D;&#x3D; &#x27;Share&#x27;&quot;&gt;
+                    &lt;div class&#x3D;&quot;col-3&quot; &gt;
+                        &lt;img src&#x3D;&quot;{{a.videoInfo.poster}}&quot; id&#x3D;&quot;{{a.videoInfo._id}}&quot; class&#x3D;&quot;poster&quot;&gt;
+                    &lt;/div&gt;
+                    &lt;div class&#x3D;&quot;col-6&quot;&gt;
+                      &lt;p&gt;
+                        {{a.userInfo.username}} 
+                        
+                        &lt;span&gt; &lt;b&gt;shared&lt;/b&gt; on &lt;/span&gt;
+                      
+                        &lt;a  [routerLink]&#x3D;&quot;[&#x27;/videos&#x27;]&quot;  style&#x3D;&quot;color: #6e5eff&quot; [queryParams]&#x3D;&quot;{video:a.videoInfo._id}&quot;&gt;
+                           {{a.videoInfo.Title}}
+                        &lt;/a&gt; 
+                      &lt;/p&gt;
+                      &lt;p &gt;{{a.videoInfo.updatedAt | dateAgo}}&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt; --&gt;
+
+                &lt;!-- &lt;div class&#x3D;&quot;row&quot; *ngIf&#x3D;&quot;a.activityType &#x3D;&#x3D; &#x27;Comment&#x27;&quot;&gt;
+                    &lt;div class&#x3D;&quot;col-3&quot;&gt;
+                        &lt;img src&#x3D;&quot;{{a.videoInfo.poster}}&quot; class&#x3D;&quot;poster&quot;&gt;
+                    &lt;/div&gt;
+                    &lt;div class&#x3D;&quot;col-6&quot;&gt;
+                      &lt;p&gt;
+                        &lt;a &gt;{{a.userInfo.username}}&lt;/a&gt;  &lt;b&gt; commented&lt;/b&gt; on 
+                        &lt;a style&#x3D;&quot;color: #6e5eff&quot; (click)&#x3D;&quot;showVideo(a.videoInfo._id)&quot;&gt;
+                            {{a.videoInfo.Title}}
+                        &lt;/a&gt; 
+                      &lt;/p&gt;
+                      &lt;p&gt;{{a.videoInfo.updatedAt | dateAgo}}&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class&#x3D;&quot;row&quot; *ngIf&#x3D;&quot;a.activityType &#x3D;&#x3D; &#x27;follow&#x27;&quot;&gt;
+                    &lt;div class&#x3D;&quot;col-3&quot; &gt;
+                        &lt;img src&#x3D;&quot;{{a.userInfo.profilePic}}&quot; class&#x3D;&quot;poster&quot;&gt;
+                    &lt;/div&gt;
+                    &lt;div class&#x3D;&quot;col-6&quot;&gt;
+                      &lt;p&gt;
+                        {{a.userInfo.username}} 
+                        &lt;span &gt; is &lt;b&gt;following&lt;/b&gt; &lt;/span&gt;
+                      
+                        &lt;a  [routerLink]&#x3D;&quot;[&#x27;/public-profile&#x27;]&quot; style&#x3D;&quot;color: #6e5eff&quot; [queryParams]&#x3D;&quot;{user:a.followUserInfo._id}&quot;&gt;
+                          {{a.followUserInfo.username}}
+                        &lt;/a&gt;
+                      &lt;/p&gt;
+                      &lt;p&gt;{{a.followUserInfo.createdAt | dateAgo}}&lt;/p&gt;
+                    &lt;/div&gt;
+                   
+                &lt;/div&gt; --&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/section&gt;
+&lt;withoutloginfooter&gt;&lt;/withoutloginfooter&gt;</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./notifications.component.css</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">.notification-sect{
+    margin-top: 100px;
+}
+
+.custom-container {
+    max-width: 1000px;
+}
+
+.custom-row {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: #FFF;
+    box-shadow: 0px 0px 10px 0px #dad8d8;
+}
+
+.heading {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom: 30px;
+}
+
+.poster {
+    width: 100%;
+}
+
+.user-profile {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.notification-link {
+    color: #6e5eff !important;
+    text-decoration: none;
+    /* font-size: 12px; */
+    /* font-weight: 600; */
+}</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><headerone></headerone><sideMenu></sideMenu><section class="notification-sect">    <div class="container custom-container">        <div class="row heading">            <h5 class="">User Notifications</h5>        </div>        <div class="row" *ngFor="let n of notifications" style="margin-bottom: 30px;">            <div class="col-12 custom-row">              <!-- Contributor Notifications -->              <div class="row" *ngIf="n.notificationType == \'contributor\'">                <div class="col-3">                  <a>                    <img src="{{n.videoInfo.poster}}" class="poster" (click)="viewNotification(n.notificationId)">                  </a>                </div>                <div class="col-6">                  <p>                    <span>{{n.userInfo.username}} </span>                    <span>added you as a contributor for </span>                    <a class="notification-link">{{n.videoInfo.Title}}</a>                  </p>                  <p>{{n.createdAt | dateAgo}}</p>                </div>              </div>                            <!-- Publish Notifications -->              <div class="row" *ngIf="n.notificationType == \'publishVideo\'">                <div class="col-3">                  <a>                    <img src="{{n.videoInfo.poster}}" class="poster" (click)="viewNotification(n.notificationId)">                  </a>                </div>                <div class="col-6">                  <p>                    <span>{{n.userInfo.username}} </span>                    <span>published </span>                    <a class="notification-link">{{n.videoInfo.Title}}</a>                  </p>                  <p>{{n.createdAt | dateAgo}}</p>                </div>              </div>              <!-- Comment notifications -->              <div class="row" *ngIf="n.notificationType == \'Comment\'">                  <div class="col-3">                    <a>                      <img src="{{n.videoInfo.poster}}" class="poster" (click)="viewNotification(n.notificationId)">                    </a>                  </div>                  <div class="col-6">                    <p>                      <span>{{n.userInfo.username}} </span>                      <span>commented on </span>                      <a class="notification-link">{{n.videoInfo.Title}}</a>                    </p>                    <p>{{n.createdAt | dateAgo}}</p>                  </div>              </div>              <!-- Follow notifications -->              <div class="row" *ngIf="n.notificationType == \'follow\'">                <div class="col-1">                  <a>                    <img src="{{n.userInfo.profilePic}}" class="user-profile" (click)="viewNotification(n.notificationId)">                  </a>                </div>                <div class="col-4">                  <p>                    <span class="notification-link">{{n.userInfo.username}}</span>                    <span> started following</span>                  </p>                  <p>{{n.createdAt | dateAgo}}</p>                </div>                <div class="col-1">                  <img src="{{n.followingUserInfo.profilePic}}" class="user-profile">                </div>                <div class="col-4">                  <p>                    <span>{{n.followingUserInfo.username}}</span>                  </p>                </div>              </div>              <!-- Like notifications -->              <div class="row" *ngIf="n.notificationType == \'Like\'">                <div class="col-3">                  <a>                    <img src="{{n.videoInfo.poster}}" class="poster" (click)="viewNotification(n.notificationId)">                  </a>                </div>                <div class="col-6">                  <p>                    <span>{{n.userInfo.username}}</span>                    <span> reacted with </span>                    <img src="{{getEmoji(n.category)}}" style="height:17px!important;width: auto"/>                    on <a class="notification-link" (click)="viewNotification(n.notificationId)">{{n.videoInfo.Title}}</a>                  </p>                  <p>{{n.createdAt | dateAgo}}</p>                </div>              </div>              <!-- Share notifications -->              <div class="row" *ngIf="n.notificationType == \'Share\'">                <div class="col-3">                  <a>                    <img src="{{n.videoInfo.poster}}" class="poster" (click)="viewNotification(n.notificationId)">                  </a>                </div>                <div class="col-6">                  <p>                    <span>{{n.userInfo.username}}</span>                    <span> shared </span>                    <a class="notification-link" (click)="viewNotification(n.notificationId)">{{n.videoInfo.Title}}</a>                  </p>                  <p>{{n.createdAt | dateAgo}}</p>                </div>              </div>                <!-- <div class="row" *ngIf="a.activityType == \'Like\'">                    <div class="col-3">                        <img src="{{a.videoInfo.poster}}" id="{{a.videoInfo._id}}" class="poster">                    </div>                    <div class="col-6">                      <p>                        {{a.userInfo.username}}                         <span ><b>reacted</b> to <img src="{{getEmoji(a.category)}}" style="height:17px!important;width: auto"/> </span>                                              <a [routerLink]="[\'/videos\']" style="color: #6e5eff" [queryParams]="{video:a.videoInfo._id}">                           {{a.videoInfo.Title}}                        </a>                                             </p>                      <p >{{a.videoInfo.updatedAt | dateAgo}}</p>                    </div>                                  </div> -->                                <!-- <div class="row" *ngIf="a.activityType == \'Share\'">                    <div class="col-3" >                        <img src="{{a.videoInfo.poster}}" id="{{a.videoInfo._id}}" class="poster">                    </div>                    <div class="col-6">                      <p>                        {{a.userInfo.username}}                                                 <span> <b>shared</b> on </span>                                              <a  [routerLink]="[\'/videos\']"  style="color: #6e5eff" [queryParams]="{video:a.videoInfo._id}">                           {{a.videoInfo.Title}}                        </a>                       </p>                      <p >{{a.videoInfo.updatedAt | dateAgo}}</p>                    </div>                </div> -->                <!-- <div class="row" *ngIf="a.activityType == \'Comment\'">                    <div class="col-3">                        <img src="{{a.videoInfo.poster}}" class="poster">                    </div>                    <div class="col-6">                      <p>                        <a >{{a.userInfo.username}}</a>  <b> commented</b> on                         <a style="color: #6e5eff" (click)="showVideo(a.videoInfo._id)">                            {{a.videoInfo.Title}}                        </a>                       </p>                      <p>{{a.videoInfo.updatedAt | dateAgo}}</p>                    </div>                </div>                <div class="row" *ngIf="a.activityType == \'follow\'">                    <div class="col-3" >                        <img src="{{a.userInfo.profilePic}}" class="poster">                    </div>                    <div class="col-6">                      <p>                        {{a.userInfo.username}}                         <span > is <b>following</b> </span>                                              <a  [routerLink]="[\'/public-profile\']" style="color: #6e5eff" [queryParams]="{user:a.followUserInfo._id}">                          {{a.followUserInfo.username}}                        </a>                      </p>                      <p>{{a.followUserInfo.createdAt | dateAgo}}</p>                    </div>                                   </div> -->            </div>        </div>    </div></section><withoutloginfooter></withoutloginfooter></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CreateInteractiveVideoComponent', 'selector': 'createInteractiveVideoComponent'},{'name': 'DashboardComponent', 'selector': 'dashboard'},{'name': 'EditProfileComponent', 'selector': 'editProfile'},{'name': 'FollowersComponent', 'selector': 'app-followers'},{'name': 'FollowingComponent', 'selector': 'app-following'},{'name': 'FooterComponent', 'selector': 'footer'},{'name': 'FooterComponent', 'selector': 'footer'},{'name': 'FooterComponent', 'selector': 'footer'},{'name': 'FooterComponent', 'selector': 'footer'},{'name': 'FooterComponent', 'selector': 'footer'},{'name': 'FooterComponent', 'selector': 'footer'},{'name': 'ForgetPasswordComponent', 'selector': 'forgetPassword'},{'name': 'HeaderComponent', 'selector': 'headerone'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LandingPageComponent', 'selector': 'app-landing-page'},{'name': 'LandingTestComponent', 'selector': 'app-landing-test'},{'name': 'LibraryComponent', 'selector': 'app-library'},{'name': 'LoginComponent', 'selector': 'login'},{'name': 'MyVideosComponent', 'selector': 'app-my-videos'},{'name': 'MyVideosPublicComponent', 'selector': 'app-my-videos-public'},{'name': 'NotificationsComponent', 'selector': 'app-notifications'},{'name': 'OtpComponent', 'selector': 'otp'},{'name': 'ProfileCompletionComponent', 'selector': 'profileCompletion'},{'name': 'PublicProfileComponent', 'selector': 'app-public-profile'},{'name': 'PublicUserActivitiyComponent', 'selector': 'app-public-user-activitiy'},{'name': 'PublicVideoComponent', 'selector': 'app-public-video'},{'name': 'PublishFooterComponent', 'selector': 'publishFooter'},{'name': 'ResetPasswordComponent', 'selector': 'resetPassword'},{'name': 'SearchResultsComponent', 'selector': 'app-search-results'},{'name': 'SectionSpinnerComponent', 'selector': 'sectionSpinner'},{'name': 'SideMenuComponent', 'selector': 'sideMenu'},{'name': 'SignupComponent', 'selector': 'signup'},{'name': 'SignupComponent', 'selector': 'signup'},{'name': 'SpinnerComponent', 'selector': 'spinner'},{'name': 'TestComponent', 'selector': 'app-test'},{'name': 'ThatsallComponent', 'selector': 'app-thatsall'},{'name': 'TrendingComponent', 'selector': 'app-trending'},{'name': 'UploadVideosComponent', 'selector': 'uploadVideos'},{'name': 'UserActivitiyComponent', 'selector': 'app-user-activitiy'},{'name': 'WithOutLoginFooterComponent', 'selector': 'withoutloginfooter'}];
+    var DIRECTIVES = [{'name': 'VideoJS', 'selector': '[videojs]'}];
+    var ACTUAL_COMPONENT = {'name': 'NotificationsComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'NotificationsComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

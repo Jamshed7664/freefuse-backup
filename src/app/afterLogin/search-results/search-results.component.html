@@ -1,0 +1,206 @@
+<headerone></headerone>
+<sideMenu></sideMenu>
+<spinner *ngIf="spinner" [@fadeInOut] ></spinner>
+<section class="search-section">
+    <div class=" custom-container">
+        <!-- Heading -->
+        <div class="row">
+            <div class="col-lg-4">
+                <h5 *ngIf="resultType == 'video'" >Search result ({{results.length}})</h5>
+                <h5 *ngIf="resultType == 'users'" >User result ({{results.length}})</h5>
+                <p style="margin: 5px 0px;">Searched Term: {{searchText}}</p>
+                <p>Results are title based only</p>
+            </div>
+            <div class="col-lg-3 rsult-btn" *ngIf="isLoggedIN">
+                      <h5 style="margin-left: 10px">Result Type</h5>
+                    <a class="btn animations" [ngClass]="{'active':resultType == 'users'}"  style="border-right: 1px solid #ccc" (click)="resultType = 'users';getSearchResults();">Users</a>
+                   <a class="btn animations" [ngClass]="{'active':resultType == 'video'}" (click)="resultType = 'video'">Videos</a> 
+                </div>
+
+                <div class="col-3 rsult-btn" *ngIf="!isLoggedIN">
+                       
+                  </div>
+
+            <div class="col-lg-3 like-cmt-select" *ngIf="resultType == 'video'">
+                <select class="btn border shadow-none w-100 position-relative pb-0" (change)="changeFilter(val)" name="changeFilterUploadVideo" [(ngModel)]="val">
+                    <option value="recent">Most recent</option>
+                    <option value="old">Oldest First</option>
+                  
+                </select>
+                <span>Sort</span>
+                <button type="button" class="btn shadow-none sort-videos"><span></span></button>
+            </div>
+            <div class="col-lg-2" *ngIf="resultType == 'video'">
+                <button type="button" id="showFilters" class="filter-btn border" (click)="showFilters()">
+                    <span style="float: left;">Filters</span>
+                    <img src="../../../assets/images/search/filters-tune.svg">
+                </button>    
+            </div>
+        </div>
+
+        <!-- Filter section -->
+        <div class="row" *ngIf="resultType == 'video'">
+            <div class="col-12 filters-div">
+                <div class="row">
+                    <!-- Upload Date -->
+                    <div class="col-lg-2">
+                        <h5>Upload Date</h5>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="uploadDateFilters" id="any" value="any" checked (change)="applyUploadDateFilter($event)">
+                            <label class="form-check-label" for="any">
+                                Any
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="uploadDateFilters" id="lastHour" value="lastHour" (change)="applyUploadDateFilter($event)">
+                            <label class="form-check-label" for="lastHour">
+                                Last hour
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="uploadDateFilters" id="today" value="today" (change)="applyUploadDateFilter($event)">
+                            <label class="form-check-label" for="today">
+                                Today
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="uploadDateFilters" id="thisWeek" value="thisWeek" (change)="applyUploadDateFilter($event)">
+                            <label class="form-check-label" for="thisWeek">
+                                This week
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="uploadDateFilters" id="thisMonth" value="thisMonth" (change)="applyUploadDateFilter($event)">
+                            <label class="form-check-label" for="thisMonth">
+                                This month
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="uploadDateFilters" id="thisYear" value="thisYear" (change)="applyUploadDateFilter($event)">
+                            <label class="form-check-label" for="thisYear">
+                                This year
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Interactivity -->
+                    <div class="col-lg-3">
+                        <h5>Interactivity</h5>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="interactivityFilters" id="interactivityFilter1" value="any" checked (change)="applyInteractivityFilter($event)">
+                            <label class="form-check-label" for="interactivityFilter1">
+                                Any
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="interactivityFilters" id="interactivityFilter2" value="interactiveOnly" (change)="applyInteractivityFilter($event)">
+                            <label class="form-check-label" for="interactivityFilter2">
+                                Interactive only
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="interactivityFilters" id="interactivityFilter3" value="nonInteractiveOnly" (change)="applyInteractivityFilter($event)">
+                            <label class="form-check-label" for="interactivityFilter3">
+                                Non-interactive only
+                            </label>
+                          </div>
+                        
+                    </div>
+
+                    <!-- Decisions & Outcomes -->
+                    <div class="col-lg-3">
+                        <h5>Decisions & Outcome</h5>
+                        <form>
+                            <label class="form-header">Decisions</label>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <input type="text" autocomplete="off" class="form-control minMax" id="decMin" placeholder="Min" [(ngModel)]="minDecision" #minDec="ngModel" name="decMin">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <input type="text" autocomplete="off" class="form-control minMax" id="decMax" placeholder="Max" [(ngModel)]="maxDecision" #maxDec="ngModel" name="decMax">
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-apply" (click)="applyDecisionFilter($event)">Apply</button>
+                        </form>
+                        <form>
+                            <label class="form-header" style="margin-top: 10px;">Outcomes</label>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <input type="text" autocomplete="off" class="form-control minMax" id="outMin" placeholder="Min" [(ngModel)]="minOutcome" #minOut="ngModel" name="outMin">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <input type="text" autocomplete="off" class="form-control minMax" id="outMax" placeholder="Max" [(ngModel)]="maxOutcome" #minOut="ngModel" name="outMax">
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-apply" (click)="applyOutcomeFilter($event)">Apply</button>
+                        </form>
+                    </div>
+
+                    <!-- Features -->
+                    <div class="col-lg-2" >
+                        <h5>Features</h5>
+                        <div class="form-check" *ngFor="let i of categories">
+                            <input class="form-check-input" type="checkbox" value="{{i}}" id="feature{{i}}" (change)="applyFeatureFilter($event)">
+                            <label class="form-check-label" for="feature{{i}}">
+                              {{i}}
+                            </label>
+                        </div>
+                    </div>
+
+                  
+                </div>
+                
+            </div>
+        </div>
+
+        <!-- Search results-->
+        <div *ngIf="resultType == 'video'" [@fadeInOut]>
+        <div *ngFor="let r of results" (click)="viewVides(r.videoInfo._id)">
+              <div *ngIf="r.videoInfo" class="row search-result pointer"> 
+                        <div class="col-lg-3" >
+                            <img src="{{r.videoInfo.poster}}" class="poster">
+                          
+                        </div>
+                        <div class="col-lg-2 center" style="text-align: center" (click)="viewuser(r.userInfo._id)">
+                            <img src="{{r.userInfo.profilePic}}" class="user" *ngIf="r.userInfo.profilePic">
+                            <img src="../../../assets/images/user-pic.svg" class="user" *ngIf="!r.userInfo.profilePic">
+                            <!-- <span class="profile-image" *ngIf="!r.userInfo.profilePic" imgName  title="{{i.userInfo.firstname}},{{i.userInfo.lastname}}" style="border-radius:50%"></span> -->
+                           
+                            <a style="display:block;">{{r.userInfo.username}}</a>
+                        </div>
+                        <div class="col-6">
+                            <h5>{{r.videoInfo.Title}}</h5>
+                            <span class="video-stats">{{r.videoInfo.createdAt | dateAgo}}</span>
+                            <span class="video-stats"> {{r.videoInfo.viewCount}} Views</span>
+                            <br>
+                        
+                            <span class="video-cat cateogyclass animations class0" (click)="showCategory(c)" *ngFor="let c of r.videoInfo.Categories">{{c}}</span>
+                       
+                            <p class="video-desc">{{r.videoInfo.Description}}</p>
+                        </div>
+        </div>
+    </div>
+        
+</div>
+
+
+
+      <!-- user results-->
+      <div *ngIf="resultType == 'users'" [@fadeInOut]>
+      <div *ngFor="let r of users" (click)="viewuser(r._id)">
+           
+            <div class="row search-result pointer"> 
+                      <div class="col-lg-2 center" >
+                          <img src="{{r.profilePic}}" *ngIf="r.profilePic" style="width: 100%;border-radius: 0;height: 100px;object-fit: cover">
+                          <span class="profile-image" *ngIf="!r.profilePic" imgName  title="{{r.firstname}},{{r.lastname}}" style="border-radius:4px;;line-height: 100px;width: 100%; height: 100px"></span>
+                        </div>
+                      <div class="col-lg-6">
+                          <h5>{{r.username}}</h5>
+                          <span class="video-stats">About: {{r.bio[0]}}</span>
+                          <span class="video-stats" style="display: block;">Name: {{r.firstname}} {{r.lastname}}</span>
+                      </div>
+      </div>
+  </div>
+</div>
+    </div>
+</section>

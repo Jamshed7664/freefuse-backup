@@ -1,0 +1,191 @@
+.my-videos {
+    margin-top: 100px;
+}
+
+.custom-container {
+    padding-left: 8%;
+    padding-right: 8%;
+}
+
+.custom-container h5 {
+    font-size: 17px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.custom-container p {
+    color: #a6a3a3;
+    font-size: 14px;
+}
+
+.custom-container p > span {
+    color: #6e5eff;
+}
+ 
+.like-cmt-select > select {
+    height: 50px;
+    font-size: 15px;
+}
+
+.like-cmt-select > span{
+    position: absolute;
+    font-size: 13px;
+    left: 30px;
+    top: 2px;
+    color: #878787;
+}
+
+.like-cmt-select button span{
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 6px solid #555;
+    display: inline-block;
+}
+
+.like-cmt-select button{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 16px;
+    top: 25px;
+    width: 50px;
+    background-color: #f5f7f6;
+}
+
+.like-cmt-select button.sort-videos {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    /* left: 117px; */
+    top: 25px;
+    padding: 0;
+    width: 26px;
+    background-color: #f5f7f6;
+}
+
+.filter-btn{
+    background-color: transparent;
+    height: 50px;
+    width: 100%;
+    box-shadow: none;
+    border-radius: 3px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 6px;
+}
+
+.img-cover {
+    position: relative;
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.over {
+    position: absolute;
+    background-color: gba(0,0,0,0.5);
+    top: 0px;
+    right: 15px;
+    font-size: 12px;
+    border-radius: 4px;
+    padding: 5px;
+    color: #FFF;
+}
+
+.over img {
+    margin-right: 5px;
+    height: 14px;
+}
+
+.over span {
+    margin-right: 10px;
+}
+
+.filter-btn img {
+    height: 17px;
+}
+.info{
+    margin-bottom: 20px;
+}
+
+.info span {
+ margin-right: 10px;
+ font-size: 13px;
+}
+
+.info span.categories {
+    color: #878787;
+    font-size: 12px;
+}
+
+.video-container {
+   padding: 10px;
+}
+
+.video-container:hover {
+    background-color: #FFF;
+    box-shadow:  0px 0px 4px 0px rgba(0,0,0,0.5)
+}
+
+.video-container:hover .published-options {
+    display: block;
+    
+}
+
+.video-container:hover .published-options p,
+.video-container:hover .published-options h5 {
+    color: #878787;
+}
+
+.video-container:hover .published-views {
+    display: none;
+}
+
+.published-options {
+    /* display: none; */
+    list-style-type: none;
+}
+
+.published-options p , h5 {
+    color: #000000;
+}
+
+.published-options p {
+    margin-bottom: 0px;
+    margin-top: 0;
+}
+
+.published-options h5 {
+    margin-top: 0;
+    margin-bottom: 35px;
+}
+
+.published-options li a:hover {
+    color: #6e5eff;
+}
+
+.published-views{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.published-views li {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.draft-row {
+    margin-bottom: 70px;
+}
+
+h5 {
+    margin-top: 15px;
+}
+
+.poster {
+    width: 100%;
+    /* height: 100%; */
+    cursor: pointer;
+}
+

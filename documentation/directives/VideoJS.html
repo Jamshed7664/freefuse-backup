@@ -1,0 +1,286 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>my-app documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">my-app documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content directive">
+                   <div class="content-data">
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>Directives</li>
+  <li>VideoJS</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/app/videojsDirective.ts</code>
+        </p>
+
+
+
+
+        <section>
+            <h3>Metadata</h3>
+            <table class="table table-sm table-hover">
+                <tbody>
+
+                    <tr>
+                        <td class="col-md-3">Selector</td>
+                        <td class="col-md-9"><code>[videojs]</code></td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </section>
+
+
+            <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(el: <a href="https://angular.io/api/core/ElementRef" target="_blank">ElementRef</a>, renderer: <a href="https://angular.io/api/core/Renderer" target="_blank">Renderer</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="7" class="link-to-prism">src/app/videojsDirective.ts:7</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>el</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/core/ElementRef" target="_blank" >ElementRef</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>renderer</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/core/Renderer" target="_blank" >Renderer</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+
+
+
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Directive, ElementRef, Renderer, Input, OnChanges, ɵɵNgOnChangesFeature } from &#x27;@angular/core&#x27;;
+declare var videojs;
+declare var $;
+@Directive({
+  selector: &#x27;[videojs]&#x27;
+})
+export class VideoJS {
+  
+ 
+  constructor(el: ElementRef, renderer: Renderer) {
+    // videojs((el.id), {html5: {
+    // }});
+    
+
+  
+    setTimeout(()&#x3D;&gt;{
+      
+    
+        for (var key in videojs.players) {
+          if(key &#x3D;&#x3D; (el.nativeElement.getAttribute(&#x27;id&#x27;)))
+          {
+             videojs((el.nativeElement.getAttribute(&#x27;id&#x27;))).dispose();
+             break;
+          }
+         }
+        var player &#x3D; videojs((el.nativeElement.getAttribute(&#x27;id&#x27;)), {html5: { }},); 
+        
+      // When you pass text in options it just creates a control text,
+      // which is displayed as tooltip when hovered on 
+      // this button viz the span in you div,
+    
+      var backward &#x3D; player.controlBar.addChild(&quot;button&quot;,{},1);
+      var forward &#x3D; player.controlBar.addChild(&quot;button&quot;,{},2);
+      var reset &#x3D; player.controlBar.addChild(&quot;button&quot;);
+
+      // There are many functions available for button component 
+      // like below mentioned in this docs 
+      // https://docs.videojs.com/button. 
+      // You can set attributes and clasess as well.
+
+      // Getting html DOM
+        var forwardDom &#x3D; forward.el();
+        var backwardDom &#x3D; backward.el();
+        // Since now you have the html dom element 
+        // you can add click events
+
+
+        // Now I am setting the text as you needed.
+        forwardDom.innerHTML &#x3D; &quot;&lt;img src&#x3D;&#x27;../../../assets/images/videoplayer/step-forward.svg&#x27;/style&#x3D;&#x27;width:17px;filter: invert(100%);&#x27;&gt;&quot;;
+        forwardDom.setAttribute(&#x27;title&#x27;,&#x27;Forward&#x27;);
+        backwardDom.innerHTML &#x3D;  &quot;&lt;img src&#x3D;&#x27;../../../assets/images/videoplayer/step-backward.svg&#x27; style&#x3D;&#x27;width:17px;filter: invert(100%);&#x27;/&gt;&quot;;
+        backwardDom.setAttribute(&#x27;title&#x27;,&#x27;Backward&#x27;);
+        
+        forwardDom.onclick &#x3D; function(){
+          player.currentTime(player.currentTime() + 10);
+
+      } 
+      backwardDom.onclick &#x3D; function(){
+        player.currentTime(player.currentTime() - 10);
+        ;
+      } 
+    
+    
+      
+
+    
+     })
+   
+ }
+}</code></pre>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'directive';
+            var COMPODOC_CURRENT_PAGE_URL = 'VideoJS.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

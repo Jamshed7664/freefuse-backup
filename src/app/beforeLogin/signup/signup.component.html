@@ -1,0 +1,154 @@
+<headerone></headerone>
+<spinner *ngIf="signupObject.spinner"></spinner>
+<form class="signup-form"  #signupForm="ngForm" (ngSubmit)="onSubmit()">
+    <section class="video-signup-sec" style="margin-top: 50px;">
+        <div class="container video-common-sec">
+            <div class="video-common-form">
+                <h4>Free<strong>Fuse</strong></h4>
+                <h6>Create a new account</h6>
+
+                <div class="form-group signup-group">
+                    <div class="pos-relative">
+                        <input type="email" id="user_email" class="form-control main_focus_input" name="user_email" required  [(ngModel)]="signupObject.email" #user_email="ngModel" (change)="changeUserLogin('user_email')" [ngClass]="{'custom-alert-border':user_email.invalid && user_email.touched}" email>
+                        <label class="input-field" for="user_email">Enter your email address</label>  
+                    </div>   
+                    <div *ngIf="user_email.invalid && user_email.touched" class="custom-alert">
+                        <div *ngIf="user_email.errors.required">
+                            Email is required.
+                        </div> 
+                        <div *ngIf="user_email.errors.email">
+                            Please enter valid email address.
+                        </div>                                
+                    </div>                                    
+                </div>
+
+                <div class="form-group signup-group">
+                    <div class="pos-relative">
+                        <input type="text" id="user_firstName" class="form-control main_focus_input" maxlength="20" minlength="2" name="user_firstName" required  [(ngModel)]="signupObject.firstname" #user_firstName="ngModel" (change)="changeUserLogin('user_firstName')" [ngClass]="{'custom-alert-border':user_firstName.invalid && user_firstName.touched}">
+                        <label class="input-field" for="user_firstName">First Name</label>  
+                    </div>   
+                    <div *ngIf="user_firstName.invalid && user_firstName.touched" class="custom-alert">
+                        <div *ngIf="user_firstName.errors.required">
+                            First Name is required!
+                        </div> 
+                        <div *ngIf="user_firstName.errors.maxlength">
+                            Maximum of 20 characters are allowed!
+                        </div> 
+                        <div *ngIf="user_firstName.errors.minlength">
+                            Minimum of 2 characters required!
+                        </div>                           
+                    </div>
+                </div>
+
+                <div class="form-group signup-group">
+                    <div class="pos-relative">
+                        <input type="text" id="user_lastName" class="form-control main_focus_input" maxlength="20" minlength="2" name="user_lastName" required  [(ngModel)]="signupObject.lastname" #user_lastName="ngModel" (change)="changeUserLogin('user_lastName')" [ngClass]="{'custom-alert-border':user_lastName.invalid && user_lastName.touched}">
+                        <label class="input-field" for="user_lastName">Last Name</label>  
+                    </div>   
+                    <div *ngIf="user_lastName.invalid && user_lastName.touched" class="custom-alert">
+                        <div *ngIf="user_lastName.errors.required">
+                            Last Name is required!
+                        </div> 
+                        <div *ngIf="user_lastName.errors.maxlength">
+                            Maximum of 20 characters are allowed!
+                        </div> 
+                        <div *ngIf="user_lastName.errors.minlength">
+                            Minimum of 2 characters required!
+                        </div>                            
+                    </div>
+                </div>
+
+                <div class="form-group signup-group">
+                    <div class="pos-relative">
+                        <input type="text" id="user_userName" class="form-control main_focus_input" maxlength="20" minlength="2" name="user_userName" required  [(ngModel)]="signupObject.username" #user_userName="ngModel" (change)="changeUserLogin('user_userName')" [ngClass]="{'custom-alert-border':user_userName.invalid && user_userName.touched}">
+                        <label class="input-field" for="user_userName">User Name</label>  
+                    </div>   
+                    <div *ngIf="user_userName.invalid && user_userName.touched" class="custom-alert">
+                        <div *ngIf="user_userName.errors.required">
+                            User Name is required!
+                        </div> 
+                        <div *ngIf="user_userName.errors.maxlength">
+                            Maximum of 20 characters are allowed!
+                        </div> 
+                        <div *ngIf="user_userName.errors.minlength">
+                            Minimum of 2 characters required!
+                        </div>                            
+                    </div>
+                </div>
+
+                <div class="form-group signup-group">
+                    <div class="pos-relative">                                                                                                                                                                                                                                                                                                                                                                  
+                        <input [type]="fieldPassTextType ? 'text' : 'password'" id="user_password" autocomplete="new-password" class="form-control main_focus_input" name="user_password" required  [(ngModel)]="signupObject.password" #user_password="ngModel" (change)="changeUserLogin('user_password')" [ngClass]="{'custom-alert-border':user_password.invalid && user_password.touched}" >
+                        <label class="input-field" for="user_password">Create a password</label>
+                        <button type="button" id="pass-show" class="btn btn-link btn-show-password" (click)="togglePasswordTextType()" *ngIf="!fieldPassTextType">Show</button>
+                        <button type="button" id="pass-hide" class="btn btn-link btn-show-password" (click)="togglePasswordTextType()" *ngIf="fieldPassTextType">Hide</button>  
+                    </div>   
+
+                    <div *ngIf="user_password.invalid && user_password.touched" class="custom-alert">
+                        <div *ngIf="user_password.errors.required">
+                            Create a password is required!
+                        </div>          
+                        <!-- <div *ngIf="user_password.errors.pattern">
+                            pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"
+                            Minimum eight characters, at least one uppercase letter, one lowercase letter, one number and one special character
+                        </div>  -->
+
+
+                <!-- <a class="pwd-info" data-trigger="hover" href="#" data-toggle="popover-pwd-info" data-placement="top" data-html="true" 
+                data-content="<p>password must be at least 8 charactorters long.</p><p>password must contain 
+                at least one letter and one number</p><p>Password must contain at least one special character (~!@#$%^&*()_+=-)</p>">
+                    <img src="assets/images/pwd-info.svg" alt=""> 
+                </a>                                    -->
+            </div>
+        </div>
+            <div class="form-group signup-group">
+                    <div class="pos-relative">
+                            <input [type]="fieldCPassTextType ? 'text' : 'password'" autocomplete="new-password" id="user_cpassword" class="form-control main_focus_input" minlength="8" name="user_cpassword" required  [(ngModel)]="signupObject.cPassowrd" #user_cpassword="ngModel" (change)="changeUserLogin('user_cpassword')" [ngClass]="{'custom-alert-border':(user_cpassword.invalid && user_cpassword.touched)}" pattern="{{ user_password.value }}">
+                            <label class="input-field" for="user_cpassword">Confirm a password</label>
+                            <button type="button" id="cpass-show" class="btn btn-link btn-show-password" (click)="toggleCPasswordTextType()" *ngIf="!fieldCPassTextType">Show</button>
+                            <button type="button" id="cpass-hide" class="btn btn-link btn-show-password" (click)="toggleCPasswordTextType()" *ngIf="fieldCPassTextType">Hide</button>  
+                       </div>   
+
+                          <div *ngIf="user_cpassword.invalid && user_cpassword.touched" class="custom-alert">
+                               <div *ngIf="user_cpassword.errors.required">
+                                    This is required!
+                              </div> 
+                              <div *ngIf="user_cpassword.errors.maxlength">
+                                   Maximum of 20 characters are allowed!
+                                </div> 
+                                <div *ngIf="user_cpassword.errors.minlength">
+                                    Minimum of 2 characters required!
+                                </div> 
+                                <div *ngIf="user_cpassword.errors.pattern" class="custom-alert">
+                                        Password does not matched!
+                                    </div>
+                            </div>
+                            
+
+                                                  
+            </div>
+            <button type="submit" class="video-common-btn" [disabled]="signupForm.invalid">Continue</button>
+        
+        
+        <!-- <span class="or-text">OR</span> -->
+
+        <!-- <div class="social-area">
+            <h6>Continue with</h6>
+            <div class="social-icon">
+                <a><img src="assets/images/facebook-icon.svg" alt="facebook"></a>
+                <a><img src="assets/images/twitter-icon.svg" alt="twitter"></a>
+                <a><img src="assets/images/linkedin-icon.svg" alt="linkedin"></a>
+                <a><img src="assets/images/google-icon.svg" alt="google"></a>
+            </div>
+        </div> -->
+
+        <p class="tc-pp-text">Before continuing using FreeFuse please make sure you have read and agree with our 
+            <a >terms and conditions</a> & <a>privacy policy</a>
+        </p>
+
+        </div>
+    </div>
+
+</section>
+</form>
+<withoutloginfooter></withoutloginfooter>

@@ -1,0 +1,259 @@
+<headerone></headerone>
+<sideMenu></sideMenu>
+<spinner *ngIf="spinner" ></spinner>
+<!-- Main wrapper -->
+<section class="main" *ngIf="!spinner">
+    <div class="custom-container">
+        <div class="row">
+            <div class="col-12">
+                <h5 style="font-weight: 600;margin-bottom: 20px;">User Activity</h5>
+            </div>
+        </div>
+        <div class="row">
+            <!-- Tab list -->
+            <div class="col-lg-3">
+                <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                    <a class="nav-link icon" id="activity-tab" data-toggle="pill" href="#activity" role="tab" aria-controls="activity" aria-selected="true">
+                        <svg version="1.1" id="icons" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	                        viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
+                            <path d="M17,10c-3.9,0-7,3.1-7,7c0,3.9,3.1,7,7,7c3.9,0,7-3.1,7-7C24,13.1,20.9,10,17,10z M17,22c-2.8,0-5-2.2-5-5s2.2-5,5-5
+	                            c2.8,0,5,2.2,5,5S19.8,22,17,22z"/>
+                            <polygon points="18,13 16,13 16,17.4 18.3,19.7 19.7,18.3 18,16.6 "/>
+                            <path d="M4,4.5C4,7,6,9,8.5,9C11,9,13,7,13,4.5C13,2,11,0,8.5,0C6,0,4,2,4,4.5z M11,4.5C11,5.9,9.9,7,8.5,7C7.1,7,6,5.9,6,4.5
+	                            S7.1,2,8.5,2C9.9,2,11,3.1,11,4.5z"/>
+                            <path d="M2,16v-1c0-1.7,1.3-3,3-3h5.8c0.6-0.8,1.4-1.4,2.2-1.9C12.7,10,12.3,10,12,10H5c-2.8,0-5,2.2-5,5v3h9.1C9,17.7,9,17.3,9,17
+	                            c0-0.3,0-0.7,0.1-1H2z"/>
+                        </svg>
+                        Activity
+                    </a>
+                    <a class="nav-link icon active" id="history-tab" data-toggle="pill" href="#history" role="tab" aria-controls="history" aria-selected="true">
+                        <svg version="1.1" id="icons" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	                        viewBox="0 0 22.019 23.019" style="enable-background:new 0 0 22.019 23.019;" xml:space="preserve">
+                            <path d="M8.019,14.019c0-1.654-1.346-3-3-3s-3,1.346-3,3s1.346,3,3,3S8.019,15.673,8.019,14.019z M4.019,14.019c0-0.551,0.448-1,1-1
+	                            c0.552,0,1,0.449,1,1s-0.448,1-1,1C4.468,15.019,4.019,14.57,4.019,14.019z"/>
+                            <path d="M0.019,21.019v2h2v-2c0-0.551,0.448-1,1-1h4c0.552,0,1,0.449,1,1v2h2v-2c0-1.654-1.346-3-3-3h-4
+	                            C1.365,18.019,0.019,19.365,0.019,21.019z"/>
+                            <path d="M22.019,11.01C22.019,4.939,17.081,0,11.01,0S0,4.939,0,11.01h2C2,6.042,6.042,2,11.01,2c4.968,0,9.01,4.042,9.01,9.01
+	                            s-4.042,9.009-9.01,9.009v2C17.081,22.019,22.019,17.08,22.019,11.01z"/>
+                            <polygon points="10.008,4.008 10.008,11.422 14.301,15.715 15.715,14.302 12.008,10.594 12.008,4.008 "/>
+                        </svg>
+                        Watch History
+                    </a>
+                    <a class="nav-link icon" id="likes-tab" data-toggle="pill" href="#likes" role="tab" aria-controls="likes" aria-selected="false">
+                        <svg viewBox="0 0 16 16" width="512" xmlns="http://www.w3.org/2000/svg">
+                            <path d="m3.5 0h-3c-.276367 0-.5.223633-.5.5v9c0 .276367.223633.5.5.5h3c.276367 0 .5-.223633.5-.5v-9c0-.276367-.223633-.5-.5-.5zm-.5 9h-2v-8h2z" transform="translate(0 5)"/><path d="m9.15332 5.02979h-2.9541c-.258301 0-.387695-.172363-.431152-.246582-.043457-.0737305-.131348-.270508-.0063477-.496094l1.0415-1.87549c.228516-.410645.251953-.893555.0649414-1.32471-.187012-.43164-.556152-.744629-1.0127-.858398l-.734375-.183594c-.178711-.0449219-.368164.0122071-.492676.150391l-3.9873 4.42969c-.413574.460449-.641113 1.0542-.641113 1.67236v4.23242c0 1.37842 1.12158 2.5 2.5 2.5l4.97412-.0004883c1.12305 0 2.11475-.756348 2.41113-1.83887l1.06738-3.89844c.03125-.13623.0473633-.275879.0473633-.415527 0-1.01807-.828613-1.84668-1.84668-1.84668zm.82959 2.01709-1.0625 3.87939c-.177734.649414-.772461 1.10352-1.44629 1.10352h-4.97412c-.827148 0-1.5-.672852-1.5-1.5v-4.23242c0-.371094.136719-.727539.384766-1.00342l3.78564-4.20605.442383.110352c.152344.0380859.275391.142578.337891.286621.0625.143555.0546875.304199-.0214844.441406l-1.0415 1.87549c-.260742.469238-.253906 1.02588.0185547 1.48877.272461.462891.755859.739258 1.29297.739258h2.9541c.466797 0 .84668.379883.84668.84668 0 .0634766-.0073242.127441-.0170898.17041z" transform="translate(5 .97)"/>
+                        </svg>
+                        Liked Videos
+                    </a>
+                    <a class="nav-link icon" id="shared-tab" data-toggle="pill" href="#shares" role="tab" aria-controls="shares" aria-selected="false">
+                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	                        viewBox="0 0 13.5 11.25" style="enable-background:new 0 0 13.5 11.25;" xml:space="preserve">
+                            <path d="M8.262,10.512V7.453C6.386,7.43,4.775,7.734,3.428,8.367C2.08,9,0.937,9.961,0,11.25c0.352-1.921,1.166-3.668,2.443-5.238
+	                            c1.277-1.57,3.217-2.566,5.818-2.988V0L13.5,5.273L8.262,10.512z"/>
+                            <g></g>
+                            <g></g>
+                            <g></g>
+                            <g></g>
+                            <g></g>
+                            <g></g>
+                        </svg>
+                        Shared Videos
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Tab content-->
+            <div class="col-lg-9 video-container">
+                <div class="tab-content" id="v-pills-tabContent">
+                    <!-- Activity -->
+                    <div class="tab-pane fade show" id="activity" role="tabpanel" aria-labelledby="activity-tab">
+                        <h5 style="text-align: center;" *ngIf="activityList.length==0">No activities found....</h5>
+                        <div class="row history-row animations" *ngFor="let a of sortedActivityList" >
+                            
+                            <div class="row width-100" *ngIf="a.activityType == 'choice' &&  !!a.videoInfo" (click)="showVideo(a.videoInfo._id)">
+                    
+                                <div class="col-lg-3">
+                                    <img src="{{a.videoInfo.poster}}" class="poster" thumnailsDirective>
+                                </div>
+                                <div class="col-lg-9">
+                                  <p>
+                                    <a >You</a>  <b> chose</b>  <b> {{a.videoInfo.childInfo}}</b> on  
+                                    <a style="color: #6e5eff" >
+                                       {{a.videoInfo.Title}}
+                                    </a> 
+                                   
+                                  </p>
+                                  <p >{{a.activityTime | dateAgo}}</p>
+                                </div>
+          
+                            </div>
+
+                                <div class="row width-100"  *ngIf="a.activityType == 'Comment'" (click)="showVideo(a.videoInfo._id)">
+                                        <div class="col-3">
+                                            <img src="{{a.videoInfo.poster}}" class="poster" thumnailsDirective>
+                                        </div>
+                                        <div class="col-9">
+                                          <p>
+                                            <a >{{a.userInfo.username}}</a>  <b> commented</b> on 
+                                            <a style="color: #6e5eff" >
+                                               {{a.videoInfo.Title}}
+                                            </a> 
+                                           
+                                          </p>
+                                          <p >{{a.activityTime | dateAgo}}</p>
+                                        </div>
+                
+                                    </div>
+                
+                
+                
+                                    <div class="row width-100" *ngIf="a.activityType == 'Share'" (click)="showVideo(a.videoInfo._id)">
+                                        <div class="col-3" >
+                                            <img src="{{a.videoInfo.poster}}" id="{{a.videoInfo._id}}" class="poster" thumnailsDirective>
+                                        </div>
+                                        <div class="col-9">
+                                          <p>
+                                            {{a.userInfo.username}} 
+                                            
+                                            <span> <b>shared</b> on </span>
+                                          
+                                            <a  [routerLink]="['/videos']"  style="color: #6e5eff" [queryParams]="{video:a.videoInfo._id}">
+                                               {{a.videoInfo.Title}}
+                                            </a> 
+                                          </p>
+                                          <p >{{a.activityTime | dateAgo}}</p>
+                                        </div>
+                                       
+                                    </div>
+                
+                
+                                    <div class="row width-100" *ngIf="a.activityType == 'Like'" (click)="showVideo(a.videoInfo._id)">
+                                        <div class="col-3">
+                                            <img src="{{a.videoInfo.poster}}" id="{{a.videoInfo._id}}" class="poster" thumnailsDirective>
+                                        </div>
+                                        <div class="col-9">
+                                          <p>
+                                            {{a.userInfo.username}} 
+                
+                                            <span ><b>reacted</b> to <img src="{{getEmoji(a.category)}}" style="height:17px!important;width: auto" /> </span>
+                                          
+                                            <a [routerLink]="['/videos']" style="color: #6e5eff" [queryParams]="{video:a.videoInfo._id}">
+                                               {{a.videoInfo.Title}}
+                                            </a> 
+                                          
+                                          </p>
+                                          <p >{{a.activityTime | dateAgo}}</p>
+                                        </div>
+                                      
+                                    </div>
+                
+                
+                                    <div class="row width-100" *ngIf="a.activityType == 'follow'" (click)="userProfile(a.userInfo._id)">
+                                        <div class="col-3" >
+                                            <img *ngIf="a.userInfo.profilePic" src="{{a.userInfo.profilePic}}" class="poster">
+                                            <span class="profile-image" *ngIf="!a.userInfo.profilePic" imgName  title="{{a.userInfo.firstname}},{{a.userInfo.lastname}}" style="border-radius:50%" ></span>
+
+                                        </div>
+                                        <div class="col-9">
+                                          <p>
+                                            {{a.userInfo.username}} 
+                                            <span > is <b>following</b> </span>
+                                          
+                                            <a  [routerLink]="['/public-profile']" style="color: #6e5eff" [queryParams]="{user:a.followUserInfo._id}">
+                                              {{a.followUserInfo.username}}
+                                            </a>
+                                          </p>
+                                          <p>{{a.activityTime | dateAgo}}</p>
+                                        </div>
+                                       
+                                    </div>
+                
+
+                        </div>
+                    </div>
+                    
+                    <!-- Watch History -->
+                    <div class="tab-pane fade show active" id="history" role="tabpanel" aria-labelledby="history-tab">
+                        <h5 style="text-align: center;" *ngIf="watchHistory.length==0">No watch history found....</h5>
+                        <div class="row history-row animations" *ngFor="let i of watchHistory" (click)="showVideo(i.videoInfo._id)">
+                            <div class="row width-100" >
+                            <div class="col-3 video-img">
+                                <img src="{{i.videoInfo.poster}}" id="{{i.videoInfo._id}}" thumnailsDirective >
+                                <div class="over">
+                                    <span>
+                                            <img  src="../../../assets/images/landing/video-decisions.svg">
+                                        {{i.videoInfo.totalchild}}</span>
+                                    <span>
+                                            <img  src="../../../assets/images/landing/video-outcomes.svg">
+                                        {{i.videoInfo.totallevel}}</span>
+                                </div>
+                            </div>
+                            <div class="col-9 video-details">
+                                <h5>{{i.videoInfo.Title}}</h5>
+                                <p>Watched by you, {{i.createdAt | dateAgo}}</p>
+                                <span *ngFor="let c of i.videoInfo.Categories">{{c}}</span>
+                                <!-- <p class="video-desc">Description</p> -->
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+
+                    <div class="tab-pane fade show" id="likes" role="tabpanel" aria-labelledby="likes-tab">
+                        <h5 style="text-align: center;" *ngIf="likedVideos.length==0">No liked videos found....</h5>
+                        <div class="row history-row animations" *ngFor="let i of likedVideos" (click)="showVideo(i.videoInfo._id)">
+                            <div class="row width-100" >
+                            <div class="col-3 video-img">
+                                <img src="{{i.videoData.poster}}" id="{{i.videoData._id}}" thumnailsDirective>
+                                <div class="over">
+                                        <span>
+                                                <img  src="../../../assets/images/landing/video-decisions.svg">
+                                            {{i.videoData.totalchild}}</span>
+                                        <span>
+                                                <img  src="../../../assets/images/landing/video-outcomes.svg">
+                                            {{i.videoData.totallevel}}</span>
+                                    </div>
+                            </div>
+                            <div class="col-9 video-details">
+                                <h5>{{i.videoData.Title}}</h5>
+                                <p>reacted <img src="{{getEmoji(i.category)}}" class="reacted" /> by you, {{i.createdAt | dateAgo}}</p>
+                                <span *ngFor="let c of i.videoData.Categories">{{c}}</span>
+                                <!-- <p class="video-desc">Description</p> -->
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane fade show" id="shares" role="tabpanel" aria-labelledby="shares-tab">
+                        <h5 style="text-align: center;" *ngIf="sharedVideos.length==0">No shared videos found....</h5>
+                        <div class="row history-row animations" *ngFor="let i of sharedVideos" (click)="showVideo(i._id)">
+                            <div class="row width-100" *ngIf="i.videoDetails">
+                            <div class="col-3 video-img" >
+                                <img src="{{i.videoDetails.poster}}" id="{{i._id}}" thumnailsDirective>
+                                <div class="over">
+                                        <span>
+                                                <img  src="../../../assets/images/landing/video-decisions.svg">
+                                            {{i.videoDetails.totalchild}}</span>
+                                        <span>
+                                                <img  src="../../../assets/images/landing/video-outcomes.svg">
+                                            {{i.videoDetails.totallevel}}</span>
+                                    </div>
+                            </div>
+                            <div class="col-9 video-details" *ngIf="i.videoDetails"> 
+                                <h5>{{i.videoDetails.Title}}</h5>
+                                <p>Shared  <a *ngIf="i.sharedWith" (click)="userProfile(i.sharedWith._id)" style="color:#6655ee">by you with {{i.sharedWith.username}}</a>, {{i.shareTime | dateAgo}}</p>
+                                
+                                     <span *ngFor="let c of i.videoDetails.Categories">{{c}}</span>
+                                 
+                                <!-- <p class="video-desc">Description</p> -->
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<withoutloginfooter></withoutloginfooter>

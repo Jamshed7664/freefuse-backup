@@ -1,0 +1,224 @@
+section.upload-videos-sec .upload-vid{
+    width: 360px;
+    height: auto;
+}
+.upload-videos-sec .upload-vid > h3{
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 28px;
+}
+.upload-vid .upload-v-btn{
+    padding: 15px;
+    background-color: #9ca9ba;
+}
+.upload-vid .upload-v-btn > button{
+    border: none;
+    background: none;
+    width: 100%;
+    border-bottom: 1px solid #ffffff61;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    outline: none;
+}
+.upload-vid .upload-v-btn > button:last-child{
+    border-bottom: none;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+.upload-vid .upload-v-btn > button .media img{
+    width: 26px;
+    height: 26px;
+}
+.upload-vid .upload-v-btn > button .media-body h5{
+    font-size: 16px;
+    font-weight: 600;
+    color: #ffffff;
+}
+.upload-vid .upload-v-btn > button .media-body p{
+    font-size: 12px;
+    color: #ffffff;
+    margin-bottom: 0px;
+}
+.upload-vid .upload-other-btn{
+    background-color: #ffffff;
+    padding: 15px;
+    box-shadow: 0px 10px 20px -10px #dad8d8;
+}
+.upload-vid .upload-other-btn > .txt img{
+    width: 20px;
+    height: 20px;
+}
+.upload-vid .upload-other-btn > .txt h5{
+    font-size: 16px;
+    margin-bottom: 0px;
+}
+.upload-vid .upload-other-btn .other-buttons > div button{
+    width: 30px;
+    height: auto;
+    background: none;
+    border: none;
+}
+.upload-vid .upload-other-btn .other-buttons > div button img{
+    width: 100%;
+    height: 100%;
+}
+.upload-vid .upload-v-btn .more-btn button{
+    box-shadow: none;
+    float: right;
+    padding: 0px 10px;
+    margin-bottom: 15px;
+}
+.upload-vid .upload-v-btn .more-btn button::after{
+    display: none;
+}
+.upload-vid .upload-v-btn .more-btn button img{
+    width: 20px;
+    height: 20px;
+}
+
+/* Upload video popup */
+.upload-vid-Modal .modal-body,.upload-url-Modal .modal-body{
+    padding: 0px 25px 25px 25px;
+}
+.upload-vid-Modal .modal-header,.upload-url-Modal .modal-header{
+    padding: 25px;
+}
+
+.upload-vid-Modal .modal-header .modal-title,
+.upload-url-Modal .modal-header .modal-title{
+    font-size: 19px;
+}
+.upload-vid-Modal .modal-body .select-vid-area .upload-img{
+    width: 65px;
+    height: 65px;
+    background-color: #9ca9ba;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+}
+.upload-vid-Modal .modal-body .select-vid-area button{
+    border: 1px solid #6e5eff;
+    padding: 8px 30px;
+    border-radius: 5px;
+    background: #6e5eff;
+    color: #ffff;
+    font-size: 15px;
+    outline: none;
+}
+.upload-vid-Modal .modal-body .select-vid-area{
+    border: 1px dotted black;
+    border-radius: 10px;
+    padding: 28px 15px;
+}
+.upload-vid-Modal .modal-body .select-vid-area p{
+    font-size: 14px;
+}
+.upload-vid-Modal{
+    padding-right: 15px !important;
+    padding-left: 15px !important;
+}
+.upload-vid-Modal .vid-library-options .vid-options .txt h5{
+    font-size: 17px;
+}
+.upload-vid-Modal .vid-library-options .vid-options{
+    display: flex;
+    justify-content: space-between;
+}
+.upload-vid-Modal .vid-library-options .vid-options .txt p{
+    font-size: 14px;
+    margin-bottom: 0px;
+}
+.vid-library-options .vid-options .search button{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0px;
+}
+.vid-library-options .vid-options .search > input{
+    /* padding-right: 40px; */
+    width: 44px;
+}
+
+.vid-library-options .vid-options .search button svg{
+    fill: black;
+}
+
+.upload-vid-list .choose-vid .form-group label img{
+    width: 90px;
+    height: 60px;
+    object-fit: cover;
+}
+.upload-vid-list .choose-vid .form-group label h6 samp{
+    font-size: 14px;
+    color: #a4a4a5;
+    margin-top: 2px;
+}
+.upload-vid-list > .row .vid-timing samp{
+    font-size: 14px;
+    color: #a4a4a5;
+}
+
+.upload-vid-list > .row .vid-timing{
+    width: 100%;
+}
+.upload-vid-Modal .modal-body .upload-vid-list{
+    height: 300px;
+}
+.vid-list-btn{
+    width: 100% !important;
+    padding-right: 40px;
+}
+.upload-vid-list .choose-vid .form-group label{
+    position: relative;
+    cursor: pointer;
+}
+.upload-vid-list .choose-vid .form-group label:before{
+    content:'';
+    border: 1px solid black;
+    padding: 10px;
+    margin-right: 5px;
+    border-radius: 50%;
+}
+.upload-vid-list .choose-vid .form-group input:checked + label:after{
+    content: '';
+    position: absolute;
+    left: 9px;
+    width: 6px;
+    height: 14px;
+    border: solid #0079bf;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }  
+/* Upload video popup */
+
+/* Upload url popup */
+.upload-url-Modal {
+    padding-right: 15px !important;
+    padding-left: 15px !important;
+}
+.upload-url-Modal .vid-url-body .url-txt{
+    float: left;
+}
+.upload-url-Modal .vid-url-body .url-txt h6{
+    color: #a4a4a5;
+    margin-bottom: 2px;
+}
+.upload-url-Modal .vid-url-body .url-txt p{
+    color: #a4a4a5;
+    font-size: 14px;
+}
+.upload-url-Modal .vid-url-body button{
+    float: right;
+    border: 1px solid #6e5eff;
+    padding: 8px 30px;
+    border-radius: 5px;
+    background: #6e5eff;
+    color: #ffff;
+    font-size: 15px;
+}
+
+/* Upload url popup */

@@ -1,0 +1,778 @@
+<headerone></headerone>
+<sideMenu></sideMenu>
+
+<spinner *ngIf="createInteractiveVideoObj.spinner" [@fadeInOut]></spinner>
+<section class="public-vid-comments" >
+  <div class=" custom-container">
+    <div class="comment-card-sec">
+      <div class="card" >
+        <div class="position-relative vid-cover">
+            <!-- [ngClass]="{'isChoicesShown': createInteractiveVideoObj.currentObj.currentPlayingItem.currentTime > createInteractiveVideoObj.currentObj.currentPlayingItem.time && createInteractiveVideoObj.currentObj.currentPlayingItem.children.length > 0}" -->
+          <div style="min-height: 70vh;" class="custom-height"  >       
+          
+
+
+            <div *ngIf="createInteractiveVideoObj.preview" >
+              <video width="100%" class="custom-height card-img-top w-100 video-js vjs-default-skin vjs-big-play-centered" 
+                poster="{{createInteractiveVideoObj.currentObj.currentPlayingItem.poster}}" preload="metadata" controls 
+                id="previewVideoMobile" autoplay="" autofullscreen="false" webkit-playsinlin playsinline>
+                <source src="{{createInteractiveVideoObj.currentObj.currentPlayingItem.URL}}" type="application/x-mpegURL">
+              </video>
+            </div>      
+            
+            <img  width="100%"   style="height: 70vh;object-fit: cover;top: 0;position: absolute;left: 0;"  class="card-img-top w-100 custom-height" src="{{createInteractiveVideoObj.currentObj.currentPlayingItem.poster}} "  />
+<!--                 
+            <div class="" style="position: relative;">
+              <button (click)=startOver() class="btn btn-primary startOver" title="Start from begining" tooltip="Start from begining">
+                <svg class="bi bi-arrow-clockwise" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" d="M3.17 6.706a5 5 0 017.103-3.16.5.5 0 10.454-.892A6 6 0 1013.455 5.5a.5.5 0 00-.91.417 5 5 0 11-9.375.789z" clip-rule="evenodd"/>
+                  <path fill-rule="evenodd" d="M8.147.146a.5.5 0 01.707 0l2.5 2.5a.5.5 0 010 .708l-2.5 2.5a.5.5 0 11-.707-.708L10.293 3 8.147.854a.5.5 0 010-.708z" clip-rule="evenodd"/>
+                </svg>
+              </button> 
+            </div>
+               -->
+            <!-- <div class="optionsOFchoice" *ngIf="createInteractiveVideoObj.currentObj.currentPlayingItem.currentTime > createInteractiveVideoObj.currentObj.currentPlayingItem.time" [@fadeInOut]>
+                     <div class="optionschoiceitem animations" *ngFor= "let i of createInteractiveVideoObj.currentObj.currentPlayingItem.children" (click)="loadNextOption(i)">{{i.name}}</div>
+            </div> -->
+          </div> 
+        </div>
+
+        <div class="card-body pb-0">
+          <div class="row">
+            <div class="col-sm-6">
+                            <div class="vid-info">
+                                <h3 class="mb-1">{{createInteractiveVideoObj.currentObj.currentPlayingItem.Title}}</h3>
+                                <p class="mb-2">
+                                  <span>{{createInteractiveVideoObj.currentObj.currentPlayingItem.formattedTime | dateAgo }}</span>
+                                  <span style="margin-left: 10px;">  {{createInteractiveVideoObj.currentObj.currentPlayingItem.viewCount}} Views</span>
+                                </p>
+                                <span class="video-tags cateogyclass animations class0" (click)="showCategory(c)"  *ngFor="let c of createInteractiveVideoObj.currentObj.currentPlayingItem.Categories;">
+                                  {{c}}
+                                </span>
+                                <p class="mb-0 collapsed readMore video-desc" [class.collapsed]="isCollapsed" [ngClass]="{'isCollapsed': !isCollapsed}" *ngIf="createInteractiveVideoObj.currentObj.currentPlayingItem.Description">
+                                  {{createInteractiveVideoObj.currentObj.currentPlayingItem.Description}}
+                                </p>
+                                <div *ngIf="createInteractiveVideoObj.currentObj.currentPlayingItem.Description"> 
+                                  <a class="btn pl-0 cmt-show-more pointer" (click)="showMore(videoDetails.description)" *ngIf="isCollapsed &&  createInteractiveVideoObj.currentObj.currentPlayingItem.Description.length > 50" [@fadeInOut]>Show more</a>
+                                  <a class="btn pl-0 cmt-show-more pointer" (click)="showMore(videoDetails.description)" *ngIf="!isCollapsed &&  createInteractiveVideoObj.currentObj.currentPlayingItem.Description.length > 50" [@fadeInOut]>Show less</a>
+                              </div>
+                            </div>
+            </div>
+
+            <div class="col-sm-6">
+                            <div class="option-btns">
+                              <div *ngIf= "createInteractiveVideoObj.currentObj.currentPlayingItem.currentTime <= createInteractiveVideoObj.currentObj.currentPlayingItem.time;"  [@fadeInOut] style="display: inline-block;font-size: 16px;vertical-align: middle;margin-right: 10px;"> 
+                                  Choices At : <b>{{createInteractiveVideoObj.currentObj.currentPlayingItem.mintue}}M :  {{createInteractiveVideoObj.currentObj.currentPlayingItem.seconds}}S
+                                    </b></div>
+                                <button type="button" class="btn" (click)="openShareModal()">Share<img src="assets/images/upload-video-icons/upload-share.svg" alt=""></button>
+                                <!-- Share Video Modal -->
+                                <div class="modal fade upload-vid-Modal sharing-mod-modal" id="share-Modal">
+                                  <div class="modal-dialog modal-dialog-centered modal-md">
+                                      <div class="modal-content">
+                                          <div class="modal-header">
+                                              <h5>Share Video</h5>
+                                              <button style="padding: 1rem;" type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                              </button>
+                                          </div>
+                                          <div class="modal-body sharing-modal-body">
+                                            <div class="row">
+                                              <div class="col-12">
+                                                <div class="cmt-tab-btns">
+                                                    <ul class="nav nav-tabs d-flex justify-content-center sharing-modal-tabs" role="tablist">
+                                                        <li class="nav-item mr-sm-4">
+                                                          <a class="nav-link active" href="#share-Ext" role="tab" data-toggle="tab">
+                                                            Externally
+                                                          </a>
+                                                        </li>
+                                                        <li class="nav-item" *ngIf="isLoggedIN">
+                                                           <a class="nav-link" href="#share-Int" role="tab" data-toggle="tab">FreeFuse</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <!-- Tab content -->
+                                                <div class="tab-content">
+                                                  <!-- Share Externally -->
+                                                  <div role="tabpanel" class="tab-pane fade active show" id="share-Ext">
+                                                    <ul class="sharing-links animations">
+                                                      <li class="animations">
+                                                        <img src="../../assets/images/email.png" alt="">
+                                                        <p>Email</p>
+                                                      </li>
+                                                      <li class="animations">
+                                                        <img src="../../assets/images/fb.png" alt="" (click)="popupfacebook()">
+                                                        <p>Facebook</p>
+                                                      </li>
+                                                      <li class="animations">
+                                                        <img src="../../assets/images/twitter.png" alt="" (click)="popuptweet()">
+                                                        <p>Twitter</p>
+                                                      </li>
+                                                      <li class="animations">
+                                                        <img src="../../assets/images/linkedin.png" alt="" (click)="popuplinkedin()">
+                                                        <p>LinkedIn</p>
+                                                      </li>
+                                                    </ul>
+                                                    <div class="input-group mb-3">
+                                                      <!-- <label for="url">URL</label> -->
+                                                      <input type="text" id="url" class="form-control" readonly value="{{publicURL}}" aria-label="Recipient's username" aria-describedby="button-addon2" #userinput name="userinput">
+                                                      <div class="input-group-append">
+                                                        <button class="btn btn-outline-secondary" type="button" id="button-addon2" style="font-size: 12px; " (click)="copyMessage(userinput)">COPY</button>
+                                                      </div>
+                                                    </div>
+                                                    <p class="p-text">
+                                                      Anyone that follows your link will be able to see your first decisions on the current video
+                                                    </p>
+                                                  </div>
+
+ 
+                                                  <!-- Share Internally -->
+                                                  <div role="tabpanel" class="tab-pane fade" id="share-Int" *ngIf="isLoggedIN">
+                                                    <div class="container search-users">
+                                                      <form class="form-inline">
+                                                        <input class="form-control" type="text" name="findorselect" id="findorselect" placeholder="Find or select users..."  [(ngModel)]="findorselect">
+                                                        <button class="btn btn-primary share-btn" (click)="shareTousers('findToshare');findorselect=''" style=" width: calc(24% - 15px);" id="findToshare">Share</button>
+                                                      </form>
+                                                    </div>
+                                                    <!-- List of followers -->
+                                                    <ul style="columns: 2;" class="sharing-links" *ngIf="myfollowers.length > 0">
+                                                      <li class="user-list-item" *ngFor="let f of myfollowers |   search:'username,firstname,lastname':findorselect;" (click)="selectToShare(f._id);f.selected = !f.selected">
+                                                        <div  [ngClass]="{'selected-share': f.selected}" class="follow-share">
+                                                          <img src="{{f.profilePic}}" *ngIf="f.profilePic" >
+                                                          <span class="profile-image" *ngIf="!f.profilePic" imgName  title="{{f.firstname}},{{f.lastname}}" style="border-radius:50%"></span>
+
+                                                          <h5>{{f.username}}</h5>
+                                                      </div>
+                                                      </li>
+                                                    </ul>
+                                                  </div>
+                                                </div>
+                                            </div>
+                                            </div>   
+                                          </div>
+                                        
+                                      </div>
+                                  </div>
+                              </div>
+                                <!-- <button type="button" class="btn">Save<img src="assets/images/save.svg" alt=""></button> -->
+                                <!-- <button type="button" class="btn pr-0">More<img src="assets/images/more-i.svg" alt=""></button> -->
+                            </div>
+
+
+
+                            <div class="like-btn">
+                                <button type="button" class="btn pr-0  align-items-center" data-toggle="modal" data-target="#react-Modal" [ngClass]="{'reacted': myEmoji}"  >
+                                  <span *ngIf="!myEmoji" [@fadeInOut]>Reaction</span>
+                                  <span *ngIf="myEmoji" [@fadeInOut]>Reacted</span>
+                                </button>
+                            
+
+                                <!-- React modal -->
+                                <div class="modal fade upload-vid-Modal" id="react-Modal">
+                                  <div class="modal-dialog modal-dialog-centered modal-md" >
+                                      <div class="modal-content ">
+                                          <div class="modal-header react-mdal-header">
+                                              <h5>User reactions</h5>
+                                              <button style="padding: 1rem;" type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="closeReactons()">
+                                                <span aria-hidden="true">&times;</span>
+                                              </button>
+                                          </div>
+                                          <div class="modal-body sharing-modal-body react-mdal-body" >
+                                            <div class="row">
+                                              <div class="col-12 gray-border-bottom">
+                                                <div class="cmt-tab-btns">
+                                                    <ul class="nav nav-tabs d-flex justify-content-center sharing-modal-tabs react-modal-tabs" role="tablist">
+                                                        <li class="nav-item mr-sm-4">
+                                                          <a class="nav-link active" href="#all" role="tab" data-toggle="tab">
+                                                            All
+                                                            <p>{{likes.length}}</p>
+                                                          </a>
+                                                        </li>
+                                                        <li class="nav-item mr-sm-4">
+                                                          <a class="nav-link" href="#cat-1" role="tab" data-toggle="tab">
+                                                            <img src="../../../assets/images/videoplayer/react-laugh.svg">
+                                                            <p>{{laughs.length}}</p>
+                                                          </a>
+                                                        </li>
+                                                        <li class="nav-item mr-sm-4">
+                                                          <a class="nav-link" href="#cat-2" role="tab" data-toggle="tab">
+                                                            <img src="../../../assets/images/videoplayer/react-like.svg">
+                                                            <p>{{likesReaction.length}}</p>
+                                                          </a>
+                                                        </li>
+                                                        <li class="nav-item mr-sm-4">
+                                                          <a class="nav-link" href="#cat-3" role="tab" data-toggle="tab">
+                                                            <img src="../../../assets/images/videoplayer/react-dislike.svg">
+                                                            <p>{{dislikes.length}}</p>
+                                                          </a>
+                                                        </li>
+                                                        <li class="nav-item mr-sm-4">
+                                                          <a class="nav-link" href="#cat-4" role="tab" data-toggle="tab">
+                                                            <img src="../../../assets/images/videoplayer/react-question.svg">
+                                                            <p>{{questions.length}}</p>
+                                                          </a>
+                                                        </li>
+                                                        <li class="nav-item mr-sm-4">
+                                                          <a class="nav-link" href="#cat-5" role="tab" data-toggle="tab">
+                                                            <img src="../../../assets/images/videoplayer/react-amazed.svg">
+                                                            <p>{{amazes.length}}</p>
+                                                          </a>
+                                                        </li>
+                                                        <li class="nav-item mr-sm-4">
+                                                          <a class="nav-link" href="#cat-6" role="tab" data-toggle="tab">
+                                                            <img src="../../../assets/images/videoplayer/react-crying.svg">
+                                                            <p>{{cries.length}}</p>
+                                                          </a>
+                                                        </li>
+                                                        <li class="nav-item mr-sm-4">
+                                                          <a class="nav-link" href="#cat-7" role="tab" data-toggle="tab">
+                                                            <img src="../../../assets/images/videoplayer/react-angry.svg">
+                                                            <p>{{angry.length}}</p>
+                                                          </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <!-- Tab content -->
+                                                <div class="tab-content">
+                                                  <!-- All -->
+                                                  <div role="tabpanel" class="tab-pane fade active show" id="all">
+                                                    <ul class="user-list">
+                                                      <li *ngFor="let r of likes">
+                                                        <div class="left-image">
+                                                          <img class="user-profile-pic" src="{{r.profilePic}}" *ngIf="r.profilePic">
+                                                          <span class="profile-image" *ngIf="!r.profilePic" imgName  title="{{r.firstname}},{{r.lastname}}" style="border-radius:50%"></span>
+
+                                                        </div>
+                                                        <div class="right-section">
+                                                          <p class="username pointer" id="{{r._id}}"  (click)="userProfile(r._id)">{{r.userName}}</p>
+                                                          <p class="reacted">reacted</p>
+                                                          <div *ngIf="!r.isMe && isLoggedIN" [@fadeInOut]>
+                                                             <button class="follow-modal-btn" [@fadeInOut] *ngIf="r.iAmFollowing" (click)="unfollowUser(r._id)">Following</button>
+                                                             <button class="follow-modal-btn" [@fadeInOut] *ngIf="!r.iAmFollowing" (click)="followUser(r._id)">Follow</button>
+                                                          </div>
+                                                          <div class="user-reaction">
+                                                            <img src="{{getEmoji(r.category)}}">
+                                                          </div>
+                                                        </div>
+                                                      </li>
+                                                    </ul>
+                                                  </div>
+                                                  <!-- Cat 1 -->
+                                                  <div role="tabpanel" class="tab-pane fade" id="cat-1">
+                                                    <ul class="user-list">
+                                                      <li *ngFor="let l of laughs">
+                                                        <div class="left-image">
+                                                          <img class="user-profile-pic" src="{{l.profilePic}}" *ngIf="l.profilePic">
+                                                          <span class="profile-image" *ngIf="!l.profilePic" imgName  title="{{l.firstname}},{{l.lastname}}" style="border-radius:50%"></span>
+                                                        </div>
+                                                        <div class="right-section">
+                                                          <p class="username pointer" id="{{l._id}}" (click)="userProfile(l._id)">{{l.userName}}</p>
+                                                          <p class="reacted">reacted</p>
+                                                          <div *ngIf="!l.isMe && isLoggedIN" [@fadeInOut]>
+                                                              <button class="follow-modal-btn" *ngIf="l.iAmFollowing"  (click)="unfollowUser(l._id)">Following</button>
+                                                              <button class="follow-modal-btn"  *ngIf="!l.iAmFollowing"  (click)="followUser(l._id)">Follow</button>
+                                                           </div>
+
+                                                          <!-- <button class="follow-modal-btn" *ngIf="!l.isMe" (click)="followUser(l._id)">Follow</button> -->
+                                                          <div class="user-reaction">
+                                                            <img src="{{getEmoji(l.category)}}">
+                                                          </div>
+                                                        </div>
+                                                      </li>
+                                                    </ul>
+                                                  </div>
+                                                  <!-- Cat 2 -->
+                                                  <div role="tabpanel" class="tab-pane fade" id="cat-2">
+                                                    <ul class="user-list animations">
+                                                      <li *ngFor="let like of likesReaction" class="animations">
+                                                        <div class="left-image">
+                                                          <img class="user-profile-pic" *ngIf="like.profilePic" src="{{like.profilePic}}">
+                                                          <span class="profile-image" *ngIf="!like.profilePic" imgName  title="{{like.firstname}},{{like.lastname}}" style="border-radius:50%"></span>
+                                                        </div>
+                                                        <div class="right-section">
+                                                          <p class="username pointer" id="{{like._id}}" (click)="userProfile(like._id)">{{like.userName}}</p>
+                                                          <p class="reacted">reacted</p>
+
+                                                          <div *ngIf="!like.isMe && isLoggedIN">
+                                                              <button class="follow-modal-btn" *ngIf="like.iAmFollowing"  (click)="unfollowUser(like._id)">Following</button>
+                                                              <button class="follow-modal-btn"  *ngIf="!like.iAmFollowing"  (click)="followUser(like._id)">Follow</button>
+                                                           </div>
+
+                                                          <!-- <button class="follow-modal-btn" *ngIf="!like.isMe" (click)="followUser(like._id)">Follow</button> -->
+                                                          <div class="user-reaction">
+                                                            <img src="{{getEmoji(like.category)}}">
+                                                          </div>
+                                                        </div>
+                                                      </li>
+                                                    </ul>
+                                                  </div>
+                                                  <!-- Cat 3 -->
+                                                  <div role="tabpanel" class="tab-pane fade" id="cat-3">
+                                                    <ul class="user-list">
+                                                      <li *ngFor="let dislike of dislikes">
+                                                        <div class="left-image">
+                                                          <img class="user-profile-pic" *ngIf="dislike.profilePic" src="{{dislike.profilePic}}">
+                                                          <span class="profile-image" *ngIf="!dislike.profilePic" imgName  title="{{dislike.firstname}},{{dislike.lastname}}" style="border-radius:50%"></span>
+                                                        </div>
+                                                        <div class="right-section">
+                                                          <p class="username pointer" id="{{dislike._id}}" (click)="userProfile(dislike._id)">{{dislike.userName}}</p>
+                                                          <p class="reacted">reacted</p>
+                                                          <div *ngIf="!dislike.isMe && isLoggedIN">
+                                                              <button class="follow-modal-btn" *ngIf="dislike.iAmFollowing"  (click)="unfollowUser(dislike._id)">Following</button>
+                                                              <button class="follow-modal-btn"  *ngIf="!dislike.iAmFollowing"  (click)="followUser(dislike._id)">Follow</button>
+                                                           </div>
+
+                                                          <!-- <button class="follow-modal-btn" *ngIf="!dislike.isMe" (click)="followUser(dislike._id)">Follow</button> -->
+                                                          <div class="user-reaction">
+                                                            <img src="{{getEmoji(dislike.category)}}">
+                                                          </div>
+                                                        </div>
+                                                      </li>
+                                                    </ul>
+                                                  </div>
+                                                  <!-- Cat 4 -->
+                                                  <div role="tabpanel" class="tab-pane fade" id="cat-4">
+                                                    <ul class="user-list">
+                                                      <li *ngFor="let q of questions">
+                                                        <div class="left-image">
+                                                          <img class="user-profile-pic" *ngIf="q.profilePic" src="{{q.profilePic}}">
+                                                          <span class="profile-image" *ngIf="!q.profilePic" imgName  title="{{q.firstname}},{{q.lastname}}" style="border-radius:50%"></span>
+                                                        </div>
+                                                        <div class="right-section">
+                                                          <p class="username pointer" id="{{q._id}}" (click)="userProfile(q._id)">{{q.userName}}</p>
+                                                          <p class="reacted">reacted</p>
+                                                          <div *ngIf="!q.isMe && isLoggedIN">
+                                                              <button class="follow-modal-btn" *ngIf="q.iAmFollowing"  (click)="unfollowUser(q._id)">Following</button>
+                                                              <button class="follow-modal-btn"  *ngIf="!q.iAmFollowing"  (click)="followUser(q._id)">Follow</button>
+                                                           </div>
+
+                                                          <!-- <button class="follow-modal-btn" *ngIf="!q.isMe" (click)="followUser(q._id)">Follow</button> -->
+                                                          <div class="user-reaction">
+                                                            <img src="{{getEmoji(q.category)}}">
+                                                          </div>
+                                                        </div>
+                                                      </li>
+                                                    </ul>
+                                                  </div>
+                                                  <!-- Cat 5 -->
+                                                  <div role="tabpanel" class="tab-pane fade" id="cat-5">
+                                                    <ul class="user-list">
+                                                      <li *ngFor="let amaze of amazes">
+                                                        <div class="left-image">
+                                                          <img class="user-profile-pic" *ngIf="amaze.profilePic"src="{{amaze.profilePic}}">
+                                                          <span class="profile-image" *ngIf="!amaze.profilePic" imgName  title="{{amaze.firstname}},{{amaze.lastname}}" style="border-radius:50%"></span>
+                                                        </div>
+                                                        <div class="right-section">
+                                                          <p class="username pointer" id="{{amaze._id}}" (click)="userProfile(amaze._id)">{{amaze.userName}}</p>
+                                                          <p class="reacted">reacted</p>
+                                                          <div *ngIf="!amaze.isMe && isLoggedIN">
+                                                              <button class="follow-modal-btn" *ngIf="amaze.iAmFollowing"  (click)="unfollowUser(amaze._id)">Following</button>
+                                                              <button class="follow-modal-btn"  *ngIf="!amaze.iAmFollowing"  (click)="followUser(amaze._id)">Follow</button>
+                                                           </div>
+
+                                                          <!-- <button class="follow-modal-btn" *ngIf="!amaze.isMe" (click)="followUser(amaze._id)">Follow</button> -->
+                                                          <div class="user-reaction">
+                                                            <img src="{{getEmoji(amaze.category)}}">
+                                                          </div>
+                                                        </div>
+                                                      </li>
+                                                    </ul>
+                                                  </div>
+                                                  <!-- Cat 6 -->
+                                                  <div role="tabpanel" class="tab-pane fade" id="cat-6">
+                                                    <ul class="user-list">
+                                                      <li *ngFor="let c of cries">
+                                                        <div class="left-image">
+                                                          <img class="user-profile-pic" src="{{c.profilePic}}" *ngIf="c.profilePic">
+                                                          <span class="profile-image" *ngIf="!c.profilePic" imgName  title="{{c.firstname}},{{c.lastname}}" style="border-radius:50%"></span>
+                                                        </div>
+                                                        <div class="right-section">
+                                                          <p class="username pointer" id="{{c._id}}" (click)="userProfile(c._id)">{{c.userName}}</p>
+                                                          <p class="reacted">reacted</p>
+
+                                                          <div *ngIf="!c.isMe && isLoggedIN">
+                                                              <button class="follow-modal-btn" *ngIf="c.iAmFollowing"  (click)="unfollowUser(c._id)">Following</button>
+                                                              <button class="follow-modal-btn"  *ngIf="!c.iAmFollowing"  (click)="followUser(c._id)">Follow</button>
+                                                           </div>
+
+                                                          <!-- <button class="follow-modal-btn"  *ngIf="!c.isMe" (click)="followUser(c._id)">Follow</button> -->
+                                                          <div class="user-reaction">
+                                                            <img src="{{getEmoji(c.category)}}">
+                                                          </div>
+                                                        </div>
+                                                      </li>
+                                                    </ul>
+                                                  </div>
+                                                  <!-- Cat 7 -->
+                                                  <div role="tabpanel" class="tab-pane fade" id="cat-7">
+                                                    <ul class="user-list">
+                                                      <li *ngFor="let a of angry">
+                                                        <div class="left-image">
+                                                          <img class="user-profile-pic" *ngIf="a.profilePic" src="{{a.profilePic}}">
+                                                          <span class="profile-image" *ngIf="!a.profilePic" imgName  title="{{a.firstname}},{{a.lastname}}" style="border-radius:50%"></span>
+                                                        </div>
+                                                        <div class="right-section">
+                                                          <p class="username pointer" id="{{a._id}}" (click)="userProfile(a._id)">{{a.userName}}</p>
+                                                          <p class="reacted">reacted</p>
+                                                          <div *ngIf="!a.isMe && isLoggedIN">
+                                                              <button class="follow-modal-btn pointer" *ngIf="a.iAmFollowing"  (click)="unfollowUser(a._id)">Following</button>
+                                                              <button class="follow-modal-btn pointer"  *ngIf="!a.iAmFollowing"  (click)="followUser(a._id)">Follow</button>
+                                                           </div>
+
+                                                          <!-- <button class="follow-modal-btn" *ngIf="!a.isMe" (click)="followUser(a._id)">Follow</button> -->
+                                                          <div class="user-reaction">
+                                                            <img src="{{getEmoji(a.category)}}">
+                                                          </div>
+                                                        </div>
+                                                      </li>
+                                                    </ul>
+                                                  </div>
+                                                </div>
+                                            </div>
+                                            </div>   
+                                          </div>
+                                          
+                                      </div>
+                                  </div>
+                              </div>
+
+                              <!-- current reaction -->
+
+                              <!-- <button class="btn pr-0  align-items-center pointer" style="outline: none" (click)="unlikeVideo()">
+                              <img src="{{myEmoji}}" class="mr-2" alt="" *ngIf="myEmoji" [@fadeInOut] />
+                            </button> -->
+
+                            <button class="btn pr-0  align-items-center pointer" style="outline: none">
+                              <img src="{{myEmoji}}" class="mr-2" alt="" *ngIf="myEmoji && isLoggedIN" [@fadeInOut] />
+                            </button >
+
+                                <!-- reaction registration -->
+                                <button type="button" style="position: relative; outline:none" class="pointer custom-react-button btn pr-0  align-items-center" (click)="showEmojis()" [disabled]="!isLoggedIN">
+                                  {{totalLikes}}</button>
+                                <!-- Like categories for video -->
+                                <div class="likes-emoji" style="display: none" *ngIf="isLoggedIN || isAnonymousUser">
+                                  <ul class="emoji-list">
+                                    <li *ngFor="let l of likeCategories">
+                                      <img id="{{l.id}}" src="{{l.emoji}}" class="" [@fadeInOut] *ngIf="myEmoji" (click)="updatelikeVideo(l)">
+                                      <img id="{{l.id}}" src="{{l.emoji}}" class="" *ngIf="!myEmoji" (click)="likeVideo(l)">
+                                    </li>
+                                  </ul>
+                                </div>
+
+
+                              </div>
+            </div>
+          </div>
+          <hr>
+          <div class="row">
+                        <div class="col-lg-6" *ngIf="uploaderDetails.userinfo" [@fadeInOut]>
+                            <div class="media pt-2 follow-area">
+                                <img src="{{uploaderDetails.userinfo.profilePic}}"(click)="userProfile(uploaderId)" *ngIf="uploaderDetails.userinfo.profilePic" alt="" class="mr-3 rounded-circle" style="width:50px; height: 50px;">
+
+                                <span class="profile-image" (click)="userProfile(uploaderId)" *ngIf="!uploaderDetails.userinfo.profilePic" imgName  title="{{uploaderDetails.userinfo.firstname}},{{uploaderDetails.userinfo.lastname}}" style="width:50px; height: 50px;border-radius:50%"></span>
+                                <div class="media-body" *ngIf="isLoggedIN">
+                                  <h5 class="mb-0 pointer" (click)="userProfile(uploaderId)">{{uploaderDetails.userinfo.username}}</h5>
+                                  <p>
+                                    <span class="mr-3 pointer" (click)="userProfile(uploaderId)">{{uploaderDetails.userinfo.followers.length}} Followers</span>
+                                    <span (click)="userVideo(uploaderId)" class="pointer">{{uploaderDetails.publishedVideoCount}} Videos</span>
+                                  </p>      
+                                </div>
+
+
+                                <div class="media-body" *ngIf="!isLoggedIN" (click)="userProfile(uploaderId)">
+                                    <h5 class="mb-0 pointer" >{{uploaderDetails.userinfo.username}}</h5>
+                                    <p>
+                                      <span class="mr-3 pointer" (click)="userProfile(uploaderId)">{{uploaderDetails.userinfo.followers.length}} Followers</span>
+                                      <span class="pointer">{{uploaderDetails.publishedVideoCount}} Videos</span>
+                                    </p>      
+                                  </div>
+                            </div>
+
+                        </div>
+                        <div class="col-6" *ngIf="!isSameUser && isLoggedIN">
+
+                            <div class="follow-btn" *ngIf="iAMFollowing">
+                                <button type="button" class="btn" (click)="unfollowUser(uploaderDetails.userinfo._id)">Following</button>
+                            </div> 
+
+                            <div class="follow-btn" *ngIf="!iAMFollowing" >
+                                <button type="button" class="btn" (click)="followUser(uploaderDetails.userinfo._id)">Follow</button>
+                            </div>
+                        </div>
+          </div>
+          <hr>
+          <div class="row">
+                        <div class="col-12">
+                             <div class="cmt-tab-btns">
+                                <ul class="nav nav-tabs d-flex justify-content-center" role="tablist">
+                                    <li class="nav-item mr-sm-4">
+                                      <a class="nav-link active one" href="#cmt-count-btn" role="tab" data-toggle="tab">{{totalCOmments}} Comments</a>
+                                    </li>
+                                    <li class="nav-item">
+                                      <a class="nav-link two" href="#cmt-breakdown-btn" role="tab" data-toggle="tab">Choices breakdown</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="comment-details-sec mt-4">
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane fade active" id="cmt-count-btn" style="opacity:1">
+                    <div class="row">
+                        <div class="col-lg-8 custom-rowa">
+                            <div class="row" *ngIf="isLoggedIN">
+                                <div class="col-sm-8">
+                                    <div class="form-group write-cmt position-relative  mb-4">
+                                      <!-- <form (keyup.enter)="comment()"> -->
+                                        <label for="cmt-usr" class="cmt-usr">
+                                          <img src="{{currentProfilePic}}"/></label>
+                                        <input (keyup.enter)="comment()" type="text" class="form-control pl-5" id="cmt-usr" name="usercomment" placeholder="Write a comment" [(ngModel)]="commentText" #usercomments="ngModel" required>
+                                      <!-- </form> -->
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="like-cmt-select position-relative">
+                                        <select class="btn border shadow-none w-100 position-relative pb-0" (change)="changeFilter(val)" name="changeFilterUploadVideo" [(ngModel)]="val">
+                                            <option value="liked">Most liked first</option>
+                                            <option value="recent">Most Recent</option>
+                                            
+                                        </select>
+                                        <span>Sort</span>
+                                        <button type="button" class="btn shadow-none"><span></span></button>
+                                    </div>
+                                </div>
+                            </div>
+
+                          
+
+                            <div *ngIf="!commentsLoaded" [@fadeInOut] class="text"  style="position: relative;text-align: center;min-height: 60px;"> 
+                              <sectionSpinner></sectionSpinner>
+                            </div>
+                            <div class="text center"  *ngIf="commentsLoaded && totalCOmments < 1" [@fadeInOut]>
+                                No comments yet, be the first to comment!
+                              </div>
+                            <ul class="cmts-list pl-0" *ngIf="commentsLoaded  && totalCOmments > 0" [@fadeInOut]>
+                               
+                                <li *ngFor="let c of commentData; let i = index">
+                                    <div class="media mb-3">
+                                        <img src="{{c.profilePic}}" (click)="userProfile(c._id)" *ngIf="c.profilePic" class="mr-3 rounded-circle pointer" style="width:40px; height: 40px;">
+                                        <span class="profile-image pointer" *ngIf="!c.profilePic" (click)="userProfile(c._id)" imgName  title="{{c.firstname}},{{c.lastname}}" style="border-radius:50%"></span>
+
+                                        <div class="media-body">
+                                            <div class="cmt-reply  justify-content-between align-items-center">
+                                              <h6 class="mb-0" style="display: inline-block;width: 78%;">{{c.userName}} <span>{{c.createdAT | dateAgo}}</span>
+                                                <span *ngIf="c.likebyuserInfo && c.likebyuserInfo.length > 0" style="margin-left:5px">
+                                                  <img src="{{likeCategories[1].emoji}}" style="width: 17px;"/>
+                                                  {{c.likebyuserInfo.length}}</span>
+                                              </h6>
+                                              <!-- <button class="btn pr-0">React</button> -->
+                                              <div style="position: relative; display: inline-block;" *ngIf="isLoggedIN">
+                                                <button type="button" *ngIf="!c.likedbyMe" class="btn pr-0" (click)="showCommentEmojis(c._id)">
+                                                    Like
+                                                  </button>
+                                                  <button type="button" *ngIf="c.likedbyMe" class="btn pr-0" (click)="unlikeComment(c._id)">
+                                                    Liked
+                                                  </button>
+
+                                                  <div class="comment-emoji" style="display: none;" id="{{c._id}}">
+                                                      <ul class="emoji-list">
+                                                        <li *ngFor="let l of likeCategories">
+                                                          <img id="{{l.id}}" src="{{l.emoji}}" class="" (click)="likeComment($event, c._id)">
+                                                        </li>
+                                                      </ul>
+                                                    </div>
+                                                </div> 
+
+                                              <button type="button" class="btn pr-0"  style="margin-left: 15px;" (click)="openReplyModal(c._id)" *ngIf="isLoggedIN">
+                                                <img src="assets/images/cmt-share.svg" width="12px" height="12px" class="mr-1" alt="">
+                                                Reply
+                                              </button>
+                                              <!-- Reply modal -->
+                                              <div class="modal fade upload-vid-Modal" id="reply-Modal">
+                                                  <div class="modal-dialog modal-dialog-centered modal-md">
+                                                      <div class="modal-content">
+                                                          <div class="modal-header">
+                                                              <h5>Reply</h5>
+                                                          </div>
+                                                          <div class="modal-body">
+                                                              <textarea class="form-control" name="userReply" id="reply-text" cols="30" rows="5" [(ngModel)]="replyText" #userreply="ngModel" required></textarea>   
+                                                          </div>
+                                                          <div class="modal-footer reply-footer">
+                                                              <button class="reply-btn video-common-btn btn-sm w-20" (click)="reply()" [disabled]="userreply.invalid">OK</button>
+                                                              <button class="reply-btn video-common-btn btn-sm w-20" data-dismiss="modal">Cancel</button>
+                                                          </div>
+                                                          
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                            </div>
+
+                                            <!-- Comment Text -->
+                                          <p id="{{c.id}}" *ngIf="c.comment" [@fadeInOut]>
+                                            {{c.comment}}
+                                            <a  class="btn pl-0 cmt-show-more" *ngIf="c.comment.length > 200">Show more</a>
+                                          </p>      
+
+                                          <!-- Likes and Replies -->
+                                          <div class="cmt-opt" *ngIf="c.reply">
+                                              <!-- <span  style="position: relative;"> -->
+                                                  <!-- <img src="assets/images/like-heart.svg" width="14px" height="14px" alt=""> -->
+                                                  <!-- <a *ngIf="c.reply">{{c.reply.length}}</a> -->
+                                              <!-- </span> -->
+                                              <!-- Like categories for comment -->
+                                              
+                                              <span class="replies" *ngIf="c.reply" (click)="c.showAllComments = !c.showAllComments;c.showLeghth=3">
+                                                  <!-- <img src="assets/images/like-heart.svg" width="14px" height="14px" alt=""> -->
+                                                  {{c.reply.length}} replies
+                                              </span>
+                                          </div> 
+                                        </div>
+                                    </div>
+                                    <!-- Reply List -->
+                                    <ul class="reply-list pl-5" *ngIf="c.showAllComments " [@fadeInOut]>
+                                        <li *ngFor="let u of c.reply;let index=index">
+                                            <div class="media" *ngIf="index < c.showLeghth">
+                                                <img src="{{u.userInfo.profilePic}}"  (click)="userProfile(u.userInfo._id)" *ngIf="u.userInfo.profilePic" class="mr-3 rounded-circle pointer" style="width:35px; height: 35px;">
+
+                                                <span class="profile-image pointer" (click)="userProfile(u.userInfo._id)" *ngIf="!u.userInfo.profilePic" imgName  title="{{u.userInfo.firstname}},{{u.userInfo.lastname}}" style="width:35px; height: 35px;border-radius:50%"></span>
+                                                
+                                                <div class="media-body">
+                                                  <h6 (click)="userProfile(u.userInfo._id)" class="pointer">{{u.userInfo.username}} <span>{{u.replyInfo.updatedAt | dateAgo}}</span></h6>
+                                                  <p>{{u.replyInfo.comment}}</p>      
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <!-- <button *ngIf="c.reply && c.reply.length > 0" type="button" class="btn mb-3 all-reply" (click)="c.showAllComments = true">View all replies</button> -->
+                                    </ul>
+                                    <button *ngIf="c.reply && c.reply.length > 2" type="button" class="btn mb-3 all-reply" (click)="c.showLeghth = c.showAllComments.length -1">
+                                          View all replies
+                                      <!-- </span>
+                                      <span *ngIf="c.showAllComments">
+                                          View Less
+                                      </span> -->
+                                      </button>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="col-lg-4">
+                            <div class="user-commented" style="position: relative;min-height: 60px;">
+                              
+                              
+
+                                 <p class="mb-2"><b>Similar Videos</b></p>
+                                 <div *ngIf="spinners.second" [@fadeInOut] style="position: relative;min-height: 60px;">                                
+                                    <sectionSpinner ></sectionSpinner>
+                                  </div>
+                                <ul *ngIf="!spinners.second" [@fadeInOut]>
+                                  <li *ngIf="simiarVideo.length == 0">No Videos Yet!</li>
+                                    <li *ngFor="let i of simiarVideo" class="simirl-video pointer animations"> 
+                                      <div class="media mb-3" style="position: relative;font-size: 14px">
+                                          <div class="over" style="left:38px;right: auto"  (click)="showVideo(i.videoInfo._id)">
+                                              <span>
+                                                    <img  src="../../../assets/images/landing/video-decisions.svg">
+                                                {{i.videoInfo.totalchild}}</span>
+                                            <span>
+                                                    <img  src="../../../assets/images/landing/video-outcomes.svg">
+                                                {{i.videoInfo.totallevel}}</span>
+                                          </div>
+                                          <img src="{{i.videoInfo.poster}}" thumnailsDirective class="mr-2" style="width:100px;height: 80px; object-fit: cover;" (click)="showVideo(i.videoInfo._id)">
+                                          <div class="media-body">
+                                            <h6 class="mb-0" (click)="showVideo(i.videoInfo._id)"><b style="font-size: 16px">{{i.videoInfo.Title}}</b></h6>
+                                           
+                                            
+                                            <p class="mb-1" (click)="userProfile(i.userInfo._id)" *ngIf="isLoggedIN" >
+                                              <img src="{{i.userInfo.profilePic}}" *ngIf="i.userInfo.profilePic" style="width: 25px;height: 25px;border-radius: 50%" /> {{i.userInfo.username}}
+                                            
+                                              <span class="profile-image" *ngIf="!i.userInfo.profilePic" imgName  title="{{i.userInfo.firstname}},{{i.userInfo.lastname}}" style="width:35px; height: 35px;border-radius:50%"></span>
+                                            </p>
+                                            
+                                            <p class="mb-1" *ngIf="!isLoggedIN" ><img src="{{i.userInfo.profilePic}}" style="width: 25px;height: 25px;border-radius: 50%" /> {{i.userInfo.username}}</p>
+
+                                            <p class="mb-1" (click)="showVideo(i.videoInfo._id)">{{i.videoInfo.viewCount}} Views | {{i.videoInfo.updatedAt | dateAgo}}</p>
+                                            <!-- <span class="d-flex align-items-center" (click)="showVideo(i.videoInfo._id)">
+                              
+                                              <strong *ngFor="let j of Categories" style="border:1px solid #ccc;padding: 5px;">{{j}}</strong>
+                                            </span> -->
+                                          </div>
+                                      </div>
+                                    </li>
+                                    <!-- <button type="button" class="btn show-more">Show more</button> -->
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+      
+                <div role="tabpanel" class="tab-pane fade" id="cmt-breakdown-btn">
+                    <div class="row breakdown" style="position: relative;">
+                      <sectionSpinner *ngIf="cjocies"></sectionSpinner>
+                        <div class="col-md-8">
+                            <div class="card-container">
+                              <div class="mb-4">
+                                <!-- <h4 class="mb-4">{{childVideos.length}} Choices Available</h4> -->
+                                <h4 class="mb-4">Most Popular Path</h4>
+                                <div class="card-row mb-5">
+                                  <div *ngIf="mostPopularPath && mostPopularPath.length < 1" style="padding: 10px;width: 100%">
+                                    No Choices Available!
+                                  </div>
+                                  <div *ngFor="let i of mostPopularPath">
+                                    <img src="{{i.poster}}" thumnailsDirective style="position: relative;">
+                                    <h6 style="position: absolute; top: -7px; left: 4px; color: #fff;">{{i.name}}</h6>
+                                    <!-- <h6>Starts at <b>{{topViewedChoice.topViewedVideo.time}} S</b> at lavel <b>{{topViewedChoice.topViewedVideo.level}}</b></h6> -->
+                                  </div>
+                                  <!-- <div *ngFor="let i of childVideos">
+                                    <img src="{{i.poster}}">
+                                    <h6>{{i.name}}</h6>
+                                    <h6>Starts at <b>{{i.time}} S</b> at lavel <b>{{i.level}}</b></h6>
+                                  </div>
+                                  
+                                </div>
+                              </div>
+
+
+                              <div class="mb-4">
+                                  <!-- <h4 class="mb-4">{{childVideos.length}} Choices Available</h4> -->
+                                </div>
+                                  <h4 class="mb-4"  *ngIf="isLoggedIN">Your Decisions</h4>
+                                  <div class="card-row"  *ngIf="isLoggedIN">
+                                    <div *ngIf="firstDecisions.length < 1" style="padding: 10px;width: 100%">
+                                      No Decision Available!
+                                    </div>
+                                   
+  
+                                    <!-- by chandan -->
+                                    <div *ngFor="let i of firstDecisions">
+                                      <img src="{{i.video.poster}}" thumnailsDirective>
+                                      <h6>{{i.video.name}}</h6>
+                                      <h6>Starts at <b>{{i.video.time}} S</b> at level <b>{{i.video.level}}</b></h6>
+                                    </div>
+                                    
+                                  </div>
+                                </div>
+
+                            
+                        </div>
+                        </div>
+                        <div class="col-md-4">
+                          <div class="progress-container">
+                            <h4 class="mb-4">Top Decisions</h4>
+                            <div class="pro-group mb-4" *ngFor="let i of topViewedChoices">
+                              <h6>{{i.percentage}}% {{i.video.name}}</h6>
+                              <div class="progress">
+                                <div class="progress-bar" [ngStyle]="{'width': i.progress}"></div>
+                              </div>
+                            </div>      
+                          </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+    </div>
+  </div>
+</section>
+
+<withoutloginfooter></withoutloginfooter>

@@ -1,0 +1,1603 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>my-app documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">my-app documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>UserActivitiyComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/afterLogin/user-activitiy/user-activitiy.component.ts</code>
+</p>
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-user-activitiy</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./user-activitiy.component.css</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./user-activitiy.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#activityList">activityList</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#currentUser">currentUser</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#likeCategories">likeCategories</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#likedVideos">likedVideos</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#sharedVideos">sharedVideos</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#spinner">spinner</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#watchHistory">watchHistory</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#getEmoji">getEmoji</a>
+                            </li>
+                            <li>
+                                <a href="#getLikedVideos">getLikedVideos</a>
+                            </li>
+                            <li>
+                                <a href="#getSharedVideos">getSharedVideos</a>
+                            </li>
+                            <li>
+                                <a href="#getUserActivity">getUserActivity</a>
+                            </li>
+                            <li>
+                                <a href="#getWatchHistory">getWatchHistory</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#showVideo">showVideo</a>
+                            </li>
+                            <li>
+                                <a href="#userProfile">userProfile</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(apiService: <a href="../injectables/CrudService.html">CrudService</a>, router: <a href="https://angular.io/api/router/Router" target="_blank">Router</a>, activatedRoute: <a href="https://angular.io/api/router/ActivatedRoute" target="_blank">ActivatedRoute</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="62" class="link-to-prism">src/app/afterLogin/user-activitiy/user-activitiy.component.ts:62</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>apiService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/CrudService.html" target="_self" >CrudService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>router</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/router/Router" target="_blank" >Router</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>activatedRoute</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/router/ActivatedRoute" target="_blank" >ActivatedRoute</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getEmoji"></a>
+                    <span class="name">
+                        <b>
+                            getEmoji
+                        </b>
+                        <a href="#getEmoji"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getEmoji(cat: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="154"
+                            class="link-to-prism">src/app/afterLogin/user-activitiy/user-activitiy.component.ts:154</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>cat</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getLikedVideos"></a>
+                    <span class="name">
+                        <b>
+                            getLikedVideos
+                        </b>
+                        <a href="#getLikedVideos"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getLikedVideos()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="119"
+                            class="link-to-prism">src/app/afterLogin/user-activitiy/user-activitiy.component.ts:119</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getSharedVideos"></a>
+                    <span class="name">
+                        <b>
+                            getSharedVideos
+                        </b>
+                        <a href="#getSharedVideos"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getSharedVideos()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="100"
+                            class="link-to-prism">src/app/afterLogin/user-activitiy/user-activitiy.component.ts:100</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getUserActivity"></a>
+                    <span class="name">
+                        <b>
+                            getUserActivity
+                        </b>
+                        <a href="#getUserActivity"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getUserActivity()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="136"
+                            class="link-to-prism">src/app/afterLogin/user-activitiy/user-activitiy.component.ts:136</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getWatchHistory"></a>
+                    <span class="name">
+                        <b>
+                            getWatchHistory
+                        </b>
+                        <a href="#getWatchHistory"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getWatchHistory()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="78"
+                            class="link-to-prism">src/app/afterLogin/user-activitiy/user-activitiy.component.ts:78</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <b>
+                            ngOnInit
+                        </b>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="69"
+                            class="link-to-prism">src/app/afterLogin/user-activitiy/user-activitiy.component.ts:69</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="showVideo"></a>
+                    <span class="name">
+                        <b>
+                            showVideo
+                        </b>
+                        <a href="#showVideo"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>showVideo(videoId: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="179"
+                            class="link-to-prism">src/app/afterLogin/user-activitiy/user-activitiy.component.ts:179</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>videoId</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="userProfile"></a>
+                    <span class="name">
+                        <b>
+                            userProfile
+                        </b>
+                        <a href="#userProfile"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>userProfile(id: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="151"
+                            class="link-to-prism">src/app/afterLogin/user-activitiy/user-activitiy.component.ts:151</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>id</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="activityList"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            activityList</b>
+                            <a href="#activityList"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>Array&lt;any&gt;</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/afterLogin/user-activitiy/user-activitiy.component.ts:15</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="currentUser"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            currentUser</b>
+                            <a href="#currentUser"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/app/afterLogin/user-activitiy/user-activitiy.component.ts:13</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="likeCategories"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            likeCategories</b>
+                            <a href="#likeCategories"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>Array&lt;any&gt;</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[
+    {
+      shortcut:0,
+      id: &#x27;1&#x27;,
+      category: &#x27;Laugh&#x27;,
+      emoji: &#x27;../../../assets/images/videoplayer/react-laugh.svg&#x27;
+    },
+    {
+      shortcut:1,
+      id: &#x27;2&#x27;,
+      category: &#x27;Like&#x27;,
+      emoji: &#x27;../../../assets/images/videoplayer/react-like.svg&#x27;
+    },
+    {
+      shortcut:2,
+      id: &#x27;3&#x27;,
+      category: &#x27;Dislike&#x27;,
+      emoji: &#x27;../../../assets/images/videoplayer/react-dislike.svg&#x27;
+    },
+    {
+      shortcut:3,
+      id: &#x27;4&#x27;,
+      category: &#x27;Question&#x27;,
+      emoji: &#x27;../../../assets/images/videoplayer/react-question.svg&#x27;
+    },
+    {
+      shortcut:4,
+      id: &#x27;5&#x27;,
+      category: &#x27;Amazed&#x27;,
+      emoji: &#x27;../../../assets/images/videoplayer/react-amazed.svg&#x27;
+    },
+    {
+      shortcut:5,
+      id: &#x27;6&#x27;,
+      category: &#x27;Crying&#x27;,
+      emoji: &#x27;../../../assets/images/videoplayer/react-crying.svg&#x27;
+    },
+    { 
+      shortcut:6,
+      id: &#x27;7&#x27;,
+      category: &#x27;Angry&#x27;,
+      emoji: &#x27;../../../assets/images/videoplayer/react-angry.svg&#x27;
+    }
+  ]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/app/afterLogin/user-activitiy/user-activitiy.component.ts:19</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="likedVideos"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            likedVideos</b>
+                            <a href="#likedVideos"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>Array&lt;any&gt;</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/afterLogin/user-activitiy/user-activitiy.component.ts:16</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="sharedVideos"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            sharedVideos</b>
+                            <a href="#sharedVideos"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>Array&lt;any&gt;</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/afterLogin/user-activitiy/user-activitiy.component.ts:18</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="spinner"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            spinner</b>
+                            <a href="#spinner"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>false</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/app/afterLogin/user-activitiy/user-activitiy.component.ts:17</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="watchHistory"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            watchHistory</b>
+                            <a href="#watchHistory"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>Array&lt;any&gt;</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/afterLogin/user-activitiy/user-activitiy.component.ts:14</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
+import { CrudService} from &#x27;../../crud.service&#x27;;
+import { Router, ActivatedRoute } from &#x27;@angular/router&#x27;;
+import * as _ from &#x27;lodash&#x27;;
+import { isArray } from &#x27;util&#x27;;
+
+@Component({
+  selector: &#x27;app-user-activitiy&#x27;,
+  templateUrl: &#x27;./user-activitiy.component.html&#x27;,
+  styleUrls: [&#x27;./user-activitiy.component.css&#x27;]
+})
+export class UserActivitiyComponent implements OnInit {
+  private currentUser:any;
+  private watchHistory: Array&lt;any&gt; &#x3D; [];
+  private activityList: Array&lt;any&gt; &#x3D; [];
+  private likedVideos: Array&lt;any&gt; &#x3D; [];
+  private spinner:any &#x3D; false;
+  private sharedVideos: Array&lt;any&gt; &#x3D; [];
+  private likeCategories: Array&lt;any&gt; &#x3D; [
+    {
+      shortcut:0,
+      id: &#x27;1&#x27;,
+      category: &#x27;Laugh&#x27;,
+      emoji: &#x27;../../../assets/images/videoplayer/react-laugh.svg&#x27;
+    },
+    {
+      shortcut:1,
+      id: &#x27;2&#x27;,
+      category: &#x27;Like&#x27;,
+      emoji: &#x27;../../../assets/images/videoplayer/react-like.svg&#x27;
+    },
+    {
+      shortcut:2,
+      id: &#x27;3&#x27;,
+      category: &#x27;Dislike&#x27;,
+      emoji: &#x27;../../../assets/images/videoplayer/react-dislike.svg&#x27;
+    },
+    {
+      shortcut:3,
+      id: &#x27;4&#x27;,
+      category: &#x27;Question&#x27;,
+      emoji: &#x27;../../../assets/images/videoplayer/react-question.svg&#x27;
+    },
+    {
+      shortcut:4,
+      id: &#x27;5&#x27;,
+      category: &#x27;Amazed&#x27;,
+      emoji: &#x27;../../../assets/images/videoplayer/react-amazed.svg&#x27;
+    },
+    {
+      shortcut:5,
+      id: &#x27;6&#x27;,
+      category: &#x27;Crying&#x27;,
+      emoji: &#x27;../../../assets/images/videoplayer/react-crying.svg&#x27;
+    },
+    { 
+      shortcut:6,
+      id: &#x27;7&#x27;,
+      category: &#x27;Angry&#x27;,
+      emoji: &#x27;../../../assets/images/videoplayer/react-angry.svg&#x27;
+    }
+  ];
+  constructor(
+    private apiService: CrudService,
+    private router:Router,
+    private activatedRoute: ActivatedRoute
+  ) { }
+
+  ngOnInit() {
+    this.spinner &#x3D; true;
+    this.currentUser &#x3D; window.localStorage.getItem(&#x27;user&#x27;)
+    this.getWatchHistory();
+
+    
+  }
+
+  // Getting watch history
+  getWatchHistory() {
+    this.apiService.getWatchHistory().subscribe(
+      success &#x3D;&gt; {
+        if(!isArray(success.data)){
+          this.watchHistory &#x3D; []
+          this.getSharedVideos();
+          this.spinner &#x3D; false;
+          return
+        }
+        let history: Array&lt;any&gt; &#x3D; success.data;
+        let sortedHistory &#x3D; _.sortBy(history, [&#x27;createdAt&#x27;]);
+        sortedHistory &#x3D; sortedHistory.reverse();
+        this.watchHistory &#x3D; _.take(sortedHistory, 20)
+        this.getSharedVideos();
+        this.spinner &#x3D; false;
+       
+       
+      }
+    );
+  }
+
+  // Get shared videos
+  getSharedVideos() {
+    this.apiService.getUserShares(this.currentUser).subscribe(
+      success &#x3D;&gt; {
+        if(!isArray(success.data)){
+          this.getLikedVideos();
+          this.getUserActivity();
+          this.sharedVideos &#x3D; [];
+          return
+        }
+        this.getLikedVideos();
+       this.getUserActivity();
+     
+       // console.log(success.data);
+        this.sharedVideos &#x3D; success.data;
+       
+      });
+  }
+
+  // Get liked videos
+  getLikedVideos() {
+    this.apiService.getLikedVideos(this.currentUser).subscribe(
+      success&#x3D;&gt;{
+        if(!isArray(success.data)){
+          this.likedVideos &#x3D; []
+          return;
+
+        }
+       // console.log(&#x27;Liked videos: &#x27;,success.data);
+       for (const [key, value] of Object.entries(success.data)) {
+        this.likedVideos.push(value)
+      }
+        
+      });
+  }
+
+  // Get activity
+  getUserActivity() {
+    this.apiService.getUserActivity().subscribe(
+      success&#x3D;&gt;{
+        if(!isArray(success.data)){
+          this.activityList &#x3D; []
+          return;
+
+        }
+        for (const [key, value] of Object.entries(success.data))
+        {
+          this.activityList.push(value);
+        }
+       // console.log(&#x27;activity: &#x27;, this.activityList);
+      });
+  }
+  userProfile(id:any){
+    this.router.navigate([&#x27;public-profile&#x27;], { queryParams: { user: id } });
+  }
+  getEmoji(cat:any){
+    //console.log(cat)
+    if(cat &#x3D;&#x3D; &#x27;1&#x27;)
+    return this.likeCategories[0].emoji
+
+    if(cat &#x3D;&#x3D; &#x27;2&#x27;)
+    return this.likeCategories[1].emoji
+
+    if(cat &#x3D;&#x3D; &#x27;3&#x27;)
+    return this.likeCategories[2].emoji
+
+    if(cat &#x3D;&#x3D; &#x27;4&#x27;)
+    return this.likeCategories[3].emoji
+
+    if(cat &#x3D;&#x3D; &#x27;5&#x27;)
+    return this.likeCategories[4].emoji
+
+    if(cat &#x3D;&#x3D; &#x27;6&#x27;)
+    return this.likeCategories[5].emoji
+
+    if(cat &#x3D;&#x3D; &#x27;7&#x27;)
+    return this.likeCategories[6].emoji
+  }
+
+  // Navigate to public videos
+  showVideo(videoId: any) {
+    this.router.navigate([&#x27;videos&#x27;], { queryParams: { video: videoId } });
+  }
+
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;headerone&gt;&lt;/headerone&gt;
+&lt;sideMenu&gt;&lt;/sideMenu&gt;
+&lt;spinner *ngIf&#x3D;&quot;spinner&quot; &gt;&lt;/spinner&gt;
+&lt;!-- Main wrapper --&gt;
+&lt;section class&#x3D;&quot;main&quot; *ngIf&#x3D;&quot;!spinner&quot;&gt;
+    &lt;div class&#x3D;&quot;container&quot;&gt;
+        &lt;div class&#x3D;&quot;row&quot;&gt;
+            &lt;div class&#x3D;&quot;col-12&quot;&gt;
+                &lt;h5 style&#x3D;&quot;font-weight: 600;margin-bottom: 20px;&quot;&gt;User Activity&lt;/h5&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot;row&quot;&gt;
+            &lt;!-- Tab list --&gt;
+            &lt;div class&#x3D;&quot;col-3&quot;&gt;
+                &lt;div class&#x3D;&quot;nav flex-column nav-pills&quot; id&#x3D;&quot;v-pills-tab&quot; role&#x3D;&quot;tablist&quot; aria-orientation&#x3D;&quot;vertical&quot;&gt;
+                    &lt;a class&#x3D;&quot;nav-link icon&quot; id&#x3D;&quot;activity-tab&quot; data-toggle&#x3D;&quot;pill&quot; href&#x3D;&quot;#activity&quot; role&#x3D;&quot;tab&quot; aria-controls&#x3D;&quot;activity&quot; aria-selected&#x3D;&quot;true&quot;&gt;
+                        &lt;svg version&#x3D;&quot;1.1&quot; id&#x3D;&quot;icons&quot; xmlns&#x3D;&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink&#x3D;&quot;http://www.w3.org/1999/xlink&quot; x&#x3D;&quot;0px&quot; y&#x3D;&quot;0px&quot;
+	                        viewBox&#x3D;&quot;0 0 24 24&quot; style&#x3D;&quot;enable-background:new 0 0 24 24;&quot; xml:space&#x3D;&quot;preserve&quot;&gt;
+                            &lt;path d&#x3D;&quot;M17,10c-3.9,0-7,3.1-7,7c0,3.9,3.1,7,7,7c3.9,0,7-3.1,7-7C24,13.1,20.9,10,17,10z M17,22c-2.8,0-5-2.2-5-5s2.2-5,5-5
+	                            c2.8,0,5,2.2,5,5S19.8,22,17,22z&quot;/&gt;
+                            &lt;polygon points&#x3D;&quot;18,13 16,13 16,17.4 18.3,19.7 19.7,18.3 18,16.6 &quot;/&gt;
+                            &lt;path d&#x3D;&quot;M4,4.5C4,7,6,9,8.5,9C11,9,13,7,13,4.5C13,2,11,0,8.5,0C6,0,4,2,4,4.5z M11,4.5C11,5.9,9.9,7,8.5,7C7.1,7,6,5.9,6,4.5
+	                            S7.1,2,8.5,2C9.9,2,11,3.1,11,4.5z&quot;/&gt;
+                            &lt;path d&#x3D;&quot;M2,16v-1c0-1.7,1.3-3,3-3h5.8c0.6-0.8,1.4-1.4,2.2-1.9C12.7,10,12.3,10,12,10H5c-2.8,0-5,2.2-5,5v3h9.1C9,17.7,9,17.3,9,17
+	                            c0-0.3,0-0.7,0.1-1H2z&quot;/&gt;
+                        &lt;/svg&gt;
+                        Activity
+                    &lt;/a&gt;
+                    &lt;a class&#x3D;&quot;nav-link icon active&quot; id&#x3D;&quot;history-tab&quot; data-toggle&#x3D;&quot;pill&quot; href&#x3D;&quot;#history&quot; role&#x3D;&quot;tab&quot; aria-controls&#x3D;&quot;history&quot; aria-selected&#x3D;&quot;true&quot;&gt;
+                        &lt;svg version&#x3D;&quot;1.1&quot; id&#x3D;&quot;icons&quot; xmlns&#x3D;&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink&#x3D;&quot;http://www.w3.org/1999/xlink&quot; x&#x3D;&quot;0px&quot; y&#x3D;&quot;0px&quot;
+	                        viewBox&#x3D;&quot;0 0 22.019 23.019&quot; style&#x3D;&quot;enable-background:new 0 0 22.019 23.019;&quot; xml:space&#x3D;&quot;preserve&quot;&gt;
+                            &lt;path d&#x3D;&quot;M8.019,14.019c0-1.654-1.346-3-3-3s-3,1.346-3,3s1.346,3,3,3S8.019,15.673,8.019,14.019z M4.019,14.019c0-0.551,0.448-1,1-1
+	                            c0.552,0,1,0.449,1,1s-0.448,1-1,1C4.468,15.019,4.019,14.57,4.019,14.019z&quot;/&gt;
+                            &lt;path d&#x3D;&quot;M0.019,21.019v2h2v-2c0-0.551,0.448-1,1-1h4c0.552,0,1,0.449,1,1v2h2v-2c0-1.654-1.346-3-3-3h-4
+	                            C1.365,18.019,0.019,19.365,0.019,21.019z&quot;/&gt;
+                            &lt;path d&#x3D;&quot;M22.019,11.01C22.019,4.939,17.081,0,11.01,0S0,4.939,0,11.01h2C2,6.042,6.042,2,11.01,2c4.968,0,9.01,4.042,9.01,9.01
+	                            s-4.042,9.009-9.01,9.009v2C17.081,22.019,22.019,17.08,22.019,11.01z&quot;/&gt;
+                            &lt;polygon points&#x3D;&quot;10.008,4.008 10.008,11.422 14.301,15.715 15.715,14.302 12.008,10.594 12.008,4.008 &quot;/&gt;
+                        &lt;/svg&gt;
+                        Watch History
+                    &lt;/a&gt;
+                    &lt;a class&#x3D;&quot;nav-link icon&quot; id&#x3D;&quot;likes-tab&quot; data-toggle&#x3D;&quot;pill&quot; href&#x3D;&quot;#likes&quot; role&#x3D;&quot;tab&quot; aria-controls&#x3D;&quot;likes&quot; aria-selected&#x3D;&quot;false&quot;&gt;
+                        &lt;svg viewBox&#x3D;&quot;0 0 16 16&quot; width&#x3D;&quot;512&quot; xmlns&#x3D;&quot;http://www.w3.org/2000/svg&quot;&gt;
+                            &lt;path d&#x3D;&quot;m3.5 0h-3c-.276367 0-.5.223633-.5.5v9c0 .276367.223633.5.5.5h3c.276367 0 .5-.223633.5-.5v-9c0-.276367-.223633-.5-.5-.5zm-.5 9h-2v-8h2z&quot; transform&#x3D;&quot;translate(0 5)&quot;/&gt;&lt;path d&#x3D;&quot;m9.15332 5.02979h-2.9541c-.258301 0-.387695-.172363-.431152-.246582-.043457-.0737305-.131348-.270508-.0063477-.496094l1.0415-1.87549c.228516-.410645.251953-.893555.0649414-1.32471-.187012-.43164-.556152-.744629-1.0127-.858398l-.734375-.183594c-.178711-.0449219-.368164.0122071-.492676.150391l-3.9873 4.42969c-.413574.460449-.641113 1.0542-.641113 1.67236v4.23242c0 1.37842 1.12158 2.5 2.5 2.5l4.97412-.0004883c1.12305 0 2.11475-.756348 2.41113-1.83887l1.06738-3.89844c.03125-.13623.0473633-.275879.0473633-.415527 0-1.01807-.828613-1.84668-1.84668-1.84668zm.82959 2.01709-1.0625 3.87939c-.177734.649414-.772461 1.10352-1.44629 1.10352h-4.97412c-.827148 0-1.5-.672852-1.5-1.5v-4.23242c0-.371094.136719-.727539.384766-1.00342l3.78564-4.20605.442383.110352c.152344.0380859.275391.142578.337891.286621.0625.143555.0546875.304199-.0214844.441406l-1.0415 1.87549c-.260742.469238-.253906 1.02588.0185547 1.48877.272461.462891.755859.739258 1.29297.739258h2.9541c.466797 0 .84668.379883.84668.84668 0 .0634766-.0073242.127441-.0170898.17041z&quot; transform&#x3D;&quot;translate(5 .97)&quot;/&gt;
+                        &lt;/svg&gt;
+                        Liked Videos
+                    &lt;/a&gt;
+                    &lt;a class&#x3D;&quot;nav-link icon&quot; id&#x3D;&quot;shared-tab&quot; data-toggle&#x3D;&quot;pill&quot; href&#x3D;&quot;#shares&quot; role&#x3D;&quot;tab&quot; aria-controls&#x3D;&quot;shares&quot; aria-selected&#x3D;&quot;false&quot;&gt;
+                        &lt;svg version&#x3D;&quot;1.1&quot; id&#x3D;&quot;Layer_1&quot; xmlns&#x3D;&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink&#x3D;&quot;http://www.w3.org/1999/xlink&quot; x&#x3D;&quot;0px&quot; y&#x3D;&quot;0px&quot;
+	                        viewBox&#x3D;&quot;0 0 13.5 11.25&quot; style&#x3D;&quot;enable-background:new 0 0 13.5 11.25;&quot; xml:space&#x3D;&quot;preserve&quot;&gt;
+                            &lt;path d&#x3D;&quot;M8.262,10.512V7.453C6.386,7.43,4.775,7.734,3.428,8.367C2.08,9,0.937,9.961,0,11.25c0.352-1.921,1.166-3.668,2.443-5.238
+	                            c1.277-1.57,3.217-2.566,5.818-2.988V0L13.5,5.273L8.262,10.512z&quot;/&gt;
+                            &lt;g&gt;&lt;/g&gt;
+                            &lt;g&gt;&lt;/g&gt;
+                            &lt;g&gt;&lt;/g&gt;
+                            &lt;g&gt;&lt;/g&gt;
+                            &lt;g&gt;&lt;/g&gt;
+                            &lt;g&gt;&lt;/g&gt;
+                        &lt;/svg&gt;
+                        Shared Videos
+                    &lt;/a&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            
+            &lt;!-- Tab content--&gt;
+            &lt;div class&#x3D;&quot;col-9 video-container&quot;&gt;
+                &lt;div class&#x3D;&quot;tab-content&quot; id&#x3D;&quot;v-pills-tabContent&quot;&gt;
+                    &lt;!-- Activity --&gt;
+                    &lt;div class&#x3D;&quot;tab-pane fade show&quot; id&#x3D;&quot;activity&quot; role&#x3D;&quot;tabpanel&quot; aria-labelledby&#x3D;&quot;activity-tab&quot;&gt;
+                        &lt;h5 style&#x3D;&quot;text-align: center;&quot; *ngIf&#x3D;&quot;activityList.length&#x3D;&#x3D;0&quot;&gt;No activities found....&lt;/h5&gt;
+                        &lt;div class&#x3D;&quot;row history-row animations&quot; *ngFor&#x3D;&quot;let a of activityList&quot; &gt;
+                            
+
+                                &lt;div class&#x3D;&quot;row width-100&quot;  *ngIf&#x3D;&quot;a.activityType &#x3D;&#x3D; &#x27;Comment&#x27;&quot;&gt;
+                                        &lt;div class&#x3D;&quot;col-3&quot;&gt;
+                                            &lt;img src&#x3D;&quot;{{a.videoInfo.poster}}&quot; class&#x3D;&quot;poster&quot;&gt;
+                                        &lt;/div&gt;
+                                        &lt;div class&#x3D;&quot;col-9&quot;&gt;
+                                          &lt;p&gt;
+                                            &lt;a &gt;{{a.userInfo.username}}&lt;/a&gt;  &lt;b&gt; commented&lt;/b&gt; on 
+                                            &lt;a style&#x3D;&quot;color: #6e5eff&quot; (click)&#x3D;&quot;showVideo(a.videoInfo._id)&quot;&gt;
+                                               {{a.videoInfo.Title}}
+                                            &lt;/a&gt; 
+                                           
+                                          &lt;/p&gt;
+                                          &lt;p &gt;{{a.videoInfo.updatedAt | dateAgo}}&lt;/p&gt;
+                                        &lt;/div&gt;
+                
+                                    &lt;/div&gt;
+                
+                
+                
+                                    &lt;div class&#x3D;&quot;row width-100&quot; *ngIf&#x3D;&quot;a.activityType &#x3D;&#x3D; &#x27;Share&#x27;&quot;&gt;
+                                        &lt;div class&#x3D;&quot;col-3&quot; &gt;
+                                            &lt;img src&#x3D;&quot;{{a.videoInfo.poster}}&quot; id&#x3D;&quot;{{a.videoInfo._id}}&quot; class&#x3D;&quot;poster&quot;&gt;
+                                        &lt;/div&gt;
+                                        &lt;div class&#x3D;&quot;col-9&quot;&gt;
+                                          &lt;p&gt;
+                                            {{a.userInfo.username}} 
+                                            
+                                            &lt;span&gt; &lt;b&gt;shared&lt;/b&gt; on &lt;/span&gt;
+                                          
+                                            &lt;a  [routerLink]&#x3D;&quot;[&#x27;/videos&#x27;]&quot;  style&#x3D;&quot;color: #6e5eff&quot; [queryParams]&#x3D;&quot;{video:a.videoInfo._id}&quot;&gt;
+                                               {{a.videoInfo.Title}}
+                                            &lt;/a&gt; 
+                                          &lt;/p&gt;
+                                          &lt;p &gt;{{a.videoInfo.updatedAt | dateAgo}}&lt;/p&gt;
+                                        &lt;/div&gt;
+                                       
+                                    &lt;/div&gt;
+                
+                
+                                    &lt;div class&#x3D;&quot;row width-100&quot; *ngIf&#x3D;&quot;a.activityType &#x3D;&#x3D; &#x27;Like&#x27;&quot;&gt;
+                                        &lt;div class&#x3D;&quot;col-3&quot;&gt;
+                                            &lt;img src&#x3D;&quot;{{a.videoInfo.poster}}&quot; id&#x3D;&quot;{{a.videoInfo._id}}&quot; class&#x3D;&quot;poster&quot;&gt;
+                                        &lt;/div&gt;
+                                        &lt;div class&#x3D;&quot;col-9&quot;&gt;
+                                          &lt;p&gt;
+                                            {{a.userInfo.username}} 
+                
+                                            &lt;span &gt;&lt;b&gt;reacted&lt;/b&gt; to &lt;img src&#x3D;&quot;{{getEmoji(a.category)}}&quot; style&#x3D;&quot;height:17px!important;width: auto&quot;/&gt; &lt;/span&gt;
+                                          
+                                            &lt;a [routerLink]&#x3D;&quot;[&#x27;/videos&#x27;]&quot; style&#x3D;&quot;color: #6e5eff&quot; [queryParams]&#x3D;&quot;{video:a.videoInfo._id}&quot;&gt;
+                                               {{a.videoInfo.Title}}
+                                            &lt;/a&gt; 
+                                          
+                                          &lt;/p&gt;
+                                          &lt;p &gt;{{a.videoInfo.updatedAt | dateAgo}}&lt;/p&gt;
+                                        &lt;/div&gt;
+                                      
+                                    &lt;/div&gt;
+                
+                
+                                    &lt;div class&#x3D;&quot;row width-100&quot; *ngIf&#x3D;&quot;a.activityType &#x3D;&#x3D; &#x27;follow&#x27;&quot;&gt;
+                                        &lt;div class&#x3D;&quot;col-3&quot; &gt;
+                                            &lt;img src&#x3D;&quot;{{a.userInfo.profilePic}}&quot; class&#x3D;&quot;poster&quot;&gt;
+                                        &lt;/div&gt;
+                                        &lt;div class&#x3D;&quot;col-9&quot;&gt;
+                                          &lt;p&gt;
+                                            {{a.userInfo.username}} 
+                                            &lt;span &gt; is &lt;b&gt;following&lt;/b&gt; &lt;/span&gt;
+                                          
+                                            &lt;a  [routerLink]&#x3D;&quot;[&#x27;/public-profile&#x27;]&quot; style&#x3D;&quot;color: #6e5eff&quot; [queryParams]&#x3D;&quot;{user:a.followUserInfo._id}&quot;&gt;
+                                              {{a.followUserInfo.username}}
+                                            &lt;/a&gt;
+                                          &lt;/p&gt;
+                                          &lt;p&gt;{{a.followUserInfo.createdAt | dateAgo}}&lt;/p&gt;
+                                        &lt;/div&gt;
+                                       
+                                    &lt;/div&gt;
+                
+
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    
+                    &lt;!-- Watch History --&gt;
+                    &lt;div class&#x3D;&quot;tab-pane fade show active&quot; id&#x3D;&quot;history&quot; role&#x3D;&quot;tabpanel&quot; aria-labelledby&#x3D;&quot;history-tab&quot;&gt;
+                        &lt;h5 style&#x3D;&quot;text-align: center;&quot; *ngIf&#x3D;&quot;watchHistory.length&#x3D;&#x3D;0&quot;&gt;No watch history found....&lt;/h5&gt;
+                        &lt;div class&#x3D;&quot;row history-row animations&quot; *ngFor&#x3D;&quot;let i of watchHistory&quot; (click)&#x3D;&quot;showVideo(i.videoInfo._id)&quot;&gt;
+                            &lt;div class&#x3D;&quot;col-3 video-img&quot;&gt;
+                                &lt;img src&#x3D;&quot;{{i.videoInfo.poster}}&quot; id&#x3D;&quot;{{i.videoInfo._id}}&quot; &gt;
+                                &lt;div class&#x3D;&quot;over&quot;&gt;
+                                    &lt;span&gt;
+                                            &lt;img  src&#x3D;&quot;../../../assets/images/landing/video-decisions.svg&quot;&gt;
+                                        {{i.videoInfo.totalchild}}&lt;/span&gt;
+                                    &lt;span&gt;
+                                            &lt;img  src&#x3D;&quot;../../../assets/images/landing/video-outcomes.svg&quot;&gt;
+                                        {{i.videoInfo.totallevel}}&lt;/span&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;div class&#x3D;&quot;col-9 video-details&quot;&gt;
+                                &lt;h5&gt;{{i.videoInfo.Title}}&lt;/h5&gt;
+                                &lt;p&gt;Watched by you, {{i.createdAt | dateAgo}}&lt;/p&gt;
+                                &lt;span *ngFor&#x3D;&quot;let c of i.videoInfo.Categories&quot;&gt;{{c}}&lt;/span&gt;
+                                &lt;!-- &lt;p class&#x3D;&quot;video-desc&quot;&gt;Description&lt;/p&gt; --&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    
+
+                    &lt;div class&#x3D;&quot;tab-pane fade show&quot; id&#x3D;&quot;likes&quot; role&#x3D;&quot;tabpanel&quot; aria-labelledby&#x3D;&quot;likes-tab&quot;&gt;
+                        &lt;h5 style&#x3D;&quot;text-align: center;&quot; *ngIf&#x3D;&quot;likedVideos.length&#x3D;&#x3D;0&quot;&gt;No liked videos found....&lt;/h5&gt;
+                        &lt;div class&#x3D;&quot;row history-row animations&quot; *ngFor&#x3D;&quot;let i of likedVideos&quot; (click)&#x3D;&quot;showVideo(i.videoInfo._id)&quot;&gt;
+                            &lt;div class&#x3D;&quot;col-3 video-img&quot;&gt;
+                                &lt;img src&#x3D;&quot;{{i.videoData.poster}}&quot; id&#x3D;&quot;{{i.videoData._id}}&quot;&gt;
+                                &lt;div class&#x3D;&quot;over&quot;&gt;
+                                        &lt;span&gt;
+                                                &lt;img  src&#x3D;&quot;../../../assets/images/landing/video-decisions.svg&quot;&gt;
+                                            {{i.videoData.totalchild}}&lt;/span&gt;
+                                        &lt;span&gt;
+                                                &lt;img  src&#x3D;&quot;../../../assets/images/landing/video-outcomes.svg&quot;&gt;
+                                            {{i.videoData.totallevel}}&lt;/span&gt;
+                                    &lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;div class&#x3D;&quot;col-9 video-details&quot;&gt;
+                                &lt;h5&gt;{{i.videoData.Title}}&lt;/h5&gt;
+                                &lt;p&gt;reacted &lt;img src&#x3D;&quot;{{getEmoji(i.category)}}&quot; class&#x3D;&quot;reacted&quot; /&gt; by you, {{i.createdAt | dateAgo}}&lt;/p&gt;
+                                &lt;span *ngFor&#x3D;&quot;let c of i.videoData.Categories&quot;&gt;{{c}}&lt;/span&gt;
+                                &lt;!-- &lt;p class&#x3D;&quot;video-desc&quot;&gt;Description&lt;/p&gt; --&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class&#x3D;&quot;tab-pane fade show&quot; id&#x3D;&quot;shares&quot; role&#x3D;&quot;tabpanel&quot; aria-labelledby&#x3D;&quot;shares-tab&quot;&gt;
+                        &lt;h5 style&#x3D;&quot;text-align: center;&quot; *ngIf&#x3D;&quot;sharedVideos.length&#x3D;&#x3D;0&quot;&gt;No shared videos found....&lt;/h5&gt;
+                        &lt;div class&#x3D;&quot;row history-row animations&quot; *ngFor&#x3D;&quot;let i of sharedVideos&quot; (click)&#x3D;&quot;showVideo(i._id)&quot;&gt;
+                            &lt;div class&#x3D;&quot;col-3 video-img&quot;&gt;
+                                &lt;img src&#x3D;&quot;{{i.videoDetails.poster}}&quot; id&#x3D;&quot;{{i._id}}&quot; &gt;
+                                &lt;div class&#x3D;&quot;over&quot;&gt;
+                                        &lt;span&gt;
+                                                &lt;img  src&#x3D;&quot;../../../assets/images/landing/video-decisions.svg&quot;&gt;
+                                            {{i.videoDetails.totalchild}}&lt;/span&gt;
+                                        &lt;span&gt;
+                                                &lt;img  src&#x3D;&quot;../../../assets/images/landing/video-outcomes.svg&quot;&gt;
+                                            {{i.videoDetails.totallevel}}&lt;/span&gt;
+                                    &lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;div class&#x3D;&quot;col-9 video-details&quot;&gt;
+                                &lt;h5&gt;{{i.videoDetails.Title}}&lt;/h5&gt;
+                                &lt;p&gt;Shared by you with &lt;a (click)&#x3D;&quot;userProfile(i.sharedWith._id)&quot; style&#x3D;&quot;color:#6655ee&quot;&gt;{{i.sharedWith.username}}&lt;/a&gt;, {{i.shareTime | dateAgo}}&lt;/p&gt;
+                                
+                                     &lt;span *ngFor&#x3D;&quot;let c of i.videoDetails.Categories&quot;&gt;{{c}}&lt;/span&gt;
+                                 
+                                &lt;!-- &lt;p class&#x3D;&quot;video-desc&quot;&gt;Description&lt;/p&gt; --&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/section&gt;
+
+&lt;withoutloginfooter&gt;&lt;/withoutloginfooter&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./user-activitiy.component.css</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">.main {
+    margin-top: 100px;
+}
+
+.container {
+    max-width: 1000px;
+}
+
+.video-container {
+    height: 500px;
+    overflow-y: scroll;
+}
+
+/* .video-container :hover {
+    background-color: #fff;
+} */
+.reacted
+{
+   
+    width: auto!important;
+   
+    height: 17px!important;
+}
+.nav-pills .nav-link
+{
+    color: #000 !important
+}
+.nav-pills .nav-link.active
+{
+    color: #6655ee !important;
+    background-color: transparenT!important;
+
+}
+.history-row img{
+    width: 100%;
+    object-fit: cover;
+    height: 86px;
+}
+.history-row {
+    
+    padding: 15px 0;
+    margin: 5px 0px;
+    cursor: pointer;
+    box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.1);
+    
+}
+.width-100{
+    width: 100%;
+    padding: 0px 15px;
+}
+.history-row:hover{
+    background: #fff;
+    box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.5);
+    
+    
+}
+
+.video-img img {
+    width: inherit;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.video-details h5 {
+    font-size: 15px;
+}
+
+.video-details p {
+    font-size: 12px;
+    margin-bottom: 7px;
+}
+
+.video-details span {
+    font-size: 12px;
+    color: #636161;
+    border:  1px solid #636161;
+    border-radius: 4px;
+    padding: 4px;
+    margin-right: 15px;
+
+}
+
+.video-desc {
+    text-align: justify;
+}
+
+.icon :hover{
+    /* fill: #6655ee; */
+}
+
+.icon &gt; svg {
+    width: 11%;
+    margin-right: 5px;
+}
+
+a.active &gt; svg {
+    fill: #6655ee
+}
+
+a.nav-link :hover {
+    color: #6655ee;
+}</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><headerone></headerone><sideMenu></sideMenu><spinner *ngIf="spinner" ></spinner><!-- Main wrapper --><section class="main" *ngIf="!spinner">    <div class="container">        <div class="row">            <div class="col-12">                <h5 style="font-weight: 600;margin-bottom: 20px;">User Activity</h5>            </div>        </div>        <div class="row">            <!-- Tab list -->            <div class="col-3">                <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">                    <a class="nav-link icon" id="activity-tab" data-toggle="pill" href="#activity" role="tab" aria-controls="activity" aria-selected="true">                        <svg version="1.1" id="icons" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"	                        viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">                            <path d="M17,10c-3.9,0-7,3.1-7,7c0,3.9,3.1,7,7,7c3.9,0,7-3.1,7-7C24,13.1,20.9,10,17,10z M17,22c-2.8,0-5-2.2-5-5s2.2-5,5-5	                            c2.8,0,5,2.2,5,5S19.8,22,17,22z"/>                            <polygon points="18,13 16,13 16,17.4 18.3,19.7 19.7,18.3 18,16.6 "/>                            <path d="M4,4.5C4,7,6,9,8.5,9C11,9,13,7,13,4.5C13,2,11,0,8.5,0C6,0,4,2,4,4.5z M11,4.5C11,5.9,9.9,7,8.5,7C7.1,7,6,5.9,6,4.5	                            S7.1,2,8.5,2C9.9,2,11,3.1,11,4.5z"/>                            <path d="M2,16v-1c0-1.7,1.3-3,3-3h5.8c0.6-0.8,1.4-1.4,2.2-1.9C12.7,10,12.3,10,12,10H5c-2.8,0-5,2.2-5,5v3h9.1C9,17.7,9,17.3,9,17	                            c0-0.3,0-0.7,0.1-1H2z"/>                        </svg>                        Activity                    </a>                    <a class="nav-link icon active" id="history-tab" data-toggle="pill" href="#history" role="tab" aria-controls="history" aria-selected="true">                        <svg version="1.1" id="icons" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"	                        viewBox="0 0 22.019 23.019" style="enable-background:new 0 0 22.019 23.019;" xml:space="preserve">                            <path d="M8.019,14.019c0-1.654-1.346-3-3-3s-3,1.346-3,3s1.346,3,3,3S8.019,15.673,8.019,14.019z M4.019,14.019c0-0.551,0.448-1,1-1	                            c0.552,0,1,0.449,1,1s-0.448,1-1,1C4.468,15.019,4.019,14.57,4.019,14.019z"/>                            <path d="M0.019,21.019v2h2v-2c0-0.551,0.448-1,1-1h4c0.552,0,1,0.449,1,1v2h2v-2c0-1.654-1.346-3-3-3h-4	                            C1.365,18.019,0.019,19.365,0.019,21.019z"/>                            <path d="M22.019,11.01C22.019,4.939,17.081,0,11.01,0S0,4.939,0,11.01h2C2,6.042,6.042,2,11.01,2c4.968,0,9.01,4.042,9.01,9.01	                            s-4.042,9.009-9.01,9.009v2C17.081,22.019,22.019,17.08,22.019,11.01z"/>                            <polygon points="10.008,4.008 10.008,11.422 14.301,15.715 15.715,14.302 12.008,10.594 12.008,4.008 "/>                        </svg>                        Watch History                    </a>                    <a class="nav-link icon" id="likes-tab" data-toggle="pill" href="#likes" role="tab" aria-controls="likes" aria-selected="false">                        <svg viewBox="0 0 16 16" width="512" xmlns="http://www.w3.org/2000/svg">                            <path d="m3.5 0h-3c-.276367 0-.5.223633-.5.5v9c0 .276367.223633.5.5.5h3c.276367 0 .5-.223633.5-.5v-9c0-.276367-.223633-.5-.5-.5zm-.5 9h-2v-8h2z" transform="translate(0 5)"/><path d="m9.15332 5.02979h-2.9541c-.258301 0-.387695-.172363-.431152-.246582-.043457-.0737305-.131348-.270508-.0063477-.496094l1.0415-1.87549c.228516-.410645.251953-.893555.0649414-1.32471-.187012-.43164-.556152-.744629-1.0127-.858398l-.734375-.183594c-.178711-.0449219-.368164.0122071-.492676.150391l-3.9873 4.42969c-.413574.460449-.641113 1.0542-.641113 1.67236v4.23242c0 1.37842 1.12158 2.5 2.5 2.5l4.97412-.0004883c1.12305 0 2.11475-.756348 2.41113-1.83887l1.06738-3.89844c.03125-.13623.0473633-.275879.0473633-.415527 0-1.01807-.828613-1.84668-1.84668-1.84668zm.82959 2.01709-1.0625 3.87939c-.177734.649414-.772461 1.10352-1.44629 1.10352h-4.97412c-.827148 0-1.5-.672852-1.5-1.5v-4.23242c0-.371094.136719-.727539.384766-1.00342l3.78564-4.20605.442383.110352c.152344.0380859.275391.142578.337891.286621.0625.143555.0546875.304199-.0214844.441406l-1.0415 1.87549c-.260742.469238-.253906 1.02588.0185547 1.48877.272461.462891.755859.739258 1.29297.739258h2.9541c.466797 0 .84668.379883.84668.84668 0 .0634766-.0073242.127441-.0170898.17041z" transform="translate(5 .97)"/>                        </svg>                        Liked Videos                    </a>                    <a class="nav-link icon" id="shared-tab" data-toggle="pill" href="#shares" role="tab" aria-controls="shares" aria-selected="false">                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"	                        viewBox="0 0 13.5 11.25" style="enable-background:new 0 0 13.5 11.25;" xml:space="preserve">                            <path d="M8.262,10.512V7.453C6.386,7.43,4.775,7.734,3.428,8.367C2.08,9,0.937,9.961,0,11.25c0.352-1.921,1.166-3.668,2.443-5.238	                            c1.277-1.57,3.217-2.566,5.818-2.988V0L13.5,5.273L8.262,10.512z"/>                            <g></g>                            <g></g>                            <g></g>                            <g></g>                            <g></g>                            <g></g>                        </svg>                        Shared Videos                    </a>                </div>            </div>                        <!-- Tab content-->            <div class="col-9 video-container">                <div class="tab-content" id="v-pills-tabContent">                    <!-- Activity -->                    <div class="tab-pane fade show" id="activity" role="tabpanel" aria-labelledby="activity-tab">                        <h5 style="text-align: center;" *ngIf="activityList.length==0">No activities found....</h5>                        <div class="row history-row animations" *ngFor="let a of activityList" >                                                            <div class="row width-100"  *ngIf="a.activityType == \'Comment\'">                                        <div class="col-3">                                            <img src="{{a.videoInfo.poster}}" class="poster">                                        </div>                                        <div class="col-9">                                          <p>                                            <a >{{a.userInfo.username}}</a>  <b> commented</b> on                                             <a style="color: #6e5eff" (click)="showVideo(a.videoInfo._id)">                                               {{a.videoInfo.Title}}                                            </a>                                                                                      </p>                                          <p >{{a.videoInfo.updatedAt | dateAgo}}</p>                                        </div>                                                    </div>                                                                                    <div class="row width-100" *ngIf="a.activityType == \'Share\'">                                        <div class="col-3" >                                            <img src="{{a.videoInfo.poster}}" id="{{a.videoInfo._id}}" class="poster">                                        </div>                                        <div class="col-9">                                          <p>                                            {{a.userInfo.username}}                                                                                         <span> <b>shared</b> on </span>                                                                                      <a  [routerLink]="[\'/videos\']"  style="color: #6e5eff" [queryParams]="{video:a.videoInfo._id}">                                               {{a.videoInfo.Title}}                                            </a>                                           </p>                                          <p >{{a.videoInfo.updatedAt | dateAgo}}</p>                                        </div>                                                                           </div>                                                                    <div class="row width-100" *ngIf="a.activityType == \'Like\'">                                        <div class="col-3">                                            <img src="{{a.videoInfo.poster}}" id="{{a.videoInfo._id}}" class="poster">                                        </div>                                        <div class="col-9">                                          <p>                                            {{a.userInfo.username}}                                                             <span ><b>reacted</b> to <img src="{{getEmoji(a.category)}}" style="height:17px!important;width: auto"/> </span>                                                                                      <a [routerLink]="[\'/videos\']" style="color: #6e5eff" [queryParams]="{video:a.videoInfo._id}">                                               {{a.videoInfo.Title}}                                            </a>                                                                                     </p>                                          <p >{{a.videoInfo.updatedAt | dateAgo}}</p>                                        </div>                                                                          </div>                                                                    <div class="row width-100" *ngIf="a.activityType == \'follow\'">                                        <div class="col-3" >                                            <img src="{{a.userInfo.profilePic}}" class="poster">                                        </div>                                        <div class="col-9">                                          <p>                                            {{a.userInfo.username}}                                             <span > is <b>following</b> </span>                                                                                      <a  [routerLink]="[\'/public-profile\']" style="color: #6e5eff" [queryParams]="{user:a.followUserInfo._id}">                                              {{a.followUserInfo.username}}                                            </a>                                          </p>                                          <p>{{a.followUserInfo.createdAt | dateAgo}}</p>                                        </div>                                                                           </div>                                        </div>                    </div>                                        <!-- Watch History -->                    <div class="tab-pane fade show active" id="history" role="tabpanel" aria-labelledby="history-tab">                        <h5 style="text-align: center;" *ngIf="watchHistory.length==0">No watch history found....</h5>                        <div class="row history-row animations" *ngFor="let i of watchHistory" (click)="showVideo(i.videoInfo._id)">                            <div class="col-3 video-img">                                <img src="{{i.videoInfo.poster}}" id="{{i.videoInfo._id}}" >                                <div class="over">                                    <span>                                            <img  src="../../../assets/images/landing/video-decisions.svg">                                        {{i.videoInfo.totalchild}}</span>                                    <span>                                            <img  src="../../../assets/images/landing/video-outcomes.svg">                                        {{i.videoInfo.totallevel}}</span>                                </div>                            </div>                            <div class="col-9 video-details">                                <h5>{{i.videoInfo.Title}}</h5>                                <p>Watched by you, {{i.createdAt | dateAgo}}</p>                                <span *ngFor="let c of i.videoInfo.Categories">{{c}}</span>                                <!-- <p class="video-desc">Description</p> -->                            </div>                        </div>                    </div>                                        <div class="tab-pane fade show" id="likes" role="tabpanel" aria-labelledby="likes-tab">                        <h5 style="text-align: center;" *ngIf="likedVideos.length==0">No liked videos found....</h5>                        <div class="row history-row animations" *ngFor="let i of likedVideos" (click)="showVideo(i.videoInfo._id)">                            <div class="col-3 video-img">                                <img src="{{i.videoData.poster}}" id="{{i.videoData._id}}">                                <div class="over">                                        <span>                                                <img  src="../../../assets/images/landing/video-decisions.svg">                                            {{i.videoData.totalchild}}</span>                                        <span>                                                <img  src="../../../assets/images/landing/video-outcomes.svg">                                            {{i.videoData.totallevel}}</span>                                    </div>                            </div>                            <div class="col-9 video-details">                                <h5>{{i.videoData.Title}}</h5>                                <p>reacted <img src="{{getEmoji(i.category)}}" class="reacted" /> by you, {{i.createdAt | dateAgo}}</p>                                <span *ngFor="let c of i.videoData.Categories">{{c}}</span>                                <!-- <p class="video-desc">Description</p> -->                            </div>                        </div>                    </div>                    <div class="tab-pane fade show" id="shares" role="tabpanel" aria-labelledby="shares-tab">                        <h5 style="text-align: center;" *ngIf="sharedVideos.length==0">No shared videos found....</h5>                        <div class="row history-row animations" *ngFor="let i of sharedVideos" (click)="showVideo(i._id)">                            <div class="col-3 video-img">                                <img src="{{i.videoDetails.poster}}" id="{{i._id}}" >                                <div class="over">                                        <span>                                                <img  src="../../../assets/images/landing/video-decisions.svg">                                            {{i.videoDetails.totalchild}}</span>                                        <span>                                                <img  src="../../../assets/images/landing/video-outcomes.svg">                                            {{i.videoDetails.totallevel}}</span>                                    </div>                            </div>                            <div class="col-9 video-details">                                <h5>{{i.videoDetails.Title}}</h5>                                <p>Shared by you with <a (click)="userProfile(i.sharedWith._id)" style="color:#6655ee">{{i.sharedWith.username}}</a>, {{i.shareTime | dateAgo}}</p>                                                                     <span *ngFor="let c of i.videoDetails.Categories">{{c}}</span>                                                                 <!-- <p class="video-desc">Description</p> -->                            </div>                        </div>                    </div>                </div>            </div>        </div>    </div></section><withoutloginfooter></withoutloginfooter></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CreateInteractiveVideoComponent', 'selector': 'createInteractiveVideoComponent'},{'name': 'DashboardComponent', 'selector': 'dashboard'},{'name': 'EditProfileComponent', 'selector': 'editProfile'},{'name': 'FollowersComponent', 'selector': 'app-followers'},{'name': 'FollowingComponent', 'selector': 'app-following'},{'name': 'FooterComponent', 'selector': 'footer'},{'name': 'FooterComponent', 'selector': 'footer'},{'name': 'FooterComponent', 'selector': 'footer'},{'name': 'FooterComponent', 'selector': 'footer'},{'name': 'FooterComponent', 'selector': 'footer'},{'name': 'FooterComponent', 'selector': 'footer'},{'name': 'ForgetPasswordComponent', 'selector': 'forgetPassword'},{'name': 'HeaderComponent', 'selector': 'headerone'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LandingPageComponent', 'selector': 'app-landing-page'},{'name': 'LandingTestComponent', 'selector': 'app-landing-test'},{'name': 'LibraryComponent', 'selector': 'app-library'},{'name': 'LoginComponent', 'selector': 'login'},{'name': 'MyVideosComponent', 'selector': 'app-my-videos'},{'name': 'MyVideosPublicComponent', 'selector': 'app-my-videos-public'},{'name': 'NotificationsComponent', 'selector': 'app-notifications'},{'name': 'OtpComponent', 'selector': 'otp'},{'name': 'ProfileCompletionComponent', 'selector': 'profileCompletion'},{'name': 'PublicProfileComponent', 'selector': 'app-public-profile'},{'name': 'PublicUserActivitiyComponent', 'selector': 'app-public-user-activitiy'},{'name': 'PublicVideoComponent', 'selector': 'app-public-video'},{'name': 'PublishFooterComponent', 'selector': 'publishFooter'},{'name': 'ResetPasswordComponent', 'selector': 'resetPassword'},{'name': 'SearchResultsComponent', 'selector': 'app-search-results'},{'name': 'SectionSpinnerComponent', 'selector': 'sectionSpinner'},{'name': 'SideMenuComponent', 'selector': 'sideMenu'},{'name': 'SignupComponent', 'selector': 'signup'},{'name': 'SignupComponent', 'selector': 'signup'},{'name': 'SpinnerComponent', 'selector': 'spinner'},{'name': 'TestComponent', 'selector': 'app-test'},{'name': 'ThatsallComponent', 'selector': 'app-thatsall'},{'name': 'TrendingComponent', 'selector': 'app-trending'},{'name': 'UploadVideosComponent', 'selector': 'uploadVideos'},{'name': 'UserActivitiyComponent', 'selector': 'app-user-activitiy'},{'name': 'WithOutLoginFooterComponent', 'selector': 'withoutloginfooter'}];
+    var DIRECTIVES = [{'name': 'VideoJS', 'selector': '[videojs]'}];
+    var ACTUAL_COMPONENT = {'name': 'UserActivitiyComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'UserActivitiyComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

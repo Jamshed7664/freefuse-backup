@@ -1,0 +1,110 @@
+
+<headerone></headerone>
+<spinner *ngIf="loginObject.spinner"></spinner>
+  
+<!-- form -1 for login -->
+<form class="signin-form"  #loginForm="ngForm" (ngSubmit)="onSubmit()" >
+    <section class="video-signin-sec" [hidden]="loginObject.isFirstFormCompleted" style="margin-top: 50px;">
+        <div class="container video-common-sec">
+            <div class="video-common-form">
+                <h4>Free<strong>Fuse</strong></h4>
+                <h6>Log In</h6>
+                <div class="form-group signup-group">
+                    <div class="pos-relative">
+                        <input type="email" id="user_email"   class="form-control main_focus_input" 
+                            name="user_email" required  
+                            [(ngModel)]="loginObject.email" 
+                            #user_email="ngModel" 
+                            (change)="changeUserLogin('user_email')" 
+                            [ngClass]="{'custom-alert-border':user_email.invalid && user_email.touched}" 
+                            email 
+                            (keyup.enter)="loginFirstStep()"  autofocus>
+                        <label class="input-field" for="user_email">Enter your email address</label>  
+                    </div>   
+                    <div *ngIf="user_email.invalid && user_email.touched" class="custom-alert">
+                        <div *ngIf="user_email.errors.required">
+                            Email is required.
+                        </div> 
+                        <div *ngIf="user_email.errors.email">
+                            Please enter valid email address.
+                        </div>                                
+                    </div>
+                </div>
+                <button type="button" class="video-common-btn" [disabled]="user_email.invalid" (click)="loginFirstStep()">Continue</button>
+            
+            
+                <span class="or-text">OR</span>
+                <!-- <button type="button" class="video-common-btn" (click)="loginFirstStep()">Sign up</button> -->
+                <a class="video-common-btn signup-btn" [routerLink]="['/signup']">
+                    Sign up
+                </a>
+                <span class="or-text">OR</span>
+
+                <div class="social-area">
+                    <h6>Continue with</h6>
+                    <div class="social-icon">
+                    <a ><img src="assets/images/facebook-icon.svg" alt="facebook" (click)="fbLogin()"></a>
+                    <!-- <a ><img src="assets/images/twitter-icon.svg" alt="twitter"></a>
+                    <a ><img src="assets/images/linkedin-icon.svg" alt="linkedin"></a> -->
+                    <a ><img src="assets/images/google-icon.svg" alt="google" (click)="googleLogin()"></a>
+                </div>
+            </div>
+
+            <p class="tc-pp-text">Before continuing using FreeFuse please make sure you have read and agree with our 
+                <a >terms and conditions</a> & <a >privacy policy</a>
+            </p>
+
+            </div>
+        </div>
+    </section>
+    <!-- end here -->
+
+    <!-- form -2 for the login -->
+    <section class="video-reset-sec" [hidden]="!loginObject.isFirstFormCompleted">
+        <div class="container video-common-sec" style="margin-top: 50px;">
+            <div class="video-common-form">
+                <h4>Free<strong>Fuse</strong></h4>
+         
+                <div class="user-pic-text">
+                    <img src="assets/images/user-pic.svg" *ngIf="!(!!loginObject.profilePic)">
+                    <img src="{{loginObject.profilePic}}" *ngIf="!!loginObject.profilePic">
+                    <h5>Welcome back, {{loginObject.userName}}</h5>
+                    <p>Enter your password to access your account</p>
+                </div>
+
+                <div class="form-group signup-group">
+                    <div class="pos-relative">
+                        <input [type]="fieldPassTextType ? 'text' : 'password'" autocomplete="nope" id="user_password" class="form-control main_focus_input" name="user_password" required [(ngModel)]="loginObject.password" #user_password="ngModel" (change)="changeUserLogin('user_password')" [ngClass]="{'custom-alert-border':user_password.invalid && user_password.touched}">
+                        <label class="input-field" for="user_password">Password</label> 
+                        <button type="button" id="cpass-show" class="btn btn-link btn-show-password" (click)="togglePasswordTextType()" *ngIf="!fieldPassTextType">Show</button>
+                        <button type="button" id="cpass-hide" class="btn btn-link btn-show-password" (click)="togglePasswordTextType()" *ngIf="fieldPassTextType">Hide</button>      
+                    </div>  
+                    <div *ngIf="user_password.invalid && user_password.touched" class="custom-alert">
+                        <div *ngIf="user_password.errors.required">
+                               Password is required.
+                        </div>
+                    </div>                       
+                </div>
+                
+                <button type="submit" class="video-common-btn" [disabled]="user_password.invalid">Sign in</button>
+                <!-- <button style="margin-top: 10px;" type="button" class="video-common-btn" (click)="activateAccount()">Activate</button> -->
+                <!-- <button *ngIf="deactivated" style="margin-top: 10px;" type="button" class="video-common-btn" (click)="activateAccount()">Activate2</button> -->
+                <!-- *ngIf="deactivated" -->
+
+            <div class="forgot-reset-pwd">
+                <a (click)="loginObject.isFirstFormCompleted = false">Return to log in</a>
+                <a [routerLink]="['/forgotPassword']">Forgot your password?</a>
+            </div>
+
+            <p class="tc-pp-text">Before continuing using FreeFuse please make sure you have read and agree with our 
+                <a >terms and conditions</a> & <a >privacy policy</a>
+            </p>
+
+            </div>
+        </div>
+    </section>
+</form>
+    <!-- end here -->
+
+<withoutloginfooter></withoutloginfooter>
+

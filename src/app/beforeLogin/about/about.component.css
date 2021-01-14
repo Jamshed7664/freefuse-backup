@@ -1,0 +1,71 @@
+.bg {
+    background-image: url('../../../assets/images/freefuse-landing-new-concept-v5.png');
+    background-size: cover;
+    height: 100%;
+    margin-top: 63px;
+    min-height: 130vh;
+}
+.aboutImg{
+    width: 95%;
+    height: 300px;
+    object-fit: contain;
+}
+.aboutImg:hover{
+    width: 95%;
+    height: 300px;
+    object-fit: contain;
+    transform: scale(1.09);
+    transition: 0.5s;
+    transition-timing-function: ease;
+}
+.aboutPara{
+    color: white;
+    font-size: 25px;
+    text-align: justify;
+}
+.video-all-dimensions {
+    width: 100% !important;
+    height: 415px !important;
+}
+.video-js .vjs-tech {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto !important;
+}
+@media(max-width: 991px){
+   
+    .video-all-dimensions{
+        height: 191px !important;
+    }
+    .video-js .vjs-tech {
+        position: absolute;
+        top: -16px;
+    }
+    .aboutPara{
+        padding: 10px;
+        color: white;
+        font-size: 25px;
+        text-align: justify;
+    }
+    .aboutPara{
+        padding: 10px;
+        color: white;
+        font-size: 16px;
+        text-align: justify;
+    }
+    .aboutImg{
+        width: 92%;
+        height: 265px;
+        object-fit: contain;
+    }
+    .aboutImg:hover{
+        width: 95%;
+        height: 300px;
+        object-fit: contain;
+        transform: unset !important
+        /* transition: 0.5s; */
+      
+    }
+}

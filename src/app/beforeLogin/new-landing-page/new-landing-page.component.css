@@ -1,0 +1,539 @@
+.bg {
+    background-image: url('../../../assets/images/freefuse-landing-new-concept-v5.png');
+    background-size: cover;
+
+}
+
+.intro-section {
+    padding-top: 70px;
+    padding-left: 52px;
+}
+
+h1 {
+    color: #FFFFFF;
+    text-align: center;
+}
+
+h1.section-heading {
+    margin-bottom: 25px;
+    margin-top: 50px;
+}
+
+.intro {
+    background-color: #522195;
+    color: #FFFFFF;
+    border-radius: 12px;
+    padding: 15px;
+    height: 131px;
+    box-shadow: 2px 2px 3px 0px rgba(0,0,0,0.4);
+    overflow: hidden;
+}
+
+.intro img {
+    width: 15%;
+}
+
+.intro div.d-table {
+    width: 85%;
+    float: right;
+    padding-left: 15%;
+}
+
+.video-bg {
+    background-image: url('../../../assets/images/feature-video.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: auto;
+}
+
+/* Feature Video Section CSS */
+.feature-video-section {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding-left: 52px;
+}
+
+.feature-video img.poster {
+    width: 100%;
+    height: 400px;
+    object-fit: fill;
+}
+
+.feature-video .feature-info {
+    position: absolute;
+    z-index: 9;
+    padding: 15px;
+    color: #ffffff;
+    bottom: 40px;
+    /* background-color: black; */
+}
+
+.feature-video .feature-info h2 {
+    margin-bottom: 25px;
+    cursor: pointer;
+}
+
+.feature-video .feature-info .categories {
+  
+    /* background-color: red; */
+    padding: 10px 0px;
+    height: auto;
+}
+
+.feature-video .feature-info .categories span.category {
+    text-transform: uppercase;
+    border: 1px solid #FFFFFF;
+    padding: 3px 10px;
+    margin-right: 10px;
+    border-radius: 16px;
+    display: inline-block;
+    font-size: 14px;
+}
+
+.feature-video .feature-info .decision-info img {
+    width: 30px;
+    height: 30px;
+    margin-right: 15px;
+}
+
+.feature-video .feature-info .btn-interact {
+    background-color: #FFFFFF;
+    color: #522195;
+    margin-right: 15px;
+    padding: 6px 15px;
+}
+
+.feature-video .feature-info .btn-outcomes {
+    background-color: transparent;
+    color: #FFFFFF;
+    border: 1px solid #FFFFFF;
+    padding: 6px 15px;
+}
+/* Feature Video Section CSS */
+
+/* Trending Section CSS */
+.trending-section {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding-left: 52px;
+}
+
+.trending-section h4.section-heading {
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.trending-video img.poster {
+    width: 100%;
+    height: 35vh !important;
+    object-fit: cover;
+}
+
+.trending-video:hover .video-info {
+    top: 0;
+}
+
+.trending-video:hover .top-choices {
+    opacity: 1;
+    z-index: 9;
+}
+
+.interact-cardimg-iconstext {
+    width: 120px;
+    border-radius: 2px;
+    padding: 10px 10px;
+    position: absolute;
+    top: 0px;
+    right: 15px;
+}
+
+.interact-cardimg-iconstext > span {
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    padding: 3px;
+}
+
+.interact-cardimg-iconstext > span img {
+    width: 20px !important;
+    height: 20px;
+    margin-right: 5px;
+}
+
+.interact-cardimg-iconstext > span b {
+    font-size: 12px;
+}
+
+.trending-video .video-info {
+    position: absolute;
+    bottom: 0px;
+    color: #FFFFFF;
+    padding: 10px;
+    background: rgba(0,0,0,0.5);
+    width: calc(100% - 30px);
+}
+
+.trending-video .video-info p {
+    display: inline;
+}
+.feature-video
+{
+    position: relative;
+
+}
+.feature-video::before{
+position: absolute;
+content: '';
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+z-index: 9;
+background-color: rgba(0,0,0,0.2) 
+}
+
+.trending-video .video-info h6 {
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+.trending-video .top-choices {
+    position: absolute;
+    color: #FFFFFF;
+    padding: 10px;
+    background: rgba(0,0,0,0.5);
+    width: calc(100% - 30px);
+    bottom: 0px;
+    opacity: 0;
+}
+
+.trending-video .top-choices .pro-group {
+    margin-bottom: 10px;
+}
+
+.trending-video .top-choices .pro-group h6 {
+    font-weight: normal;
+    font-size: 12px;
+}
+
+
+.trending-video .top-choices .pro-group .progress {
+    height: 6px;
+}
+.trending-video .top-choices .pro-group .progress .progress-bar {
+    background-color: #522195;
+}
+/* Trending Section CSS */
+
+.profile-25 {
+    width: 40px !important;
+    height: 40px !important;
+    margin-right: 5px !important;
+    object-fit: cover;
+    cursor: pointer;
+    border: 2px solid #FFFFFF;
+    border-radius: 50%;
+}
+
+/* Highly Interactive Section CSS */
+.highly-interactive-section {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding-left: 52px;
+}
+
+.highly-interactive-section h4.section-heading {
+    color: #FFFFFF;
+    margin-bottom: 20px;
+}
+
+.interactive-video img.poster{
+    width: 100%;
+    height: 35vh !important;
+    position: relative;
+    object-fit: cover;
+}
+
+.interactive-video .decisions {
+    position: absolute;
+    top: 0px;
+    padding: 10px;
+    color: #FFFFFF;
+    background: rgba(0,0,0,0.5);
+    width: calc(100% - 30px);
+}
+
+.interactive-video .decisions p {
+    margin-bottom: 0px;
+}
+
+.interactive-video .decisions .touch-icon {
+    float: left;
+    width: 40px;
+    margin-right: 5px;
+}
+
+.interactive-video .decisions .touch-icon img {
+    width: 40px;
+    height: 40px;
+}
+
+.interactive-video .video-info {
+    position: absolute;
+    bottom: 0px;
+    color: #FFFFFF;
+    padding: 10px;
+    background: rgba(0,0,0,0.5);
+    width: calc(100% - 30px);
+}
+
+.interactive-video .video-info p {
+    display: inline;
+}
+
+.interactive-video .video-info h6 {
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+
+.owl-nav
+{
+    opacity: 0!important;
+}
+/* Highly Interactive Section CSS */
+.container-fluid .owl-nav
+{
+    opacity: 1!important;
+}
+
+
+/* Latest Section CSS */
+.latest-section {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding-left: 52px;
+}
+
+.latest-section h4.section-heading {
+    color: #FFFFFF;
+    margin-bottom: 20px;
+}
+
+.latest-video img.poster {
+    width: 100%;
+    height: 300px !important;
+    object-fit: cover;
+}
+
+.latest-video .video-info {
+    position: absolute;
+    bottom: 0px;
+    color: #FFFFFF;
+    padding: 10px;   
+    background: rgba(0,0,0,0.5);
+    width: calc(100% - 30px);
+}
+
+.latest-video .video-info p {
+    display: inline;
+}
+
+.latest-video .video-info h6 {
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+/* Latest Section CSS */
+
+
+
+
+/* Popuplar Categories Section CSS */
+.pop-categories-section {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding-left: 52px;
+}
+
+.pop-categories-section .section-heading{
+    color: #FFFFFF;
+    margin-bottom: 20px;
+}
+
+.pop-categories-section .pop-categories .card{
+    height: 230px;
+    margin-bottom: 20px;
+    border: none;
+    background: none;
+    transition: all .2s linear;
+    cursor: pointer;
+}
+.pop-categories-section .pop-categories .card:hover{
+    transform: scale(1.1);
+    box-shadow: 1px 1px 10px 2px black;
+    z-index: 1;
+}
+
+.pop-categories .card .card-img-overlay{
+    color: #ffffff;
+    top: unset;
+    bottom: 0px;
+    padding: 12px;
+}
+
+.pop-categories .card .card-img-overlay h6,
+.pop-categories .card .card-img-overlay span{
+    margin-bottom: 0px;
+    font-size: 14px;
+}
+
+.pop-categories .card .card-img-overlay h3{
+    font-size: 24px;
+}
+
+.pop-categories-section .pop-categories .card > img{
+    width: 100%;
+    height: 100%;
+}
+.pop-categories-section .pop-categories{
+    margin-bottom: 50px;
+}
+/* Popuplar Categories Section CSS */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Footer CSS */
+.interactive-vid-footer{
+    background-color: #17113b;
+    color: white;
+    padding: 40px 35px 80px 52px;
+}
+.interactive-vid-footer .link-list ul{
+    padding-left: 0px;
+    list-style-type: none;
+    margin-bottom: 0px;
+}
+.interactive-vid-footer .link-list ul li a,
+.interactive-vid-footer .app-list a{
+    color: #ffffff;
+    display: block;
+}
+.interactive-vid-footer .link-list ul li{
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+.interactive-vid-footer .logo-area p{
+    font-size: 13px;
+}
+.interactive-vid-footer .logo-area h2{
+    font-size: 24px;
+}
+.interactive-vid-footer .app-list a{
+    border: 1px solid;
+    display: inline-block;
+}
+/* .interactive-vid-footer .app-list a{} */
+
+.interactive-vid-footer .app-list a img{
+    width: 135px;
+    height: auto;
+}
+.interactive-vid-footer .app-list > span{
+    margin-bottom: 10px;
+    display: inline-block;
+}
+/* Footer CSS */
+@media(max-width: 700px){
+    .feature-video-section{
+
+        margin-bottom: 50px;
+        z-index: 0;
+    }
+
+}
+@media(max-width: 991px)
+{
+    .trending-video img.poster
+{
+    height: 300px!important;
+   
+}
+.feature-video-section{
+    /* margin-top: 207px !important; */
+    margin-bottom: 50px;
+    z-index: 0;
+}
+.poster  {
+    width: 100% !important;
+    height: 183px !important;
+    object-fit: fill;
+    /* margin-top: 186px !important; */
+}
+    .interact-vid-sec
+    {
+        padding: 30px 30px 0px !important;
+    }
+    .custom-height,.position-relative.pop5
+    {
+        height: auto!important;
+        margin-bottom: 30px;
+    }
+    .card-body
+    {
+        padding-bottom: 20px!important;
+    }
+    .interactive-vid-footer {
+        padding: 30px 30px 60px!important;
+    }
+    .margin-right-0-mobile
+    {
+        margin-right: 0px!important;
+    }
+    .interactive-vid-footer .app-list a {
+       
+        margin-right: 15px;
+    }
+    .intro-section,.feature-video-section,.highly-interactive-section,.trending-section,.latest-section,.pop-categories-section
+    {
+        padding-left: 0;
+    }
+    .intro
+    {
+        margin-bottom: 20px;
+    }
+    .feature-video .feature-info
+    {
+        bottom: 0;
+    }
+
+.feature-video .feature-info {
+   position: static !important;
+    z-index: 9;
+    padding: 15px;
+    color: #ffffff;
+
+
+}
+.feature-video-section {
+    margin-top: 0 !important ;
+
+}
+
+}
+
+.posterImg{
+    padding: 5px;
+    width: 100%;
+    height: 195px;
+    object-fit: contain;
+}

@@ -1,0 +1,202 @@
+
+/* side header css */
+.side-menu-navbar .navbar{
+    height: 100vh;
+    align-items: start; 
+    justify-content: center;
+    padding-top: 15px;
+}
+.side-menu-navbar .navbar-nav a img{
+    width: 22px;
+    height: 22px;
+}
+.side-menu-navbar .navbar-nav li a{
+    font-size: 19px;
+    color: white;
+    margin-bottom: 10px;
+}
+.side-menu-navbar .navbar-nav li{
+    margin-bottom: 5px;
+}
+.side-menu-navbar .navbar-nav li a span{
+    display: block;
+    margin-top: 5px;
+}
+.side-bar-menu
+{
+    width: 5s0px;
+    position: fixed;
+    height: 100%;
+    box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.5);
+    left: 0;
+    top: 57px;
+    z-index: 9;
+}
+.nav-link {
+    position: relative;
+}
+.nav-link span{
+    opacity: 0;
+    transition: 0.3s all ease-in-out;
+    padding: 5px;
+    background-color: #000;
+    color: #fff;
+    font-size: 14px;
+    position: absolute;
+    font-size: 14px;
+    position: absolute;
+    right: -75px;
+    top: 0px;
+    z-index: 99;
+    width: 65px;
+}
+.nav-link span::after {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 0;
+    margin-left: -15px;
+    border-width: 8px;
+    border-style: solid;
+    border-color: transparent #000 transparent transparent;
+  }
+
+.nav-link:hover span{
+    opacity: 1;
+   
+}
+.icon :hover {
+    fill: #6655ee;
+}
+
+svg {
+    width: 22px;
+    height: 22px;
+}
+
+.fa-plus{
+    font-size: 23px;
+    color: white;
+    display: none;
+    position: absolute;
+    top: 18px;
+}
+
+    .fa-user-circle{
+        font-size: 20px;
+        color: white;
+        display: none;
+        position: absolute;
+        top: 18px;
+    }
+    .fa-th{
+        position: relative;
+        bottom: 29px;
+    }
+
+
+@media(max-width: 991px)
+{
+    .nav-link span
+        {
+            display: none!important;
+        }
+    .navbar.bg-white
+    {
+        height: auto!important;
+        padding: 5px 0px;
+    }
+    .navbar-nav.text-center
+    {
+        width: 100%;
+        display: block!important;
+        position: relative;
+        bottom: 13px;
+        /* left: 22px; */
+    }
+    .side-menu-navbar .navbar-nav li
+    {
+        display: inline-block;
+        width: 20%;
+    }
+    svg
+    {
+        width: 24px!important;
+        height: 24px!important;
+    }
+    .side-bar-menu
+    {
+        width: 100%!important;
+        height: auto!important;
+        top: auto!important;
+        bottom: 0!important;
+        box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+    }
+    .fa-plus{
+        font-size: 23px;
+        color: white;
+        display: block;
+        position: absolute;
+        top: 18px;
+        left: 0;
+        right: 0;
+         margin: 0 auto;
+    }
+    .fa-home{
+        font-size: 23px;
+        color: white;
+        display: block;
+        position: absolute;
+        top: 18px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+    }
+    .fa-user{
+        font-size: 23px;
+        color: white;
+        display: block;
+        position: absolute;
+        top: 18px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+    }
+    .fa-fire{
+        font-size: 23px;
+        color: white;
+        display: block;
+        position: absolute;
+        top: 18px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+    }
+    .fa-th{
+        font-size: 23px;
+        color: white;
+        display: block;
+        position: absolute;
+        top: 18px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+    }
+    .fa-user-circle{
+        font-size: 23px;
+        color: white;
+        display: block;
+        position: absolute;
+        top: 18px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+    }
+}
+.profilePic{
+    width: 27px;
+     height:27px; 
+     border-radius: 50%;
+}
+
+/* side header css end */

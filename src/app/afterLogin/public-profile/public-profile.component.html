@@ -1,0 +1,407 @@
+<headerone></headerone>
+<sideMenu></sideMenu>
+<spinner *ngIf="dashboardObj.spinner"></spinner>
+<section class="container-fluid HB-bg-body afterlogindashboard" style="padding-bottom:30px" *ngIf="!dashboardObj.spinner">
+    <div class="row">
+        <div class="col-12 pt-5">
+            <section class="hb-film-sec-1">
+                <div class="container-fluid hb-film-container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="hb-logo-content">
+                                <div class="logo">
+                                    <img src="{{userData.userinfo.profilePic}}"  *ngIf="userData.userinfo.profilePic">
+                                  
+
+                      <span class="profile-image" *ngIf="!userData.userinfo.profilePic" imgName  title="{{userData.userinfo.firstname}},{{userData.userinfo.lastname}}" style="border-radius:50%" ></span>
+
+                                </div>
+                                <div class="logo-txt">
+                                    <h3>{{userData.userinfo.username}}</h3> 
+                                    <button (click)="unfollowUser('following')" *ngIf="iAmFollowing" id="following">Following</button>
+                                    <button (click)="followUser('follow')" *ngIf="!iAmFollowing" id="follow">Follow</button>
+                                    
+                                    <h6>Bio</h6>
+                                    <p>{{userData.userinfo.bio[0]}}</p>                      
+                                </div> 
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="active-since">Active since 
+                                {{userData.userinfo.createdAt | date}}</div>
+                            <div class="hb-follower-content">
+                                <p>
+                                  <a class="profile-link" [routerLink]="['/followers']" [queryParams]="{user:userId}">
+                                    <span>{{followers.length}} Followers</span>
+                                  </a>
+                                  <a class="profile-link" [routerLink]="['/following']" [queryParams]="{user:userId}">
+                                    <span>{{following.length}} Following</span>
+                                  </a>    
+                                  <a class="profile-link" [routerLink]="['/my-videos-public']" [queryParams]="{user:userId}">
+                                    <span>{{userData.publishedVideoCount}} Videos</span>
+                                  </a>
+                                </p>
+                                <h6>Major Interests</h6>
+                               
+                                <a *ngFor="let i of userData.userinfo.category" class="cateogyclass animations"  style="color:black!important"(click)="showCategory(i)">{{i}}</a>
+                             </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+    <section class="hb-film-sec-2">
+        <div class="container-fluid hb-film-container">
+            <div class="row">
+              <!-- If there is no published video-->
+              <div class="col-md-6" *ngIf="!(recentMainVideo | keyvalue)?.length">
+                <div class="big-video-card">
+                  <div class="card border-0">
+                    <img class="card-img-top" src="../../../assets/images/hbf-images/hb-play1.jpg" alt="Videos">
+                    <div class="card-body">
+                      <h4 class="card-title">No published videos found....</h4>
+                      <p class="card-text">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                      </p>
+                    </div>
+                  </div> 
+                </div>
+              </div>
+
+              <!-- Recent video -->  
+              <div class="col-md-6" *ngIf="(recentMainVideo | keyvalue)?.length">
+                    <div class="big-video-card">
+                        <div class="card border-0">
+                            <img id="{{recentMainVideo._id}}" class="card-img-top recent-poster" src="{{recentMainVideo.poster}}" thumnailsDirective alt="Videos" (click)="showVideo(recentMainVideo._id)">
+                            
+                            <div class="card-body" (click)="showVideo(recentMainVideo._id)">
+                                <h4 class="card-title " (click)="showVideo(recentMainVideo._id)">{{recentMainVideo.Title}}</h4>
+                                <p class="card-text" (click)="showVideo(recentMainVideo._id)">
+                                    <span>{{recentMainVideo.updatedAt | dateAgo}}</span>
+                                    <span>{{recentMainVideo.viewCount}} Views</span>
+                                    <br>
+                                    
+                                </p>
+                                <span *ngFor="let c of recentMainVideo.Categories;let index = index" class="recent-cat cateogyclass animations class{{index}}" (click)="showCategory(c)"  >{{c}}</span>
+                                
+                                    <div class="dropdown parentofdotdotButton">
+                                      <button data-toggle="tooltip" data-placement="top" title="All Categories" class="dropdown-toggle dotdotButton" type="button" id="dropdownMenuButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" *ngIf="recentMainVideo.Categories.length > 1">
+                                        <svg width="1em" height="1em" viewBox="0 0 16 16"  class="bi bi-three-dots" fill="currentColor" xmlns="http://www.w3.org/2000/svg" >
+                                          <path fill-rule="evenodd" d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/>
+                                        </svg>
+                                      </button>
+                                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                        <a *ngFor="let i of recentMainVideo.Categories" class="animations needtoShow"  style="color:black!important"(click)="showCategory(i)">{{i}}</a>
+                                      </div>
+                                    </div>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+                <!-- Watch History -->
+                <div class="col-md-6">
+                    <div class="history-video-card" *ngIf="privacySettings.watchHistory">
+                        <!-- <h4>Watch history</h4> -->
+                        <h4>Recommended</h4>
+                        <a   *ngFor="let i of top3">
+                          <div class="row">
+                            <div class="col-lg-5" (click)="showVideo(i.videoInfo._id)">
+                              <div class="hv-card">
+                                <img src="{{i.videoInfo.poster}}" id="{{i.videoInfo._id}}" thumnailsDirective>
+                              </div>
+                            </div> 
+                            <div class="col-lg-7 pl">
+                              <div class="hv-card-text">
+                                <h5 (click)="showVideo(i.videoInfo._id)">{{i.videoInfo.Title}}</h5>              
+                                <span (click)="showVideo(i.videoInfo._id)">{{i.updatedAt | dateAgo}}</span>
+                                <span (click)="showVideo(i.videoInfo._id)">{{i.videoInfo.viewCount}} Views</span>
+                                <div class="clearfix"></div>
+                                <span *ngFor="let c of i.videoInfo.Categories;let index = index"  class="recent-cat cateogyclass animations class{{index}}" (click)="showCategory(c)">{{c}}</span>
+                                <div class="dropdown parentofdotdotButton">
+                                  <button data-toggle="tooltip" data-placement="top" title="All Categories" class="dropdown-toggle dotdotButton" type="button" id="dropdownMenuButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" *ngIf="i.videoInfo.Categories.length > 1">
+                                    <svg width="1em" height="1em" viewBox="0 0 16 16"  class="bi bi-three-dots" fill="currentColor" xmlns="http://www.w3.org/2000/svg" >
+                                      <path fill-rule="evenodd" d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/>
+                                    </svg>
+                                  </button>
+                                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                    <a *ngFor="let i of i.videoInfo.Categories" class="animations needtoShow"  style="color:black!important"(click)="showCategory(i)">{{i}}</a>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </a>
+                        <a [routerLink]="['/public-user-activity']" [queryParams]="{user:userId}" *ngIf="watchHistory.length > 4">
+                          View All
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="hb-film-sec-3">
+        <div class="container-fluid hb-film-container">
+            <ul class="nav nav-pills rfTab mb-2" id="myTab" role="tablist">
+                <li class="nav-item mr-4" *ngIf="privacySettings.recentConnections">
+                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Recent connections</a>
+                </li>
+                <li class="nav-item" *ngIf="privacySettings.following">
+                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Following</a>
+                </li>
+            </ul> 
+            <div class="tab-content" id="myTabContent">
+              <!-- Recent connections -->
+              <div class="tab-pane fade show active recent-con" id="home" role="tabpanel" aria-labelledby="home-tab" *ngIf="privacySettings.recentConnections">
+                    <div class="row" style="position: relative;">
+                      <h5 *ngIf="recentFollowers && recentFollowers.length == 0">No recent connections found....</h5>
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-3" *ngFor="let f of recentFollowers;let index=index">
+                            <div class="media d-flex align-items-center mb-3" (click)="userProfile(f.info._id)" style="cursor:pointer"  *ngIf="index < 4">
+                              <img src="{{f.info.profilePic}}" alt="" class="mr-3 rounded-circle" style="width:60px; height: 60px;" *ngIf="f.info.profilePic">  
+                              
+
+                              <span class="profile-image mr-3" *ngIf="!f.info.profilePic" imgName  title="{{f.info.firstname}},{{f.info.lastname}}" style="width:60px; height: 60px;border-radius:50%;line-height: 60px" ></span>
+
+
+                                <div class="media-body">
+                                    <h5 class="pointer" >{{f.info.username}}</h5>
+                                    <!-- <span>{{f.info.followers.length}} Followers</span>
+                                    <span>{{f.info.following.length}} Following</span>       -->
+
+                                    <span *ngIf="!f.info.isshow" class="linear-background"></span>  
+                                    <span *ngIf="f.info.isshow">{{(f.info.content * 100).toFixed(1)}}% content match</span>
+                                    <span *ngIf="f.info.isshow">{{((f.info.content)/1.5 * 100).toFixed(1)}}% choices match</span>      
+
+                                </div>
+                            </div>
+                        </div>
+                        <a *ngIf="recentFollowers && recentFollowers.length > 4" class="view-all" [routerLink]="['/followers']" [queryParams]="{user:userData.userinfo._id}">View All</a>
+                    </div>    
+              </div>
+
+              <!-- Following -->
+              <div class="tab-pane fade recent-con" id="profile" role="tabpanel" aria-labelledby="profile-tab" *ngIf="privacySettings.following">
+                <div class="row" style="position: relative;">
+                  <h5 *ngIf="recentFollowing && recentFollowing.length == 0">No following users found....</h5>
+                  <div class="col-12 col-sm-6 col-md-4 col-lg-3" *ngFor="let f of recentFollowing;let index=index">
+                    <div class="media d-flex align-items-center mb-3" (click)="userProfile(f.userinfo._id)" style="cursor:pointer" *ngIf="index < 4">
+                      <img src="{{f.userinfo.profilePic}}" alt="" class="mr-3 rounded-circle" style="width:60px; height: 60px; object-fit: cover;" *ngIf="f.userinfo.profilePic">
+                    
+                      <span class="profile-image mr-3" *ngIf="!f.userinfo.profilePic" imgName  title="{{f.userinfo.firstname}},{{f.userinfo.lastname}}" style="width:60px; height: 60px;border-radius:50%;line-height: 60px" ></span>
+
+                      <div class="media-body">
+                        <h5 >{{f.userinfo.username}}</h5>
+                        <!-- <span>{{f.userinfo.followers.length}} Followers</span>
+                        <span>{{f.userinfo.following.length}} Following</span>       -->
+
+
+                        <span *ngIf="!f.userinfo.isshow" class="linear-background"></span> 
+                        <span *ngIf="f.userinfo.isshow">{{(f.userinfo.content * 100).toFixed(1)}}% content match</span>
+                        <span *ngIf="f.userinfo.isshow">{{((f.userinfo.content)/1.5 *100).toFixed(1)}}% choices match</span> 
+
+                       
+                      </div>
+                    </div>
+                  </div>
+                  <a *ngIf="recentFollowing && recentFollowing.length > 4" class="view-all" [routerLink]="['/following']" [queryParams]="{user:userData.userinfo._id}">View All</a>
+                </div>
+              </div>
+            </div>                      
+        </div>
+    </section>            
+    
+    <!-- Viewer choice highlights -->
+    <section class="hb-film-sec-4">
+      <div class="container-fluid hb-film-container" style="min-height: 60px">
+        <h4>Viewer choice highlights</h4>
+        <sectionSpinner *ngIf="spinners.sixth" [@fadeInOut]></sectionSpinner>   
+
+        <div class=" " *ngIf="viewerChoices.length < 1" >
+          No Data Available! 
+        </div>
+        <div class="owl-carousel owl-theme v-choice-carousel" style="margin-bottom: 30px;" *ngIf="!spinners.sixth" [@fadeInOut]>
+         
+          <div class="choice item" *ngFor="let i of viewerChoices" >   
+            <sectionSpinner *ngIf="i.spinner"></sectionSpinner>
+
+               <div  class="test ">
+                <div  class="">
+                  <div>
+                    <img src="{{i.publishedVideo.poster}}" thumnailsDirective class="img-poster pointer" *ngIf="i.childVideos && i.childVideos.length < 1"  (click)="showVideo(i.publishedVideo._id)">
+                    <p class="main-title" *ngIf="i.childVideos && i.childVideos.length < 1">{{i.publishedVideo.Title}}</p>
+
+                    <div  class="test owl-carousel owl-theme child-wo childv-choice-carousel{{i.publishedVideo._id}}" >
+                      <div *ngFor="let j of i.childVideos"  class="item">
+                      <div>
+                          <img src="{{j.poster}}" class="img-poster pointer"  (click)="showVideo(i.publishedVideo._id)">
+                          <div class="slises slider-counter{{i.publishedVideo._id}}">No Choices!</div>
+                          <p class="main-title">{{i.publishedVideo.Title}}</p>
+                          
+                            <div class="owl-nav">
+                              <button type="button" role="presentation" class="owl-prev" (click)="preVpopularPath(i)" [disabled] ="i.prevDisabled">
+                                <span aria-label="Previous">‹</span>
+                              </button>
+                              <button type="button" role="presentation" class="owl-next" (click)="nextVpopularPath(i)" [disabled] ="i.nextDisabled">
+                                <span aria-label="Next">›</span>
+                              </button>
+                            </div>
+
+                         
+                      </div>
+                      </div>
+                  </div>
+
+                  </div>
+                </div>
+              </div>
+
+              
+            
+              <div class="v-choice-info"  >
+               
+                <ul class="tbalesa mb-2">
+                  <li *ngFor="let c of i.childVideos;let index = index"  class="upli upli{{index}} animations"  >
+                    <span class="dottype dottype{{index}}"></span> {{c.name}}</li>
+                    <li *ngIf="i.childVideos.length < 1" class="upli  animations"  >
+                      No Choices!</li>
+                </ul>
+                <div class=" mb-2" *ngIf="!i.noViews" >
+                  <!-- <img src="../../../assets/images/user-pic.svg" alt="HB" class="mr-3 rounded-circle" style="width: 40px; height: 40px;"> -->
+                  
+                
+                    <div id="chartContainer{{i.publishedVideo._id}}" style="height: 60px; width: 60px;float:left"></div>
+                    <ul class="tbalesa3 mb-2">
+                      <li *ngFor="let c of i.childVideos;let index = index"  class="upli animations"  style="display:block;width: 100%;font-weight: normal" >
+                        <b> {{(c.viewCount / i.totalView * 100).toFixed(1)}}% Chose</b> <span class="dottype dottype{{index}}" ></span> {{c.name}}</li>
+                    </ul>
+
+
+                   
+                    <!-- </ul> --> 
+
+
+                 
+                </div>
+                
+              </div>
+              
+          </div>          
+        </div>
+
+        
+
+      </div>
+  </section>
+
+    <!-- Likes and shares -->
+    <section class="hb-film-sec-5">
+      <div class="container-fluid hb-film-container">
+        <hr class="mb-0">
+        <ul class="nav nav-pills rfTab mb-4 d-flex justify-content-center" id="myTab" role="tablist">
+            <li class="nav-item mr-2" *ngIf="privacySettings.likes">
+                    <a class="nav-link active" id="hbLike-tab" data-toggle="tab" href="#hbLike" role="tab" aria-controls="like" aria-selected="true">
+                      <svg xmlns="http://www.w3.org/2000/svg" height="15px" viewBox="0 0 16 16" width="15px">
+                        <g><path d="m3.5 0h-3c-.276367 0-.5.223633-.5.5v9c0 .276367.223633.5.5.5h3c.276367 0 .5-.223633.5-.5v-9c0-.276367-.223633-.5-.5-.5zm-.5 9h-2v-8h2z" transform="translate(0 5)" data-original="#000000" class="active-path like" data-old_color="#000000" fill="#92969E"/>
+                        <path d="m9.15332 5.02979h-2.9541c-.258301 0-.387695-.172363-.431152-.246582-.043457-.0737305-.131348-.270508-.0063477-.496094l1.0415-1.87549c.228516-.410645.251953-.893555.0649414-1.32471-.187012-.43164-.556152-.744629-1.0127-.858398l-.734375-.183594c-.178711-.0449219-.368164.0122071-.492676.150391l-3.9873 4.42969c-.413574.460449-.641113 1.0542-.641113 1.67236v4.23242c0 1.37842 1.12158 2.5 2.5 2.5l4.97412-.0004883c1.12305 0 2.11475-.756348 2.41113-1.83887l1.06738-3.89844c.03125-.13623.0473633-.275879.0473633-.415527 0-1.01807-.828613-1.84668-1.84668-1.84668zm.82959 2.01709-1.0625 3.87939c-.177734.649414-.772461 1.10352-1.44629 1.10352h-4.97412c-.827148 0-1.5-.672852-1.5-1.5v-4.23242c0-.371094.136719-.727539.384766-1.00342l3.78564-4.20605.442383.110352c.152344.0380859.275391.142578.337891.286621.0625.143555.0546875.304199-.0214844.441406l-1.0415 1.87549c-.260742.469238-.253906 1.02588.0185547 1.48877.272461.462891.755859.739258 1.29297.739258h2.9541c.466797 0 .84668.379883.84668.84668 0 .0634766-.0073242.127441-.0170898.17041z" transform="translate(5 .97)" data-original="#000000" class="active-path like" data-old_color="#000000" fill="#92969E"/></g>
+                      </svg>
+                      Likes
+                    </a>
+            </li>
+            <li class="nav-item" *ngIf="privacySettings.shares">
+                    <a class="nav-link" id="hbShare-tab" data-toggle="tab" href="#hbShare" role="tab" aria-controls="share" aria-selected="false">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512.00004" width="15px" height="15px">
+                        <g><path d="m511.824219 255.863281-233.335938-255.863281v153.265625h-27.105469c-67.144531 0-130.273437 26.148437-177.753906 73.628906-47.480468 47.480469-73.628906 110.609375-73.628906 177.757813v107.347656l44.78125-49.066406c59.902344-65.628906 144.933594-103.59375 233.707031-104.457032v153.253907zm-481.820313 179.003907v-30.214844c0-59.132813 23.027344-114.730469 64.839844-156.542969s97.40625-64.839844 156.539062-64.839844h57.105469v-105.84375l162.734375 178.4375-162.734375 178.441407v-105.84375h-26.917969c-94.703124 0-185.773437 38.652343-251.566406 106.40625zm0 0" data-original="#000000" class="active-path share" data-old_color="#000000" fill="#92969E"/></g>
+                      </svg>
+                      Share
+                    </a>
+            </li>
+        </ul>
+
+        <div class="tab-content like-share-content" id="myTabContent">              
+          <!-- Likes -->
+          <div class="tab-pane fade show active" id="hbLike" role="tabpanel" aria-labelledby="hbLike-tab" *ngIf="privacySettings.likes">
+                  <h5 style="text-align: center;" *ngIf="likedVideos.length==0">No liked videos found.....</h5>  
+                  <div class="row">
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-2" *ngFor="let i of likedVideos;let index=index">
+                      <div class="card" *ngIf="i.videoData && index < 10">
+                        <img class="card-img-top" thumnailsDirective src="{{i.videoData.poster}}" alt="" style="width:100%; height: 121px;object-fit: cover" (click)="showVideo(i.videoData._id)">
+                        <div class="card-body">
+                          <h5 class="card-title" (click)="showVideo(i.videoData._id)">{{i.videoData.Title}}</h5>
+                          <p class="card-text">
+                            <span class="mr-1" (click)="showVideo(i.videoData._id)">{{i.createdAt | dateAgo}}</span>
+                            <span (click)="showVideo(i.videoData._id)">{{i.videoData.viewCount}} Views</span>
+                            <a class="my-tags">
+                             <span *ngFor="let c of i.videoData.Categories;let index = index" class="cateogyclass animations class{{index}}" (click)="showCategory(c)">{{c}}</span>
+                             <div class="dropdown parentofdotdotButton">
+                              <button data-toggle="tooltip" data-placement="top" title="All Categories" class="dropdown-toggle dotdotButton" type="button" id="dropdownMenuButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" *ngIf="i.videoData.Categories.length > 1">
+                                <svg width="1em" height="1em" viewBox="0 0 16 16"  class="bi bi-three-dots" fill="currentColor" xmlns="http://www.w3.org/2000/svg" >
+                                  <path fill-rule="evenodd" d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/>
+                                </svg>
+                              </button>
+                              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                <a *ngFor="let i of i.videoData.Categories" class="animations needtoShow"  style="color:black!important"(click)="showCategory(i)">{{i}}</a>
+                              </div>
+                            </div>
+
+                            </a>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                      
+                        <a [routerLink]="['/public-user-activity']" [queryParams]="{user:userId}" *ngIf="likedVideos.length > 9">View all</a>
+                        
+                    </div> 
+                    
+          </div>
+            
+          <!-- Shares -->
+          <div class="tab-pane fade" id="hbShare" role="tabpanel" aria-labelledby="hbShare-tab" *ngIf="privacySettings.shares">
+            
+            <h5 style="text-align: center;" *ngIf="sharedVideos.length==0">No shared videos found.....</h5>
+                  <div class="row" *ngIf="sharedVideos.length != 0">
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-2" *ngFor="let i of sharedVideos;let index=index">
+                      <div class="card" *ngIf="index < 10 && i.videoDetails">
+                        <img class="card-img-top" thumnailsDirective src="{{i.videoDetails.poster}}" alt="" style="width:100%; height: 121px;object-fit: cover" (click)="showVideo(i.videoDetails._id)">
+                        <div class="card-body">
+                          <h5 class="card-title" (click)="showVideo(i.videoDetails._id)">{{i.videoDetails.Title}}</h5>
+                          <p class="card-text">
+                            <span class="mr-1" (click)="showVideo(i.videoDetails._id)">{{i.shareTime | dateAgo}}</span>
+                            <span (click)="showVideo(i.videoDetails._id)">{{i.videoDetails.viewCount}} Views</span>
+                            <a class="my-tags">
+                            <span *ngFor="let c of i.videoDetails.Categories;let index = index" class="cateogyclass animations class{{index}}" (click)="showCategory(c)">{{c}}</span>
+                            <div class="dropdown parentofdotdotButton">
+                              <button data-toggle="tooltip" data-placement="top" title="All Categories" class="dropdown-toggle dotdotButton" type="button" id="dropdownMenuButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" *ngIf="i.videoDetails.Categories.length > 1">
+                                <svg width="1em" height="1em" viewBox="0 0 16 16"  class="bi bi-three-dots" fill="currentColor" xmlns="http://www.w3.org/2000/svg" >
+                                  <path fill-rule="evenodd" d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/>
+                                </svg>
+                              </button>
+                              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                <a *ngFor="let i of i.videoDetails.Categories" class="animations needtoShow"  style="color:black!important"(click)="showCategory(i)">{{i}}</a>
+                              </div>
+                            </div>
+
+                          </a>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  
+                  <a [routerLink]="['/public-user-activity']" [queryParams]="{user:userId}" *ngIf="sharedVideos.length > 9">
+                    View all
+                  </a>
+                </div>
+          </div>          
+        </div>
+      </div>
+    </section> 
+        
+      </div>
+    </div>
+
+  </section>
+<withoutloginfooter></withoutloginfooter>

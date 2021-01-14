@@ -1,0 +1,347 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>my-app documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">my-app documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content module">
+                   <div class="content-data">
+
+
+
+<ol class="breadcrumb">
+    <li>Modules</li>
+    <li>AppRoutingModule</li>
+</ol>
+
+
+<ul class="nav nav-tabs" role="tablist">
+    <li  class="active" >
+        <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+    </li>
+    <li >
+        <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+    </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info">
+
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/app/app-routing.module.ts</code>
+        </p>
+
+
+
+
+        <div class="container-fluid module">
+            <div class="row">
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { NgModule } from &#x27;@angular/core&#x27;;
+import { Routes, RouterModule } from &#x27;@angular/router&#x27;;
+import { LoginComponent } from &#x27;./beforeLogin/login/login.component&#x27;;
+import { SignupComponent } from &#x27;./beforeLogin/signup/signup.component&#x27;;
+import { ResetPasswordComponent } from &#x27;./beforeLogin/resetPassword/resetPassword.component&#x27;;
+import { ForgetPasswordComponent } from &#x27;./beforeLogin/forgotPassword/forgetPassword.component&#x27;;
+import { OtpComponent } from &#x27;./beforeLogin/otp/otp.component&#x27;;
+import { ProfileCompletionComponent } from &#x27;./afterLogin/profileCompletion/profileCompletion.component&#x27;;
+import { DashboardComponent } from &#x27;./afterLogin/Dashboard/dashboard.component&#x27;;
+import { UploadVideosComponent } from &#x27;./afterLogin/uploadVideos/uploadVideos.component&#x27;;
+import { AuthGuardService } from &#x27;./router-gaurd.service&#x27;;
+import { RoleGuardService } from &#x27;./role-gaurd.service&#x27;;
+import { EditProfileComponent } from &#x27;./afterLogin/editProfile/editProfile.component&#x27;;
+import { CreateInteractiveVideoComponent } from &#x27;./afterLogin/createInteractiveVideo/createInteractiveVideo.component&#x27;;
+import { ThatsallComponent } from &#x27;./afterLogin/thatsall/thatsall.component&#x27;;
+import { PublicVideoComponent } from &#x27;./afterLogin/public-video/public-video.component&#x27;;
+import { MyVideosComponent } from &#x27;./afterLogin/my-videos/my-videos.component&#x27;;
+import { PublicProfileComponent } from &#x27;./afterLogin/public-profile/public-profile.component&#x27;;
+import { MyVideosPublicComponent } from &#x27;./afterLogin/my-videos-public/my-videos-public.component&#x27;;
+import { SearchResultsComponent } from &#x27;./afterLogin/search-results/search-results.component&#x27;;
+import { FollowingComponent } from &#x27;./afterLogin/following/following.component&#x27;;
+import { FollowersComponent } from &#x27;./afterLogin/followers/followers.component&#x27;;
+import { LandingPageComponent } from &#x27;./beforeLogin/landing-page/landing-page.component&#x27;;
+import { UserActivitiyComponent } from &#x27;./afterLogin/user-activitiy/user-activitiy.component&#x27;;
+import { PublicUserActivitiyComponent } from &#x27;./afterLogin/public-user-activitiy/public-user-activitiy.component&#x27;; 
+import { TrendingComponent } from &#x27;./beforeLogin/trending/trending.component&#x27;;
+
+import { TestComponent } from &#x27;./afterLogin/test/test.component&#x27;;
+import { NotificationsComponent } from &#x27;./afterLogin/notifications/notifications.component&#x27;;
+import { LibraryComponent } from &#x27;./afterLogin/library/library.component&#x27;;
+import { LandingTestComponent } from &#x27;./beforeLogin/landing-test/landing-test.component&#x27;;
+
+/**
+ * Routes
+ */
+const APP_ROUTES: Routes &#x3D; [
+  { 
+    path: &#x27;&#x27;, 
+    redirectTo: &#x27;/landing-page&#x27;, 
+    pathMatch: &#x27;full&#x27; 
+  },
+  {
+    path: &#x27;login&#x27;, 
+    component: LoginComponent, 
+    data: {
+      animation: &#x27;Home&#x27;
+    } 
+  },
+  {
+    path: &#x27;signup&#x27;, 
+    component: SignupComponent, 
+    data: {
+      animation: &#x27;Home&#x27;
+    }
+  },
+  {
+    path: &#x27;forgotPassword&#x27;, 
+    component: ResetPasswordComponent, 
+    data: {
+      animation: &#x27;Home&#x27;
+    }
+  },
+  {
+    path: &#x27;resetPassword&#x27;, 
+    component: ForgetPasswordComponent, 
+    data: {
+      animation: &#x27;Home&#x27;
+    }
+  },
+  {
+    path: &#x27;otp&#x27;, 
+    component: OtpComponent, 
+    canActivate: [RoleGuardService], 
+    data: {
+      animation: &#x27;Home&#x27;
+    } 
+  },
+  {
+    path: &#x27;landing-page&#x27;, 
+    component: LandingPageComponent, 
+    data: {animation: &#x27;Home&#x27;}
+  },
+  {
+    path: &#x27;trending&#x27;, 
+    component: TrendingComponent, 
+    data: {animation: &#x27;Home&#x27;}
+  },
+  {
+    path: &#x27;land-test&#x27;, 
+    component: LandingTestComponent, 
+    data: {animation: &#x27;Home&#x27;}
+  },
+
+  // After login
+  {
+    path: &#x27;thats-all&#x27;, 
+    component: ThatsallComponent, 
+    canActivate: [AuthGuardService], 
+    data: {animation: &#x27;Home&#x27;}
+  },
+  {
+    path: &#x27;complete-profile&#x27;, 
+    component: ProfileCompletionComponent, 
+    canActivate: [AuthGuardService],
+    data: {animation: &#x27;Home&#x27;}
+  },
+  {
+    path: &#x27;dashboard&#x27;, 
+    component: DashboardComponent,
+    canActivate: [AuthGuardService], 
+    data: {animation: &#x27;Home&#x27;} 
+  },
+  {
+    path: &#x27;upload-videos&#x27;, 
+    component: UploadVideosComponent,
+    canActivate: [AuthGuardService],
+    data: {animation: &#x27;Home&#x27;}
+  },
+  {
+    path: &#x27;editProfile&#x27;, 
+    component: EditProfileComponent,
+    canActivate: [AuthGuardService],
+    data: {animation: &#x27;Home&#x27;}
+  },
+  {
+    path: &#x27;create-interactive-video&#x27;, 
+    component:CreateInteractiveVideoComponent,
+    canActivate: [AuthGuardService], 
+    data: {animation: &#x27;Home&#x27;}
+  },
+  {
+    path: &#x27;videos&#x27;, 
+    component: PublicVideoComponent, 
+    data: {animation: &#x27;Home&#x27;}
+  },
+  {
+    path: &#x27;my-videos&#x27;, 
+    component: MyVideosComponent, 
+    canActivate: [AuthGuardService], 
+    data: {animation: &#x27;Home&#x27;}
+  },
+  {
+    path: &#x27;public-profile&#x27;, 
+    component: PublicProfileComponent, 
+    canActivate: [AuthGuardService], 
+    data: {animation: &#x27;Home&#x27;}
+  },
+  {
+    path: &#x27;my-videos-public&#x27;, 
+    component: MyVideosPublicComponent, 
+    canActivate: [AuthGuardService], 
+    data: {animation: &#x27;Home&#x27;}
+  },
+  {
+    path: &#x27;search-results&#x27;, 
+    component: SearchResultsComponent, 
+    data: {animation: &#x27;Home&#x27;}
+  },
+  {
+    path: &#x27;following&#x27;, 
+    component: FollowingComponent, 
+    canActivate: [AuthGuardService], 
+    data: {animation: &#x27;Home&#x27;}
+  },
+  {
+    path: &#x27;followers&#x27;, 
+    component: FollowersComponent, 
+    canActivate: [AuthGuardService], 
+    data: {animation: &#x27;Home&#x27;}
+  },
+  {
+    path: &#x27;user-activity&#x27;, 
+    component: UserActivitiyComponent, 
+    canActivate: [AuthGuardService], 
+    data: {animation: &#x27;Home&#x27;}
+  },
+  {
+    path: &#x27;public-user-activity&#x27;, 
+    component: PublicUserActivitiyComponent, 
+    canActivate: [AuthGuardService], 
+    data: {animation: &#x27;Home&#x27;}
+  },
+  {
+    path: &#x27;notifications&#x27;, 
+    component: NotificationsComponent, 
+    canActivate: [AuthGuardService], 
+    data: {animation: &#x27;Home&#x27;}
+  },
+  {
+    path: &#x27;library&#x27;, 
+    component: LibraryComponent, 
+    canActivate: [AuthGuardService], 
+    data: {animation: &#x27;Home&#x27;}
+  },
+  {
+    path: &#x27;test-page&#x27;, 
+    component: TestComponent, 
+    canActivate: [AuthGuardService], 
+    data: {animation: &#x27;Home&#x27;}
+  } 
+];
+
+@NgModule({
+  imports: [RouterModule.forRoot(APP_ROUTES)],
+  exports: [RouterModule]
+})
+export class AppRoutingModule { }
+</code></pre>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'module';
+            var COMPODOC_CURRENT_PAGE_URL = 'AppRoutingModule.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

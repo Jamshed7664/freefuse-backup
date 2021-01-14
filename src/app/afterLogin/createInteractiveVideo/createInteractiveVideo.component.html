@@ -1,0 +1,1049 @@
+<headerone [style.display]="footserSection"></headerone>
+<!-- <sideMenu></sideMenu> -->
+
+<spinner *ngIf="createInteractiveVideoObj.spinner" [@fadeInOut]></spinner>
+<section class="tree-view-chart-sec" style="margin-top: 63px">
+  <!-- <div class="container video-common-sec">
+            <button type="button" class="btn shadow-none p-0" data-toggle="modal" data-target="#tree-Modal">
+                <div class="card tree-card border-0">
+                    <img class="card-img-top" src="assets/images/hbf-images/hb-play4.jpg" alt="Card image" style="width:100%">
+                    <div class="card-body p-3">
+                      <h4 class="card-title">Intro video title
+                      </h4>
+                    </div>
+                </div>
+            </button>
+        </div> -->
+
+  <div class="select-video" (click)="clickSelectVideo()" *ngIf="createInteractiveVideoObj.selectedVideoCheck"
+    [@fadeInOut] [ngClass]="{'disabled-item': createInteractiveVideoObj.allVideos.length < 1}" style="display: none;">
+    <!-- <img src="assets/images/Plus.png" class="symbol-class"/> -->
+    <svg xmlns="http://www.w3.org/2000/svg" fill="#d8d8d8" height="511pt" version="1.1" viewBox="-53 1 511 511.99906"
+      width="511pt">
+      <g id="surface1">
+        <path
+          d="M 276.410156 3.957031 C 274.0625 1.484375 270.84375 0 267.507812 0 L 67.777344 0 C 30.921875 0 0.5 30.300781 0.5 67.152344 L 0.5 444.84375 C 0.5 481.699219 30.921875 512 67.777344 512 L 338.863281 512 C 375.71875 512 406.140625 481.699219 406.140625 444.84375 L 406.140625 144.941406 C 406.140625 141.726562 404.65625 138.636719 402.554688 136.285156 Z M 279.996094 43.65625 L 364.464844 132.328125 L 309.554688 132.328125 C 293.230469 132.328125 279.996094 119.21875 279.996094 102.894531 Z M 338.863281 487.265625 L 67.777344 487.265625 C 44.652344 487.265625 25.234375 468.097656 25.234375 444.84375 L 25.234375 67.152344 C 25.234375 44.027344 44.527344 24.734375 67.777344 24.734375 L 255.261719 24.734375 L 255.261719 102.894531 C 255.261719 132.945312 279.503906 157.0625 309.554688 157.0625 L 381.40625 157.0625 L 381.40625 444.84375 C 381.40625 468.097656 362.113281 487.265625 338.863281 487.265625 Z M 338.863281 487.265625 "
+          style=" stroke:none;fill-rule:nonzero;fill:rgb(0%,0%,0%);fill-opacity:1;" />
+        <path
+          d="M 305.101562 401.933594 L 101.539062 401.933594 C 94.738281 401.933594 89.171875 407.496094 89.171875 414.300781 C 89.171875 421.101562 94.738281 426.667969 101.539062 426.667969 L 305.226562 426.667969 C 312.027344 426.667969 317.59375 421.101562 317.59375 414.300781 C 317.59375 407.496094 312.027344 401.933594 305.101562 401.933594 Z M 305.101562 401.933594 "
+          style=" stroke:none;fill-rule:nonzero;fill:rgb(0%,0%,0%);fill-opacity:1;" />
+        <path
+          d="M 140 268.863281 L 190.953125 214.074219 L 190.953125 349.125 C 190.953125 355.925781 196.519531 361.492188 203.320312 361.492188 C 210.125 361.492188 215.6875 355.925781 215.6875 349.125 L 215.6875 214.074219 L 266.640625 268.863281 C 269.113281 271.457031 272.332031 272.820312 275.667969 272.820312 C 278.636719 272.820312 281.730469 271.707031 284.078125 269.480469 C 289.027344 264.78125 289.398438 256.988281 284.699219 252.042969 L 212.226562 174.253906 C 209.875 171.78125 206.660156 170.296875 203.199219 170.296875 C 199.734375 170.296875 196.519531 171.78125 194.171875 174.253906 L 121.699219 252.042969 C 117 256.988281 117.371094 264.902344 122.316406 269.480469 C 127.511719 274.179688 135.300781 273.808594 140 268.863281 Z M 140 268.863281 "
+          style=" stroke:none;fill-rule:nonzero;fill:rgb(0%,0%,0%);fill-opacity:1;" />
+      </g>
+    </svg>
+
+    <strong>Select a Video</strong>
+    <span class="select-span">Select video from your FreeFuse library</span>
+  </div>
+
+  <div (click)="uploadAVideo()" class="uploadVideoButton" style="display: none;"
+    *ngIf="createInteractiveVideoObj.selectedVideoCheck" [@fadeInOut]>
+    <div style="border: 1px black dashed; padding: 10px;">
+      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+        x="0px" y="0px" viewBox="0 0 376.961 349.359"
+        style="width: 11%; margin-right: 5px; fill: gray; enable-background:new 0 0 376.961 349.359;"
+        xml:space="preserve">
+        <path
+          d="M366.16,170.32c-6,0-10.801,4.801-10.801,10.801v98.238c0,26.719-21.757,48.403-48.398,48.403H70
+	              c-26.719,0-48.398-21.762-48.398-48.403V179.52c0-6-4.801-10.801-10.801-10.801S0,173.52,0,179.52v99.839c0,38.641,31.441,70,70,70
+	              h236.961c38.641,0,70-31.437,70-70v-98.238C376.961,175.199,372.16,170.32,366.16,170.32L366.16,170.32z M366.16,170.32" />
+        <path d="M127.441,87.121l50.239-50.242V256c0,6,4.8,10.801,10.8,10.801S199.281,262,199.281,256V36.879l50.239,50.242
+	              c2.082,2.078,4.878,3.199,7.601,3.199c2.801,0,5.52-1.039,7.598-3.199c4.242-4.242,4.242-11.043,0-15.281L196.078,3.199
+	              c-2-2-4.797-3.199-7.598-3.199c-2.878,0-5.601,1.121-7.601,3.199L112.238,71.84c-4.238,4.238-4.238,11.039,0,15.281
+	              C116.398,91.281,123.281,91.281,127.441,87.121L127.441,87.121z M127.441,87.121" />
+      </svg>
+      <strong>Upload a Video</strong>
+      <span class="select-span" style="margin-top: -2px; margin-left: 37px;">
+        Click to add video or drag & drop here
+      </span>
+    </div>
+  </div>
+
+  <div class="select-option1" *ngIf="!createInteractiveVideoObj.selectedVideoCheck">
+    <div class="zoom-btn " [style.top]="zoomBtnPosition">
+      <button data-toggle="tooltip" data-placement="top" title="Zoom In" (click)="zoomIn()">
+        +
+      </button>
+
+      <button data-toggle="tooltip" data-placement="top" title="Zoom Out" (click)="zoomOut()">
+        -
+      </button>
+
+      <button data-toggle="tooltip" data-placement="top" title="Reset" (click)="zoomReset()">
+        Reset
+      </button>
+      <!-- <input type="file" capture="camera" accept="image/*" id="cameraInput" name="cameraInput" (change)="onFileSelected($event)">
+      <button type="button" (click)="onUpload()">Upload File</button> -->
+    </div>
+    <div id="tree-view" style="height: 728px;"></div>
+  </div>
+</section>
+
+<!-- <button type="button" class="d-block ml-auto mr-auto mb-2" data-toggle="modal" data-target="#tree-share-Modal">Let's Share</button>
+    <button type="button" class="d-block ml-auto mr-auto mb-2" data-toggle="modal" data-target="#tree-preview-vid-Modal">Preview Video</button>
+    <button type="button" class="d-block ml-auto mr-auto mb-2" data-toggle="modal" data-target="#tree-publish-vid-Modal">Publish your video</button> -->
+
+<!-- Select Modal Screen -->
+<div class="modal fade upload-vid-Modal" id="select-vid-Modal">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header border-bottom-0">
+        <h4 class="modal-title">Videos</h4>
+        <button type="button" class="close" data-dismiss="modal" (click)="closeModal()">
+          &times;
+        </button>
+      </div>
+
+      <div class="modal-body" *ngIf="OpenPopupAll">
+        <div class="vid-library-options ">
+          <div class="row">
+            <div class="col-md-4 pr-md-1">
+              <div class="vid-options">
+                <!-- <div class="txt mr-2">
+                            <h5>FreeFuse library</h5>
+                          
+                          </div> -->
+                <div class="search position-relative h-100">
+                  <input type="text" class="form-control" placeholder="Search Video..."
+                    [(ngModel)]="createInteractiveVideoObj.query" />
+                  <button type="button" class="btn" id="vid-search-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="17" height="18" viewBox="0 0 19.999 20.77">
+                      <defs></defs>
+                      <path id="search"
+                        d="M20.873 20.106l-5.827-6.06a8.242 8.242 0 1 0-.58.529l5.841 6.075a.392.392 0 1 0 .565-.544zm-11.655-4.42a7.451 7.451 0 1 1 7.451-7.451 7.459 7.459 0 0 1-7.451 7.451z"
+                        class="cls-1" transform="translate(-.983)"></path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="vid-options">
+                <select class="form-control selectCategory"
+                  (change)="changeFilterUploadVideo(createInteractiveVideoObj.changeFilterUploadVideo)"
+                  name="changeFilterUploadVideo" [(ngModel)]="createInteractiveVideoObj.changeFilterUploadVideo">
+                  <option value="recentFirst">Recent</option>
+                  <option value="size">Size</option>
+                  <option value="duration">Duration</option>
+                  <option value="name">Name</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <button id="uploadBtn" class="create-interactive-button w-100 " (click)="uploadVideos()">
+                <i class="fas fa-upload"></i> &nbsp; Upload video
+              </button>
+            </div>
+            <div class="col-12 mt-3" *ngIf="readyToUpload" [@fadeInOut]>
+              <div class="select-vid-area text-center">
+                <span class="upload-img">
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+                    id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;"
+                    xml:space="preserve" width="25px" height="25px" class="">
+                    <g>
+                      <g>
+                        <g>
+                          <path
+                            d="M472,312.642v139c0,11.028-8.972,20-20,20H60c-11.028,0-20-8.972-20-20v-139H0v139c0,33.084,26.916,60,60,60h392    c33.084,0,60-26.916,60-60v-139H472z"
+                            data-original="#000000" class="active-path" data-old_color="#000000" fill="#FFFFFF" />
+                        </g>
+                      </g>
+                      <g>
+                        <g>
+                          <polygon
+                            points="256,0.358 131.716,124.642 160,152.926 236,76.926 236,388.642 276,388.642 276,76.926 352,152.926     380.284,124.642   "
+                            data-original="#000000" class="active-path" data-old_color="#000000" fill="#FFFFFF" />
+                        </g>
+                      </g>
+                    </g>
+                  </svg>
+                </span>
+                <!-- <h6>Drag and drop your video here</h6> -->
+                <p>Click the button below to select video from your device</p>
+               
+                <!-- <button type="fil">Select file</button> -->
+
+                <label for="selectFile" class="button-style">Select Video
+                  <input type="file" accept="video/mp4,video/x-m4v,video/*" (change)="onSelectFile($event)"
+                    id="selectFile" name="file" multiple />
+                </label>
+              </div>
+              <div class="select-vid-area text-center mt-2" *ngIf="uploadVideoObject.file.length > 0">
+                <!-- <h6>Drag and drop your video here</h6> -->
+                <!-- <p>Click the button bellow to select video from your device</p> -->
+                <!-- <button type="fil">Select file</button> -->
+
+                <!-- <video *ngIf="uploadVideoObject.url" [src]="uploadVideoObject.url" style="display: none" (loadedmetadata)="getDuration($event)"></video>  -->
+
+                <!-- <div plyr style="width: 640px;" plyrTitle="Video 1" [plyrPlaysInline]="true" [plyrSources]="uploadVideoObject.url" (plyrInit)="player = $event" (plyrPlay)="played($event)" ></div> -->
+
+                <div *ngFor="let i of uploadVideoObject.file" style="position:relative">
+                  <div class="fileName">
+                    File : {{i.originalName}}
+                    <span *ngIf="i.uploadPercentage!==undefined">{{i.uploadPercentage + " %" }}</span>
+                    <span *ngIf="i.uploadPercentage=='undefined'">0 %</span>
+                  </div>
+
+                  <div class="uploaded-percetange">
+                    <div class="progress">
+                      <div *ngIf="!i.isOtherone" class="progress-bar progress-bar-striped progress-bar-animated"
+                        role="progressbar" aria-valuemin="0" aria-valuemax="100"
+                        [ngStyle]="{'width': i.uploadPercentage+'%'}"></div>
+                      <div *ngIf="i.isOtherone" class="progress-bar progress-bar-striped progress-bar-animated"
+                        role="progressbar" aria-valuemin="0" aria-valuemax="100"
+                        [ngStyle]="{'width': i.uploadPercentage+'%'}" style="background-color: #6e5eff;"></div>
+                    </div>
+                  </div>
+
+                  <!-- <div class="cancel-upload-button" (click)="cancelCurrentFile(i)" data-toggle="tooltip" data-placement="top" title="Remove File">
+                    <img src ="assets/images/settings/x.svg" />
+                  </div> -->
+                </div>
+
+                <!-- <label for="selectFile" class="button-style" style="display: inline; margin-right: 15px;">Select More
+                    <input type='file' accept="video/mp4,video/x-m4v,video/*" (change)="onSelectFile($event)"  id="selectFile"   name="file" multiple />
+                  </label> -->
+
+                <!-- <button type="button" class="custom-btn" (click)="uploadVideo()">Upload</button>
+                  <button type="button" class="cancel-button custom-btn"  (click)="cancelUpload()" >Cancel</button> -->
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="upload-vid-list FF-scroll-modify mt-3">
+          <div class="text-center" *ngIf="createInteractiveVideoObj.allUploadedVideo.length < 1">
+            No Videos Available!
+          </div>
+          <div class="row mb-3 animations">
+           
+            <div class="col-md-4 col-sm-12 col-12 col-lg-4"   [ngClass]="{'selected-item': i._id == createInteractiveVideoObj.selectedItem._id}" *ngFor="let i of createInteractiveVideoObj.allUploadedVideo |  search:'name,URL':createInteractiveVideoObj.query; let index = index">
+              <div class="choose-vid">
+                <div class="form-group form-check d-flex align-items-center pl-0 mb-0">
+                  <label for="uploadedVideo1{{i._id}}" >
+                    <input type="radio" name="uploadedVideo1" id="uploadedVideo1{{i._id}}" value="{{i._id}}"
+                      (change)="checkedReaplceItem(i)" />
+                  </label>
+                 <img [src]="i.poster ? i.poster  : 'assets/img/noVideo.png'" class=" mt-4 img-fluid thumbnail-image" alt="">
+                 <div class="video-duration">{{i.duration | minuteSeconds}}</div>
+                  <!-- <video width="200" poster="{{i.poster}}" height="100" controls preload="auto" controls videojs
+                    class="video-js vjs-default-skin vjs-big-play-centered" id="selecvideo{{index}}">
+                    <source src="{{i.URL}}" type="application/x-mpegURL" />
+                  </video> -->
+
+                  <!-- <iframe width="200" height="100" [src]="i.URL" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen *ngIf="i.type == 'URL'"></iframe>   -->
+                  <!-- <label for="uploadedVideo1{{i._id}}" class="custom-label">
+                    <h6 class="mb-0" style="margin-left: 10px;">
+                      {{i.name}}
+                      <samp class="d-block size-block" style="margin-top:10px">{{i.size | size}}</samp>
+                    </h6>
+                  </label> -->
+
+                  <!--                               
+                              <label for="uploadedVideo{{i.name}}" class="custom-label">
+                                <h6 class="mb-0">{{i.name}} <samp class="d-block size-block" style="margin-top:10px">{{i.size | size}}</samp></h6>
+                              </label> -->
+                </div>
+              </div>
+            </div>
+
+            <!-- <div class="col-md-12 col-lg-5 d-flex align-items-center">
+              <label for="uploadedVideo1{{i._id}}" class="custom-label">
+                <div class="row vid-timing">
+                  <div class="col-6">
+                    <samp class="d-block">Duration</samp>
+                    <span>{{i.duration | minuteSeconds}}</span>
+                  </div>
+                  <div class="col-6 pl-4">
+                    <samp class="d-block">Uploaded On</samp>
+                    <span>{{i.updatedAt | date:'MM/dd/yyyy'}}</span>
+                  </div>
+                </div>
+              </label>
+            </div> -->
+          </div>
+        </div>
+        <!--  -->
+      </div>
+      <div class="modal-footer">
+        <button class="create-interactive-button" type="button" (click)="replaceVideoData()"
+          *ngIf="createInteractiveVideoObj.allUploadedVideo.length > 0">
+          <span *ngIf="createInteractiveVideoObj.currentObj.name == 'Add Video'">Select Video</span>
+          <span *ngIf="createInteractiveVideoObj.currentObj.name != 'Add Video'">Replace Video</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade upload-vid-Modal" id="upload-vid-Modal">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header border-bottom-0">
+        <h4 class="modal-title">Videos </h4>
+        <button type="button" class="close" data-dismiss="modal" (click)="closeUploadModal()">
+          &times;
+        </button>
+      </div>
+
+      <div class="modal-body" *ngIf="isOpenCreateVideo">
+        <div class="vid-library-options mb-4">
+          <div class="row">
+            <div class="col-md-4 pr-md-1">
+              <div class="vid-options">
+                <!-- <div class="txt mr-2">
+                        <h5>FreeFuse library</h5>  
+                      </div> -->
+                <div class="search position-relative h-100">
+                  <input type="text" class="form-control" placeholder="Search Video..."
+                    [(ngModel)]="createInteractiveVideoObj.query" />
+                  <button type="button" class="btn" id="vid-search-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="17" height="18" viewBox="0 0 19.999 20.77">
+                      <defs></defs>
+                      <path id="search"
+                        d="M20.873 20.106l-5.827-6.06a8.242 8.242 0 1 0-.58.529l5.841 6.075a.392.392 0 1 0 .565-.544zm-11.655-4.42a7.451 7.451 0 1 1 7.451-7.451 7.459 7.459 0 0 1-7.451 7.451z"
+                        class="cls-1" transform="translate(-.983)"></path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="vid-options ">
+                <select class="form-control vid-select"
+                  (change)="changeFilterUploadVideo(createInteractiveVideoObj.changeFilterUploadVideo)"
+                  name="changeFilterUploadVideo" [(ngModel)]="createInteractiveVideoObj.changeFilterUploadVideo">
+                  <option value="recentFirst">Recent</option>
+                  <option value="size">Size</option>
+                  <option value="duration">Duration</option>
+                  <option value="name">Name</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <button id="uploadBtn" class="create-interactive-button w-100 " (click)="uploadVideos()">
+                <i class="fas fa-upload"></i> &nbsp; Upload video
+              </button>
+              <div *ngIf="readyToUpload" [@fadeInOut]>
+                <label for="selectFile" class="button-style-dropdown mt-1"><i class="fas fa-window-restore"></i> &nbsp; Photo library &nbsp; 
+                  <input type="file" accept="video/mp4,video/x-m4v,video/*" (change)="onSelectFile($event)"
+                    id="selectFile" name="file" multiple />
+                </label>
+                <label for="selectFile" class="button-style-dropdown mt-1"><i class="fas fa-video"></i> &nbsp; Take Video  
+                  <input type="file" accept="image/*" (change)="onSelectFile($event)"
+                    id="selectFile" name="file" multiple />
+                </label>
+                <label for="selectFile" class="button-style-dropdown mt-1"><i class="far fa-window-restore"></i> &nbsp; Browse &nbsp;
+                  <input type="file" accept="video/mp4,video/x-m4v,video/*" (change)="onSelectFile($event)"
+                    id="selectFile" name="file" multiple />
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 mt-3" *ngIf="readyToUpload" [@fadeInOut]>
+            
+            <div class="select-vid-area text-center mt-2" *ngIf="uploadVideoObject.file.length > 0">
+              <!-- <h6>Drag and drop your video here</h6> -->
+              <!-- <p>Click the button bellow to select video from your device</p> -->
+              <!-- <button type="fil">Select file</button> -->
+
+              <!-- <video *ngIf="uploadVideoObject.url" [src]="uploadVideoObject.url" style="display: none" (loadedmetadata)="getDuration($event)"></video>  -->
+
+              <!-- <div plyr style="width: 640px;" plyrTitle="Video 1" [plyrPlaysInline]="true" [plyrSources]="uploadVideoObject.url" (plyrInit)="player = $event" (plyrPlay)="played($event)" ></div> -->
+
+              <div *ngFor="let i of uploadVideoObject.file" style="position:relative">
+                <div class="fileName">
+                  File : {{i.originalName}}
+                  <span *ngIf="i.uploadPercentage!==undefined">{{i.uploadPercentage + " %" }}</span>
+                  <span *ngIf="i.uploadPercentage=='undefined'">0 %</span>
+                </div>
+
+                <div class="uploaded-percetange">
+                  <div class="progress">
+                    <div *ngIf="!i.isOtherone" class="progress-bar progress-bar-striped progress-bar-animated"
+                      role="progressbar" aria-valuemin="0" aria-valuemax="100"
+                      [ngStyle]="{'width': i.uploadPercentage+'%'}"></div>
+                    <div *ngIf="i.isOtherone" class="progress-bar progress-bar-striped progress-bar-animated"
+                      role="progressbar" aria-valuemin="0" aria-valuemax="100"
+                      [ngStyle]="{'width': i.uploadPercentage+'%'}" style="background-color: #6e5eff;"></div>
+                  </div>
+                </div>
+
+                <!-- <div class="cancel-upload-button" (click)="cancelCurrentFile(i)" data-toggle="tooltip" data-placement="top" title="Remove File">
+                  <img src ="assets/images/settings/x.svg" />
+                </div> -->
+              </div>
+
+              <!-- <label for="selectFile" class="button-style" style="display: inline; margin-right: 15px;">Select More
+                  <input type='file' accept="video/mp4,video/x-m4v,video/*" (change)="onSelectFile($event)"  id="selectFile"   name="file" multiple />
+                </label> -->
+
+              <!-- <button type="button" class="custom-btn" (click)="uploadVideo()">Upload</button>
+                <button type="button" class="cancel-button custom-btn"  (click)="cancelUpload()" >Cancel</button> -->
+            </div>
+          </div>
+        </div>
+
+        <div class="upload-vid-list FF-scroll-modify">
+          <div class="text-center" *ngIf="createInteractiveVideoObj.allUploadedVideo.length < 1">
+            No Videos Uploaded!
+          </div>
+          <div class="row mb-3 animations">
+           
+            <div class="col-md-4 col-sm-12 col-12 col-lg-4"   [ngClass]="{'selected-item': i._id == createInteractiveVideoObj.selectedItem._id}" *ngFor="let i of createInteractiveVideoObj.allUploadedVideo |  search:'name,URL':createInteractiveVideoObj.query; let index = index">
+              <div class="choose-vid">
+                <div class="form-group form-check d-flex align-items-center pl-0 mb-0">
+                  <label for="uploadedVideo1{{i._id}}" >
+                    <input type="radio" name="uploadedVideo1" id="uploadedVideo1{{i._id}}" value="{{i._id}}"
+                      (change)="checkedReaplceItem(i)" />
+                  </label>
+                 <img [src]="i.poster ? i.poster  : 'assets/img/noVideo.png'"  class=" mt-4 img-fluid thumbnail-image" alt="">
+                 <div class="video-duration">{{i.duration | minuteSeconds}}</div>
+                  <!-- <video width="200" poster="{{i.poster}}" height="100" controls preload="auto" controls videojs
+                    class="video-js vjs-default-skin vjs-big-play-centered" id="selecvideo{{index}}">
+                    <source src="{{i.URL}}" type="application/x-mpegURL" />
+                  </video> -->
+
+                  <!-- <iframe width="200" height="100" [src]="i.URL" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen *ngIf="i.type == 'URL'"></iframe>   -->
+                  <!-- <label for="uploadedVideo1{{i._id}}" class="custom-label">
+                    <h6 class="mb-0" style="margin-left: 10px;">
+                      {{i.name}}
+                      <samp class="d-block size-block" style="margin-top:10px">{{i.size | size}}</samp>
+                    </h6>
+                  </label> -->
+
+                  <!--                               
+                              <label for="uploadedVideo{{i.name}}" class="custom-label">
+                                <h6 class="mb-0">{{i.name}} <samp class="d-block size-block" style="margin-top:10px">{{i.size | size}}</samp></h6>
+                              </label> -->
+                </div>
+              </div>
+            </div>
+
+            <!-- <div class="col-md-12 col-lg-5 d-flex align-items-center">
+              <label for="uploadedVideo1{{i._id}}" class="custom-label">
+                <div class="row vid-timing">
+                  <div class="col-6">
+                    <samp class="d-block">Duration</samp>
+                    <span>{{i.duration | minuteSeconds}}</span>
+                  </div>
+                  <div class="col-6 pl-4">
+                    <samp class="d-block">Uploaded On</samp>
+                    <span>{{i.updatedAt | date:'MM/dd/yyyy'}}</span>
+                  </div>
+                </div>
+              </label>
+            </div> -->
+          </div>
+          <!-- <input type="radio" name="uploadedVideo" checked style="display: none" /> -->
+        </div>
+        <!--  -->
+      </div>
+      <div class="modal-footer">
+        <button class="create-interactive-button" type="button" (click)="createInteractiveVideo()">
+          Create Interactive Video
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Tree Chart Modal Screen -->
+<div class="modal fade tree-Modal" id="tree-Modal">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-body p-0">
+        <div class="tree-card-vid position-relative" *ngIf="createInteractiveVideoObj.currentObj.open">
+          <!-- <video [src]="createInteractiveVideoObj.currentObj.URL" autoplay controls width="100%" (loadedmetadata)="getDuration($event)" id="video-all"></video> -->
+          <div>
+            <video width="100%" poster="{{createInteractiveVideoObj.currentObj.poster}}" controls preload="auto" videojs
+              class="video-js vjs-default-skin vjs-big-play-centered" (loadedmetadata)="getDuration($event)"
+              id="video-all">
+              <source src="{{createInteractiveVideoObj.currentObj.URL}}" type="application/x-mpegURL" />
+            </video>
+          </div>
+          <!-- <div class="marker"></div> -->
+          <!-- <iframe width="200" height="100" [src]="createInteractiveVideoObj.currentObj.youtubeURL" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen *ngIf="createInteractiveVideoObj.currentObj.URLType == 'URL'"  class="ifram-popup" (loadedmetadata)="getDuration($event)"></iframe>   -->
+
+          <div>
+            <input type="text" class="close leave-btn" name="currentName" #currentName="ngModel"
+              [(ngModel)]="createInteractiveVideoObj.currentObj.name" required
+              [ngClass]="{'custom-alert-border':currentName.invalid && currentName.touched}" minlength="2"
+              (change)="updateCurrentName(createInteractiveVideoObj.currentObj.name)" />
+
+            <div *ngIf="currentName.invalid && currentName.touched" class="custom-alert">
+              <div *ngIf="currentName.errors.required">
+                Required!
+              </div>
+              <div *ngIf="currentName.errors.minlength">
+                Minimum 2 letter are allowed!
+              </div>
+            </div>
+          </div>
+
+          <!-- <button class="close leave-btn" *ngIf="!showEdit">{{createInteractiveVideoObj.currentObj.name}}
+                    </button> -->
+
+          <div class="dropdown more-btn">
+            <button type="button" class="btn dropdown-toggle" data-toggle="dropdown">
+              <img src="assets/images/upload-video-icons/upload-more.svg" width="20px" height="20px" />
+            </button>
+            <div class="dropdown-menu">
+              <!-- <button class="dropdown-item" (click)="showEdit = !showEdit">Edit Title</button> -->
+
+              <a class="dropdown-item" (click)="replaceVideo()"
+                *ngIf="createInteractiveVideoObj.currentObj.name != 'Add Video'">Replace video</a>
+              <a class="dropdown-item" (click)="replaceVideo()"
+                *ngIf="createInteractiveVideoObj.currentObj.name == 'Add Video'">Select video</a>
+              <!-- <a class="dropdown-item" href="#">Copy video</a> -->
+            </div>
+          </div>
+        </div>
+        <div class="tree-card-content">
+          <div class="create-choice" *ngIf="createChoiceObj.child.length < 1">
+            <button type="button" class="btn shadow-none float-right p-0 delete-btn" (click)="deleteCUrrentNode()">
+              <img src="assets/images/upload/close.svg" class="cross-icon" />
+              Delete
+            </button>
+            <!-- repeater -->
+
+            <div class="chcoice">
+              <div class="infor-msg">
+                Add at least one choice to create an interactive path
+              </div>
+              <div class="add-choices">
+                <input type="number" class="form-control" placeholder="1" (mouseup)="UptheMouse()"
+                  (keyup)="UptheMouse()" name="createChoices" #createChoices="ngModel"
+                  [(ngModel)]="createChoiceObj.currentNo" pattern="^$|^([1-4]|)?" required
+                  [ngClass]="{'custom-alert-border':createChoices.invalid && createChoices.touched}" />
+
+                <button (click)="addChoices(createChoiceObj.currentNo)" type="button"
+                  [disabled]="createChoices.invalid">
+                  + Add Choices
+                </button>
+
+                <div *ngIf="createChoices.invalid && createChoices.touched" class="custom-alert">
+                  <div *ngIf="createChoices.errors.required">
+                    Required!
+                  </div>
+                  <div *ngIf="createChoices.errors.pattern">
+                    Value between 1-4 are allowed!
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="choice-starts" *ngIf="createChoiceObj.child.length > 0">
+            <div class="row check-line mb-2">
+              <div class="col-md-12 d-flex align-items-center pr-0">
+                <div class="chexk-box-top">
+                  <!-- // <input type="checkbox" id="tree-check"> -->
+                  <label for="tree-check" class="mb-0">Choices start at</label>
+                  <input type="number" name="createTimen" #createTimen="ngModel"
+                    [ngModel]="createInteractiveVideoObj.currentObj.mmm"
+                    (ngModelChange)="createInteractiveVideoObj.currentObj.mmm=$event" min="0" max="59" required
+                    (change)="updateCurrentTime(0)" />
+                  M :
+                  <input type="number" name="createTimet" #createTimet="ngModel"
+                    [ngModel]="createInteractiveVideoObj.currentObj.sss"
+                    (ngModelChange)="createInteractiveVideoObj.currentObj.sss=$event" min="0" max="59" required
+                    (change)="updateCurrentTime(0)"
+                    [ngClass]="{'custom-alert-border':createTimet.invalid && createTimet.touched}" />
+                  S
+                  <a style="color: #676767">
+                    of {{createInteractiveVideoObj.currentObj.duration |
+                    minuteSeconds}}
+                  </a>
+
+                  <div *ngIf="createTimet.invalid && createTimet.touched" class="custom-alert">
+                    <div *ngIf="createTimet.errors.required">
+                      Required!
+                    </div>
+                  </div>
+                </div>
+                <button type="button" class="btn shadow-none float-right p-0 delete-btn btn-after-delet"
+                  (click)="deleteCUrrentNode()">
+                  <img src="assets/images/upload/close.svg" class="cross-icon" />
+                  Delete
+                </button>
+              </div>
+            </div>
+
+            <div class="row vid-select">
+              <div class="col-6 dropdownWidth" *ngFor="let i of createChoiceObj.child; let index = index">
+                <!-- <ng-select [items]="cities3"
+                       bindLabel="name"
+                      
+                       placeholder={{myPlaceholder}}
+                       [(ngModel)]="selectedCityName"
+                       (click)="onSeacrch($event)"
+                       >
+                
+                <ng-template ng-label-tmp let-item="item">
+                    <img height="15" width="15" [src]="item.avatar"/> &nbsp;
+                    <b>{{item.name}}</b> 
+                </ng-template>
+                <ng-template ng-option-tmp let-item="item" let-index="index">
+                    <img height="15" width="15" [src]="item.avatar"/> &nbsp;
+                    <b>{{item.name}}</b>
+                </ng-template>
+               
+            </ng-select> -->
+
+                <div *ngIf="index == 0" class="option-choices" [@fadeInOut]>
+                  <!-- <ngx-select-dropdown [config]="config1" [options]="createInteractiveVideoObj.allUploadedVideo" 
+                                 [(ngModel)]="i.URLName" (change)="selectionChanged($event,0)" [disabled]="i.URLName" ></ngx-select-dropdown> -->
+
+                  <ng-select [items]="createInteractiveVideoObj.allVideos" bindLabel="name" bindValue="name"
+                    placeholder="Untitled 1" [searchable]="true" [clearable]="true" [closeOnSelect]="false"
+                    [(ngModel)]="i.URLName" [disabled]="i.URLName" (change)="selectionChanged($event,0)">
+                    <ng-template ng-label-tmp let-item="item">
+                      <img class="dropdownImg" [src]="item.poster" /> &nbsp;
+                      {{item.name}}
+                    </ng-template>
+                    <ng-template ng-option-tmp let-item="item" let-index="index">
+                      <img class="dropdownImg" [src]="item.poster ? item.poster : 'assets/img/nophoto.png'" />
+                      &nbsp; {{item.name}}
+                    </ng-template>
+                  </ng-select>
+                </div>
+                <div *ngIf="index == 1" class="option-choices" [@fadeInOut]>
+                  <ng-select class="optionWidth" [items]="createInteractiveVideoObj.allVideos" bindLabel="name"
+                    bindValue="name" placeholder="Untitled 2" [(ngModel)]="i.URLName" [disabled]="i.URLName"
+                    (change)="selectionChanged($event,1)">
+                    <ng-template ng-label-tmp let-item="item">
+                      <img class="dropdownImg" [src]="item.poster" /> &nbsp;
+                      {{item.name}}
+                    </ng-template>
+                    <ng-template ng-option-tmp let-item="item" let-index="index">
+                      <img class="dropdownImg" [src]="item.poster ? item.poster : 'assets/img/nophoto.png'" />
+                      &nbsp; {{item.name}}
+                    </ng-template>
+                  </ng-select>
+
+                  <!-- <ngx-select-dropdown [config]="config2" [options]="createInteractiveVideoObj.allUploadedVideo" 
+                                       [(ngModel)]="i.URLName"  (change)="selectionChanged($event,1)" [disabled]="i.URLName" ></ngx-select-dropdown> -->
+                </div>
+                <div *ngIf="index == 2" class="option-choices" [@fadeInOut]>
+                  <ng-select class="optionWidth" [items]="createInteractiveVideoObj.allVideos" bindLabel="name"
+                    bindValue="name" placeholder="Untitled 3" [(ngModel)]="i.URLName" [disabled]="i.URLName"
+                    (change)="selectionChanged($event,2)">
+                    <ng-template ng-label-tmp let-item="item">
+                      <img class="dropdownImg img-thumbnail" [src]="item.poster" /> 
+                      &nbsp;
+                      {{item.name}}
+                    </ng-template>
+                    <ng-template ng-option-tmp let-item="item" let-index="index">
+                      <img class="dropdownImg" [src]="item.poster ? item.poster : 'assets/img/nophoto.png'" />
+                      &nbsp; {{item.name}}
+                    </ng-template>
+                  </ng-select>
+
+                  <!-- <ngx-select-dropdown [config]="config3" [options]="createInteractiveVideoObj.allUploadedVideo" 
+                                    [(ngModel)]="i.URLName"   (change)="selectionChanged($event,2)"  [disabled]="i.URLName" ></ngx-select-dropdown> -->
+                </div>
+                <div *ngIf="index == 3" class="option-choices" [@fadeInOut]>
+                  <ng-select [items]="createInteractiveVideoObj.allVideos" bindLabel="name" bindValue="name"
+                    placeholder="Untitled 4" (change)="selectionChanged($event,3)" [(ngModel)]="i.URLName"
+                    [disabled]="i.URLName">
+                    <ng-template ng-label-tmp let-item="item">
+                      <img class="dropdownImg" [src]="item.poster" /> &nbsp;
+                      {{item.name}}
+                    </ng-template>
+                    <ng-template ng-option-tmp let-item="item" let-index="index">
+                      <img class="dropdownImg" [src]="item.poster ? item.poster : 'assets/img/thum.jpg'" />
+                      &nbsp; {{item.name}}
+                    </ng-template>
+                  </ng-select>
+
+                  <!-- <ngx-select-dropdown [config]="config4" [options]="createInteractiveVideoObj.allUploadedVideo" 
+                                    [(ngModel)]="i.URLName"  (change)="selectionChanged($event,3)"  [disabled]="i.URLName" ></ngx-select-dropdown> -->
+                </div>
+              </div>
+              <button (click)="addMoreChoices()" class="choice-btn" *ngIf="createChoiceObj.child.length < 4"
+                [@fadeInOut]>
+                + Add Choices
+              </button>
+            </div>
+          </div>
+          <div class="find-peoples-sec"></div>
+        </div>
+      </div>
+
+      <div class="modal-footer float-lg-right">
+        <button class="create-interactive-button custom-create-interactive-button" type="button"
+          (click)="refreshInteractiveVideo()">
+          Save
+        </button>
+
+        <button class="create-interactive-button custom-create-interactive-button custom-create-interactive-button-red"
+          type="button" (click)="closeInteractiveVideo()">
+          Close
+        </button>
+
+        <!-- <button class="create-interactive-button custom-create-interactive-button custom-create-interactive-button-red" type="button" (click)="refreshInteractiveVideo()"> Save & Close</button> -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Tree Chart video preview Modal Screen -->
+<div class="modal fade tree-preview-vid-Modal" id="tree-preview-vid-Modal">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header pb-0 border-bottom-0" *ngIf="createInteractiveVideoObj.currentPlayingItem != ''">
+        <h4 class="modal-title">Video Preview</h4>
+        <button type="button" class="close" data-dismiss="modal" (click)="closePreview()">
+          &times;
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <div class="preview-vid">
+          <div *ngIf="createInteractiveVideoObj.preview">
+            <video width="100%" height="400" poster="{{createInteractiveVideoObj.currentPlayingItem.poster}}"
+              preload="auto" videojs controls class="video-js vjs-default-skin vjs-big-play-centered" autoplay
+              (loadedmetadata)="getCurrentTime($event)" id="previewVideo">
+              <source src="{{createInteractiveVideoObj.currentPlayingItem.URL}}" type="application/x-mpegURL" />
+            </video>
+
+            <div class="optionsOFchoice"
+              *ngIf="createInteractiveVideoObj.currentPlayingItem.currentTime > createInteractiveVideoObj.currentPlayingItem.time"
+              [@fadeInOut]>
+              <div class="optionschoiceitem animations"
+                *ngFor="let i of createInteractiveVideoObj.currentPlayingItem.children" (click)="loadNextOption(i)">
+                {{i.name}}
+              </div>
+            </div>
+          </div>
+
+          <div style="height:400px" *ngIf="!createInteractiveVideoObj.preview"></div>
+
+          <!-- <iframe  id="myIfram" width="100%" height="400" [src]="createInteractiveVideoObj.currentPlayingItem.URL" frameborder="0" allow="accelerometer; encrypted-media; autplay; gyroscope; picture-in-picture" allowfullscreen *ngIf="createInteractiveVideoObj.currentPlayingItem.source == 'youtube'"></iframe> -->
+
+          <div class="vid-txt mt-3">
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="vid-title">
+                  <h5>{{createInteractiveVideoObj.currentPlayingItem.name}}</h5>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="vid-btn float-lg-right">
+                  <button type="button" class="btn shadow-none mr-sm-2" (click)="closePreview()">
+                    Cancel
+                  </button>
+                  <button type="button" class="btn shadow-none" (click)="publishPreview()">
+                    Publish
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Tree Chart video preview Modal Screen -->
+
+<!-- Tree Chart Publish Video Modal Screen-->
+<div class="modal fade tree-publish-vid-Modal" id="tree-publish-vid-Modal">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header pb-0 border-bottom-0">
+        <h4 class="modal-title">Publish your video</h4>
+        <button type="button" class="close" data-dismiss="modal">
+          &times;
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <div class="publish-vid-sec">
+          <div class="row">
+            <div class="col-12 col-sm-6">
+              <form #publishProfileForm="ngForm" (ngSubmit)="onSubmit()">
+                <div class="form-group signup-group">
+                  <div class="pos-relative">
+                    <input type="type" name="main_title" id="main_title" class="form-control main_focus_input" required
+                      [(ngModel)]="createInteractiveVideoObj.mainVideo.Title" #main_title="ngModel"
+                      [ngClass]="{'custom-alert-border':main_title.invalid && main_title.touched}"
+                      (change)="changeUserLogin('main_title')" placeholder="Enter title here..." />
+                    <label class="input-field" for="main_title">Video title</label>
+
+                    <div *ngIf="main_title.invalid && main_title.touched" class="custom-alert">
+                      <div *ngIf="main_title.errors.required">
+                        Title is required!
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group signup-group">
+                  <div class="pos-relative">
+                    <textarea placeholder="Enter description here.." id="user_Description" name="user_Description"
+                      class="form-control main_focus_input" maxlength="200"
+                      [(ngModel)]="createInteractiveVideoObj.mainVideo.Description" #user_Description="ngModel"
+                      [ngClass]="{'custom-alert-border':user_Description.invalid && user_Description.touched}"
+                      (change)="changeUserLogin('user_Description')" required></textarea>
+                    <span class="count-letter mt-1" style="font-size: 10px;text-align: left;">Write a short about
+                      video</span>
+                    <span class="count-letter mt-1" *ngIf="createInteractiveVideoObj.mainVideo.Description"
+                      style="font-size: 10px;text-align: right; float: right;">{{createInteractiveVideoObj.mainVideo.Description.length}}/200</span>
+                    <label class="input-field" for="user_Description">Description</label>
+                    <div *ngIf="user_Description.invalid && user_Description.touched" class="custom-alert">
+                      <div *ngIf="user_Description.errors.required">
+                        Description is required!
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group signup-group">
+                  <h5>Category</h5>
+                  <p>
+                    Add your video to a Category so viewers can find it more
+                    easily
+                  </p>
+                  <!-- <select class="shadow-none form-control" id="user_Categories" name="user_Categories" class="form-control main_focus_input" maxlength="200" required [(ngModel)]="createInteractiveVideoObj.mainVideo.Cate" #user_Categories="ngModel" [ngClass]="{'custom-alert-border':user_Categories.invalid && user_Categories.touched}">
+                                            <option value="i" ngFor="let if availableCategory" v>i</option>
+                                            
+                                        </select> -->
+                  <ngx-select-dropdown required name="availableCategory" [config]="config5" [multiple]="true"
+                    [options]="availableCategory" [(ngModel)]="createInteractiveVideoObj.mainVideo.Categories">
+                  </ngx-select-dropdown>
+                  <div *ngIf="availableCategory.invalid && availableCategory.touched" class="custom-alert">
+                    <div *ngIf="availableCategory.errors.required">
+                      Category is required!
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+
+            <div class="col-12 col-sm-6">
+              <div class="publish-vid" *ngIf="createInteractiveVideoObj.publish">
+                <video (click)="previewVIdeo()" width="100%" style="max-height: 300px"
+                  poster="{{createInteractiveVideoObj.mainVideo.poster}}" preload="auto" videojs
+                  class="video-js vjs-default-skin vjs-big-play-centered"
+                  (loadedmetadata)="getCurrentTimePublish($event)" id="publishVideo">
+                  <!-- <source src="{{createInteractiveVideoObj.mainVideo.URL}}" type="application/x-mpegURL"> -->
+                </video>
+
+                <!-- <video  [src]="createInteractiveVideoObj.mainVideo.URL" width="100%" (loadedmetadata)="getCurrentTimePublish($event)" id="publishVideo"  controls style="max-height: 300px"></vide{{i.name}} o> -->
+                <!-- <div class="marker"></div> -->
+
+                <div class="thumbnail-area mt-2">
+                  <h5>Thumbnail</h5>
+                  <p>
+                    Select or upload a picture that shows what's in your video
+                  </p>
+                  <p>Recommended Size: <b>250px * 100px</b></p>
+                  <div class="container-fluid">
+                    <div class="row">
+                      <div class="col-6 col-lg-3">
+                        <label class="select-thumb up" for="selec_thumb_file">
+                          <input #file type="file" accept="image/*" id="selec_thumb_file" (change)="preview(file.files)"
+                            class="input-hidden-file" />
+                          <div class="upload">
+                            <img src="assets/images/upload.svg" alt="" class="d-block ml-auto mr-auto" />
+                            <span>Upload</span>
+                          </div>
+                        </label>
+                      </div>
+
+                      <div class="col-6 col-lg-9">
+                        <label class="select-thumb" *ngFor="let i of createInteractiveVideoObj.mainVideo.thumbnail;"
+                          style="width: 25%;margin-right: 10px;text-align: center;" [ngClass]="{'active': i == item}">
+                          <!-- <input type="checkbox"> -->
+                          <img src="{{i}}" (click)="item = i;" />
+
+                          <img src="assets/images/delete-512.png" class="deletrThumnails animations"
+                            (click)="deleteThumbnails(i)" />
+                          <!-- <span class="check"></span> -->
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <div class="publish-vid-btn">
+          <button type="button" class="btn shadow-none mr-sm-2" (click)="cancelPublish()">
+            Cancel
+          </button>
+          <button type="button" class="btn shadow-none" (click)="onSubmit()" [disabled]="publishProfileForm.invalid">
+            Publish
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Tree Chart Publish Video Modal Screen-->
+
+<!-- video publish footer -->
+
+<button class="btn topBottomBtn" [style.display]="buttonView" [style.bottom]="iconPosition" (click)="hideShowFooter()">
+  <i class="fas fa-external-link-alt"></i>
+</button>
+<ng-container>
+  <section class="vid-publish-footer" [style.display]="footserSection" [@fadeInOut]
+    *ngIf="!createInteractiveVideoObj.selectedVideoCheck">
+    <div class="container-fluid">
+      <div class="row align-items-center">
+        <div class="col-sm-12 col-md-5">
+          <div class="other-btns">
+            <!-- <button type="button">
+              <img src="assets/images/upload-video-icons/record-vid-cam.svg" alt="">
+            </button>
+            <button type="button">
+              <img src="assets/images/upload-video-icons/record-vid-cam.svg" alt="">
+            </button>
+            <button type="button">
+              <img src="assets/images/upload-video-icons/record-vid-cam.svg" alt="">
+            </button>
+            <button type="button">
+              <img src="assets/images/upload-video-icons/record-vid-cam.svg" alt="">
+            </button> -->
+            <!-- <button type="button" class="share-btn d-flex align-items-center justify-content-between" 
+               data-toggle="modal" data-target="#contributor-Modal" (click)="openContributorModal()">
+              <span>Collab</span>
+              <img src="assets/images/upload-video-icons/publish-share.svg" alt="" width="20px" height="20px">
+            </button> -->
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-2">
+          <div class="footer-text" *ngIf="createInteractiveVideoObj.interactiveStep == 'three'">
+            <!-- {{createInteractiveVideoObj.mainVideo.Title}} -->
+            <input type="type" name="main_title1" id="main_title1"
+              class="form-control main_focus_input footer-title-input" required
+              [(ngModel)]="createInteractiveVideoObj.mainVideo.Title" #main_title1="ngModel"
+              [ngClass]="{'custom-alert-border':main_title1.invalid && main_title1.touched}"
+              placeholder="Enter Video Title..." (change)="addVideoTitle()" />
+          </div>
+
+          <div class="footer-text" *ngIf="createInteractiveVideoObj.interactiveStep != 'three'">
+            Interactive Video...
+            <!-- {{createInteractiveVideoObj.mainVideo.Title}} -->
+            <!-- <input type="type" name="main_title1" id="main_title1" class="form-control main_focus_input footer-title-input" required  [(ngModel)]="createInteractiveVideoObj.mainVideo.Title" #main_title1="ngModel" [ngClass]="{'custom-alert-border':main_title1.invalid && main_title1.touched}" placeholder="Enter Video Title..." (change)="addVideoTitle()"> -->
+          </div>
+        </div>
+
+        <div class="col-sm-12 col-md-5">
+          <div class="pre-pub-btn d-flex justify-content-end">
+            <button type="button" (click)="previewVIdeo()">Preview</button>
+            <button type=" collabeBtn button mr-2" style="background: #6e5eff;color:#fff;margin-right: 16px;"
+              data-toggle="modal" data-target="#contributor-Modal" (click)="openContributorModal()">
+              Collab<span><img src="assets/images/upload-video-icons/publish-share.svg" alt="" style="margin-left: 7px;"
+                  width="15px" height="15px" /></span>
+            </button>
+            <button type="button" (click)="publishVIdeoFooter()" style="background: #6e5eff;color:#fff">
+              Publish
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</ng-container>
+
+<!-- Contributors Modal -->
+<div class="modal fade upload-vid-Modal" id="contributor-Modal">
+  <div class="modal-dialog modal-dialog-centered modal-md">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5>Add Contributors</h5>
+        <button style="padding: 1rem;" type="button" (click)="closeContributorModal()" class="close"
+          data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <div class="modal-body sharing-modal-body collabeBody" *ngIf="isShareOpen">
+        <!-- From Public Videos-->
+        <!-- <ul style="columns: 2;" class="sharing-links">
+            <li class="user-list-item" *ngFor="let f of followers" (click)="setContributor(f.info._id);f.selected = !f.selected">
+              <div [ngClass]="{'selected-share': f.selected}" class="follow-share">
+                <img src="{{f.info.profilePic}}" alt="">
+                <h5>{{f.info.username}}</h5>
+            </div>
+            </li>
+          </ul> -->
+        <h5>Collaboration</h5>
+        <ul class="sharing-links">
+          <div *ngIf="followers && followers.length < 1" style="text-align:center">
+            No one to add, start creating you network!
+          </div>
+          <li class="user-list-item mt-2" *ngFor="let f of followers">
+            <ng-container class="d-flex align-items-center">
+              <input type="checkbox" [(ngModel)]="f.setFollowerCheck" name="follower" id="{{f.info._id}}"
+                value="{{f.info.username}}" (change)="getFollowingId(f.info._id,f.setFollowerCheck)" />
+
+              <label for="{{f.info._id}}" class="follower-name"> </label>
+              <img [src]="f.info.profilePic ? f.info.profilePic :'/assets/img/nophoto.png' " class="collabeImg" />
+              {{f.info.username}}
+            </ng-container>
+
+            <!-- <img src="{{f.info.profilePic}}" alt=""> -->
+          </li>
+        </ul>
+        <!-- 
+          <h5>Following </h5>
+          <ul class="sharing-links">
+            <div *ngIf="following && following.length < 1" style="text-align:center">
+              No one to add, start creating you network!
+            </div>
+            <li class="user-list-item" *ngFor="let i of following">
+              <input type="checkbox" [(ngModel)]="i.setFollowingCheck" class="collabRadio" name="following" id="{{i.userinfo._id}}" value="{{i.userinfo.username}}" (change)="getFollowingId(i.userinfo._id,i.setFollowingCheck)">
+              <label for="{{i.userinfo._id}}" class="follower-name">{{i.userinfo.username}}</label>
+              
+            </li>
+          </ul> -->
+
+        <!-- <h1>Angular ng-select <small class="text-muted"><a target="_blank" href="https://github.com/ng-select/ng-select">Open in Github</a></small></h1> -->
+
+        <!-- <ng-select [items]="country" formControlName="countryId" [clearable]="false" bindLabel="countryName" bindValue="id">
+              <ng-template ng-label-tmp let-item="item">
+                <img class="img-doc" [src]="item.countryFlagUrl" />
+                {{item.countryName}}
+              </ng-template>
+              <ng-template ng-option-tmp let-doc="item">
+                <img [src]="doc.countryFlagUrl" class="img-doc"> <span>{{ doc.countryName }}</span>
+              </ng-template>
+            </ng-select> -->
+
+        <!--Using ng-option and for loop-->
+        <!-- <ng-select [(ngModel)]="selectedCar">
+  <ng-option *ngFor="let car of cars" [value]="car.id">{{car.name}}</ng-option>
+</ng-select> -->
+
+        <!--Using items input-->
+        <!-- <ng-select [items]="cars" 
+          bindLabel="name" 
+          bindValue="id" 
+          [(ngModel)]="selectedCar">
+</ng-select>
+         -->
+
+        <div style="margin-top:300px"></div>
+      </div>
+
+      <div class="modal-footer custom-footer">
+        <button class="btn modal-btn" type="button" (click)="setContributor()">
+          Save
+        </button>
+        <button class=" btn modal-btn-close" type="button" (click)="closeContributorModal()" data-dismiss="modal">
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- video publish footer -->

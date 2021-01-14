@@ -1,0 +1,942 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>my-app documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">my-app documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>ProfileCompletionComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/afterLogin/profileCompletion/profileCompletion.component.ts</code>
+</p>
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>profileCompletion</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./profileCompletion.component.css</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./profileCompletion.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#profileCompltetObj">profileCompltetObj</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#changeUserLogin">changeUserLogin</a>
+                            </li>
+                            <li>
+                                <a href="#checkChange">checkChange</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#onSubmit">onSubmit</a>
+                            </li>
+                            <li>
+                                <a href="#preview">preview</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(urlService: <a href="../injectables/CrudService.html">CrudService</a>, router: <a href="https://angular.io/api/router/Router" target="_blank">Router</a>, toastr: ToastrService)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">src/app/afterLogin/profileCompletion/profileCompletion.component.ts:12</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>urlService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/CrudService.html" target="_self" >CrudService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>router</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/router/Router" target="_blank" >Router</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>toastr</td>
+                                                  
+                                                        <td>
+                                                                    <code>ToastrService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="changeUserLogin"></a>
+                    <span class="name">
+                        <b>
+                            changeUserLogin
+                        </b>
+                        <a href="#changeUserLogin"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>changeUserLogin(id)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="48"
+                            class="link-to-prism">src/app/afterLogin/profileCompletion/profileCompletion.component.ts:48</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>id</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="checkChange"></a>
+                    <span class="name">
+                        <b>
+                            checkChange
+                        </b>
+                        <a href="#checkChange"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>checkChange(e: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>, obj: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="58"
+                            class="link-to-prism">src/app/afterLogin/profileCompletion/profileCompletion.component.ts:58</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>e</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>obj</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <b>
+                            ngOnInit
+                        </b>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="15"
+                            class="link-to-prism">src/app/afterLogin/profileCompletion/profileCompletion.component.ts:15</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onSubmit"></a>
+                    <span class="name">
+                        <b>
+                            onSubmit
+                        </b>
+                        <a href="#onSubmit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onSubmit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="71"
+                            class="link-to-prism">src/app/afterLogin/profileCompletion/profileCompletion.component.ts:71</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="preview"></a>
+                    <span class="name">
+                        <b>
+                            preview
+                        </b>
+                        <a href="#preview"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>preview(files)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="28"
+                            class="link-to-prism">src/app/afterLogin/profileCompletion/profileCompletion.component.ts:28</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>files</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="profileCompltetObj"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            profileCompltetObj</b>
+                            <a href="#profileCompltetObj"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>{categories:[],bio:&#x27;&#x27;,file:&#x27;&#x27;,spinner:&#x27;&#x27;,imagePath:&#x27;&#x27;,imgURL:&#x27;&#x27;,step:&#x27;first&#x27;,checkedList:[],fileData:&#x27;&#x27;}</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/app/afterLogin/profileCompletion/profileCompletion.component.ts:13</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
+import{Router} from &#x27;@angular/router&#x27;;
+import { CrudService } from &#x27;src/app/crud.service&#x27;;
+import { ToastrService } from &#x27;ngx-toastr&#x27;;
+declare var $;
+@Component({
+  selector: &#x27;profileCompletion&#x27;,
+  templateUrl: &#x27;./profileCompletion.component.html&#x27;,
+  styleUrls: [&#x27;./profileCompletion.component.css&#x27;]
+})
+
+export class ProfileCompletionComponent implements OnInit {
+  constructor(private urlService:CrudService, private router:Router,private toastr: ToastrService) { }  private profileCompltetObj:any &#x3D; {categories:[],bio:&#x27;&#x27;,file:&#x27;&#x27;,spinner:&#x27;&#x27;,imagePath:&#x27;&#x27;,imgURL:&#x27;&#x27;,step:&#x27;first&#x27;,checkedList:[],fileData:&#x27;&#x27;}
+
+  ngOnInit() {
+    this.profileCompltetObj.spinner &#x3D; true;
+    this.urlService.fetchCategories().subscribe(
+      success &#x3D;&gt;{
+           this.profileCompltetObj.spinner &#x3D; false;
+           this.profileCompltetObj.categories &#x3D; success.data.categories
+         
+       },
+       error &#x3D;&gt;{
+       })
+  }
+
+
+  preview(files) {
+    if (files.length &#x3D;&#x3D;&#x3D; 0)
+      return;
+ 
+    var mimeType &#x3D; files[0].type;
+    if (mimeType.match(/image\/*/) &#x3D;&#x3D; null) {
+      this.toastr.error(&#x27;Only images are supported!&#x27;);
+      return;
+    }
+ 
+    var reader &#x3D; new FileReader();
+    this.profileCompltetObj.imagePath &#x3D; files;
+    this.profileCompltetObj.fileData &#x3D; files[0]
+    reader.readAsDataURL(files[0]); 
+    reader.onload &#x3D; (_event) &#x3D;&gt; { 
+      this.profileCompltetObj.imgURL &#x3D; reader.result; 
+    }
+  }
+
+
+  changeUserLogin(id)
+  {
+    if ($(&#x27;#&#x27;+id).val() !&#x3D; &quot;&quot;){
+        $(&#x27;#&#x27;+id).siblings(&#x27;.input-field&#x27;).addClass(&#x27;video_input_focus&#x27;);
+        $(&#x27;#&#x27;+id).addClass(&#x27;focusIn&#x27;);
+      }else{
+        $(&#x27;#&#x27;+id).siblings(&#x27;.input-field&#x27;).removeClass(&#x27;video_input_focus&#x27;);
+      }
+   }
+
+   checkChange(e:any,obj:any)
+   {
+    if(e.target.checked) {
+      this.profileCompltetObj.checkedList.push(obj);
+    } else {
+    for(var i&#x3D;0 ; i &lt; this.profileCompltetObj.categories.length; i++) {
+      if(this.profileCompltetObj.checkedList[i] &#x3D;&#x3D; obj) {
+        this.profileCompltetObj.checkedList.splice(i,1);
+     }
+   }
+ }
+   }
+
+   onSubmit()
+   {
+    this.profileCompltetObj.spinner &#x3D; true;
+    const formData &#x3D; new FormData();  
+    formData.append(&#x27;file&#x27;, this.profileCompltetObj.fileData);  
+    formData.append(&quot;bio&quot;, this.profileCompltetObj.bio);
+    for(let i of this.profileCompltetObj.checkedList)
+    {
+      formData.append(&quot;category&quot;, i);
+    
+    }
+    // let params:any &#x3D; {
+    //   bio: this.profileCompltetObj.obj,
+    //   category:this.profileCompltetObj.checkedList
+    // };
+    this.urlService.completeProfile(formData).subscribe(
+      success &#x3D;&gt;{
+           this.profileCompltetObj.spinner &#x3D; false;
+           this.router.navigate([&#x27;/thats-all&#x27;]);
+           //this.router.navigate([&#x27;/dashboard&#x27;]);
+           //this.profileCompltetObj.categories &#x3D; success.data.categories
+       },
+       error &#x3D;&gt;{
+       })
+   }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;spinner *ngIf&#x3D;&quot;profileCompltetObj.spinner&quot;&gt;&lt;/spinner&gt;
+&lt;!-- step -1 --&gt;
+&lt;form #profileCompletionForm&#x3D;&quot;ngForm&quot; (ngSubmit)&#x3D;&quot;onSubmit()&quot;&gt;
+&lt;section *ngIf&#x3D;&quot;profileCompltetObj.step &#x3D;&#x3D; &#x27;first&#x27;&quot;&gt;
+    &lt;div class&#x3D;&quot;container video-common-sec&quot;&gt;
+        &lt;div class&#x3D;&quot;video-common-form text-center&quot;&gt;
+
+            &lt;h4&gt;Free&lt;strong&gt;Fuse&lt;/strong&gt;&lt;/h4&gt;
+
+            &lt;div class&#x3D;&quot;complete-profile border-bottom mb-3&quot;&gt;
+                &lt;h5&gt;Complete your profile&lt;/h5&gt;
+                &lt;p&gt;We ask everyone a few details for a better experience, so get a head start and do it now!&lt;/p&gt;      
+            &lt;/div&gt;
+
+            &lt;div class&#x3D;&quot;stepbystep-form-area&quot;&gt;
+                &lt;span&gt;Step 1 of 3&lt;/span&gt;
+                &lt;p&gt;Upload a profile picture&lt;/p&gt;
+                &lt;div class&#x3D;&quot;pos-relative&quot;&gt;
+                    &lt;img src&#x3D;&quot;assets/images/upload-pic.svg&quot; alt&#x3D;&quot;Picture&quot; *ngIf&#x3D;&quot;!profileCompltetObj.imgURL&quot;&gt; 
+                    
+                    &lt;img [src]&#x3D;&quot;profileCompltetObj.imgURL&quot; height&#x3D;&quot;200&quot; *ngIf&#x3D;&quot;profileCompltetObj.imgURL&quot;&gt;
+                    &lt;input  #file type&#x3D;&quot;file&quot; accept&#x3D;&#x27;image/*&#x27; (change)&#x3D;&quot;preview(file.files)&quot; class&#x3D;&quot;input-hidden-file&quot;/&gt;
+                  &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;video-common-btn&quot; (click)&#x3D;&quot;profileCompltetObj.step &#x3D; &#x27;second&#x27;&quot; &gt;Next step&lt;/button&gt;
+
+            &lt;div class&#x3D;&quot;skip-button mt-3&quot;&gt;
+                &lt;a (click)&#x3D;&quot;profileCompltetObj.step &#x3D; &#x27;second&#x27;&quot;&gt;Skip this step&lt;/a&gt;
+              
+            &lt;/div&gt;
+
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/section&gt;
+&lt;!-- end here --&gt;
+
+
+&lt;!-- step-2 --&gt;
+&lt;section *ngIf&#x3D;&quot;profileCompltetObj.step &#x3D;&#x3D; &#x27;second&#x27;&quot;&gt;
+    &lt;div class&#x3D;&quot;container video-common-sec&quot;&gt;
+        &lt;div class&#x3D;&quot;video-common-form text-center&quot;&gt;
+
+            &lt;h4&gt;Free&lt;strong&gt;Fuse&lt;/strong&gt;&lt;/h4&gt;
+
+            &lt;div class&#x3D;&quot;complete-profile border-bottom mb-3&quot;&gt;
+                &lt;h5&gt;Complete your profile&lt;/h5&gt;
+                &lt;p&gt;We ask everyone a few details for a better experience, so get a head start and do it now!&lt;/p&gt;      
+            &lt;/div&gt;
+
+            &lt;div class&#x3D;&quot;stepbystep-form-area&quot;&gt;
+                &lt;span&gt;Step 2 of 3&lt;/span&gt;
+                &lt;p class&#x3D;&quot;mb-2&quot;&gt;Write a short bio about yourself&lt;/p&gt;
+            &lt;/div&gt;
+
+            &lt;div class&#x3D;&quot;short-bio-form text-left&quot; novalidate&gt;  
+
+                &lt;div class&#x3D;&quot;form-group signup-group&quot;&gt;
+                    &lt;div class&#x3D;&quot;pos-relative&quot;&gt;
+                        &lt;textarea id&#x3D;&quot;user_bio&quot; name&#x3D;&quot;user_bio&quot; class&#x3D;&quot;form-control main_focus_input&quot; maxlength&#x3D;&quot;200&quot; [(ngModel)]&#x3D;&quot;profileCompltetObj.bio&quot; #user_bio&#x3D;&quot;ngModel&quot; (keyup)&#x3D;&quot;changeUserLogin(&#x27;user_bio&#x27;)&quot; &gt;&lt;/textarea&gt;
+                        &lt;label class&#x3D;&quot;input-field&quot; for&#x3D;&quot;user_bio&quot;&gt;Type here&lt;/label&gt;     
+                        &lt;span class&#x3D;&quot;count-letter mt-1&quot;&gt;{{profileCompltetObj.bio.length}}/200&lt;/span&gt;
+                     &lt;/div&gt;   
+                &lt;/div&gt;
+
+                &lt;div *ngIf&#x3D;&quot;user_bio.invalid &amp;&amp; user_bio.touched&quot; class&#x3D;&quot;custom-alert&quot;&gt;
+                    &lt;div *ngIf&#x3D;&quot;user_bio.errors.maxlength&quot;&gt;
+                       Max length exceeded!
+                   &lt;/div&gt; 
+                                             
+           &lt;/div&gt;
+                &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;video-common-btn&quot; (click)&#x3D;&quot;profileCompltetObj.step &#x3D; &#x27;third&#x27;&quot;&gt;Next step&lt;/button&gt;
+        &lt;/div&gt;
+
+            &lt;div class&#x3D;&quot;skip-button mt-3&quot;&gt;
+                &lt;a (click)&#x3D;&quot;profileCompltetObj.step &#x3D; &#x27;third&#x27;&quot;&gt;Skip this step&lt;/a&gt;
+                &lt;a (click)&#x3D;&quot;profileCompltetObj.step &#x3D; &#x27;first&#x27;&quot;style&#x3D;&quot;display: block&quot;&gt;Back to Previous Step&lt;/a&gt;
+            &lt;/div&gt;
+
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/section&gt;
+
+&lt;!-- end here --&gt;
+
+&lt;!-- step-3 --&gt;
+
+&lt;section *ngIf&#x3D;&quot;profileCompltetObj.step &#x3D;&#x3D; &#x27;third&#x27;&quot;&gt;
+    &lt;div class&#x3D;&quot;container video-common-sec&quot;&gt;
+        &lt;div class&#x3D;&quot;video-common-form text-center&quot;&gt;
+
+            &lt;h4&gt;Free&lt;strong&gt;Fuse&lt;/strong&gt;&lt;/h4&gt;
+
+            &lt;div class&#x3D;&quot;complete-profile border-bottom mb-3&quot;&gt;
+                &lt;h5&gt;Complete your profile&lt;/h5&gt;
+                &lt;p&gt;We ask everyone a few details for a better experience, so get a head start and do it now!&lt;/p&gt;      
+            &lt;/div&gt;
+
+            &lt;div class&#x3D;&quot;stepbystep-form-area&quot;&gt;
+                &lt;span&gt;Step 3 of 3&lt;/span&gt;
+                &lt;p class&#x3D;&quot;mb-3&quot;&gt;Select your areas of interest&lt;/p&gt;
+            &lt;/div&gt;
+
+            &lt;div class&#x3D;&quot;select-category-form text-left&quot; novalidate&gt; 
+                &lt;div class&#x3D;&quot;row FF-scroll-modify&quot;&gt;
+                    &lt;div class&#x3D;&quot;row&quot;&gt;
+                        &lt;div class&#x3D;&quot;col-6&quot; style&#x3D;&quot;padding: 0 40px;&quot; *ngFor&#x3D;&quot;let obj of profileCompltetObj.categories&quot;&gt;
+                        &lt;div class&#x3D;&quot;form-check mb-1&quot;&gt;
+                            &lt;label class&#x3D;&quot;form-check-label&quot;&gt;
+                                &lt;input type&#x3D;&quot;checkbox&quot; class&#x3D;&quot;form-check-input&quot; (change)&#x3D;&quot;checkChange($event,obj)&quot;[value]&#x3D;&quot;obj&quot;&gt;
+                                {{obj}}
+                            &lt;/label&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;       
+                
+                &lt;button type&#x3D;&quot;submit&quot; class&#x3D;&quot;video-common-btn mt-3&quot;&gt;Finish&lt;/button&gt;
+        &lt;/div&gt;
+
+            &lt;div class&#x3D;&quot;skip-button mt-3&quot;&gt;
+                &lt;a (click)&#x3D;&quot;onSubmit()&quot;&gt;Skip this step&lt;/a&gt;
+
+                &lt;a (click)&#x3D;&quot;profileCompltetObj.step &#x3D; &#x27;second&#x27;&quot; style&#x3D;&quot;display: block&quot;&gt;Back to Previous Step&lt;/a&gt;
+            &lt;/div&gt;
+
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/section&gt;
+&lt;/form&gt;
+&lt;!-- end here --&gt;
+
+&lt;withoutloginfooter&gt;&lt;/withoutloginfooter&gt;</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./profileCompletion.component.css</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">.input-hidden-file
+{
+    position: absolute;
+    opacity: 0;
+    z-index: 9;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    cursor: pointer;
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><spinner *ngIf="profileCompltetObj.spinner"></spinner><!-- step -1 --><form #profileCompletionForm="ngForm" (ngSubmit)="onSubmit()"><section *ngIf="profileCompltetObj.step == \'first\'">    <div class="container video-common-sec">        <div class="video-common-form text-center">            <h4>Free<strong>Fuse</strong></h4>            <div class="complete-profile border-bottom mb-3">                <h5>Complete your profile</h5>                <p>We ask everyone a few details for a better experience, so get a head start and do it now!</p>                  </div>            <div class="stepbystep-form-area">                <span>Step 1 of 3</span>                <p>Upload a profile picture</p>                <div class="pos-relative">                    <img src="assets/images/upload-pic.svg" alt="Picture" *ngIf="!profileCompltetObj.imgURL">                                         <img [src]="profileCompltetObj.imgURL" height="200" *ngIf="profileCompltetObj.imgURL">                    <input  #file type="file" accept=\'image/*\' (change)="preview(file.files)" class="input-hidden-file"/>                  </div>            </div>            <button type="button" class="video-common-btn" (click)="profileCompltetObj.step = \'second\'" >Next step</button>            <div class="skip-button mt-3">                <a (click)="profileCompltetObj.step = \'second\'">Skip this step</a>                          </div>        </div>    </div></section><!-- end here --><!-- step-2 --><section *ngIf="profileCompltetObj.step == \'second\'">    <div class="container video-common-sec">        <div class="video-common-form text-center">            <h4>Free<strong>Fuse</strong></h4>            <div class="complete-profile border-bottom mb-3">                <h5>Complete your profile</h5>                <p>We ask everyone a few details for a better experience, so get a head start and do it now!</p>                  </div>            <div class="stepbystep-form-area">                <span>Step 2 of 3</span>                <p class="mb-2">Write a short bio about yourself</p>            </div>            <div class="short-bio-form text-left" novalidate>                  <div class="form-group signup-group">                    <div class="pos-relative">                        <textarea id="user_bio" name="user_bio" class="form-control main_focus_input" maxlength="200" [(ngModel)]="profileCompltetObj.bio" #user_bio="ngModel" (keyup)="changeUserLogin(\'user_bio\')" ></textarea>                        <label class="input-field" for="user_bio">Type here</label>                             <span class="count-letter mt-1">{{profileCompltetObj.bio.length}}/200</span>                     </div>                   </div>                <div *ngIf="user_bio.invalid && user_bio.touched" class="custom-alert">                    <div *ngIf="user_bio.errors.maxlength">                       Max length exceeded!                   </div>                                                         </div>                <button type="button" class="video-common-btn" (click)="profileCompltetObj.step = \'third\'">Next step</button>        </div>            <div class="skip-button mt-3">                <a (click)="profileCompltetObj.step = \'third\'">Skip this step</a>                <a (click)="profileCompltetObj.step = \'first\'"style="display: block">Back to Previous Step</a>            </div>        </div>    </div></section><!-- end here --><!-- step-3 --><section *ngIf="profileCompltetObj.step == \'third\'">    <div class="container video-common-sec">        <div class="video-common-form text-center">            <h4>Free<strong>Fuse</strong></h4>            <div class="complete-profile border-bottom mb-3">                <h5>Complete your profile</h5>                <p>We ask everyone a few details for a better experience, so get a head start and do it now!</p>                  </div>            <div class="stepbystep-form-area">                <span>Step 3 of 3</span>                <p class="mb-3">Select your areas of interest</p>            </div>            <div class="select-category-form text-left" novalidate>                 <div class="row FF-scroll-modify">                    <div class="row">                        <div class="col-6" style="padding: 0 40px;" *ngFor="let obj of profileCompltetObj.categories">                        <div class="form-check mb-1">                            <label class="form-check-label">                                <input type="checkbox" class="form-check-input" (change)="checkChange($event,obj)"[value]="obj">                                {{obj}}                            </label>                        </div>                    </div>                </div>            </div>                                       <button type="submit" class="video-common-btn mt-3">Finish</button>        </div>            <div class="skip-button mt-3">                <a (click)="onSubmit()">Skip this step</a>                <a (click)="profileCompltetObj.step = \'second\'" style="display: block">Back to Previous Step</a>            </div>        </div>    </div></section></form><!-- end here --><withoutloginfooter></withoutloginfooter></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CreateInteractiveVideoComponent', 'selector': 'createInteractiveVideoComponent'},{'name': 'DashboardComponent', 'selector': 'dashboard'},{'name': 'EditProfileComponent', 'selector': 'editProfile'},{'name': 'FollowersComponent', 'selector': 'app-followers'},{'name': 'FollowingComponent', 'selector': 'app-following'},{'name': 'FooterComponent', 'selector': 'footer'},{'name': 'FooterComponent', 'selector': 'footer'},{'name': 'FooterComponent', 'selector': 'footer'},{'name': 'FooterComponent', 'selector': 'footer'},{'name': 'FooterComponent', 'selector': 'footer'},{'name': 'FooterComponent', 'selector': 'footer'},{'name': 'ForgetPasswordComponent', 'selector': 'forgetPassword'},{'name': 'HeaderComponent', 'selector': 'headerone'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LandingPageComponent', 'selector': 'app-landing-page'},{'name': 'LandingTestComponent', 'selector': 'app-landing-test'},{'name': 'LibraryComponent', 'selector': 'app-library'},{'name': 'LoginComponent', 'selector': 'login'},{'name': 'MyVideosComponent', 'selector': 'app-my-videos'},{'name': 'MyVideosPublicComponent', 'selector': 'app-my-videos-public'},{'name': 'NotificationsComponent', 'selector': 'app-notifications'},{'name': 'OtpComponent', 'selector': 'otp'},{'name': 'ProfileCompletionComponent', 'selector': 'profileCompletion'},{'name': 'PublicProfileComponent', 'selector': 'app-public-profile'},{'name': 'PublicUserActivitiyComponent', 'selector': 'app-public-user-activitiy'},{'name': 'PublicVideoComponent', 'selector': 'app-public-video'},{'name': 'PublishFooterComponent', 'selector': 'publishFooter'},{'name': 'ResetPasswordComponent', 'selector': 'resetPassword'},{'name': 'SearchResultsComponent', 'selector': 'app-search-results'},{'name': 'SectionSpinnerComponent', 'selector': 'sectionSpinner'},{'name': 'SideMenuComponent', 'selector': 'sideMenu'},{'name': 'SignupComponent', 'selector': 'signup'},{'name': 'SignupComponent', 'selector': 'signup'},{'name': 'SpinnerComponent', 'selector': 'spinner'},{'name': 'TestComponent', 'selector': 'app-test'},{'name': 'ThatsallComponent', 'selector': 'app-thatsall'},{'name': 'TrendingComponent', 'selector': 'app-trending'},{'name': 'UploadVideosComponent', 'selector': 'uploadVideos'},{'name': 'UserActivitiyComponent', 'selector': 'app-user-activitiy'},{'name': 'WithOutLoginFooterComponent', 'selector': 'withoutloginfooter'}];
+    var DIRECTIVES = [{'name': 'VideoJS', 'selector': '[videojs]'}];
+    var ACTUAL_COMPONENT = {'name': 'ProfileCompletionComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'ProfileCompletionComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

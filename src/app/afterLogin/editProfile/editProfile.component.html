@@ -1,0 +1,884 @@
+<headerone></headerone>
+<sideMenu></sideMenu>
+
+<spinner *ngIf="editProfileObject.spinner"></spinner>
+<div class="custom-container"> 
+        <div class="head-settings">Settings</div>
+    <div class="resetPassword row">
+        
+        <div class="col-lg-3">
+            <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                <a class="nav-link active icon" id="v-pills-home-tab" data-toggle="pill" role="tab" aria-controls="v-pills-home" aria-selected="true" (click)="filledItem()">
+                    <svg version="1.1" id="icons" width="10%" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	                    viewBox="0 0 24 17" style="enable-background:new 0 0 24 17;" xml:space="preserve">
+	                    <path d="M21,0H3C1.3,0,0,1.3,0,3v11c0,1.7,1.3,3,3,3h18c1.7,0,3-1.3,3-3V3C24,1.3,22.7,0,21,0z M22,14c0,0.6-0.4,1-1,1H3
+		                    c-0.6,0-1-0.4-1-1V3c0-0.6,0.4-1,1-1h18c0.6,0,1,0.4,1,1V14z"/>
+	                    <rect x="12" y="6" width="7" height="2"/>
+	                    <rect x="12" y="10" width="7" height="2"/>
+	                    <path d="M8,9H6c-1.1,0-2,0.9-2,2v2h6v-2C10,9.9,9.1,9,8,9z"/>
+	                    <circle cx="7" cy="6" r="2"/>
+                    </svg>
+                    Profile</a>
+                <a class="nav-link icon" id="v-pills-password-tab" data-toggle="pill" href="#v-pills-password" role="tab" aria-controls="v-pills-password" aria-selected="false" (click)="editProfileObject.show ='second'">
+                        <!-- <svg class="bi bi-lock" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M11.5 8h-7a1 1 0 00-1 1v5a1 1 0 001 1h7a1 1 0 001-1V9a1 1 0 00-1-1zm-7-1a2 2 0 00-2 2v5a2 2 0 002 2h7a2 2 0 002-2V9a2 2 0 00-2-2h-7zm0-3a3.5 3.5 0 117 0v3h-1V4a2.5 2.5 0 00-5 0v3h-1V4z" clip-rule="evenodd"/>
+                          </svg> -->
+                    <svg version="1.1" id="icons" width="10%" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                        viewBox="0 0 24 22" style="enable-background:new 0 0 24 22;" xml:space="preserve">
+                        <path d="M17,19c0-2.8-2.2-5-5-5H5c-2.8,0-5,2.2-5,5v3h17V19z M15,20H2v-1c0-1.7,1.3-3,3-3h7c1.7,0,3,1.3,3,3V20z"/>
+                        <path d="M4,8.5C4,11,6,13,8.5,13C11,13,13,11,13,8.5C13,6,11,4,8.5,4C6,4,4,6,4,8.5z M11,8.5C11,9.9,9.9,11,8.5,11
+                            C7.1,11,6,9.9,6,8.5S7.1,6,8.5,6C9.9,6,11,7.1,11,8.5z"/>
+                        <path d="M23,3c0-1.7-1.3-3-3-3c-1.7,0-3,1.3-3,3v1h-1v7h8V4h-1V3z M19,3c0-0.6,0.4-1,1-1c0.6,0,1,0.4,1,1v1h-2V3z M22,9h-4V6h4V9z"/>
+                    </svg>
+                    Privacy options</a>
+                <a class="nav-link icon" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false" (click)="editProfileObject.show = 'third'">
+                        <!-- <svg class="bi bi-bell" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 16a2 2 0 002-2H6a2 2 0 002 2z"/>
+                            <path fill-rule="evenodd" d="M8 1.918l-.797.161A4.002 4.002 0 004 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 00-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 111.99 0A5.002 5.002 0 0113 6c0 .88.32 4.2 1.22 6z" clip-rule="evenodd"/>
+                          </svg> -->
+                    <svg version="1.1" id="icons" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                        viewBox="0 0 24 20" style="enable-background:new 0 0 24 20;" xml:space="preserve">
+                        <path d="M12,20c1.1,0,2-0.9,2-2h-4C10,19.1,10.9,20,12,20z"/>
+                        <path d="M19.9,15.9c0.2-0.4,0.3-1.2-0.7-2.1L19,13.6V9c0-3.5-2.6-6.4-6-6.9V1c0-0.5-0.4-1-1-1c-0.5,0-1,0.4-1,1v1.1
+                            C7.6,2.5,5,5.5,5,9v4.6l-0.2,0.2c-0.9,0.9-0.8,1.7-0.7,2.1c0.1,0.3,0.6,1,1.9,1h12C19.3,17,19.8,16.2,19.9,15.9z M6.5,14.9L7,14.4V9
+                            c0-2.8,2.2-5,5-5c2.8,0,5,2.2,5,5v5.4l0.5,0.5L6.5,14.9z"/>
+                        <rect x="20" y="7" width="4" height="2"/>
+                        <rect x="19.7" y="3" transform="matrix(0.8321 -0.5547 0.5547 0.8321 1.3921 12.5978)" width="3.6" height="2"/>
+                        <rect x="20.5" y="10.2" transform="matrix(0.5547 -0.8321 0.8321 0.5547 -0.4106 23.2327)" width="2" height="3.6"/>
+                        <rect y="7" width="4" height="2"/>
+                        <rect x="1.5" y="2.2" transform="matrix(0.5547 -0.8321 0.8321 0.5547 -2.2149 3.8613)" width="2" height="3.6"/>
+                        <rect x="0.7" y="11" transform="matrix(0.8321 -0.5547 0.5547 0.8321 -6.2365 3.4021)" width="3.6" height="2"/>
+                    </svg>
+                    Notifications
+                </a>
+                <!-- <a class="nav-link disabled" id="v-pills-delete-tab" data-toggle="pill" href="#v-pills-delete" role="tab" aria-controls="v-pills-delete" aria-selected="false" (click)="editProfileObject.show = 'fourth'">Memvership and Billing</a> -->
+            </div>
+        </div>
+
+        <div class="col-lg-9"> 
+            <div class="tab-content" id="v-pills-tabContent">
+                <!-- Profile Tab -->
+                <form class="signup-form"  #editProfileOverallForm="ngForm" >   
+                    <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab" *ngIf="editProfileObject.show == 'first'">
+                        <!-- Profile Picture Section -->
+                        <section class="video-signup-sec profile-section">
+                            <div class="video-common-sec">
+                                <div class="video-common-form">
+                                    <h3>Profile picture</h3>
+                                    <div class="profilePic">
+                                        <img [src]="editProfileObject.profilePic" *ngIf="editProfileObject.profilePic"/>
+                                        <span class="profile-image" *ngIf="!editProfileObject.profilePic" imgName  title="{{editProfileObject.firstname}},{{editProfileObject.lastname}}" style="border-radius:50%"></span>
+
+                                        <input  #file type="file" accept='image/*' (change)="preview(file.files)" class="input-hidden-file" title=" "/>
+                                        <!-- <label>Upload Pic</label> -->
+                                        <h5>Add a profile photo</h5>
+                                        <br>
+                                        <p>Must be a JPEG, PNG or GIF and may not exceed 10MB.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <!-- Account Details Section -->
+                        <section class="video-signup-sec">
+                            <div class="video-common-sec">
+                                <div class="video-common-form">
+                                    <h3>Account details</h3>
+                                    <!-- <div class="form-group signup-group">
+                                        <div class="profilePic">
+                                            <img [src]="editProfileObject.profilePic" />
+                                            <input  #file type="file" accept='image/*' (change)="preview(file.files)" class="input-hidden-file"/>
+                                            <label>Upload Pic</label>
+                                        </div>                                  
+                                    </div> -->
+                                    <div class="form-group row">
+                                        <label for="user_firstName" class="align-right input-field col-sm-2 col-form-label" for="user_firstName">First Name</label>
+                                        <div class="col-sm-10">
+                                            <input type="text" id="user_firstName" class=" form-control main_focus_input" maxlength="20" minlength="2" name="user_firstName" required  [(ngModel)]="editProfileObject.firstname" #user_firstName="ngModel" (change)="changeUserLogin('user_firstName')" [ngClass]="{'custom-alert-border':user_firstName.invalid && user_firstName.touched}">  
+                                            <div *ngIf="user_firstName.invalid && user_firstName.touched" class="custom-alert">
+                                                <div *ngIf="user_firstName.errors.required">
+                                                    First Name is required!
+                                                </div> 
+                                                <div *ngIf="user_firstName.errors.maxlength">
+                                                    Maximum of 20 characters are allowed!
+                                                </div> 
+                                                <div *ngIf="user_firstName.errors.minlength">
+                                                    Minimum of 2 characters required!
+                                                </div>                                 
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
+                                        <label class="align-right input-field col-sm-2 col-form-label" for="user_lastName">Last Name</label>
+                                        <div class="col-sm-10">
+                                            <input type="text" id="user_lastName" class="form-control main_focus_input" maxlength="20" minlength="2" name="user_lastName" required  [(ngModel)]="editProfileObject.lastname" #user_lastName="ngModel" (change)="changeUserLogin('user_lastName')" [ngClass]="{'custom-alert-border':user_lastName.invalid && user_lastName.touched}">
+                                            <div *ngIf="user_lastName.invalid && user_lastName.touched" class="custom-alert">
+                                                <div *ngIf="user_lastName.errors.required">
+                                                    Last Name is required!
+                                                </div> 
+                                                <div *ngIf="user_lastName.errors.maxlength">
+                                                    Maximum of 20 characters are allowed!
+                                                </div> 
+                                                <div *ngIf="user_lastName.errors.minlength">
+                                                    Minimum of 2 characters required!
+                                                </div>                                             
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
+                                        <label class="align-right input-field col-sm-2 col-form-label" for="user_userName">User Name</label>
+                                        <div class="col-sm-10">
+                                            <input type="text" id="user_userName" class="form-control main_focus_input" maxlength="20" minlength="2" name="user_userName" required  [(ngModel)]="editProfileObject.username" #user_userName="ngModel" (change)="changeUserLogin('user_userName')" [ngClass]="{'custom-alert-border':user_userName.invalid && user_userName.touched}">
+                                            <div *ngIf="user_userName.invalid && user_userName.touched" class="custom-alert" style="padding-left: 16px;">
+                                                <div *ngIf="user_userName.errors.required">
+                                                    User Name is required!
+                                                </div> 
+                                                <div *ngIf="user_userName.errors.maxlength">
+                                                    Maximum of 20 characters are allowed!
+                                                </div> 
+                                                <div *ngIf="user_userName.errors.minlength">
+                                                    Minimum of 2 characters required!
+                                                </div>                                         
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
+                                        <label class="align-right input-field col-sm-2 col-form-label" for="user_bio">Bio</label>
+                                        <div class="col-sm-10">
+                                            <textarea id="user_bio" name="user_bio" class="form-control main_focus_input" maxlength="200" [(ngModel)]="editProfileObject.bio" #user_bio="ngModel" (keyup)="changeUserLogin('user_bio')" ></textarea>      
+                                            <span class="count-letter mt-1" style="font-size: 10px;text-align: left;">Write a short about yourself</span>
+                                            <span class="count-letter mt-1" style="font-size: 10px;text-align: right; float: right;">{{editProfileObject.bio.length}}/200</span>
+                                            <div *ngIf="user_bio.invalid && user_bio.touched" class="custom-alert">
+                                                <div *ngIf="user_bio.errors.maxlength">
+                                                    Max length exceeded!
+                                                </div>                                              
+                                            </div>    
+                                        </div>
+                                    </div>
+
+                                    <!-- <div class="form-group signup-group">
+                                        <div class="pos-relative">
+                                            <input type="text" id="user_firstName" class="form-control main_focus_input" maxlength="20" minlength="2" name="user_firstName" required  [(ngModel)]="editProfileObject.firstname" #user_firstName="ngModel" (change)="changeUserLogin('user_firstName')" [ngClass]="{'custom-alert-border':user_firstName.invalid && user_firstName.touched}">
+                                            <label class="input-field" for="user_firstName">First Name</label>  
+                                        </div>   
+                                        <div *ngIf="user_firstName.invalid && user_firstName.touched" class="custom-alert">
+                                            <div *ngIf="user_firstName.errors.required">
+                                                First Name is required!
+                                            </div> 
+                                            <div *ngIf="user_firstName.errors.maxlength">
+                                                Maximum of 20 characters are allowed!
+                                            </div> 
+                                            <div *ngIf="user_firstName.errors.minlength">
+                                                Minimum of 2 characters required!
+                                            </div>                                 
+                                        </div>
+                                    </div> -->
+
+                                    <!-- <div class="form-group signup-group">
+                                        <div class="pos-relative">
+                                            <input type="text" id="user_lastName" class="form-control main_focus_input" maxlength="20" minlength="2" name="user_lastName" required  [(ngModel)]="editProfileObject.lastname" #user_lastName="ngModel" (change)="changeUserLogin('user_lastName')" [ngClass]="{'custom-alert-border':user_lastName.invalid && user_lastName.touched}">
+                                            <label class="input-field" for="user_lastName">Last Name</label>  
+                                        </div>   
+                                        <div *ngIf="user_lastName.invalid && user_lastName.touched" class="custom-alert">
+                                            <div *ngIf="user_lastName.errors.required">
+                                                Last Name is required!
+                                            </div> 
+                                            <div *ngIf="user_lastName.errors.maxlength">
+                                                Maximum of 20 characters are allowed!
+                                            </div> 
+                                            <div *ngIf="user_lastName.errors.minlength">
+                                                Minimum of 2 characters required!
+                                            </div>                                             
+                                        </div>
+                                    </div> -->
+
+                                    <!-- <div class="form-group signup-group">
+                                        <div class="pos-relative">
+                                            <input type="text" id="user_userName" class="form-control main_focus_input" maxlength="20" minlength="2" name="user_userName" required  [(ngModel)]="editProfileObject.username" #user_userName="ngModel" (change)="changeUserLogin('user_userName')" [ngClass]="{'custom-alert-border':user_userName.invalid && user_userName.touched}">
+                                            <label class="input-field" for="user_userName">User Name</label>  
+                                        </div>   
+                                        <div *ngIf="user_userName.invalid && user_userName.touched" class="custom-alert">
+                                            <div *ngIf="user_userName.errors.required">
+                                                User Name is required!
+                                            </div> 
+                                            <div *ngIf="user_userName.errors.maxlength">
+                                                Maximum of 20 characters are allowed!
+                                            </div> 
+                                            <div *ngIf="user_userName.errors.minlength">
+                                                Minimum of 2 characters required!
+                                            </div>                                         
+                                        </div>
+                                    </div> -->
+
+                                    <!-- <div class="form-group signup-group">
+                                        <div class="pos-relative txtarea">
+                                            <textarea id="user_bio" name="user_bio" class="form-control main_focus_input" maxlength="200" [(ngModel)]="editProfileObject.bio" #user_bio="ngModel" (keyup)="changeUserLogin('user_bio')" ></textarea>
+                                            <label class="input-field" for="user_bio">Bio</label>     
+                                            <span class="count-letter mt-1" style="font-size: 10px;display: block;text-align: right">{{editProfileObject.bio.length}}/200</span>
+                                        </div>   
+                                        <div *ngIf="user_bio.invalid && user_bio.touched" class="custom-alert">
+                                            <div *ngIf="user_bio.errors.maxlength">
+                                                Max length exceeded!
+                                            </div>                                              
+                                        </div>
+                                    </div>  -->
+                                    <div class="form-group-row">
+                                        <!-- <div class="input-field col-sm-2 col-form-label">
+                                            
+                                        </div> -->
+                                        <div class="col-sm-2 margin-left-lrft-0" style="margin-left: 130px;">
+                                            <button type="button" class="video-common-btn btn-sm" [disabled]="editProfileOverallForm.invalid" (keyup.enter)="updateDetails()" (click)="updateDetails()">Save</button>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Area of Interest Section -->
+                        <section class="video-signup-sec profile-section" style="margin-top: 10px;">
+                            <div class="video-common-sec">
+                                <div class="video-common-form interests">
+                                    <h3>Area of interests</h3>
+                                    <button type="button" class="btn btn-link link-button" data-toggle="modal" data-target="#update-cat-Modal">Update</button>
+                                    <p>You will get customized recommended content based on your interests.</p>
+                                    <h5>Current selection</h5>
+                                    <a *ngFor="let i of editProfileObject.categories">{{i}}</a>
+                                    <!-- Update categories modal -->
+                                    <div class="modal fade upload-vid-Modal" id="update-cat-Modal">
+                                        <div class="modal-dialog modal-dialog-centered modal-md">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5>Update Categories</h5>
+                                                </div>
+                                                <form #editProfileCategoriesForm="ngForm" (ngSubmit)="updateCategories()">
+                                                    <div class="modal-body">
+                                                        <div class="row">
+                                                            <div class="col-6" style="padding: 0 40px;" *ngFor="let obj of editProfileObject.showingObj">
+                                                                <div class="form-check mb-1">
+                                                                    <label class="form-check-label">
+                                                                        <input type="checkbox" class="form-check-input" (change)="checkChange($event,obj)" [value]="obj.name" name="{{obj.name}}" [(ngModel)]="obj.checked">
+                                                                        {{obj.name}}
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button class="video-common-btn btn-sm w-20">OK</button>
+                                                        <button class="video-common-btn btn-sm w-20" data-dismiss="modal" type="button">Cancel</button>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Email and Password Section -->
+                        <section class="video-signup-sec profile-section" style="margin-top: 10px;">
+                            <div class="video-common-sec">
+                                <div class="video-common-form interests">
+                                    <h3>Account details</h3>
+                                    <!-- <button type="button" class="btn btn-link link-button">Update</button> -->
+                                    <p>The email address associated with your account on your password</p>
+                                    <div class="row">
+                                        <div class="col-sm-3 align-right">
+                                            <h5 style="margin-right: 0;">Email</h5>
+                                        </div>
+                                        <div class="col-sm-6 bottom-border-gray">
+                                            <svg version="1.1" width="20px" id="icons" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	                                            viewBox="0 0 24 18" style="enable-background:new 0 0 24 18;" xml:space="preserve">
+                                                <path d="M22.3,0.3L22.3,0.3L22.3,0.3C21.9,0.1,21.5,0,21,0H3C2.6,0,2.2,0.1,1.8,0.2l0,0L1.7,0.3C0.7,0.8,0,1.8,0,3v12
+	                                                c0,1.7,1.3,3,3,3h18c1.7,0,3-1.3,3-3V3C24,1.8,23.3,0.8,22.3,0.3z M20.5,2l-7.7,7.5c-0.4,0.4-1.1,0.4-1.5,0L3.7,2H20.5z M21,16H3
+	                                                c-0.6,0-1-0.4-1-1V3.2l7.9,7.7c0.6,0.6,1.4,0.9,2.2,0.9c0.8,0,1.6-0.3,2.2-0.9L22,3.3V15C22,15.6,21.6,16,21,16z"/>
+                                            </svg>
+                                            <h5 style="font-weight: normal">{{editProfileObject.email}}</h5>
+                                        </div>
+                                        <div class="col-sm-3 bottom-border-gray">
+                                            <!-- <button type="button" class="btn btn-link link-button" data-toggle="modal" data-target="#edit-email-Modal">Change Email</button> -->
+                                        </div>
+                                        <!-- Edit email modal -->
+                                        <div class="modal fade upload-vid-Modal" id="edit-email-Modal">
+                                            <div class="modal-dialog modal-dialog-centered modal-md">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5>Update you email address</h5>
+                                                    </div>
+                                                    <form (ngSubmit)="updateEmail()" #updateEmailForm="ngForm">
+                                                        <div class="modal-body">
+                                                            <input class="form-control" type="email" name="email" id="email" required [(ngModel)]="editProfileObject.email" #user_email="ngModel">
+                                                        </div>
+                                                        <div *ngIf="user_email.invalid && user_email.touched" class="custom-alert" style="margin-left: 16px;">
+                                                            <div *ngIf="user_email.errors.required">
+                                                               Email is required.
+                                                            </div> 
+                                                            <div *ngIf="user_email.errors.email">
+                                                                Please enter valid email address.
+                                                            </div>                                
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button class="video-common-btn btn-sm w-20" [disabled]="updateEmailForm.invalid">Update</button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row" style="margin-top: 10px;">
+                                        <div class="col-sm-3 align-right">
+                                            <h5 style="margin-right: 0;">Password</h5>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <svg version="1.1" id="icons" width="20px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	                                            viewBox="0 0 18 22" style="enable-background:new 0 0 18 22;" xml:space="preserve">
+	                                            <path d="M9,0C5.1,0,2,3.1,2,7v2H0v13h18V9h-2V7C16,3.1,12.9,0,9,0z M4,7c0-2.8,2.2-5,5-5s5,2.2,5,5v2H4V7z M16,20H2v-9h14V20z"/>
+	                                            <rect x="8" y="14" width="2" height="3"/>
+                                            </svg>
+                                            <h5 style="font-weight: normal" *ngIf="editProfileObject.passwordUpdatedAt">{{'Last updated '}}{{editProfileObject.passwordUpdatedAt | date:'MM/dd/yyyy'}}</h5> 
+                                            <h5 style="font-weight: normal" *ngIf="!editProfileObject.passwordUpdatedAt">{{'Last updated '}}{{editProfileObject.createdAt | date:'MM/dd/yyyy'}}</h5>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <button type="button" class="btn btn-link link-button" data-toggle="modal" data-target="#edit-password-Modal2">Change Password</button>
+                                        </div>
+                                        <!-- Edit password modal -->
+                                        <div class="modal fade upload-vid-Modal" id="edit-password-Modal2">
+                                            <div class="modal-dialog modal-dialog-centered modal-md">
+                                                 <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5>Update your password</h5>
+                                                    </div>
+                                                    <form (ngSubmit)="updatePassword()" #updatePasswordForm="ngForm">
+                                                        <div class="modal-body">
+                                                            <div class="form-group">
+                                                                <input class="form-control" 
+                                                                    [type]="fieldOldPassTextType ? 'text' : 'password'" 
+                                                                    name="password" id="user_password" required 
+                                                                    [(ngModel)]="oldPassword" 
+                                                                    #user_password="ngModel" 
+                                                                    [ngClass]="{'custom-alert-border':user_password.invalid && user_password.touched}" 
+                                                                   
+                                                                    autocomplete="off" 
+                                                                    placeholder="Old password">
+                                                                <button type="button" id="pass-show" class="btn btn-link btn-show-password" (click)="toggleOldPasswordTextType()" *ngIf="!fieldPassTextType">Show</button>
+                                                                <button type="button" id="pass-hide" class="btn btn-link btn-show-password" (click)="toggleOldPasswordTextType()" *ngIf="fieldPassTextType">Hide</button>
+                                                                <div *ngIf="user_password.invalid && user_password.touched" class="custom-alert">
+                                                                    <div *ngIf="user_password.errors.required">
+                                                                        Old Password is required!
+                                                                    </div>  
+                                                                    <!-- <div *ngIf="user_password.errors.pattern">
+                                                                        pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"
+                                                                        Minimum eight characters, at least one uppercase letter, one lowercase letter, one number and one special character
+                                                                    </div> -->
+                                                                </div>
+                                                            </div>
+                                                            
+                                                            <div class="form-group">
+                                                                <input 
+                                                                    [type]="fieldNewPassTextType ? 'text' : 'password'" 
+                                                                    id="user_npassword" 
+                                                                    class="form-control main_focus_input" minlength="2" name="user_npassword" required  
+                                                                    [(ngModel)]="newPassword" 
+                                                                    #user_npassword="ngModel" 
+                                                                    [ngClass]="{'custom-alert-border':(user_cpassword.invalid && user_cpassword.touched)}" 
+                                                                    pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" placeholder="New password">
+                                                                <button type="button" id="newpass-show" class="btn btn-link btn-show-new-password" (click)="toggleNewPasswordTextType()" *ngIf="!fieldPassTextType">Show</button>
+                                                                <button type="button" id="newpass-hide" class="btn btn-link btn-show-new-password" (click)="toggleNewPasswordTextType()" *ngIf="fieldPassTextType">Hide</button>
+                                                                <div *ngIf="user_npassword.invalid && user_npassword.touched" class="custom-alert">
+                                                                    <div *ngIf="user_npassword.errors.required">
+                                                                        New password is required!
+                                                                    </div> 
+                                                                    <div *ngIf="user_npassword.errors.pattern">
+                                                                        Minimum eight characters, at least one uppercase letter, one lowercase letter, one number and one special character
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="form-group">
+                                                                    <input [type]="fieldCNewPassTextType ? 'text' : 'password'" 
+                                                                        id="user_cpassword" 
+                                                                        class="form-control main_focus_input" 
+                                                                        minlength="2" name="user_cpassword" required  
+                                                                        [(ngModel)]="confirmPassword" 
+                                                                        #user_cpassword="ngModel" 
+                                                                        (change)="changeUserLogin('user_cpassword')" 
+                                                                        [ngClass]="{'custom-alert-border':(user_cpassword.invalid && user_cpassword.touched)}" 
+                                                                        pattern="{{ user_npassword.value }}" 
+                                                                        placeholder="Confirm new password">
+                                                                    <button type="button" id="cnewpass-show" class="btn btn-link btn-show-cnew-password" (click)="toggleCNewPasswordTextType()" *ngIf="!fieldPassTextType">Show</button>
+                                                                    <button type="button" id="cnewpass-hide" class="btn btn-link btn-show-cnew-password" (click)="toggleCNewPasswordTextType()" *ngIf="fieldPassTextType">Hide</button>
+                                                                    <div *ngIf="user_cpassword.invalid && user_cpassword.touched" class="custom-alert">
+                                                                        <div *ngIf="user_cpassword.errors.required">
+                                                                            Confirm password is required!
+                                                                        </div> 
+                                                                        <div *ngIf="user_cpassword.errors.maxlength">
+                                                                            Maximum of 20 characters are allowed!
+                                                                        </div> 
+                                                                        <div *ngIf="user_cpassword.errors.minlength">
+                                                                            Minimum of 2 characters required!
+                                                                        </div> 
+                                                                        <div *ngIf="user_cpassword.errors.pattern" class="custom-alert">
+                                                                            Password does not matched!
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button class="video-common-btn btn-sm w-20" [disabled]="updatePasswordForm.invalid">Update</button>
+                                                            <button class="video-common-btn btn-sm w-20" data-dismiss="modal">Cancel</button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Deactivate Account  Section -->
+                        <section class="video-signup-sec profile-section" style="margin-top: 10px;">
+                            <div class="video-common-sec">
+                                <div class="video-common-form">
+                                    <h3>Account termination</h3>
+                                    <p>Deactivating or Deleting your FreeFuse account</p>
+                                    <div class="row">
+                                        <div class="col-sm-3 align-right">
+                                            <h5 style="margin-right: 0;">Deactivate Account</h5>
+                                        </div>
+                                        <div class="col-sm-6 bottom-border-gray">
+                                            <p class="text-justify">
+                                                Deactivating your account can be temporary. Your profile will
+                                                be disabled and your name and videos will be removed from 
+                                                any public interaction
+                                            </p>
+                                        </div>
+                                        <div class="col-sm-3 bottom-border-gray">
+                                            <button type="button" class="btn btn-link link-button" data-toggle="modal" data-target="#deact-acc-Modal">Deactivate Account</button>
+                                            <p class="acc-status" *ngIf="editProfileObject.isDeactivated">
+                                                Account Deactivated
+                                            </p>
+                                        </div>
+                                        <!-- Deactivate Account Modal -->
+                                        <div class="modal fade upload-vid-Modal" id="deact-acc-Modal">
+                                            <div class="modal-dialog modal-dialog-centered modal-md">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5>Deactivate Account</h5>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <h5>Are you sure to deactivate your FreeFuse account ?</h5>   
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button class="video-common-btn btn-sm w-20" (click)="deactivateAccount()">OK</button>
+                                                        <button class="video-common-btn btn-sm w-20" data-dismiss="modal">Cancel</button>
+                                                    </div>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row" style="margin-top: 10px;">
+                                        <div class="col-sm-3 align-right">
+                                            <h5 style="margin-right: 0;">Delete Account</h5>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <p class="text-justify">
+                                                Deleting your account is permanent. When you delete your
+                                                FreeFuse account, you won't be able to retrieve the content  
+                                                or information you have created on FreeFuse
+                                            </p>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <button type="button" class="btn btn-link link-button" data-toggle="modal" data-target="#del-acc-Modal">Delete Account</button>
+                                            <p class="acc-status" *ngIf="editProfileObject.deleted">
+                                                Account Deleted
+                                            </p>
+                                        </div>
+                                        <!-- Delete Account Modal -->
+                                        <div class="modal fade upload-vid-Modal" id="del-acc-Modal">
+                                            <div class="modal-dialog modal-dialog-centered modal-md">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5>Delete Account</h5>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <h5>Are you sure to delete your FreeFuse account ?</h5>   
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button class="video-common-btn btn-sm w-20" (click)="deleteAccount()">OK</button>
+                                                        <button class="video-common-btn btn-sm w-20" data-dismiss="modal">Cancel</button>
+                                                    </div>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div> 
+                </form>
+                
+                <!-- Privacy Tab -->
+                <div class="tab-pane fade" id="v-pills-password" role="tabpanel" aria-labelledby="v-pills-password-tab" *ngIf="editProfileObject.show == 'second'">
+                    <!-- Block 1 -->
+                    <section class="video-signup-sec profile-section" style="margin-bottom: 2px;">
+                        <div class="video-common-sec">
+                            <div class="video-common-form notifications">
+                                <h3>Public Profile</h3>
+                                <p>Notifications while you're navigating our website</p>
+                                <div class="custom-control custom-switch">
+                                    <input type="checkbox" class="custom-control-input custom-toggle-switch" id="customSwitch13" (change)="updatePrivacySettings($event,privacySettings)" [(ngModel)]="editProfileObject.privacySettings.watchHistory" name="watchHistory">
+                                    <label class="custom-control-label" for="customSwitch13">Uploaded videos</label>
+                                    <p>While activated your this option will make your uploaded videos public on your profile</p>
+                                  </div>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    <section class="video-signup-sec profile-section" style="margin-bottom: 2px;">
+                        <div class="video-common-sec">
+                            <div class="video-common-form notifications">
+                                <div class="custom-control custom-switch">
+                                    <input type="checkbox" class="custom-control-input custom-toggle-switch" id="customSwitch21" (change)="updatePrivacySettings($event,privacySettings)" [(ngModel)]="editProfileObject.privacySettings.showPublicVideo" name="showPublicVideo">
+                                    <label class="custom-control-label" for="customSwitch21">Public Videos</label>
+                                    <p>While activated your public videos are visible to everyone</p>
+                                  </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="video-signup-sec profile-section" style="margin-bottom: 2px;">
+                        <div class="video-common-sec">
+                            <div class="video-common-form notifications">
+                                <div class="custom-control custom-switch">
+                                    <input type="checkbox" class="custom-control-input custom-toggle-switch" id="customSwitch14" (change)="updatePrivacySettings($event,privacySettings)" [(ngModel)]="editProfileObject.privacySettings.following" name="following">
+                                    <label class="custom-control-label" for="customSwitch14">Following</label>
+                                    <p>While activated this option will make your following public on your profile</p>
+                                  </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="video-signup-sec profile-section" style="margin-bottom: 2px;">
+                        <div class="video-common-sec">
+                            <div class="video-common-form notifications">
+                                <div class="custom-control custom-switch">
+                                    <input type="checkbox" class="custom-control-input custom-toggle-switch" id="customSwitch15" (change)="updatePrivacySettings($event,privacySettings)" [(ngModel)]="editProfileObject.privacySettings.recentConnections" name="recentConnections">
+                                    <label class="custom-control-label" for="customSwitch15">Recent connections</label>
+                                    <p>While activated this option will make your recent connection public on your profile</p>
+                                  </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="video-signup-sec profile-section" style="margin-bottom: 2px;">
+                        <div class="video-common-sec">
+                            <div class="video-common-form notifications">
+                                <div class="custom-control custom-switch">
+                                    <input type="checkbox" class="custom-control-input custom-toggle-switch" id="customSwitch16" (change)="updatePrivacySettings($event,privacySettings)" [(ngModel)]="editProfileObject.privacySettings.likes" name="likes">
+                                    <label class="custom-control-label" for="customSwitch16">Likes</label>
+                                    <p>While activated this option will make your likes public on your profile</p>
+                                  </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="video-signup-sec profile-section" style="margin-bottom: 2px;">
+                        <div class="video-common-sec">
+                            <div class="video-common-form notifications">
+                                <div class="custom-control custom-switch">
+                                    <input type="checkbox" class="custom-control-input custom-toggle-switch" id="customSwitch17" (change)="updatePrivacySettings($event,privacySettings)" [(ngModel)]="editProfileObject.privacySettings.shares" name="shares">
+                                    <label class="custom-control-label" for="customSwitch17">Shares</label>
+                                    <p>While activated this option will make your shares public on your profile</p>
+                                  </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="video-signup-sec profile-section" style="margin-bottom: 10px;">
+                        <div class="video-common-sec">
+                            <div class="video-common-form notifications">
+                                <div class="custom-control custom-switch">
+                                    <input type="checkbox" class="custom-control-input custom-toggle-switch" id="customSwitch18" (change)="updatePrivacySettings($event,privacySettings)" [(ngModel)]="editProfileObject.privacySettings.viewersChoice" name="viewersChoice">
+                                    <label class="custom-control-label" for="customSwitch18">Viewer choice highlights</label>
+                                    <p>While activated this option will make your watch history public on your profile</p>
+                                  </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Block 2 -->
+                    <!-- <section class="video-signup-sec profile-section" style="margin-bottom: 10px;">
+                        <div class="video-common-sec">
+                            <div class="video-common-form notifications">
+                                <h3>Ad preferences</h3>
+                                <p>Notifications while you're navigating our website</p>
+                                <div class="custom-control custom-switch">
+                                    <input type="checkbox" class="custom-control-input custom-toggle-switch" id="customSwitch19" checked>
+                                    <label class="custom-control-label" for="customSwitch19">Show custom ads</label>
+                                    <p>While activated this option will make yuor watch history public on your profile</p>
+                                  </div>
+                            </div>
+                        </div>
+                    </section> -->
+
+                    <!-- Block 3 -->
+                    <!-- <section class="video-signup-sec profile-section" style="margin-bottom: 2px;">
+                        <div class="video-common-sec">
+                            <div class="video-common-form notifications">
+                                <h3>Marketing and statistics</h3>
+                                <p>Notifications while you're navigating our website</p>
+                                <div class="custom-control custom-switch">
+                                    <input type="checkbox" class="custom-control-input custom-toggle-switch" id="customSwitch20" checked>
+                                    <label class="custom-control-label" for="customSwitch20">Show custom ads</label>
+                                    <p>While activated this option will make yuor watch history public on your profile</p>
+                                  </div>
+                            </div>
+                        </div>
+                    </section> -->
+
+                    <!-- <section class="video-signup-sec profile-section" style="margin-bottom: 2px;">
+                        <div class="video-common-sec">
+                            <div class="video-common-form notifications">
+                                <div class="custom-control custom-switch">
+                                    <input type="checkbox" class="custom-control-input custom-toggle-switch" id="customSwitch20" checked>
+                                    <label class="custom-control-label" for="customSwitch20">Show custom ads</label>
+                                    <p>While activated this option will make yuor watch history public on your profile</p>
+                                  </div>
+                            </div>
+                        </div>
+                    </section> -->
+
+                    <!-- <section class="video-signup-sec profile-section" style="margin-bottom: 2px;">
+                        <div class="video-common-sec">
+                            <div class="video-common-form notifications">
+                                <div class="custom-control custom-switch">
+                                    <input type="checkbox" class="custom-control-input custom-toggle-switch" id="customSwitch20" checked>
+                                    <label class="custom-control-label" for="customSwitch20">Show custom ads</label>
+                                    <p>While activated this option will make yuor watch history public on your profile</p>
+                                  </div>
+                            </div>
+                        </div>
+                    </section> -->
+                </div>   
+
+                <!-- Notifications Tab -->
+                <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab" *ngIf="editProfileObject.show == 'third'">
+                        <!-- Block 1 -->
+                        <section class="video-signup-sec profile-section" style="margin-bottom: 2px;">
+                            <div class="video-common-sec">
+                                <div class="video-common-form notifications">
+                                    <h3>On FreeFuse</h3>
+                                    <p>Notifications while you're navigating our website</p>
+                                    <div class="custom-control custom-switch">
+                                        <input type="checkbox" class="custom-control-input custom-toggle-switch" id="customSwitch1" (change)="updateNotificationSettings($event,notifications)" [(ngModel)]="editProfileObject.notifications.follower" name="follower">
+                                        <label class="custom-control-label" for="customSwitch1">New user subscription</label>
+                                        <p>When a user starts following you</p>
+                                      </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="video-signup-sec profile-section" style="margin-bottom: 2px;">
+                            <div class="video-common-sec">
+                                <div class="video-common-form notifications">
+                                    <div class="custom-control custom-switch">
+                                        <input type="checkbox" class="custom-control-input custom-toggle-switch" id="customSwitch2" (change)="updateNotificationSettings($event,notifications)" [(ngModel)]="editProfileObject.notifications.followingActivity" name="followingActivity">
+                                        <label class="custom-control-label" for="customSwitch2">Following activity</label>
+                                        <p>When a user that you follow posts something, you will get a notification</p>
+                                      </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="video-signup-sec profile-section" style="margin-bottom: 2px;">
+                            <div class="video-common-sec">
+                                <div class="video-common-form notifications">
+                                    <div class="custom-control custom-switch">
+                                        <input type="checkbox" class="custom-control-input custom-toggle-switch" id="customSwitch3" (change)="updateNotificationSettings($event,notifications)" [(ngModel)]="editProfileObject.notifications.commentReplies" name="commentReplies">
+                                        <label class="custom-control-label" for="customSwitch3">Comment replies</label>
+                                        <p>When this is on, you get notifications about comments on your videos and replies to your comments</p>
+                                      </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="video-signup-sec profile-section" style="margin-bottom: 2px;">
+                            <div class="video-common-sec">
+                                <div class="video-common-form notifications">
+                                    <div class="custom-control custom-switch">
+                                        <input type="checkbox" class="custom-control-input custom-toggle-switch" id="customSwitch4" (change)="updateNotificationSettings($event,notifications)" [(ngModel)]="editProfileObject.notifications.likes" name="likes">
+                                        <label class="custom-control-label" for="customSwitch4">Video likes</label>
+                                        <p>When a user likes a video of yours, you get a notification</p>
+                                      </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="video-signup-sec profile-section" style="margin-bottom: 2px;">
+                            <div class="video-common-sec">
+                                <div class="video-common-form notifications">
+                                    <div class="custom-control custom-switch">
+                                        <input type="checkbox" class="custom-control-input custom-toggle-switch" id="customSwitch5" (change)="updateNotificationSettings($event,notifications)" [(ngModel)]="editProfileObject.notifications.creatorInvites" name="creatorInvites">
+                                        <label class="custom-control-label" for="customSwitch5">Shared with you</label>
+                                        <p>When another user shares something with you, you get a notification</p>
+                                      </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Block 2 -->
+                        <!-- <section class="video-signup-sec profile-section" style="margin-bottom: 2px; margin-top: 10px;">
+                            <div class="video-common-sec">
+                                <div class="video-common-form notifications">
+                                    <h3>Email Notifications</h3>
+                                    <p>Notifications sent on your email address</p>
+                                    <div class="custom-control custom-switch">
+                                        <input type="checkbox" class="custom-control-input custom-toggle-switch" id="customSwitch6" checked>
+                                        <label class="custom-control-label" for="customSwitch6">Marketing and promotion messages</label>
+                                        <p>When this is on, you will get marketing and promotional messages from FreeFuse</p>
+                                      </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="video-signup-sec profile-section" style="margin-bottom: 2px;">
+                            <div class="video-common-sec">
+                                <div class="video-common-form notifications">
+                                    <div class="custom-control custom-switch">
+                                        <input type="checkbox" class="custom-control-input custom-toggle-switch" id="customSwitch7" checked>
+                                        <label class="custom-control-label" for="customSwitch7">FreeFuse recommendation</label>
+                                        <p>When this is on, you will get email recommendations about new content from FreeFuse</p>
+                                      </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="video-signup-sec profile-section" style="margin-bottom: 2px;">
+                            <div class="video-common-sec">
+                                <div class="video-common-form notifications">
+                                    <div class="custom-control custom-switch">
+                                        <input type="checkbox" class="custom-control-input custom-toggle-switch" id="customSwitch8" checked>
+                                        <label class="custom-control-label" for="customSwitch8">Comment replies</label>
+                                        <p>When this is on, you will get emails about comment replies</p>
+                                      </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="video-signup-sec profile-section" style="margin-bottom: 2px;">
+                            <div class="video-common-sec">
+                                <div class="video-common-form notifications">
+                                    <div class="custom-control custom-switch">
+                                        <input type="checkbox" class="custom-control-input custom-toggle-switch" id="customSwitch9" checked>
+                                        <label class="custom-control-label" for="customSwitch9">Video likes</label>
+                                        <p>When this is on, you will get emails about likes on your videos</p>
+                                      </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="video-signup-sec profile-section" style="margin-bottom: 2px;">
+                            <div class="video-common-sec">
+                                <div class="video-common-form notifications">
+                                    <div class="custom-control custom-switch">
+                                        <input type="checkbox" class="custom-control-input custom-toggle-switch" id="customSwitch10" checked>
+                                        <label class="custom-control-label" for="customSwitch10">Shared with you</label>
+                                        <p>When this is on, you will get emails about items shared with you</p>
+                                      </div>
+                                </div>
+                            </div>
+                        </section> -->
+
+                        <!-- Block 3 -->
+                        <!-- <section class="video-signup-sec profile-section" style="margin-bottom: 2px; margin-top: 10px;">
+                            <div class="video-common-sec">
+                                <div class="video-common-form notifications">
+                                    <h3>On Mobile</h3>
+                                    <p style="display: block;">Mobile specific notifications</p>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                        <label class="form-check-label" for="inlineRadio1">Lorem ipsum dolor</label>
+                                      </div>
+                                      <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                        <label class="form-check-label" for="inlineRadio2">Lorem ipsum dolor</label>
+                                      </div>
+                                      <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+                                        <label class="form-check-label" for="inlineRadio3">Lorem ipsum dolor</label>
+                                      </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="video-signup-sec profile-section" style="margin-bottom: 2px;">
+                            <div class="video-common-sec">
+                                <div class="video-common-form notifications">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                        <label class="form-check-label" for="defaultCheck1">
+                                            Default checkbox
+                                        </label>
+                                        <p>When a user starts following you</p>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
+                                        <label class="form-check-label" for="defaultCheck2">
+                                            Default checkbox
+                                        </label>
+                                        <p>When a user starts following you</p>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
+                                        <label class="form-check-label" for="defaultCheck2">
+                                            Default checkbox
+                                        </label>
+                                        <p>When a user starts following you</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <section class="video-signup-sec profile-section" style="margin-bottom: 2px;">
+                            <div class="video-common-sec">
+                                <div class="video-common-form notifications">
+                                    <div class="custom-control custom-switch">
+                                        <input type="checkbox" class="custom-control-input custom-toggle-switch" id="customSwitch11" checked>
+                                        <label class="custom-control-label" for="customSwitch11">Video likes</label>
+                                        <p>When a user starts following you</p>
+                                      </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="video-signup-sec profile-section" style="margin-bottom: 2px;">
+                            <div class="video-common-sec">
+                                <div class="video-common-form notifications">
+                                    <div class="custom-control custom-switch">
+                                        <input type="checkbox" class="custom-control-input custom-toggle-switch" id="customSwitch12" checked>
+                                        <label class="custom-control-label" for="customSwitch12">Creator invites</label>
+                                        <p>When a user starts following you</p>
+                                      </div>
+                                </div>
+                            </div>
+                        </section> -->
+                </div>
+
+                <!-- Membership Tab -->
+                <div class="tab-pane fade" id="v-pills-delete" role="tabpanel" aria-labelledby="v-pills-delete-tab" *ngIf="editProfileObject.show == 'fourth'">
+                    <div class="select-category-form text-left" >                                    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+<withoutloginfooter></withoutloginfooter>

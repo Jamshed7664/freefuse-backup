@@ -1,0 +1,343 @@
+<headerone></headerone>
+<sideMenu></sideMenu>
+<spinner *ngIf="spinners"></spinner>
+<div class="bg">
+
+    <!-- Intro Section -->
+    <section class="intro-section">
+        <div class="container-fluid ">
+            <h1 class="section-heading">Explore
+                <div class="butons">
+                    <div class="btn1 pointer" (click)="exploreType('one');getexploreVideos()" [ngClass]="{'active': explore == 'one'}">Customised</div>
+                    <div class="btn1 pointer" (click)="exploreType('two');categoryWiseData()" [ngClass]="{'active': explore == 'two'}" >Categories</div>
+                </div>
+            </h1>
+            
+        <div class="cat-list" *ngIf="explore == 'two'">
+            <div id="left-button" (click)="leftButtonClick()"> 
+                <img src="assets/images/left-arrowwhite.svg" />
+            </div> 
+            <div class="scroller">
+            
+            <span  (click)="allCategory()" class="active intial">All Categories</span>
+            <label  *ngFor="let i of popularCategories"  [ngClass]="{'active': i.checked}">
+                <input type="checkbox" class="form-check-input" (change)="showCategoryToggle(i)" [value]="i.category" name="{{i.category}}" [(ngModel)]="i.checked">
+                {{i.category}}
+            </label>
+          
+        </div>
+        <div id="right-button" (click)="rightButtonClick()">
+            <img src="assets/images/right-arrowwhite.svg"/>
+        </div> 
+        </div>
+
+        <div class="cat-list" *ngIf="explore == 'one'">
+
+            <div id="left-button" (click)="leftButtonClick()" *ngIf="allNew.length > 5"> 
+                <img src="assets/images/left-arrowwhite.svg" />
+            </div> 
+            <div class="scroller">
+                    <label  *ngFor="let i of customVideos"  [ngClass]="{'active': i.checked}">
+                        <input type="checkbox" class="form-check-input" [value]="i.name" name="{{i.name}}" [(ngModel)]="i.checked">
+                        {{i.name}}
+                    </label>
+
+                    
+                    <label  *ngFor="let i of allNew"  [ngClass]="{'active': i.checked}">
+                        <input type="checkbox" class="form-check-input"  [value]="i.name" name="{{i.name}}" [(ngModel)]="i.checked">
+                        {{i.name}}
+                    </label>
+
+                    <span  (click)="isAddingNew = true;focusOnInout()" class="intial" *ngIf="!isAddingNew">Add New +</span>
+                    <input *ngIf="isAddingNew" type="text" placeholder="Add new" id="chch" autofocus class="addNewss" [(ngModel)]="nametext" #ctrl="ngModel" required (change)="addNewKeywords(nametext);isAddingNew = false" (blur)="blurok(nametext)" (keydown.enter)="addNewKeywords(nametext);isAddingNew = false"/>
+            
+            </div>
+            <div id="right-button" (click)="rightButtonClick()" *ngIf="allNew.length > 5">
+                <img src="assets/images/right-arrowwhite.svg"/>
+            </div> 
+          
+        </div>
+
+        </div>
+    </section>
+
+    
+     <!-- videos Section -->
+     <section class="trending-section"  *ngIf="explore == 'two'">
+        
+        <div class="container-fluid  yeah" *ngFor="let i of popularCategories">
+            <h4 class="section-heading" *ngIf="i.isNotVisible">{{i.category}} <span (click)="showCategory(i.category)"> View All</span></h4>
+            <!-- Slider -->
+            <div class="trending interact-slider owl-carousel owl-theme" [hidden]="!i.isNotVisible">
+                <div class="item margin-right-0-mobile" *ngFor="let j of i.videos" style="margin-right: 12px;"  (mouseover)="getTopChoices(j)">
+                    <div class="h-interact-item" style="position: relative;" (click)="showVideo(j._id)">
+                        <sectionSpinner *ngIf="j.spinner"></sectionSpinner>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="trending-video">
+                                    <img class="poster pointer" src="{{j.poster}}" thumnailsDirective  >
+                                    
+                                    <div class="interact-cardimg-iconstext pointer" (click)="showVideo(j._id)">
+                                        <span class="float-left d-flex">
+                                            <img src="../../../assets/images/touch-effect-icon.svg" alt="">
+                                            <b *ngIf="j.totalchild">{{j.totalchild}}</b>
+                                            <b *ngIf="!j.totalchild">0</b>
+                                        </span>
+                                        <span class="float-right d-flex">
+                                            <img src="../../../assets/images/video-outcomes.svg" alt="">        
+                                            <b *ngIf="j.totallevel">{{j.totallevel}}</b>
+                                            <b *ngIf="!j.totallevel">0</b>
+                                        </span>
+                                    </div>
+            
+                                    <!-- User stats -->
+                                    <div class="video-info animations pointer" >
+                                        <p><img src="assets/images/user-pic.svg" style="width: 20px;display: inline-block;vertical-align: top;" />{{j.user.username}}</p>
+                                        <h6>{{j.Title}}</h6>
+                                    </div>
+
+                                    <div class="top-choices animations pointer" >
+                                        
+                                        <div class="pro-group" *ngFor="let c of j.topViewedChoices">
+                                            <h6>{{c.percentage}}% {{c.video.name}}</h6>
+                                            <div class="progress">
+                                                <div class="progress-bar" [ngStyle]="{'width': c.progress}"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- videos Section -->
+    <section class="trending-section"  *ngIf="explore == 'one'">
+        
+        <div class="container-fluid yeah" *ngFor="let i of customVideos" [hidden]="!i.checked">
+            <h4 class="section-heading" >{{i.name}}   </h4>
+            <!-- Slider -->
+            <div  *ngIf="i.videos.length == 0" style="color:#fff">No Record Found!</div>
+            <div class="trending interact-slider owl-carousel owl-theme "  *ngIf="i.videos.length > 0">
+                <div class="item margin-right-0-mobile" *ngFor="let j of i.videos " style="margin-right: 12px;" (mouseover)="getTopChoices(j)">
+                    <div class="h-interact-item" style="position: relative;" (click)="showVideo(j._id)" >
+                        <sectionSpinner *ngIf="j.spinner"></sectionSpinner>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="trending-video">
+                                    <img class="poster pointer" src="{{j.poster}}"  thumnailsDirective>
+                                    
+                                    <div class="interact-cardimg-iconstext pointer" >
+                                        <span class="float-left d-flex">
+                                            <img src="../../../assets/images/touch-effect-icon.svg" alt="">
+                                            <b *ngIf="j.totalchild">{{j.totalchild}}</b>
+                                            <b *ngIf="!j.totalchild">0</b>
+                                        </span>
+                                        <span class="float-right d-flex">
+                                            <img src="../../../assets/images/video-outcomes.svg" alt="">        
+                                            <b *ngIf="j.totallevel">{{j.totallevel}}</b>
+                                            <b *ngIf="!j.totallevel">0</b>
+                                        </span>
+                                    </div>
+            
+                                    <!-- User stats -->
+                                    <div class="video-info animations pointer" >
+                                        <p><img src="assets/images/user-pic.svg" style="width: 20px;display: inline-block;vertical-align: top;" />{{j.user.username}}</p>
+                                        <h6>{{j.Title}}</h6>
+                                    </div>
+
+                                    <div class="top-choices animations pointer" >
+                                        
+                                        <div class="pro-group" *ngFor="let c of j.topViewedChoices">
+                                            <h6>{{c.percentage}}% {{c.video.name}}</h6>
+                                            <div class="progress">
+                                                <div class="progress-bar" [ngStyle]="{'width': c.progress}"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+     <!-- videos Section -->
+     <section class="trending-section"  *ngIf="explore == 'one'">
+        
+        <div class="container-fluid yeah" *ngFor="let i of allNew" [hidden]="!i.checked">
+            <h4 class="section-heading" [hidden]="!i.checked">{{i.name}}   </h4>
+            <!-- Slider -->
+            <div  *ngIf="i.videos.length == 0" style="color:#fff">No Record Found!</div>
+            <div class="trending interact-slider owl-carousel owl-theme "  *ngIf="i.videos.length > 0">
+                <div class="item margin-right-0-mobile" *ngFor="let j of i.videos " style="margin-right: 12px;" (mouseover)="getTopChoices(j)">
+                    <div class="h-interact-item" style="position: relative;" (click)="showVideo(j._id)" >
+                        <sectionSpinner *ngIf="j.spinner"></sectionSpinner>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="trending-video">
+                                    <img class="poster pointer" src="{{j.poster}}" thumnailsDirective>
+                                    
+                                    <div class="interact-cardimg-iconstext pointer" >
+                                        <span class="float-left d-flex">
+                                            <img src="../../../assets/images/touch-effect-icon.svg" alt="">
+                                            <b *ngIf="j.totalchild">{{j.totalchild}}</b>
+                                            <b *ngIf="!j.totalchild">0</b>
+                                        </span>
+                                        <span class="float-right d-flex">
+                                            <img src="../../../assets/images/video-outcomes.svg" alt="">        
+                                            <b *ngIf="j.totallevel">{{j.totallevel}}</b>
+                                            <b *ngIf="!j.totallevel">0</b>
+                                        </span>
+                                    </div>
+            
+                                    <!-- User stats -->
+                                    <div class="video-info animations pointer" >
+                                        <p><img src="assets/images/user-pic.svg" style="width: 20px;display: inline-block;vertical-align: top;" />{{j.user.username}}</p>
+                                        <h6>{{j.Title}}</h6>
+                                    </div>
+
+                                    <div class="top-choices animations pointer" >
+                                        
+                                        <div class="pro-group" *ngFor="let c of j.topViewedChoices">
+                                            <h6>{{c.percentage}}% {{c.video.name}}</h6>
+                                            <div class="progress">
+                                                <div class="progress-bar" [ngStyle]="{'width': c.progress}"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+     <!-- videos Section -->
+     <section class="trending-section"  *ngIf="explore == 'one'">
+        
+        <div class="container-fluid yeah">
+            <h4 class="section-heading">Videos For You   </h4>
+            <!-- Slider -->
+            <div class="row interact-slider  ">
+                <div class="col-md-4 margin-right-0-mobile" *ngFor="let j of randomVideos " style="margin-bottom: 30px;" (mouseover)="getTopChoices(j)">
+                    <div class="h-interact-item" style="position: relative;" (click)="showVideo(j._id)">
+                        <sectionSpinner *ngIf="j.spinner"></sectionSpinner>
+                        <div class="">
+                            <div >
+                                <div class="trending-video">
+                                    <img class="poster pointer" src="{{j.poster}}" thumnailsDirective >
+                                    
+                                    <div class="interact-cardimg-iconstext pointer" >
+                                        <span class="float-left d-flex">
+                                            <img src="../../../assets/images/touch-effect-icon.svg" alt="">
+                                            <b *ngIf="j.totalchild">{{j.totalchild}}</b>
+                                            <b *ngIf="!j.totalchild">0</b>
+                                        </span>
+                                        <span class="float-right d-flex">
+                                            <img src="../../../assets/images/video-outcomes.svg" alt="">        
+                                            <b *ngIf="j.totallevel">{{j.totallevel}}</b>
+                                            <b *ngIf="!j.totallevel">0</b>
+                                        </span>
+                                    </div>
+            
+                                    <!-- User stats -->
+                                    <div class="video-info animations pointer" style="width:100%" >
+                                        <p><img src="assets/images/user-pic.svg" style="width: 20px;display: inline-block;vertical-align: top;" /> {{j.user.username}}</p>
+                                        <h6>{{j.Title}}</h6>
+                                    </div>
+
+                                    <div class="top-choices animations pointer" >
+                                        
+                                        <div class="pro-group" *ngFor="let c of j.topViewedChoices">
+                                            <h6>{{c.percentage}}% {{c.video.name}}</h6>
+                                            <div class="progress">
+                                                <div class="progress-bar" [ngStyle]="{'width': c.progress}"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+               
+                <div class="oadmon" (click)="getRandomVideos()" *ngIf="!isFinished" style="position: relative;">
+                    <sectionSpinner *ngIf="ectionspinner" ></sectionSpinner>
+                    Load More</div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- Footer -->
+    <section class="interactive-vid-footer">
+        <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12 col-md">
+                <div class="logo-area">
+                    <h2>Free<strong>Fuse</strong></h2>
+                    <p>2020 Freefuse. All rights reserved.</p>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md">
+                <div class="link-list">
+                    <ul>
+                        <li><a>Company</a></li>
+                        <li><a>About</a></li>
+                        <li><a>Newsroom</a></li>
+                        <li><a>Contact</a></li>
+                        <li><a>Careers</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md">
+                <div class="link-list">
+                    <ul>
+                        <li><a [routerLink]="['/faq']">Support</a></li>
+                        <li><a>Help Center</a></li>
+                        <li><a>Safety Center</a></li>
+                        <li><a>Community Guidelines</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md">
+                <div class="link-list">
+                    <ul>
+                        <li><a>Legal</a></li>
+                        <li><a>Cookies Policy</a></li>
+                        <li><a>Intellectual Property Policy</a></li>
+                        <li><a>Law Enforcement</a></li>
+                        <li><a [routerLink]="['/privacy']">Privacy Policy</a></li>
+                        <li><a [routerLink]="['/terms']">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md">
+                <div class="app-list">
+                    <p>Get the app</p>
+                    <a class="mb-3">
+                        <img src="../../../assets/images/interactive-vid/app-store.png" alt="Apple">
+                    </a>
+                    <a>
+                        <img src="../../../assets/images/interactive-vid/google-play.png" alt="Google">
+                    </a>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+</div>

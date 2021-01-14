@@ -1,0 +1,150 @@
+<headerone></headerone>
+<sideMenu></sideMenu>
+<spinner *ngIf="spinner" ></spinner>
+<section class="my-videos">
+    <div class=" custom-container">
+       
+        <div class="row">
+            <div class="col-7">
+                <h5 style="margin-top: 0; font-size: 24px;">Videos ({{allMainVideos.length}})</h5>
+                <p>Created by <span class="username" (click)="userProfile()" style="cursor: pointer">{{userDetails.username}}</span></p>
+            </div>
+           
+            
+            <div class="col-3 like-cmt-select" >
+                    <select class="btn border shadow-none w-100 position-relative pb-0" (change)="changeFilter(val)" name="changeFilterUploadVideo" [(ngModel)]="val">
+                            <option value="recent">Most Recent</option>
+                            <option value="viewed">Most Viewed</option>
+                            <option value="interactive">Most Interactive</option>
+                            <option value="comment">Most Commented</option>
+                        </select>
+                <!-- <select class="btn border shadow-none w-100 position-relative pb-0">
+                    <option>Newest First</option>
+                    <option>Oldest First</option>
+                    <option>Most recent</option>
+                </select> -->
+                <span>Sort</span>
+                <button type="button" class="btn shadow-none sort-videos"><span></span></button>
+            </div>
+            <!-- <div class="col-2" *ngIf="!list"> -->
+                <!-- <button type="button" class="filter-btn border">
+                    <span style="float: left;">Filters</span>
+                    <img src="../../../assets/images/search/filters-tune.svg">
+                </button>     -->
+            <!-- </div> -->
+            <div class="col-2">
+                    <button class="btn border  filter-btn border" style="background: #6e5eff;color:#fff" (click)="list =!list"><span *ngIf="!list">All Videos</span>
+                    <span *ngIf="list">Standard View</span>
+                    </button>
+                </div>
+        </div>
+
+        <div *ngIf="!list">
+        <!-- Most popular videos -->
+        <div class="row">
+            <div class="col-12">
+              <h5>Most Popular</h5>  
+            </div>
+        </div>
+        <div class="row draft-row" >
+            <div class="col-lg-3 info pointer" *ngFor="let item of mostPopularVideos">
+                <img src="{{item.poster}}" id="{{item._id}}" thumnailsDirective class="postmostInteractiveVideoser img-cover"  (click)="showVideo(item._id)">
+                <div class="over"  (click)="showVideo(item._id)">
+                    <img style=" height: 14;" src="../../../assets/images/landing/video-decisions.svg">
+                    <span>{{item.totalchild}}</span>
+                    <img style=" height: 14;" src="../../../assets/images/landing/video-outcomes.svg">
+                    <span>{{item.totallevel}}</span>
+                </div>
+                <h5  (click)="showVideo(item._id)">{{item.Title}}</h5>
+                <span  (click)="showVideo(item._id)">{{item.formattedTime | dateAgo}}</span><span>{{item.viewCount}} Views</span>
+                <br>
+               <span *ngFor="let c of item.Categories;let index = index"  class=" categories cateogyclass animations class{{index}}" (click)="showCategory(c)"  style="margin-right: 5px;;margin-top: 10px">{{c}}</span>
+               <div class="dropdown parentofdotdotButton">
+                <button data-toggle="tooltip" data-placement="top" title="All Categories" class="dropdown-toggle dotdotButton" type="button" id="dropdownMenuButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" *ngIf="item.Categories.length > 1">
+                  <svg width="1em" height="1em" viewBox="0 0 16 16"  class="bi bi-three-dots" fill="currentColor" xmlns="http://www.w3.org/2000/svg" >
+                    <path fill-rule="evenodd" d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/>
+                  </svg>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                  <a *ngFor="let i of item.Categories" class="animations needtoShow"  style="color:black!important"(click)="showCategory(i)">{{i}}</a>
+                </div>
+              </div>
+            </div>
+        </div>
+        <!-- <button></button>Show More</button> -->
+
+        <!-- Published Videos -->
+        <div class="row">
+             <div class="col-8">
+                <h5>Most Interactive</h5>
+                <!-- <p>This list includes shared videos that you don't own</p> -->
+            </div>
+            <div class="col-4 like-cmt-select">
+                <!-- <select class="btn border shadow-none w-100 position-relative pb-0">
+                    <option>Most recent</option>
+                    <option>Most recent</option>
+                    <option>Most recent</option>
+                </select>
+                <span>Sort</span>
+                <button type="button" class="btn shadow-none"><span></span></button> -->
+            </div>
+        </div>
+        <div class="row" *ngFor="let video of mostInteractiveVideos">
+            <div class="col-12 video-container animations pointer" (click)="showVideo(video._id)">
+                <div class="row">
+                    <div class="col-3 animations">
+                        <img src="{{video.poster}}" thumnailsDirective id="{{video._id}}" class="poster" style="height: 100%;" >
+                    </div>
+                    <div class="col-6">
+                        <h5>{{video.Title}}</h5>
+                        <p>Published on {{video.publishTime | date:'MM/dd/yyyy'}}
+                                 <b style="margin-left: 10px"> {{video.viewCount}} Views</b> 
+                        </p>
+                        <span *ngFor="let c of video.Categories" class="cateogyclass animations class0" (click)="showCategory(c)">{{c}}</span>
+                        <p>{{video.Description}}</p>
+                    </div>
+                    <div class="col-3">
+                        <ul class="published-options">
+                            <li>
+                                <p>Up to</p>
+                                <h5>{{video.totalchild}} Decisions</h5>
+                                <p>Potential endings</p>
+                                <h5>{{video.totallevel}} Outcomes</h5>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <!-- list view -->
+        <div *ngIf="list" class="row">
+                <div class="col-lg-4 info pointer" *ngFor="let item of allMainVideos">
+                    <img src="{{item.poster}}" thumnailsDirective id="{{item._id}}" class="poster img-cover"  (click)="showVideo(item._id)" >
+                    <div class="over" style="right: 15px;"  (click)="showVideo(item._id)">
+                        <img style="width: 17px; height: 17;" src="../../../assets/images/landing/video-decisions.svg">
+                        <span>{{item.totalchild}}</span>
+                        <img style="width: 17px; height: 17;" src="../../../assets/images/landing/video-outcomes.svg">
+                        <span>{{item.totallevel}}</span>
+                    </div>
+                    <h5  (click)="showVideo(item._id)">{{item.Title}}</h5>
+                    <span  (click)="showVideo(item._id)">{{item.formattedTime | dateAgo}}</span><span>{{item.viewCount}} Views</span>
+                    <br>
+                    <span *ngFor="let c of item.Categories;let index = index" class="categories cateogyclass class{{index}}" style="margin-right: 5px;margin-top: 10px" (click)="showCategory(c)">{{c}}</span>
+                    <div class="dropdown parentofdotdotButton">
+                        <button data-toggle="tooltip" data-placement="top" title="All Categories" class="dropdown-toggle dotdotButton" type="button" id="dropdownMenuButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" *ngIf="item.Categories.length > 1">
+                          <svg width="1em" height="1em" viewBox="0 0 16 16"  class="bi bi-three-dots" fill="currentColor" xmlns="http://www.w3.org/2000/svg" >
+                            <path fill-rule="evenodd" d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/>
+                          </svg>
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                          <a *ngFor="let i of item.Categories" class="animations needtoShow"  style="color:black!important"(click)="showCategory(i)">{{i}}</a>
+                        </div>
+                      </div>
+                </div>
+        </div>
+    </div>
+</section>
+
+<withoutloginfooter></withoutloginfooter> 

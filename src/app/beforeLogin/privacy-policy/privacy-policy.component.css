@@ -1,0 +1,115 @@
+.terms {
+    margin-top: 70px;
+}
+
+.interact-vid-sec {
+    padding: 40px 110px 0px 110px;
+}
+
+.interact-vid-sec.pad {
+    padding-bottom: 130px;
+}
+
+ol {
+    margin:0 0 1.5em;
+    padding:0;
+    counter-reset:item;
+}
+   
+ol>li {
+    margin:0;
+    padding:0 0 0 2em;
+    text-indent:-2em;
+    list-style-type:none;
+    counter-increment:item;
+}
+
+ol>li:before {
+    display:inline-block;
+    width:1.5em;
+    padding-right:0.5em;
+    font-weight:bold;
+    text-align:right;
+    content:counter(item) ".";
+}
+
+ul {
+    list-style-type: disc;
+}
+
+p {
+    text-align: justify;
+}
+
+
+
+
+
+
+.interactive-vid-footer{
+    background-color: #17113b;
+    color: white;
+    padding: 40px 35px 80px 52px;
+}
+.interactive-vid-footer .link-list ul{
+    padding-left: 0px;
+    list-style-type: none;
+    margin-bottom: 0px;
+}
+.interactive-vid-footer .link-list ul li a,
+.interactive-vid-footer .app-list a{
+    color: #ffffff;
+    display: block;
+}
+.interactive-vid-footer .link-list ul li{
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+.interactive-vid-footer .logo-area p{
+    font-size: 13px;
+}
+.interactive-vid-footer .logo-area h2{
+    font-size: 24px;
+}
+.interactive-vid-footer .app-list a{
+    border: 1px solid;
+    display: inline-block;
+}
+/* .interactive-vid-footer .app-list a{} */
+
+.interactive-vid-footer .app-list a img{
+    width: 135px;
+    height: auto;
+}
+.interactive-vid-footer .app-list > span{
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+@media(max-width: 991px)
+{
+    .interact-vid-sec
+    {
+        padding: 30px 30px 0px !important;
+    }
+    .custom-height,.position-relative.pop5
+    {
+        height: auto!important;
+        margin-bottom: 30px;
+    }
+    .card-body
+    {
+        padding-bottom: 20px!important;
+    }
+    .interactive-vid-footer {
+        padding: 30px 30px 60px!important;
+    }
+    .margin-right-0-mobile
+    {
+        margin-right: 0px!important;
+    }
+    .interactive-vid-footer .app-list a {
+       
+        margin-right: 15px;
+    }
+}

@@ -1,0 +1,22 @@
+form .user-pic-text > img 
+{
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.signup-btn{
+    display: block;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+}
+
+a :hover {
+    text-decoration: none;
+}
+
+.btn-show-password {
+    position: absolute;
+    right: 0;
+    top: 0;
+}

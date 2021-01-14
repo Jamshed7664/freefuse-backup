@@ -1,0 +1,133 @@
+<spinner *ngIf="profileCompltetObj.spinner"></spinner>
+<!-- step -1 -->
+<form #profileCompletionForm="ngForm" (ngSubmit)="onSubmit()">
+<section *ngIf="profileCompltetObj.step == 'first'">
+    <div class="container video-common-sec">
+        <div class="video-common-form text-center">
+
+            <h4>Free<strong>Fuse</strong></h4>
+
+            <div class="complete-profile border-bottom mb-3">
+                <h5>Complete your profile</h5>
+                <p>We ask everyone a few details for a better experience, so get a head start and do it now!</p>      
+            </div>
+
+            <div class="stepbystep-form-area">
+                <span>Step 1 of 3</span>
+                <p>Upload a profile picture</p>
+                <div class="pos-relative">
+                    <img src="assets/images/upload-pic.svg" alt="Picture" *ngIf="!profileCompltetObj.imgURL"> 
+                    
+                    <img [src]="profileCompltetObj.imgURL" height="200" *ngIf="profileCompltetObj.imgURL">
+                    <input  #file type="file" accept='image/*' (change)="preview(file.files)" class="input-hidden-file"/>
+                  </div>
+            </div>
+
+            <button type="button" class="video-common-btn" (click)="profileCompltetObj.step = 'second'" >Next step</button>
+
+            <div class="skip-button mt-3">
+                <a (click)="profileCompltetObj.step = 'second'">Skip this step</a>
+              
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- end here -->
+
+
+<!-- step-2 -->
+<section *ngIf="profileCompltetObj.step == 'second'">
+    <div class="container video-common-sec">
+        <div class="video-common-form text-center">
+
+            <h4>Free<strong>Fuse</strong></h4>
+
+            <div class="complete-profile border-bottom mb-3">
+                <h5>Complete your profile</h5>
+                <p>We ask everyone a few details for a better experience, so get a head start and do it now!</p>      
+            </div>
+
+            <div class="stepbystep-form-area">
+                <span>Step 2 of 3</span>
+                <p class="mb-2">Write a short bio about yourself</p>
+            </div>
+
+            <div class="short-bio-form text-left" novalidate>  
+
+                <div class="form-group signup-group">
+                    <div class="pos-relative">
+                        <textarea id="user_bio" name="user_bio" class="form-control main_focus_input" maxlength="200" [(ngModel)]="profileCompltetObj.bio" #user_bio="ngModel" (keyup)="changeUserLogin('user_bio')" ></textarea>
+                        <label class="input-field" for="user_bio">Type here</label>     
+                        <span class="count-letter mt-1">{{profileCompltetObj.bio.length}}/200</span>
+                     </div>   
+                </div>
+
+                <div *ngIf="user_bio.invalid && user_bio.touched" class="custom-alert">
+                    <div *ngIf="user_bio.errors.maxlength">
+                       Max length exceeded!
+                   </div> 
+                                             
+           </div>
+                <button type="button" class="video-common-btn" (click)="profileCompltetObj.step = 'third'">Next step</button>
+        </div>
+
+            <div class="skip-button mt-3">
+                <a (click)="profileCompltetObj.step = 'third'">Skip this step</a>
+                <a (click)="profileCompltetObj.step = 'first'"style="display: block">Back to Previous Step</a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- end here -->
+
+<!-- step-3 -->
+
+<section *ngIf="profileCompltetObj.step == 'third'">
+    <div class="container video-common-sec">
+        <div class="video-common-form text-center">
+
+            <h4>Free<strong>Fuse</strong></h4>
+
+            <div class="complete-profile border-bottom mb-3">
+                <h5>Complete your profile</h5>
+                <p>We ask everyone a few details for a better experience, so get a head start and do it now!</p>      
+            </div>
+
+            <div class="stepbystep-form-area">
+                <span>Step 3 of 3</span>
+                <p class="mb-3">Select your areas of interest</p>
+            </div>
+
+            <div class="select-category-form text-left" novalidate> 
+                <div class="row FF-scroll-modify">
+                    <div class="row">
+                        <div class="col-6" style="padding: 0 40px;" *ngFor="let obj of profileCompltetObj.categories">
+                        <div class="form-check mb-1">
+                            <label class="form-check-label">
+                                <input type="checkbox" class="form-check-input" (change)="checkChange($event,obj)"[value]="obj">
+                                {{obj}}
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>       
+                
+                <button type="submit" class="video-common-btn mt-3">Finish</button>
+        </div>
+
+            <div class="skip-button mt-3">
+                <!-- /<a (click)="onSubmit()">Skip this step</a> -->
+
+                <a (click)="profileCompltetObj.step = 'second'" style="display: block">Back to Previous Step</a>
+            </div>
+
+        </div>
+    </div>
+</section>
+</form>
+<!-- end here -->
+
+<withoutloginfooter></withoutloginfooter>

@@ -1,0 +1,206 @@
+<headerone></headerone>
+<sideMenu></sideMenu>
+<spinner *ngIf="spinner"></spinner>
+<section class="notification-sect">
+    <div class="custom-container">
+        <div class="row heading">
+            <h5 class="">User Notifications</h5>
+        </div>
+        <h5 *ngIf="notifications && notifications.length == 0">No notifications found....</h5>
+        <div class="row" *ngFor="let n of notifications"  >
+            <div class="col-12 custom-row" (click)="viewNotification(n.notificationId)" style="cursor:pointer">
+              <!-- Contributor Notifications -->
+
+              <div class="row" *ngIf="n.notificationType == 'choice' && !!n.videoInfo">
+                <div class="col-3">
+                  <a>
+                    <img src="{{n.videoInfo.poster}}" thumnailsDirective class="poster" (click)="viewNotification(n.notificationId)">
+                  </a>
+                </div>
+                <div class="col-6">
+                  <p>
+                    <span>{{n.userInfo.username}} </span>
+                    <span>chose <b>{{n.userInfo.childInfo}}</b> on </span>
+                    <a class="notification-link">{{n.videoInfo.Title}}</a>
+                  </p>
+                  <p>{{n.createdAt | dateAgo}}</p>
+                </div>
+              </div>
+
+
+              <div class="row" *ngIf="n.notificationType == 'contributor' && !!n.videoInfo">
+                <div class="col-3">
+                  <a>
+                    <img src="{{n.videoInfo.poster}}" thumnailsDirective class="poster" (click)="viewNotification(n.notificationId)">
+                  </a>
+                </div>
+                <div class="col-6">
+                  <p>
+                    <span>{{n.userInfo.username}} </span>
+                    <span>added you as a contributor for </span>
+                    <a class="notification-link">{{n.videoInfo.Title}}</a>
+                  </p>
+                  <p>{{n.createdAt | dateAgo}}</p>
+                </div>
+              </div>
+              
+              <!-- Publish Notifications -->
+              <div class="row" *ngIf="n.notificationType == 'publishVideo' && !!n.videoInfo">
+                <div class="col-3">
+                  <a>
+                    <img src="{{n.videoInfo.poster}}" thumnailsDirective class="poster" (click)="viewNotification(n.notificationId)">
+                  </a>
+                </div>
+                <div class="col-6">
+                  <p>
+                    <span>{{n.userInfo.username}} </span>
+                    <span>published </span>
+                    <a class="notification-link">{{n.videoInfo.Title}}</a>
+                  </p>
+                  <p>{{n.createdAt | dateAgo}}</p>
+                </div>
+              </div>
+              <!-- Comment notifications -->
+              <div class="row" *ngIf="n.notificationType == 'Comment' && !!n.videoInfo">
+                  <div class="col-3">
+                    <a>
+                      <img src="{{n.videoInfo.poster}}" thumnailsDirective class="poster" (click)="viewNotification(n.notificationId)">
+                    </a>
+                  </div>
+                  <div class="col-6">
+                    <p>
+                      <span>{{n.userInfo.username}} </span>
+                      <span>commented on </span>
+                      <a class="notification-link">{{n.videoInfo.Title}}</a>
+                    </p>
+                    <p>{{n.createdAt | dateAgo}}</p>
+                  </div>
+              </div>
+
+              <!-- Follow notifications -->
+              <div class="row" *ngIf="n.notificationType == 'follow'">
+                <div class="col-lg-1">
+                  <img src="{{n.userInfo.profilePic}}" class="user-profile" *ngIf="n.userInfo.profilePic">
+                  <span class="profile-image" *ngIf="!n.userInfo.profilePic" imgName  title="{{n.userInfo.firstname}},{{n.userInfo.lastname}}" style="border-radius:50%" ></span>
+                </div>
+
+                <div class="col-lg-3">
+                  <p>
+                    <span class="notification-link">{{n.userInfo.username}}</span>
+                    <span> Started following  you</span>
+                  </p>
+                  <p>{{n.createdAt | dateAgo}}</p>
+                </div>
+               
+               
+              </div>
+
+              <!-- Like notifications -->
+              <div class="row" *ngIf="n.notificationType == 'Like' && !!n.videoInfo">
+                <div class="col-3">
+                  <a>
+                    <img src="{{n.videoInfo.poster}}" thumnailsDirective class="poster" (click)="viewNotification(n.notificationId)">
+                  </a>
+                </div>
+                <div class="col-6">
+                  <p>
+                    <span>{{n.userInfo.username}}</span>
+                    <span> reacted with </span>
+                    <img src="{{getEmoji(n.category)}}" style="height:17px!important;width: auto"/>
+                    on <a class="notification-link" (click)="viewNotification(n.notificationId)">{{n.videoInfo.Title}}</a>
+                  </p>
+                  <p>{{n.createdAt | dateAgo}}</p>
+                </div>
+              </div>
+
+              <!-- Share notifications -->
+              <div class="row" *ngIf="n.notificationType == 'Share' && !!n.videoInfo">
+                <div class="col-3">
+                  <a>
+                    <img src="{{n.videoInfo.poster}}" thumnailsDirective class="poster" (click)="viewNotification(n.notificationId)">
+                  </a>
+                </div>
+                <div class="col-6">
+                  <p>
+                    <span>{{n.userInfo.username}}</span>
+                    <span> shared </span>
+                    <a class="notification-link" (click)="viewNotification(n.notificationId)">{{n.videoInfo.Title}}</a>
+                  </p>
+                  <p>{{n.createdAt | dateAgo}}</p>
+                </div>
+              </div>
+                <!-- <div class="row" *ngIf="a.activityType == 'Like'">
+                    <div class="col-3">
+                        <img src="{{a.videoInfo.poster}}" id="{{a.videoInfo._id}}" class="poster">
+                    </div>
+                    <div class="col-6">
+                      <p>
+                        {{a.userInfo.username}} 
+
+                        <span ><b>reacted</b> to <img src="{{getEmoji(a.category)}}" style="height:17px!important;width: auto"/> </span>
+                      
+                        <a [routerLink]="['/videos']" style="color: #6e5eff" [queryParams]="{video:a.videoInfo._id}">
+                           {{a.videoInfo.Title}}
+                        </a> 
+                      
+                      </p>
+                      <p >{{a.videoInfo.updatedAt | dateAgo}}</p>
+                    </div>
+                  
+                </div> -->
+                
+                <!-- <div class="row" *ngIf="a.activityType == 'Share'">
+                    <div class="col-3" >
+                        <img src="{{a.videoInfo.poster}}" id="{{a.videoInfo._id}}" class="poster">
+                    </div>
+                    <div class="col-6">
+                      <p>
+                        {{a.userInfo.username}} 
+                        
+                        <span> <b>shared</b> on </span>
+                      
+                        <a  [routerLink]="['/videos']"  style="color: #6e5eff" [queryParams]="{video:a.videoInfo._id}">
+                           {{a.videoInfo.Title}}
+                        </a> 
+                      </p>
+                      <p >{{a.videoInfo.updatedAt | dateAgo}}</p>
+                    </div>
+                </div> -->
+
+                <!-- <div class="row" *ngIf="a.activityType == 'Comment'">
+                    <div class="col-3">
+                        <img src="{{a.videoInfo.poster}}" class="poster">
+                    </div>
+                    <div class="col-6">
+                      <p>
+                        <a >{{a.userInfo.username}}</a>  <b> commented</b> on 
+                        <a style="color: #6e5eff" (click)="showVideo(a.videoInfo._id)">
+                            {{a.videoInfo.Title}}
+                        </a> 
+                      </p>
+                      <p>{{a.videoInfo.updatedAt | dateAgo}}</p>
+                    </div>
+                </div>
+
+                <div class="row" *ngIf="a.activityType == 'follow'">
+                    <div class="col-3" >
+                        <img src="{{a.userInfo.profilePic}}" class="poster">
+                    </div>
+                    <div class="col-6">
+                      <p>
+                        {{a.userInfo.username}} 
+                        <span > is <b>following</b> </span>
+                      
+                        <a  [routerLink]="['/public-profile']" style="color: #6e5eff" [queryParams]="{user:a.followUserInfo._id}">
+                          {{a.followUserInfo.username}}
+                        </a>
+                      </p>
+                      <p>{{a.followUserInfo.createdAt | dateAgo}}</p>
+                    </div>
+                   
+                </div> -->
+            </div>
+        </div>
+    </div>
+</section>
+<withoutloginfooter></withoutloginfooter>
